@@ -1,5 +1,5 @@
 """
-DC 자비스 - 위험도 스코어링 스크립트 (1단계 MVP, v1.1 - 코스피 낙폭 계산 안정화)
+DC 자비스 - 위험도 스코어링 스크립트 (1단계 MVP, v1.2 - 코스피 이상치 필터링)
 FRED(거시지표) + yfinance(VIX/환율/코스피)를 조합해 0~100점 위험도 산출
 결과는 data/risk_score.json 에 저장됨
 """
@@ -70,22 +70,23 @@ def score_kospi_drawdown():
         print("[경고] 코스피 데이터 부족, 낙폭 계산 스킵")
         return 0, 0
 
-    recent = closes.tail(20)
-    high20 = recent.max()
-    last = recent.iloc[-1]
+    window = closes.tail(20)
+    median = window.median()
 
-    print(f"[디버그] 최근 5개 종가: {recent.tail(5).tolist()}")
-    print(f"[디버그] 20일 고점: {high20}, 최근값: {last}")
+    # 중앙값 대비 ±20% 벗어나는 값은 데이터 오류(이상치)로 간주해 제외
+    cleaned = window[(window >= median * 0.8) & (window <= median * 1.2)]
 
-    if high20 <= 0:
+    print(f"[디버그] 20일 종가: {window.round(2).tolist()}")
+    if len(cleaned) < len(window):
+        removed = window[~window.index.isin(cleaned.index)]
+        print(f"[경고] 이상치로 제외됨: {removed.round(2).tolist()}")
+
+    if cleaned.empty:
         return 0, 0
 
+    high20 = cleaned.max()
+    last = closes.iloc[-1]  # 가장 최근 종가는 이상치 필터와 무관하게 그대로 사용
     drawdown = (last / high20 - 1) * 100
-
-    # 하루 만에 -15% 이상 낙폭은 데이터 오류 가능성이 높음 -> 로그만 남기고 보수적으로 제한
-    if drawdown < -15:
-        print(f"[경고] 비정상적으로 큰 낙폭 감지({drawdown:.2f}%), 데이터 오류 의심 -> -15%로 제한")
-        drawdown = -15
 
     if drawdown > -2:
         return drawdown, 10
