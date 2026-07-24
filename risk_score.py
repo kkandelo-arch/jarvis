@@ -1,5 +1,5 @@
 """
-DC 자비스 - 위험도 스코어링 스크립트 (1단계 MVP)
+DC 자비스 - 위험도 스코어링 스크립트 (1단계 MVP, v1.1 - 코스피 낙폭 계산 안정화)
 FRED(거시지표) + yfinance(VIX/환율/코스피)를 조합해 0~100점 위험도 산출
 결과는 data/risk_score.json 에 저장됨
 """
@@ -15,7 +15,6 @@ FRED_BASE = "https://api.stlouisfed.org/fred/series/observations"
 
 
 def get_fred_latest(series_id):
-    """FRED에서 특정 지표의 가장 최근 값을 가져온다."""
     params = {
         "series_id": series_id,
         "api_key": FRED_API_KEY,
@@ -57,19 +56,37 @@ def score_yield_curve(spread_10y2y):
     if spread_10y2y is None:
         return 0, 0
     if spread_10y2y < 0:
-        return spread_10y2y, 80  # 장단기 역전 = 경기침체 경고
+        return spread_10y2y, 80
     if spread_10y2y < 0.5:
         return spread_10y2y, 40
     return spread_10y2y, 10
 
 
 def score_kospi_drawdown():
-    kospi = yf.Ticker("^KS11").history(period="1mo")
-    if kospi.empty:
+    kospi = yf.Ticker("^KS11").history(period="2mo")
+    closes = kospi["Close"].dropna()
+
+    if len(closes) < 5:
+        print("[경고] 코스피 데이터 부족, 낙폭 계산 스킵")
         return 0, 0
-    high20 = kospi["Close"].tail(20).max()
-    last = kospi["Close"].iloc[-1]
+
+    recent = closes.tail(20)
+    high20 = recent.max()
+    last = recent.iloc[-1]
+
+    print(f"[디버그] 최근 5개 종가: {recent.tail(5).tolist()}")
+    print(f"[디버그] 20일 고점: {high20}, 최근값: {last}")
+
+    if high20 <= 0:
+        return 0, 0
+
     drawdown = (last / high20 - 1) * 100
+
+    # 하루 만에 -15% 이상 낙폭은 데이터 오류 가능성이 높음 -> 로그만 남기고 보수적으로 제한
+    if drawdown < -15:
+        print(f"[경고] 비정상적으로 큰 낙폭 감지({drawdown:.2f}%), 데이터 오류 의심 -> -15%로 제한")
+        drawdown = -15
+
     if drawdown > -2:
         return drawdown, 10
     if drawdown > -5:
@@ -89,7 +106,6 @@ def main():
     curve_raw, curve_score = score_yield_curve(curve_val)
     dd_raw, dd_score = score_kospi_drawdown()
 
-    # 가중합산: VIX 30%, 하이일드스프레드 30%, 장단기금리차 20%, 코스피낙폭 20%
     composite = round(
         vix_score * 0.30 + hy_score * 0.30 + curve_score * 0.20 + dd_score * 0.20
     )
