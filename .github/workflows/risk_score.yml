@@ -1,0 +1,37 @@
+name: DC 자비스 위험도 스코어링
+
+on:
+  schedule:
+    - cron: "0 0,4,8 * * *"   # 하루 3회 (UTC 기준, 한국시간 09:00 / 13:00 / 17:00)
+  workflow_dispatch: {}         # "Run workflow" 버튼으로 수동 실행도 가능
+
+permissions:
+  contents: write
+
+jobs:
+  compute-risk-score:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 패키지 설치
+        run: pip install -r requirements.txt
+
+      - name: 위험도 스코어링 실행
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python risk_score.py
+
+      - name: 결과 커밋
+        run: |
+          git config user.name "dc-jarvis-bot"
+          git config user.email "actions@github.com"
+          git add data/risk_score.json
+          git diff --cached --quiet || git commit -m "위험도 스코어 자동 갱신"
+          git push
