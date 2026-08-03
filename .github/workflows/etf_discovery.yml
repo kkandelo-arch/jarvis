@@ -24,6 +24,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: ETF 발굴 실행
+        env:
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
         run: python etf_discovery.py
 
       - name: 결과 커밋
