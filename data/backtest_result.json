@@ -1,0 +1,189 @@
+{
+  "timestamp": "2026-08-03T01:28:24.488050+00:00",
+  "method": "과거 시점별 모멘텀+52주밴드 점수(거시점수는 중립 50점 고정) vs 이후 20일 수익률 비교",
+  "buy_threshold": 60,
+  "overall_buy_signal_win_rate_pct": 62.0,
+  "overall_buy_signal_count": 413,
+  "per_etf": [
+    {
+      "ticker": "069500",
+      "name": "KODEX 200",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 48,
+        "win_rate_pct": 79.2,
+        "avg_return_pct": 8.34
+      },
+      "other_group": {
+        "count": 33,
+        "win_rate_pct": 81.8,
+        "avg_return_pct": 4.29
+      }
+    },
+    {
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 37,
+        "win_rate_pct": 59.5,
+        "avg_return_pct": 1.58
+      },
+      "other_group": {
+        "count": 44,
+        "win_rate_pct": 56.8,
+        "avg_return_pct": 0.27
+      }
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 48,
+        "win_rate_pct": 66.7,
+        "avg_return_pct": 8.13
+      },
+      "other_group": {
+        "count": 33,
+        "win_rate_pct": 72.7,
+        "avg_return_pct": 9.29
+      }
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 28,
+        "win_rate_pct": 50.0,
+        "avg_return_pct": 0.55
+      },
+      "other_group": {
+        "count": 53,
+        "win_rate_pct": 45.3,
+        "avg_return_pct": 0.46
+      }
+    },
+    {
+      "ticker": "143850",
+      "name": "TIGER 미국S&P500",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 14,
+        "win_rate_pct": 71.4,
+        "avg_return_pct": 1.53
+      },
+      "other_group": {
+        "count": 67,
+        "win_rate_pct": 56.7,
+        "avg_return_pct": 0.75
+      }
+    },
+    {
+      "ticker": "133690",
+      "name": "TIGER 미국나스닥100",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 31,
+        "win_rate_pct": 83.9,
+        "avg_return_pct": 3.62
+      },
+      "other_group": {
+        "count": 50,
+        "win_rate_pct": 58.0,
+        "avg_return_pct": 1.1
+      }
+    },
+    {
+      "ticker": "132030",
+      "name": "KODEX 골드선물(H)",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 37,
+        "win_rate_pct": 62.2,
+        "avg_return_pct": 1.9
+      },
+      "other_group": {
+        "count": 44,
+        "win_rate_pct": 63.6,
+        "avg_return_pct": 1.96
+      }
+    },
+    {
+      "ticker": "148070",
+      "name": "KOSEF 국고채10년",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 16,
+        "win_rate_pct": 18.8,
+        "avg_return_pct": -0.96
+      },
+      "other_group": {
+        "count": 65,
+        "win_rate_pct": 46.2,
+        "avg_return_pct": -0.46
+      }
+    },
+    {
+      "ticker": "091170",
+      "name": "KODEX 은행",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 37,
+        "win_rate_pct": 48.6,
+        "avg_return_pct": 1.5
+      },
+      "other_group": {
+        "count": 44,
+        "win_rate_pct": 70.5,
+        "avg_return_pct": 4.6
+      }
+    },
+    {
+      "ticker": "117460",
+      "name": "KODEX 에너지화학",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 36,
+        "win_rate_pct": 52.8,
+        "avg_return_pct": 1.98
+      },
+      "other_group": {
+        "count": 45,
+        "win_rate_pct": 57.8,
+        "avg_return_pct": 1.21
+      }
+    },
+    {
+      "ticker": "091180",
+      "name": "KODEX 자동차",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 44,
+        "win_rate_pct": 56.8,
+        "avg_return_pct": 3.21
+      },
+      "other_group": {
+        "count": 37,
+        "win_rate_pct": 78.4,
+        "avg_return_pct": 2.6
+      }
+    },
+    {
+      "ticker": "244620",
+      "name": "KODEX 바이오",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 37,
+        "win_rate_pct": 70.3,
+        "avg_return_pct": 2.43
+      },
+      "other_group": {
+        "count": 44,
+        "win_rate_pct": 63.6,
+        "avg_return_pct": 3.59
+      }
+    }
+  ]
+}
