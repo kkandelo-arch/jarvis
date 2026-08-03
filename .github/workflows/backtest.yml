@@ -1,0 +1,39 @@
+name: DC 자비스 백테스팅
+
+on:
+  schedule:
+    - cron: "0 20 * * 0"   # 매주 일요일 UTC 20:00 = 한국시간 월요일 05:00
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run-backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 패키지 설치
+        run: pip install -r requirements.txt
+
+      - name: 백테스팅 실행
+        env:
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
+        run: python backtest.py
+
+      - name: 결과 커밋
+        run: |
+          git config user.name "dc-jarvis-bot"
+          git config user.email "actions@github.com"
+          git add data/backtest_result.json
+          git diff --cached --quiet || git commit -m "백테스팅 결과 자동 갱신"
+          git pull --rebase
+          git push
