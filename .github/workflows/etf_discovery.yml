@@ -1,0 +1,36 @@
+name: DC 자비스 ETF 발굴
+
+on:
+  schedule:
+    - cron: "30 6 * * 1-5"   # 평일 UTC 06:30 = 한국시간 15:30 (장마감 직후)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  discover-etf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 패키지 설치
+        run: pip install -r requirements.txt
+
+      - name: ETF 발굴 실행
+        run: python etf_discovery.py
+
+      - name: 결과 커밋
+        run: |
+          git config user.name "dc-jarvis-bot"
+          git config user.email "actions@github.com"
+          git add data/etf_discovery.json
+          git diff --cached --quiet || git commit -m "ETF 발굴 결과 자동 갱신"
+          git pull --rebase
+          git push
