@@ -1,76 +1,72 @@
 {
-  "timestamp": "2026-08-03T00:49:59.281385+00:00",
+  "timestamp": "2026-08-03T01:10:23.617232+00:00",
   "macro_composite_score": 42,
   "scanned_count": 12,
+  "note": "수급(외국인·기관 순매수) 지표는 ETF 전용 API 검증 후 추가 예정",
   "top5": [
     {
       "ticker": "091170",
       "name": "KODEX 은행",
-      "total_score": 46,
+      "total_score": 69,
       "components": {
-        "momentum_20d_pct": -2.33,
+        "momentum_20d_pct": -2.43,
         "momentum_score": 38,
-        "band_position_pct": 68.3,
+        "band_position_pct": 68.0,
         "band_score": 88,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "143850",
       "name": "TIGER 미국S&P500",
-      "total_score": 44,
+      "total_score": 66,
       "components": {
-        "momentum_20d_pct": -0.05,
+        "momentum_20d_pct": -0.1,
         "momentum_score": 50,
-        "band_position_pct": 89.4,
+        "band_position_pct": 89.1,
         "band_score": 56,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "132030",
       "name": "KODEX 골드선물(H)",
-      "total_score": 39,
+      "total_score": 60,
       "components": {
-        "momentum_20d_pct": -2.22,
+        "momentum_20d_pct": -2.28,
         "momentum_score": 39,
-        "band_position_pct": 27.4,
+        "band_position_pct": 27.3,
         "band_score": 51,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "148070",
       "name": "KOSEF 국고채10년",
-      "total_score": 38,
+      "total_score": 59,
       "components": {
-        "momentum_20d_pct": -0.21,
+        "momentum_20d_pct": -0.14,
         "momentum_score": 49,
-        "band_position_pct": 11.2,
-        "band_score": 27,
+        "band_position_pct": 11.7,
+        "band_score": 28,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "133690",
       "name": "TIGER 미국나스닥100",
-      "total_score": 35,
+      "total_score": 54,
       "components": {
-        "momentum_20d_pct": -9.91,
+        "momentum_20d_pct": -10.15,
         "momentum_score": 0,
-        "band_position_pct": 59.7,
-        "band_score": 100,
+        "band_position_pct": 59.0,
+        "band_score": 98,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     }
   ],
@@ -78,169 +74,157 @@
     {
       "ticker": "091170",
       "name": "KODEX 은행",
-      "total_score": 46,
+      "total_score": 69,
       "components": {
-        "momentum_20d_pct": -2.33,
+        "momentum_20d_pct": -2.43,
         "momentum_score": 38,
-        "band_position_pct": 68.3,
+        "band_position_pct": 68.0,
         "band_score": 88,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "143850",
       "name": "TIGER 미국S&P500",
-      "total_score": 44,
+      "total_score": 66,
       "components": {
-        "momentum_20d_pct": -0.05,
+        "momentum_20d_pct": -0.1,
         "momentum_score": 50,
-        "band_position_pct": 89.4,
+        "band_position_pct": 89.1,
         "band_score": 56,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "132030",
       "name": "KODEX 골드선물(H)",
-      "total_score": 39,
+      "total_score": 60,
       "components": {
-        "momentum_20d_pct": -2.22,
+        "momentum_20d_pct": -2.28,
         "momentum_score": 39,
-        "band_position_pct": 27.4,
+        "band_position_pct": 27.3,
         "band_score": 51,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "148070",
       "name": "KOSEF 국고채10년",
-      "total_score": 38,
+      "total_score": 59,
       "components": {
-        "momentum_20d_pct": -0.21,
+        "momentum_20d_pct": -0.14,
         "momentum_score": 49,
-        "band_position_pct": 11.2,
-        "band_score": 27,
+        "band_position_pct": 11.7,
+        "band_score": 28,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "133690",
       "name": "TIGER 미국나스닥100",
-      "total_score": 35,
+      "total_score": 54,
       "components": {
-        "momentum_20d_pct": -9.91,
+        "momentum_20d_pct": -10.15,
         "momentum_score": 0,
-        "band_position_pct": 59.7,
-        "band_score": 100,
+        "band_position_pct": 59.0,
+        "band_score": 98,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "069500",
       "name": "KODEX 200",
-      "total_score": 33,
+      "total_score": 53,
       "components": {
-        "momentum_20d_pct": -23.32,
+        "momentum_20d_pct": -23.55,
         "momentum_score": 0,
-        "band_position_pct": 54.3,
+        "band_position_pct": 54.0,
         "band_score": 91,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "091160",
       "name": "KODEX 반도체",
-      "total_score": 32,
+      "total_score": 51,
       "components": {
-        "momentum_20d_pct": -26.65,
+        "momentum_20d_pct": -27.78,
         "momentum_score": 0,
-        "band_position_pct": 50.4,
-        "band_score": 86,
+        "band_position_pct": 49.2,
+        "band_score": 84,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "091180",
       "name": "KODEX 자동차",
-      "total_score": 29,
+      "total_score": 48,
       "components": {
-        "momentum_20d_pct": -13.98,
+        "momentum_20d_pct": -12.24,
         "momentum_score": 0,
-        "band_position_pct": 39.3,
-        "band_score": 69,
+        "band_position_pct": 41.8,
+        "band_score": 73,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "244620",
       "name": "KODEX 바이오",
-      "total_score": 26,
+      "total_score": 44,
       "components": {
         "momentum_20d_pct": -22.65,
         "momentum_score": 0,
         "band_position_pct": 30.3,
         "band_score": 55,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
-      }
-    },
-    {
-      "ticker": "229200",
-      "name": "KODEX 코스닥150",
-      "total_score": 21,
-      "components": {
-        "momentum_20d_pct": -18.81,
-        "momentum_score": 0,
-        "band_position_pct": 12.9,
-        "band_score": 29,
-        "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "117460",
       "name": "KODEX 에너지화학",
-      "total_score": 21,
+      "total_score": 38,
       "components": {
-        "momentum_20d_pct": -9.62,
-        "momentum_score": 2,
-        "band_position_pct": 10.0,
-        "band_score": 25,
+        "momentum_20d_pct": -9.35,
+        "momentum_score": 3,
+        "band_position_pct": 10.4,
+        "band_score": 26,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
+      }
+    },
+    {
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "total_score": 37,
+      "components": {
+        "momentum_20d_pct": -19.25,
+        "momentum_score": 0,
+        "band_position_pct": 12.3,
+        "band_score": 28,
+        "macro_score": 100,
+        "supply_score": "추후 추가 예정"
       }
     },
     {
       "ticker": "305720",
       "name": "KODEX 2차전지산업",
-      "total_score": 18,
+      "total_score": 34,
       "components": {
-        "momentum_20d_pct": -14.96,
+        "momentum_20d_pct": -13.97,
         "momentum_score": 0,
-        "band_position_pct": 3.4,
-        "band_score": 15,
+        "band_position_pct": 4.7,
+        "band_score": 17,
         "macro_score": 100,
-        "supply_net_eok": null,
-        "supply_score": 0
+        "supply_score": "추후 추가 예정"
       }
     }
   ]
