@@ -1,6 +1,7 @@
 """
-DC 자비스 - ETF 발굴 엔진 (2단계 MVP, v1.2 - 수급지표 보류, 3지표로 재조정)
-모멘텀 + 52주밴드 + 거시 3지표로 ETF 점수화 (수급 지표는 추후 별도 보강 예정)
+DC 자비스 - ETF 발굴 엔진 (v1.3 - 채권ETF 제외, 백테스트 신뢰도 라벨 부착)
+모멘텀 + 52주밴드 + 거시 3지표로 ETF 점수화
+발굴 결과마다 backtest_result.json 기반 신뢰도 라벨을 붙여서 "믿을 만한 신호인지"를 함께 표시
 결과는 data/etf_discovery.json 에 저장됨
 """
 import json
@@ -17,11 +18,11 @@ UNIVERSE = [
     ("143850", "TIGER 미국S&P500"),
     ("133690", "TIGER 미국나스닥100"),
     ("132030", "KODEX 골드선물(H)"),
-    ("148070", "KOSEF 국고채10년"),
     ("091170", "KODEX 은행"),
     ("117460", "KODEX 에너지화학"),
     ("091180", "KODEX 자동차"),
     ("244620", "KODEX 바이오"),
+    # KOSEF 국고채10년(148070) - 백테스트에서 신호력이 유의미하게 낮아 제외
 ]
 
 EXCLUDE_KEYWORDS = ["레버리지", "인버스", "곱버스"]
@@ -39,6 +40,39 @@ def load_macro_risk_level():
     except Exception as e:
         print(f"[경고] 위험도 데이터 로드 실패, 기본값(50) 사용: {e}")
         return 50
+
+
+def load_backtest_confidence():
+    """백테스트 결과를 읽어서 종목별 신뢰도 라벨을 만든다.
+    아직 백테스트를 안 돌렸거나 파일이 없으면 전부 '검증전'으로 처리."""
+    try:
+        with open("data/backtest_result.json", "r", encoding="utf-8") as f:
+            bt = json.load(f)
+    except Exception as e:
+        print(f"[경고] 백테스트 결과 로드 실패, 신뢰도 라벨 '검증전' 처리: {e}")
+        return {}
+
+    confidence_map = {}
+    for etf in bt.get("per_etf", []):
+        buy_group = etf.get("buy_signal_group", {})
+        win_rate = buy_group.get("win_rate_pct")
+        count = buy_group.get("count", 0)
+
+        if win_rate is None or count < 15:
+            label = "표본부족"
+        elif win_rate >= 65:
+            label = "높음"
+        elif win_rate >= 50:
+            label = "보통"
+        else:
+            label = "낮음"
+
+        confidence_map[etf["ticker"]] = {
+            "label": label,
+            "backtest_win_rate_pct": win_rate,
+            "backtest_sample_count": count,
+        }
+    return confidence_map
 
 
 def score_momentum(ohlcv):
@@ -71,6 +105,9 @@ def main():
     macro_score = round(max(0, 100 - macro_penalty))
     print(f"[디버그] 거시 위험도 {macro_composite}점 -> 발굴 거시점수 {macro_score}점 적용")
 
+    confidence_map = load_backtest_confidence()
+    print(f"[디버그] 백테스트 신뢰도 매핑 {len(confidence_map)}개 종목 로드")
+
     results = []
     for ticker, name in UNIVERSE:
         if any(kw in name for kw in EXCLUDE_KEYWORDS):
@@ -88,11 +125,17 @@ def main():
 
             total = round(mom_score * 0.45 + band_score * 0.25 + macro_score * 0.30)
 
+            confidence = confidence_map.get(
+                ticker,
+                {"label": "검증전", "backtest_win_rate_pct": None, "backtest_sample_count": 0},
+            )
+
             results.append(
                 {
                     "ticker": ticker,
                     "name": name,
                     "total_score": total,
+                    "backtest_confidence": confidence,
                     "components": {
                         "momentum_20d_pct": mom_raw,
                         "momentum_score": mom_score,
@@ -103,7 +146,7 @@ def main():
                     },
                 }
             )
-            print(f"[디버그] {name}({ticker}) 총점 {total}")
+            print(f"[디버그] {name}({ticker}) 총점 {total} 신뢰도 {confidence['label']}")
 
         except Exception as e:
             print(f"[경고] {name}({ticker}) 처리 중 오류 발생, 스킵: {e}")
@@ -116,7 +159,7 @@ def main():
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "macro_composite_score": macro_composite,
         "scanned_count": len(results),
-        "note": "수급(외국인·기관 순매수) 지표는 ETF 전용 API 검증 후 추가 예정",
+        "note": "수급(외국인·기관 순매수) 지표는 ETF 전용 API 검증 후 추가 예정. 채권ETF는 백테스트 신호력 낮아 제외.",
         "top5": top5,
         "all_results": results,
     }
