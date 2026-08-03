@@ -1,6 +1,6 @@
 """
-DC 자비스 - ETF 발굴 엔진 (2단계 MVP, v1.1 - 레버리지/인버스 제외 필터 추가)
-모멘텀 + 52주밴드 + 거시 + 수급 4지표로 ETF 점수화
+DC 자비스 - ETF 발굴 엔진 (2단계 MVP, v1.2 - 수급지표 보류, 3지표로 재조정)
+모멘텀 + 52주밴드 + 거시 3지표로 ETF 점수화 (수급 지표는 추후 별도 보강 예정)
 결과는 data/etf_discovery.json 에 저장됨
 """
 import json
@@ -9,7 +9,6 @@ from datetime import datetime, timedelta, timezone
 
 from pykrx import stock
 
-# 우선 커버할 주요 ETF 목록 (필요 시 여기에 계속 추가하면 됨)
 UNIVERSE = [
     ("069500", "KODEX 200"),
     ("229200", "KODEX 코스닥150"),
@@ -25,17 +24,14 @@ UNIVERSE = [
     ("244620", "KODEX 바이오"),
 ]
 
-# 안전장치: 이름에 이 키워드가 포함된 종목은 목록에 실수로 들어와도 자동 제외
 EXCLUDE_KEYWORDS = ["레버리지", "인버스", "곱버스"]
 
 TODAY = datetime.now()
 FROM_1Y = (TODAY - timedelta(days=380)).strftime("%Y%m%d")
-FROM_20D = (TODAY - timedelta(days=40)).strftime("%Y%m%d")
 TO = TODAY.strftime("%Y%m%d")
 
 
 def load_macro_risk_level():
-    """1단계에서 만든 위험도 점수를 읽어와 발굴 가중치에 반영"""
     try:
         with open("data/risk_score.json", "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -69,22 +65,6 @@ def score_52w_band(ohlcv):
     return round(position, 1), round(score)
 
 
-def score_supply(ticker):
-    try:
-        df = stock.get_market_trading_value_by_date(FROM_20D, TO, ticker)
-        if df.empty:
-            return None, 0
-        net_foreign = df["외국인합계"].sum() if "외국인합계" in df.columns else 0
-        net_inst = df["기관합계"].sum() if "기관합계" in df.columns else 0
-        net_total = net_foreign + net_inst
-        eok = net_total / 1e8
-        score = max(0, min(100, 50 + eok / 2))
-        return round(eok, 1), round(score)
-    except Exception as e:
-        print(f"[경고] {ticker} 수급 데이터 조회 실패, 0점 처리: {e}")
-        return None, 0
-
-
 def main():
     macro_composite = load_macro_risk_level()
     macro_penalty = max(0, (macro_composite - 50)) * 0.5
@@ -105,14 +85,8 @@ def main():
 
             mom_raw, mom_score = score_momentum(ohlcv)
             band_raw, band_score = score_52w_band(ohlcv)
-            supply_raw, supply_score = score_supply(ticker)
 
-            total = round(
-                mom_score * 0.35
-                + band_score * 0.20
-                + macro_score * 0.15
-                + supply_score * 0.30
-            )
+            total = round(mom_score * 0.45 + band_score * 0.25 + macro_score * 0.30)
 
             results.append(
                 {
@@ -125,8 +99,7 @@ def main():
                         "band_position_pct": band_raw,
                         "band_score": band_score,
                         "macro_score": macro_score,
-                        "supply_net_eok": supply_raw,
-                        "supply_score": supply_score,
+                        "supply_score": "추후 추가 예정",
                     },
                 }
             )
@@ -143,6 +116,7 @@ def main():
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "macro_composite_score": macro_composite,
         "scanned_count": len(results),
+        "note": "수급(외국인·기관 순매수) 지표는 ETF 전용 API 검증 후 추가 예정",
         "top5": top5,
         "all_results": results,
     }
