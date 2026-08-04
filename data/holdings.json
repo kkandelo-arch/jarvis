@@ -1,1 +1,9 @@
-
+[
+  {
+    "ticker": "091170",
+    "name": "KODEX 은행",
+    "quantity": 10,
+    "avg_price": 32500,
+    "purchase_date": "2026-07-15"
+  }
+]
