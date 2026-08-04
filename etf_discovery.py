@@ -1,7 +1,7 @@
 """
-DC 자비스 - ETF 발굴 엔진 (v1.3 - 채권ETF 제외, 백테스트 신뢰도 라벨 부착)
-모멘텀 + 52주밴드 + 거시 3지표로 ETF 점수화
-발굴 결과마다 backtest_result.json 기반 신뢰도 라벨을 붙여서 "믿을 만한 신호인지"를 함께 표시
+DC 자비스 - ETF 발굴 엔진 (v1.5 - ETF 전용 수급지표 복원 + 신뢰도 가중 조정점수)
+모멘텀 + 52주밴드 + 거시 + 수급 4지표로 점수화
+원점수(total_score)와 신뢰도 반영 조정점수(adjusted_score)를 함께 표시, 순위는 조정점수 기준
 결과는 data/etf_discovery.json 에 저장됨
 """
 import json
@@ -27,8 +27,17 @@ UNIVERSE = [
 
 EXCLUDE_KEYWORDS = ["레버리지", "인버스", "곱버스"]
 
+CONFIDENCE_MULTIPLIER = {
+    "높음": 1.10,
+    "보통": 1.00,
+    "낮음": 0.70,
+    "표본부족": 0.85,
+    "검증전": 0.85,
+}
+
 TODAY = datetime.now()
 FROM_1Y = (TODAY - timedelta(days=380)).strftime("%Y%m%d")
+FROM_20D = (TODAY - timedelta(days=40)).strftime("%Y%m%d")
 TO = TODAY.strftime("%Y%m%d")
 
 
@@ -43,8 +52,6 @@ def load_macro_risk_level():
 
 
 def load_backtest_confidence():
-    """백테스트 결과를 읽어서 종목별 신뢰도 라벨을 만든다.
-    아직 백테스트를 안 돌렸거나 파일이 없으면 전부 '검증전'으로 처리."""
     try:
         with open("data/backtest_result.json", "r", encoding="utf-8") as f:
             bt = json.load(f)
@@ -99,6 +106,39 @@ def score_52w_band(ohlcv):
     return round(position, 1), round(score)
 
 
+def score_supply(ticker):
+    """ETF 전용 투자자별 매매동향 함수로 외국인+기관 순매수를 조회.
+    버전에 따라 컬럼명이 다를 수 있어 여러 후보를 탐색하고, 실패 시 로그를 남기고 0점 처리."""
+    try:
+        df = stock.get_etf_trading_volume_and_value(FROM_20D, TO, ticker, "거래대금", "순매수")
+        print(f"[디버그] {ticker} 수급 원본 컬럼: {list(df.columns)}")
+
+        net_total = 0
+        found = False
+        for col in ["기관합계", "기관"]:
+            if col in df.columns:
+                net_total += df[col].sum()
+                found = True
+                break
+        for col in ["외국인합계", "외국인"]:
+            if col in df.columns:
+                net_total += df[col].sum()
+                found = True
+                break
+
+        if not found:
+            print(f"[경고] {ticker} 수급 컬럼 매칭 실패(컬럼명 확인 필요), 0점 처리")
+            return None, 0
+
+        eok = net_total / 1e8
+        score = max(0, min(100, 50 + eok / 2))
+        return round(eok, 1), round(score)
+
+    except Exception as e:
+        print(f"[경고] {ticker} 수급 데이터 조회 실패, 0점 처리: {e}")
+        return None, 0
+
+
 def main():
     macro_composite = load_macro_risk_level()
     macro_penalty = max(0, (macro_composite - 50)) * 0.5
@@ -122,19 +162,29 @@ def main():
 
             mom_raw, mom_score = score_momentum(ohlcv)
             band_raw, band_score = score_52w_band(ohlcv)
+            supply_raw, supply_score = score_supply(ticker)
 
-            total = round(mom_score * 0.45 + band_score * 0.25 + macro_score * 0.30)
+            total_score = round(
+                mom_score * 0.35
+                + band_score * 0.20
+                + macro_score * 0.15
+                + supply_score * 0.30
+            )
 
             confidence = confidence_map.get(
                 ticker,
                 {"label": "검증전", "backtest_win_rate_pct": None, "backtest_sample_count": 0},
             )
+            multiplier = CONFIDENCE_MULTIPLIER.get(confidence["label"], 0.85)
+            adjusted_score = round(total_score * multiplier)
 
             results.append(
                 {
                     "ticker": ticker,
                     "name": name,
-                    "total_score": total,
+                    "total_score": total_score,
+                    "adjusted_score": adjusted_score,
+                    "confidence_multiplier": multiplier,
                     "backtest_confidence": confidence,
                     "components": {
                         "momentum_20d_pct": mom_raw,
@@ -142,24 +192,29 @@ def main():
                         "band_position_pct": band_raw,
                         "band_score": band_score,
                         "macro_score": macro_score,
-                        "supply_score": "추후 추가 예정",
+                        "supply_net_eok": supply_raw,
+                        "supply_score": supply_score,
                     },
                 }
             )
-            print(f"[디버그] {name}({ticker}) 총점 {total} 신뢰도 {confidence['label']}")
+            print(
+                f"[디버그] {name}({ticker}) 원점수 {total_score} "
+                f"-> 조정점수 {adjusted_score} (신뢰도 {confidence['label']}, 수급점수 {supply_score})"
+            )
 
         except Exception as e:
             print(f"[경고] {name}({ticker}) 처리 중 오류 발생, 스킵: {e}")
             continue
 
-    results.sort(key=lambda x: x["total_score"], reverse=True)
+    results.sort(key=lambda x: x["adjusted_score"], reverse=True)
     top5 = results[:5]
 
     output = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "macro_composite_score": macro_composite,
         "scanned_count": len(results),
-        "note": "수급(외국인·기관 순매수) 지표는 ETF 전용 API 검증 후 추가 예정. 채권ETF는 백테스트 신호력 낮아 제외.",
+        "ranking_basis": "adjusted_score (원점수 x 백테스트 신뢰도 가중치)",
+        "note": "채권ETF는 백테스트 신호력 낮아 제외.",
         "top5": top5,
         "all_results": results,
     }
