@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-05T05:44:37.327973+00:00",
+  "holdings_count": 1,
+  "total_cost": 325000,
+  "total_eval_amount": 158200,
+  "total_pnl_amount": -166800,
+  "total_pnl_pct": -51.32,
+  "items": [
+    {
+      "ticker": "091170",
+      "name": "KODEX 은행",
+      "quantity": 10,
+      "avg_price": 32500,
+      "current_price": 15820.0,
+      "purchase_date": "2026-07-15",
+      "eval_amount": 158200,
+      "pnl_amount": -166800,
+      "pnl_pct": -51.32
+    }
+  ]
+}
