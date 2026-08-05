@@ -2,7 +2,7 @@ name: DC 자비스 ETF 발굴
 
 on:
   schedule:
-    - cron: "30 6 * * 1-5"   # 평일 UTC 06:30 = 한국시간 15:30 (장마감 직후)
+    - cron: "0 7 * * 1-5"   # 평일 UTC 06:30 = 한국시간 15:30 (장마감 직후)
   workflow_dispatch: {}
 
 permissions:
