@@ -1,0 +1,4647 @@
+{
+  "timestamp": "2026-08-05T04:16:44.554353+00:00",
+  "date_used": "20260805",
+  "count": 1160,
+  "etfs": [
+    {
+      "ticker": "0193M0",
+      "name": "BNK 27-12 특수채(AAA이상)액티브"
+    },
+    {
+      "ticker": "466810",
+      "name": "BNK 2차전지양극재"
+    },
+    {
+      "ticker": "457930",
+      "name": "BNK 미래전략기술액티브"
+    },
+    {
+      "ticker": "0218K0",
+      "name": "BNK 스마트카"
+    },
+    {
+      "ticker": "487750",
+      "name": "BNK 온디바이스AI"
+    },
+    {
+      "ticker": "445690",
+      "name": "BNK 주주가치액티브"
+    },
+    {
+      "ticker": "0120J0",
+      "name": "BNK 카카오그룹포커스"
+    },
+    {
+      "ticker": "0112X0",
+      "name": "마이티 200TR"
+    },
+    {
+      "ticker": "465780",
+      "name": "마이티 26-09 특수채(AAA)액티브"
+    },
+    {
+      "ticker": "0191M0",
+      "name": "마이티 5월만기자동연장특수채(AAA)액티브"
+    },
+    {
+      "ticker": "0222F0",
+      "name": "마이티 AI데이터센터밸류체인"
+    },
+    {
+      "ticker": "442260",
+      "name": "마이티 다이나믹퀀트액티브"
+    },
+    {
+      "ticker": "0001P0",
+      "name": "마이티 바이오시밀러&CDMO액티브"
+    },
+    {
+      "ticker": "159800",
+      "name": "마이티 코스피100"
+    },
+    {
+      "ticker": "472840",
+      "name": "IBK 200"
+    },
+    {
+      "ticker": "0005G0",
+      "name": "IBK K-AI반도체코어테크"
+    },
+    {
+      "ticker": "0178H0",
+      "name": "IBK 미국AI TOP10국채혼합50"
+    },
+    {
+      "ticker": "0135Y0",
+      "name": "IBK 중기종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "0221V0",
+      "name": "IBK 초단기채권액티브"
+    },
+    {
+      "ticker": "0191S0",
+      "name": "IBK 코스닥150"
+    },
+    {
+      "ticker": "0208N0",
+      "name": "IBK 코스피액티브"
+    },
+    {
+      "ticker": "361580",
+      "name": "RISE 200TR"
+    },
+    {
+      "ticker": "290080",
+      "name": "RISE 200고배당커버드콜ATM"
+    },
+    {
+      "ticker": "284980",
+      "name": "RISE 200금융"
+    },
+    {
+      "ticker": "252400",
+      "name": "RISE 200선물레버리지"
+    },
+    {
+      "ticker": "252420",
+      "name": "RISE 200선물인버스2X"
+    },
+    {
+      "ticker": "252410",
+      "name": "RISE 200선물인버스"
+    },
+    {
+      "ticker": "475720",
+      "name": "RISE 200위클리커버드콜"
+    },
+    {
+      "ticker": "148020",
+      "name": "RISE 200"
+    },
+    {
+      "ticker": "183700",
+      "name": "RISE 200채권혼합50"
+    },
+    {
+      "ticker": "0122W0",
+      "name": "RISE 26-11 회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "465330",
+      "name": "RISE 2차전지TOP10"
+    },
+    {
+      "ticker": "465350",
+      "name": "RISE 2차전지TOP10인버스(합성)"
+    },
+    {
+      "ticker": "422420",
+      "name": "RISE 2차전지액티브"
+    },
+    {
+      "ticker": "105780",
+      "name": "RISE 5대그룹주"
+    },
+    {
+      "ticker": "469070",
+      "name": "RISE AI&로봇"
+    },
+    {
+      "ticker": "0093A0",
+      "name": "RISE AI반도체TOP10"
+    },
+    {
+      "ticker": "0101N0",
+      "name": "RISE AI전력인프라"
+    },
+    {
+      "ticker": "427120",
+      "name": "RISE AI플랫폼"
+    },
+    {
+      "ticker": "477080",
+      "name": "RISE CD금리액티브(합성)"
+    },
+    {
+      "ticker": "290130",
+      "name": "RISE ESG사회책임투자"
+    },
+    {
+      "ticker": "367770",
+      "name": "RISE 수소경제테마"
+    },
+    {
+      "ticker": "326240",
+      "name": "RISE IT플러스"
+    },
+    {
+      "ticker": "385560",
+      "name": "RISE KIS국고채30년Enhanced"
+    },
+    {
+      "ticker": "479520",
+      "name": "RISE KOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "270800",
+      "name": "RISE KQ고배당"
+    },
+    {
+      "ticker": "292050",
+      "name": "RISE KRX300"
+    },
+    {
+      "ticker": "388280",
+      "name": "RISE K엔터&여행레저"
+    },
+    {
+      "ticker": "0192L0",
+      "name": "RISE SK하이닉스단일종목레버리지"
+    },
+    {
+      "ticker": "0013R0",
+      "name": "RISE 테슬라미국채타겟커버드콜혼합(합성)"
+    },
+    {
+      "ticker": "234310",
+      "name": "RISE V&S셀렉트밸류"
+    },
+    {
+      "ticker": "241390",
+      "name": "RISE V&S셀렉트밸류채권혼합"
+    },
+    {
+      "ticker": "401170",
+      "name": "RISE 메타버스"
+    },
+    {
+      "ticker": "300640",
+      "name": "RISE 게임테마"
+    },
+    {
+      "ticker": "266160",
+      "name": "RISE 고배당"
+    },
+    {
+      "ticker": "481430",
+      "name": "RISE 국고채10년액티브"
+    },
+    {
+      "ticker": "282000",
+      "name": "RISE 국고채3년선물인버스"
+    },
+    {
+      "ticker": "114100",
+      "name": "RISE 국고채3년"
+    },
+    {
+      "ticker": "451670",
+      "name": "RISE 국채30년레버리지(합성)"
+    },
+    {
+      "ticker": "295020",
+      "name": "RISE 국채선물10년인버스"
+    },
+    {
+      "ticker": "295000",
+      "name": "RISE 국채선물10년"
+    },
+    {
+      "ticker": "432600",
+      "name": "RISE 국채선물3년"
+    },
+    {
+      "ticker": "397420",
+      "name": "RISE 국채선물5년추종"
+    },
+    {
+      "ticker": "0114X0",
+      "name": "RISE 글로벌게임테크TOP3Plus"
+    },
+    {
+      "ticker": "437370",
+      "name": "RISE 글로벌농업경제"
+    },
+    {
+      "ticker": "375270",
+      "name": "RISE 글로벌데이터센터리츠(합성)"
+    },
+    {
+      "ticker": "475380",
+      "name": "RISE 글로벌리얼티인컴"
+    },
+    {
+      "ticker": "476310",
+      "name": "RISE 글로벌비만산업TOP2+"
+    },
+    {
+      "ticker": "417450",
+      "name": "RISE 글로벌수소경제"
+    },
+    {
+      "ticker": "442320",
+      "name": "RISE 글로벌원자력"
+    },
+    {
+      "ticker": "461490",
+      "name": "RISE 글로벌자산배분액티브"
+    },
+    {
+      "ticker": "459750",
+      "name": "RISE 글로벌주식분산액티브"
+    },
+    {
+      "ticker": "399580",
+      "name": "RISE 글로벌클린에너지"
+    },
+    {
+      "ticker": "276650",
+      "name": "RISE 글로벌테크놀로지(합성 H)"
+    },
+    {
+      "ticker": "336160",
+      "name": "RISE 금융채액티브"
+    },
+    {
+      "ticker": "326230",
+      "name": "RISE 내수주플러스"
+    },
+    {
+      "ticker": "367760",
+      "name": "RISE 네트워크인프라"
+    },
+    {
+      "ticker": "272560",
+      "name": "RISE 단기국공채액티브"
+    },
+    {
+      "ticker": "385550",
+      "name": "RISE 단기채권알파액티브"
+    },
+    {
+      "ticker": "196230",
+      "name": "RISE 단기통안채"
+    },
+    {
+      "ticker": "0061Z0",
+      "name": "RISE 단기특수은행채액티브"
+    },
+    {
+      "ticker": "315960",
+      "name": "RISE 대형고배당10TR"
+    },
+    {
+      "ticker": "0138D0",
+      "name": "RISE 동학개미"
+    },
+    {
+      "ticker": "455890",
+      "name": "RISE 머니마켓액티브"
+    },
+    {
+      "ticker": "481340",
+      "name": "RISE 미국30년국채액티브"
+    },
+    {
+      "ticker": "472870",
+      "name": "RISE 미국30년국채엔화노출(합성 H)"
+    },
+    {
+      "ticker": "472830",
+      "name": "RISE 미국30년국채커버드콜(합성)"
+    },
+    {
+      "ticker": "485690",
+      "name": "RISE 미국AI밸류체인TOP3Plus"
+    },
+    {
+      "ticker": "490590",
+      "name": "RISE 미국AI밸류체인데일리고정커버드콜"
+    },
+    {
+      "ticker": "0176E0",
+      "name": "RISE 미국AI전력인프라액티브"
+    },
+    {
+      "ticker": "0127R0",
+      "name": "RISE 미국AI클라우드인프라"
+    },
+    {
+      "ticker": "495940",
+      "name": "RISE 미국AI테크액티브"
+    },
+    {
+      "ticker": "0138T0",
+      "name": "RISE 미국S&P500데일리고정커버드콜"
+    },
+    {
+      "ticker": "0005C0",
+      "name": "RISE 미국S&P500엔화노출(합성 H)"
+    },
+    {
+      "ticker": "379780",
+      "name": "RISE 미국S&P500"
+    },
+    {
+      "ticker": "453330",
+      "name": "RISE 미국S&P500(H)"
+    },
+    {
+      "ticker": "460660",
+      "name": "RISE 미국S&P배당킹"
+    },
+    {
+      "ticker": "219390",
+      "name": "RISE 미국S&P원유생산기업(합성 H)"
+    },
+    {
+      "ticker": "0115C0",
+      "name": "RISE 미국고배당다우존스TOP10"
+    },
+    {
+      "ticker": "354240",
+      "name": "RISE 미국고정배당우선증권"
+    },
+    {
+      "ticker": "368590",
+      "name": "RISE 미국나스닥100"
+    },
+    {
+      "ticker": "437350",
+      "name": "RISE 미국단기투자등급회사채액티브"
+    },
+    {
+      "ticker": "455960",
+      "name": "RISE 미국달러SOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "469530",
+      "name": "RISE 미국달러선물인버스"
+    },
+    {
+      "ticker": "469060",
+      "name": "RISE 미국반도체NYSE"
+    },
+    {
+      "ticker": "469050",
+      "name": "RISE 미국반도체NYSE(H)"
+    },
+    {
+      "ticker": "491630",
+      "name": "RISE 미국반도체인버스(합성 H)"
+    },
+    {
+      "ticker": "490600",
+      "name": "RISE 미국배당100데일리고정커버드콜"
+    },
+    {
+      "ticker": "0018Z0",
+      "name": "RISE 미국양자컴퓨팅"
+    },
+    {
+      "ticker": "0218J0",
+      "name": "RISE 미국우주&로봇TOP2미국채혼합50"
+    },
+    {
+      "ticker": "0013P0",
+      "name": "RISE 미국은행TOP10"
+    },
+    {
+      "ticker": "267490",
+      "name": "RISE 미국장기국채선물레버리지(합성 H)"
+    },
+    {
+      "ticker": "267450",
+      "name": "RISE 미국장기국채선물인버스(H)"
+    },
+    {
+      "ticker": "267440",
+      "name": "RISE 미국장기국채선물(H)"
+    },
+    {
+      "ticker": "0036Z0",
+      "name": "RISE 미국천연가스밸류체인"
+    },
+    {
+      "ticker": "491620",
+      "name": "RISE 미국테크100데일리고정커버드콜"
+    },
+    {
+      "ticker": "0036R0",
+      "name": "RISE 미국휴머노이드로봇"
+    },
+    {
+      "ticker": "0000Z0",
+      "name": "RISE 바이오TOP10액티브"
+    },
+    {
+      "ticker": "446700",
+      "name": "RISE 배터리 리사이클링"
+    },
+    {
+      "ticker": "475350",
+      "name": "RISE 버크셔포트폴리오TOP10"
+    },
+    {
+      "ticker": "388420",
+      "name": "RISE 비메모리반도체액티브"
+    },
+    {
+      "ticker": "448630",
+      "name": "RISE 삼성그룹Top3채권혼합"
+    },
+    {
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50"
+    },
+    {
+      "ticker": "0192M0",
+      "name": "RISE 삼성전자단일종목레버리지"
+    },
+    {
+      "ticker": "140570",
+      "name": "RISE 수출주"
+    },
+    {
+      "ticker": "0093B0",
+      "name": "RISE 엔비디아고정테크100"
+    },
+    {
+      "ticker": "140580",
+      "name": "RISE 우량업종대표주"
+    },
+    {
+      "ticker": "379790",
+      "name": "RISE 유로스탁스50(H)"
+    },
+    {
+      "ticker": "498610",
+      "name": "RISE 인도디지털성장"
+    },
+    {
+      "ticker": "488480",
+      "name": "RISE 일본섹터TOP4Plus"
+    },
+    {
+      "ticker": "442550",
+      "name": "RISE TDF2030액티브 적격"
+    },
+    {
+      "ticker": "442560",
+      "name": "RISE TDF2040액티브 적격"
+    },
+    {
+      "ticker": "442570",
+      "name": "RISE TDF2050액티브 적격"
+    },
+    {
+      "ticker": "385540",
+      "name": "RISE 종합채권(A-이상)액티브"
+    },
+    {
+      "ticker": "183710",
+      "name": "RISE 주식혼합"
+    },
+    {
+      "ticker": "310080",
+      "name": "RISE 중국MSCI China(H)"
+    },
+    {
+      "ticker": "463300",
+      "name": "RISE 중국본토CSI300"
+    },
+    {
+      "ticker": "174360",
+      "name": "RISE 중국본토대형주CSI100"
+    },
+    {
+      "ticker": "136340",
+      "name": "RISE 중기우량회사채"
+    },
+    {
+      "ticker": "281990",
+      "name": "RISE 중소형고배당"
+    },
+    {
+      "ticker": "272570",
+      "name": "RISE 중장기국공채액티브"
+    },
+    {
+      "ticker": "0164G0",
+      "name": "RISE 차이나AI반도체TOP4Plus"
+    },
+    {
+      "ticker": "250730",
+      "name": "RISE 차이나HSCEI(H)"
+    },
+    {
+      "ticker": "291680",
+      "name": "RISE 차이나H선물인버스(H)"
+    },
+    {
+      "ticker": "0094L0",
+      "name": "RISE 차이나테크TOP10위클리타겟커버드콜"
+    },
+    {
+      "ticker": "371150",
+      "name": "RISE 차이나항셍테크"
+    },
+    {
+      "ticker": "498860",
+      "name": "RISE 코리아금융고배당"
+    },
+    {
+      "ticker": "0094M0",
+      "name": "RISE 코리아밸류업위클리고정커버드콜"
+    },
+    {
+      "ticker": "495050",
+      "name": "RISE 코리아밸류업"
+    },
+    {
+      "ticker": "0151P0",
+      "name": "RISE 코리아전략산업액티브"
+    },
+    {
+      "ticker": "278240",
+      "name": "RISE 코스닥150선물레버리지"
+    },
+    {
+      "ticker": "275750",
+      "name": "RISE 코스닥150선물인버스"
+    },
+    {
+      "ticker": "270810",
+      "name": "RISE 코스닥150"
+    },
+    {
+      "ticker": "0223A0",
+      "name": "RISE 코스닥커버드콜액티브"
+    },
+    {
+      "ticker": "302450",
+      "name": "RISE 코스피"
+    },
+    {
+      "ticker": "0047P0",
+      "name": "RISE 테슬라고정테크100"
+    },
+    {
+      "ticker": "449580",
+      "name": "RISE 테슬라애플아마존채권혼합"
+    },
+    {
+      "ticker": "334700",
+      "name": "RISE 팔라듐선물인버스(H)"
+    },
+    {
+      "ticker": "334690",
+      "name": "RISE 팔라듐선물(H)"
+    },
+    {
+      "ticker": "0047R0",
+      "name": "RISE 팔란티어고정테크100"
+    },
+    {
+      "ticker": "253280",
+      "name": "RISE 헬스케어"
+    },
+    {
+      "ticker": "253290",
+      "name": "RISE 헬스케어채권혼합"
+    },
+    {
+      "ticker": "0190C0",
+      "name": "RISE 현대차고정피지컬AI"
+    },
+    {
+      "ticker": "407310",
+      "name": "HANARO 200 TOP10"
+    },
+    {
+      "ticker": "332930",
+      "name": "HANARO 200TR"
+    },
+    {
+      "ticker": "304780",
+      "name": "HANARO 200선물레버리지"
+    },
+    {
+      "ticker": "306520",
+      "name": "HANARO 200선물인버스"
+    },
+    {
+      "ticker": "293180",
+      "name": "HANARO 200"
+    },
+    {
+      "ticker": "0123S0",
+      "name": "HANARO 26-12 은행채(AA+이상)액티브"
+    },
+    {
+      "ticker": "0091M0",
+      "name": "HANARO 27-06 회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "448490",
+      "name": "HANARO 32-10 국고채액티브"
+    },
+    {
+      "ticker": "454320",
+      "name": "HANARO CAPEX설비투자iSelect"
+    },
+    {
+      "ticker": "395290",
+      "name": "HANARO Fn K-POP&미디어"
+    },
+    {
+      "ticker": "395280",
+      "name": "HANARO Fn K-게임"
+    },
+    {
+      "ticker": "368190",
+      "name": "HANARO Fn K-뉴딜디지털플러스"
+    },
+    {
+      "ticker": "402460",
+      "name": "HANARO Fn K-메타버스MZ"
+    },
+    {
+      "ticker": "395270",
+      "name": "HANARO Fn K-반도체"
+    },
+    {
+      "ticker": "438900",
+      "name": "HANARO Fn K-푸드"
+    },
+    {
+      "ticker": "367740",
+      "name": "HANARO Fn5G산업"
+    },
+    {
+      "ticker": "407300",
+      "name": "HANARO Fn골프테마"
+    },
+    {
+      "ticker": "381560",
+      "name": "HANARO Fn전기&수소차"
+    },
+    {
+      "ticker": "441540",
+      "name": "HANARO Fn조선해운"
+    },
+    {
+      "ticker": "381570",
+      "name": "HANARO Fn친환경에너지"
+    },
+    {
+      "ticker": "479850",
+      "name": "HANARO K-뷰티"
+    },
+    {
+      "ticker": "453060",
+      "name": "HANARO KOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "304760",
+      "name": "HANARO KRX300"
+    },
+    {
+      "ticker": "322410",
+      "name": "HANARO K고배당"
+    },
+    {
+      "ticker": "0155N0",
+      "name": "HANARO K휴머노이드테마TOP10"
+    },
+    {
+      "ticker": "332940",
+      "name": "HANARO MSCI Korea TR"
+    },
+    {
+      "ticker": "322400",
+      "name": "HANARO e커머스"
+    },
+    {
+      "ticker": "473640",
+      "name": "HANARO 글로벌금채굴기업"
+    },
+    {
+      "ticker": "354350",
+      "name": "HANARO 글로벌럭셔리S&P(합성)"
+    },
+    {
+      "ticker": "461340",
+      "name": "HANARO 글로벌생성형AI액티브"
+    },
+    {
+      "ticker": "401590",
+      "name": "HANARO 글로벌탄소배출권선물ICE(합성)"
+    },
+    {
+      "ticker": "0040S0",
+      "name": "HANARO 글로벌피지컬AI액티브"
+    },
+    {
+      "ticker": "314700",
+      "name": "HANARO 농업융복합산업"
+    },
+    {
+      "ticker": "486830",
+      "name": "HANARO 머니마켓액티브"
+    },
+    {
+      "ticker": "0215T0",
+      "name": "HANARO 미국AI광통신TOP10"
+    },
+    {
+      "ticker": "0181B0",
+      "name": "HANARO 미국AI메모리반도체TOP4+"
+    },
+    {
+      "ticker": "0219Z0",
+      "name": "HANARO 미국S&P500액티브"
+    },
+    {
+      "ticker": "432840",
+      "name": "HANARO 미국S&P500"
+    },
+    {
+      "ticker": "498050",
+      "name": "HANARO 바이오코리아액티브"
+    },
+    {
+      "ticker": "476260",
+      "name": "HANARO 반도체핵심공정주도주"
+    },
+    {
+      "ticker": "434730",
+      "name": "HANARO 원자력iSelect"
+    },
+    {
+      "ticker": "0082F0",
+      "name": "HANARO 유럽방산"
+    },
+    {
+      "ticker": "491820",
+      "name": "HANARO 전력설비투자"
+    },
+    {
+      "ticker": "461500",
+      "name": "HANARO 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "0191W0",
+      "name": "HANARO 중기종합채권(A-이상)액티브"
+    },
+    {
+      "ticker": "0111J0",
+      "name": "HANARO 증권고배당TOP3플러스"
+    },
+    {
+      "ticker": "495750",
+      "name": "HANARO 코리아밸류업"
+    },
+    {
+      "ticker": "306530",
+      "name": "HANARO 코스닥150선물레버리지"
+    },
+    {
+      "ticker": "304770",
+      "name": "HANARO 코스닥150"
+    },
+    {
+      "ticker": "375760",
+      "name": "HANARO 탄소효율그린뉴딜"
+    },
+    {
+      "ticker": "0007N0",
+      "name": "아이엠에셋 200"
+    },
+    {
+      "ticker": "491510",
+      "name": "파워 K-주주가치액티브"
+    },
+    {
+      "ticker": "140950",
+      "name": "파워 코스피100"
+    },
+    {
+      "ticker": "152870",
+      "name": "파워 200"
+    },
+    {
+      "ticker": "192720",
+      "name": "파워 고배당저변동성"
+    },
+    {
+      "ticker": "498180",
+      "name": "파워 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "486240",
+      "name": "DAISHIN343 AI반도체&인프라액티브"
+    },
+    {
+      "ticker": "434960",
+      "name": "DAISHIN343 K200"
+    },
+    {
+      "ticker": "0189Z0",
+      "name": "DAISHIN343 금융&지주고배당"
+    },
+    {
+      "ticker": "0174J0",
+      "name": "DAISHIN343 오피스리츠플러스"
+    },
+    {
+      "ticker": "0053M0",
+      "name": "더제이 중소형포커스액티브"
+    },
+    {
+      "ticker": "0220B0",
+      "name": "DS 코스닥액티브"
+    },
+    {
+      "ticker": "0214M0",
+      "name": "MIDAS 바이오헬스케어액티브"
+    },
+    {
+      "ticker": "488290",
+      "name": "MIDAS 일본테크액티브"
+    },
+    {
+      "ticker": "438740",
+      "name": "MIDAS 중소형액티브"
+    },
+    {
+      "ticker": "0191B0",
+      "name": "MIDAS 코스닥액티브"
+    },
+    {
+      "ticker": "403790",
+      "name": "MIDAS 코스피액티브"
+    },
+    {
+      "ticker": "0139F0",
+      "name": "TIGER 12월자동연장금융채(AA-이상)액티브"
+    },
+    {
+      "ticker": "310960",
+      "name": "TIGER 200TR"
+    },
+    {
+      "ticker": "227550",
+      "name": "TIGER 200 산업재"
+    },
+    {
+      "ticker": "227560",
+      "name": "TIGER 200 생활소비재"
+    },
+    {
+      "ticker": "102110",
+      "name": "TIGER 200"
+    },
+    {
+      "ticker": "243880",
+      "name": "TIGER 200IT레버리지"
+    },
+    {
+      "ticker": "252000",
+      "name": "TIGER 200동일가중"
+    },
+    {
+      "ticker": "267770",
+      "name": "TIGER 200선물레버리지"
+    },
+    {
+      "ticker": "252710",
+      "name": "TIGER 200선물인버스2X"
+    },
+    {
+      "ticker": "243890",
+      "name": "TIGER 200에너지화학레버리지"
+    },
+    {
+      "ticker": "315270",
+      "name": "TIGER 200커뮤니케이션서비스"
+    },
+    {
+      "ticker": "166400",
+      "name": "TIGER 200커버드콜OTM"
+    },
+    {
+      "ticker": "0104N0",
+      "name": "TIGER 200타겟위클리커버드콜"
+    },
+    {
+      "ticker": "227540",
+      "name": "TIGER 200 헬스케어"
+    },
+    {
+      "ticker": "480260",
+      "name": "TIGER 27-04회사채(A+이상)액티브"
+    },
+    {
+      "ticker": "0094K0",
+      "name": "TIGER 28-04 회사채(A+이상)액티브"
+    },
+    {
+      "ticker": "364980",
+      "name": "TIGER 2차전지TOP10"
+    },
+    {
+      "ticker": "412570",
+      "name": "TIGER 2차전지TOP10레버리지"
+    },
+    {
+      "ticker": "462010",
+      "name": "TIGER 2차전지소재Fn"
+    },
+    {
+      "ticker": "305540",
+      "name": "TIGER 2차전지테마"
+    },
+    {
+      "ticker": "471760",
+      "name": "TIGER AI반도체핵심공정"
+    },
+    {
+      "ticker": "365040",
+      "name": "TIGER AI코리아그로스액티브"
+    },
+    {
+      "ticker": "364960",
+      "name": "TIGER BBIG"
+    },
+    {
+      "ticker": "412560",
+      "name": "TIGER BBIG레버리지"
+    },
+    {
+      "ticker": "475630",
+      "name": "TIGER CD1년금리액티브(합성)"
+    },
+    {
+      "ticker": "357870",
+      "name": "TIGER CD금리투자KIS(합성)"
+    },
+    {
+      "ticker": "499660",
+      "name": "TIGER CD금리플러스액티브(합성)"
+    },
+    {
+      "ticker": "400970",
+      "name": "TIGER Fn메타버스"
+    },
+    {
+      "ticker": "377990",
+      "name": "TIGER Fn신재생에너지"
+    },
+    {
+      "ticker": "417630",
+      "name": "TIGER KEDI혁신기업ESG30"
+    },
+    {
+      "ticker": "292160",
+      "name": "TIGER KRX300"
+    },
+    {
+      "ticker": "0072R0",
+      "name": "TIGER KRX금현물"
+    },
+    {
+      "ticker": "404540",
+      "name": "TIGER KRX기후변화솔루션"
+    },
+    {
+      "ticker": "300610",
+      "name": "TIGER K게임"
+    },
+    {
+      "ticker": "138530",
+      "name": "TIGER LG그룹플러스"
+    },
+    {
+      "ticker": "445910",
+      "name": "TIGER MKF배당귀족"
+    },
+    {
+      "ticker": "289260",
+      "name": "TIGER MSCI KOREA ESG리더스"
+    },
+    {
+      "ticker": "289250",
+      "name": "TIGER MSCI KOREA ESG유니버설"
+    },
+    {
+      "ticker": "310970",
+      "name": "TIGER MSCI Korea TR"
+    },
+    {
+      "ticker": "0000D0",
+      "name": "TIGER 엔비디아미국채커버드콜밸런스(합성)"
+    },
+    {
+      "ticker": "143850",
+      "name": "TIGER 미국S&P500선물(H)"
+    },
+    {
+      "ticker": "269370",
+      "name": "TIGER S&P글로벌인프라(합성)"
+    },
+    {
+      "ticker": "0195S0",
+      "name": "TIGER SK하이닉스단일종목레버리지"
+    },
+    {
+      "ticker": "453950",
+      "name": "TIGER TSMC파운드리밸류체인"
+    },
+    {
+      "ticker": "364990",
+      "name": "TIGER 게임TOP10"
+    },
+    {
+      "ticker": "139280",
+      "name": "TIGER 경기방어"
+    },
+    {
+      "ticker": "237440",
+      "name": "TIGER 경기방어채권혼합"
+    },
+    {
+      "ticker": "319640",
+      "name": "TIGER 골드선물(H)"
+    },
+    {
+      "ticker": "0190Y0",
+      "name": "TIGER 구글밸류체인"
+    },
+    {
+      "ticker": "160580",
+      "name": "TIGER 구리실물"
+    },
+    {
+      "ticker": "114820",
+      "name": "TIGER 국채3년"
+    },
+    {
+      "ticker": "464310",
+      "name": "TIGER 글로벌AI&로보틱스 INDXX"
+    },
+    {
+      "ticker": "418670",
+      "name": "TIGER 글로벌AI사이버보안"
+    },
+    {
+      "ticker": "466950",
+      "name": "TIGER 글로벌AI액티브"
+    },
+    {
+      "ticker": "440340",
+      "name": "TIGER 글로벌멀티에셋TIF액티브"
+    },
+    {
+      "ticker": "476690",
+      "name": "TIGER 글로벌비만치료제TOP2Plus"
+    },
+    {
+      "ticker": "480310",
+      "name": "TIGER 글로벌온디바이스AI"
+    },
+    {
+      "ticker": "387270",
+      "name": "TIGER 글로벌이노베이션액티브"
+    },
+    {
+      "ticker": "371450",
+      "name": "TIGER 글로벌클라우드컴퓨팅INDXX"
+    },
+    {
+      "ticker": "248270",
+      "name": "TIGER S&P글로벌헬스케어(합성)"
+    },
+    {
+      "ticker": "464930",
+      "name": "TIGER 글로벌혁신블루칩TOP10"
+    },
+    {
+      "ticker": "139320",
+      "name": "TIGER 금은선물(H)"
+    },
+    {
+      "ticker": "0168K0",
+      "name": "TIGER 기술이전바이오액티브"
+    },
+    {
+      "ticker": "137610",
+      "name": "TIGER 농산물선물Enhanced(H)"
+    },
+    {
+      "ticker": "272580",
+      "name": "TIGER 단기채권액티브"
+    },
+    {
+      "ticker": "157450",
+      "name": "TIGER 단기통안채"
+    },
+    {
+      "ticker": "105010",
+      "name": "TIGER 라틴35"
+    },
+    {
+      "ticker": "123320",
+      "name": "TIGER 레버리지"
+    },
+    {
+      "ticker": "0086B0",
+      "name": "TIGER 리츠부동산인프라TOP10액티브"
+    },
+    {
+      "ticker": "341850",
+      "name": "TIGER 리츠부동산인프라채권"
+    },
+    {
+      "ticker": "329200",
+      "name": "TIGER 리츠부동산인프라"
+    },
+    {
+      "ticker": "0086C0",
+      "name": "TIGER 리츠부동산인프라10채권혼합액티브"
+    },
+    {
+      "ticker": "0043B0",
+      "name": "TIGER 머니마켓액티브"
+    },
+    {
+      "ticker": "147970",
+      "name": "TIGER 모멘텀"
+    },
+    {
+      "ticker": "458250",
+      "name": "TIGER 미국30년국채스트립액티브(합성 H)"
+    },
+    {
+      "ticker": "0142D0",
+      "name": "TIGER 미국AI데이터센터TOP4Plus"
+    },
+    {
+      "ticker": "491830",
+      "name": "TIGER 미국AI반도체팹리스"
+    },
+    {
+      "ticker": "490090",
+      "name": "TIGER 미국AI빅테크10"
+    },
+    {
+      "ticker": "493810",
+      "name": "TIGER 미국AI빅테크10타겟데일리커버드콜"
+    },
+    {
+      "ticker": "0102A0",
+      "name": "TIGER 미국AI소프트웨어TOP4Plus"
+    },
+    {
+      "ticker": "0123G0",
+      "name": "TIGER 미국AI전력SMR"
+    },
+    {
+      "ticker": "488500",
+      "name": "TIGER 미국S&P500동일가중"
+    },
+    {
+      "ticker": "429000",
+      "name": "TIGER 미국S&P500배당귀족"
+    },
+    {
+      "ticker": "360750",
+      "name": "TIGER 미국S&P500"
+    },
+    {
+      "ticker": "448290",
+      "name": "TIGER 미국S&P500(H)"
+    },
+    {
+      "ticker": "418660",
+      "name": "TIGER 미국나스닥100레버리지(합성)"
+    },
+    {
+      "ticker": "133690",
+      "name": "TIGER 미국나스닥100"
+    },
+    {
+      "ticker": "448300",
+      "name": "TIGER 미국나스닥100(H)"
+    },
+    {
+      "ticker": "435420",
+      "name": "TIGER 미국나스닥100채권혼합50"
+    },
+    {
+      "ticker": "441680",
+      "name": "TIGER 미국나스닥100커버드콜(합성)"
+    },
+    {
+      "ticker": "429010",
+      "name": "TIGER 미국나스닥넥스트100"
+    },
+    {
+      "ticker": "245340",
+      "name": "TIGER 미국다우존스30"
+    },
+    {
+      "ticker": "456610",
+      "name": "TIGER 미국달러SOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "329750",
+      "name": "TIGER 미국달러단기채권액티브"
+    },
+    {
+      "ticker": "261110",
+      "name": "TIGER 미국달러선물레버리지"
+    },
+    {
+      "ticker": "261120",
+      "name": "TIGER 미국달러선물인버스2X"
+    },
+    {
+      "ticker": "494840",
+      "name": "TIGER 미국방산TOP10"
+    },
+    {
+      "ticker": "458730",
+      "name": "TIGER 미국배당다우존스"
+    },
+    {
+      "ticker": "0008S0",
+      "name": "TIGER 미국배당다우존스타겟데일리커버드콜"
+    },
+    {
+      "ticker": "0015K0",
+      "name": "TIGER 미국소비트렌드액티브"
+    },
+    {
+      "ticker": "0183J0",
+      "name": "TIGER 미국우주테크"
+    },
+    {
+      "ticker": "305080",
+      "name": "TIGER 미국채10년선물"
+    },
+    {
+      "ticker": "0046A0",
+      "name": "TIGER 미국초단기(3개월이하)국채"
+    },
+    {
+      "ticker": "465670",
+      "name": "TIGER 미국캐시카우100"
+    },
+    {
+      "ticker": "0223R0",
+      "name": "TIGER 미국테크NYSE100액티브"
+    },
+    {
+      "ticker": "381170",
+      "name": "TIGER 미국테크TOP10 INDXX"
+    },
+    {
+      "ticker": "472160",
+      "name": "TIGER 미국테크TOP10 INDXX(H)"
+    },
+    {
+      "ticker": "472170",
+      "name": "TIGER 미국테크TOP10채권혼합"
+    },
+    {
+      "ticker": "458260",
+      "name": "TIGER 미국투자등급회사채액티브(H)"
+    },
+    {
+      "ticker": "497570",
+      "name": "TIGER 미국필라델피아AI반도체나스닥"
+    },
+    {
+      "ticker": "381180",
+      "name": "TIGER 미국필라델피아반도체나스닥"
+    },
+    {
+      "ticker": "228810",
+      "name": "TIGER 미디어컨텐츠"
+    },
+    {
+      "ticker": "364970",
+      "name": "TIGER 바이오TOP10"
+    },
+    {
+      "ticker": "091230",
+      "name": "TIGER 반도체"
+    },
+    {
+      "ticker": "488080",
+      "name": "TIGER 반도체TOP10레버리지"
+    },
+    {
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10"
+    },
+    {
+      "ticker": "0177R0",
+      "name": "TIGER 반도체TOP10커버드콜액티브"
+    },
+    {
+      "ticker": "138520",
+      "name": "TIGER 삼성그룹"
+    },
+    {
+      "ticker": "0195R0",
+      "name": "TIGER 삼성전자단일종목레버리지"
+    },
+    {
+      "ticker": "157490",
+      "name": "TIGER 소프트웨어"
+    },
+    {
+      "ticker": "228800",
+      "name": "TIGER 여행레저"
+    },
+    {
+      "ticker": "227570",
+      "name": "TIGER 우량가치"
+    },
+    {
+      "ticker": "261140",
+      "name": "TIGER 우선주"
+    },
+    {
+      "ticker": "130680",
+      "name": "TIGER 원유선물Enhanced(H)"
+    },
+    {
+      "ticker": "245350",
+      "name": "TIGER 유로스탁스배당30"
+    },
+    {
+      "ticker": "0189B0",
+      "name": "TIGER 은액티브"
+    },
+    {
+      "ticker": "091220",
+      "name": "TIGER 은행"
+    },
+    {
+      "ticker": "466940",
+      "name": "TIGER 은행고배당플러스TOP10"
+    },
+    {
+      "ticker": "307510",
+      "name": "TIGER 의료기기"
+    },
+    {
+      "ticker": "453870",
+      "name": "TIGER 인도니프티50"
+    },
+    {
+      "ticker": "236350",
+      "name": "TIGER 인도니프티50레버리지(합성)"
+    },
+    {
+      "ticker": "479730",
+      "name": "TIGER 인도빌리언컨슈머"
+    },
+    {
+      "ticker": "123310",
+      "name": "TIGER 인버스"
+    },
+    {
+      "ticker": "365000",
+      "name": "TIGER 인터넷TOP10"
+    },
+    {
+      "ticker": "241180",
+      "name": "TIGER 일본니케이225"
+    },
+    {
+      "ticker": "465660",
+      "name": "TIGER 일본반도체FACTSET"
+    },
+    {
+      "ticker": "292560",
+      "name": "TIGER 일본엔선물"
+    },
+    {
+      "ticker": "0025N0",
+      "name": "TIGER TDF2045 적격"
+    },
+    {
+      "ticker": "494670",
+      "name": "TIGER 조선TOP10"
+    },
+    {
+      "ticker": "150460",
+      "name": "TIGER 중국소비테마"
+    },
+    {
+      "ticker": "0192Z0",
+      "name": "TIGER 중기종합채권(A-이상)액티브"
+    },
+    {
+      "ticker": "302190",
+      "name": "TIGER 중장기국채"
+    },
+    {
+      "ticker": "157500",
+      "name": "TIGER 증권"
+    },
+    {
+      "ticker": "307520",
+      "name": "TIGER 지주회사"
+    },
+    {
+      "ticker": "117690",
+      "name": "TIGER 차이나항셍30"
+    },
+    {
+      "ticker": "0067Y0",
+      "name": "TIGER 차이나AI소프트웨어"
+    },
+    {
+      "ticker": "245360",
+      "name": "TIGER 차이나HSCEI"
+    },
+    {
+      "ticker": "414780",
+      "name": "TIGER 차이나과창판STAR50(합성)"
+    },
+    {
+      "ticker": "0067V0",
+      "name": "TIGER 차이나글로벌리더스TOP3+"
+    },
+    {
+      "ticker": "371470",
+      "name": "TIGER 차이나바이오테크SOLACTIVE"
+    },
+    {
+      "ticker": "396520",
+      "name": "TIGER 차이나반도체FACTSET"
+    },
+    {
+      "ticker": "371460",
+      "name": "TIGER 차이나전기차SOLACTIVE"
+    },
+    {
+      "ticker": "456680",
+      "name": "TIGER 차이나전기차레버리지(합성)"
+    },
+    {
+      "ticker": "0133E0",
+      "name": "TIGER 차이나증권"
+    },
+    {
+      "ticker": "396510",
+      "name": "TIGER 차이나클린에너지SOLACTIVE"
+    },
+    {
+      "ticker": "0047A0",
+      "name": "TIGER 차이나테크TOP10"
+    },
+    {
+      "ticker": "438320",
+      "name": "TIGER 차이나항셍테크레버리지(합성 H)"
+    },
+    {
+      "ticker": "371160",
+      "name": "TIGER 차이나항셍테크"
+    },
+    {
+      "ticker": "0053L0",
+      "name": "TIGER 차이나휴머노이드로봇"
+    },
+    {
+      "ticker": "0117V0",
+      "name": "TIGER 코리아AI전력기기TOP3플러스"
+    },
+    {
+      "ticker": "292150",
+      "name": "TIGER 코리아TOP10"
+    },
+    {
+      "ticker": "0104P0",
+      "name": "TIGER 코리아배당다우존스위클리커버드콜"
+    },
+    {
+      "ticker": "0052D0",
+      "name": "TIGER 코리아배당다우존스"
+    },
+    {
+      "ticker": "496080",
+      "name": "TIGER 코리아밸류업"
+    },
+    {
+      "ticker": "0091P0",
+      "name": "TIGER 코리아원자력"
+    },
+    {
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업"
+    },
+    {
+      "ticker": "233160",
+      "name": "TIGER 코스닥150 레버리지"
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150"
+    },
+    {
+      "ticker": "261060",
+      "name": "TIGER 코스닥150IT"
+    },
+    {
+      "ticker": "261070",
+      "name": "TIGER 코스닥150바이오테크"
+    },
+    {
+      "ticker": "250780",
+      "name": "TIGER 코스닥150선물인버스"
+    },
+    {
+      "ticker": "461580",
+      "name": "TIGER 코스닥글로벌"
+    },
+    {
+      "ticker": "0204S0",
+      "name": "TIGER 코스닥액티브"
+    },
+    {
+      "ticker": "277640",
+      "name": "TIGER 코스피대형주"
+    },
+    {
+      "ticker": "277650",
+      "name": "TIGER 코스피중형주"
+    },
+    {
+      "ticker": "277630",
+      "name": "TIGER 코스피"
+    },
+    {
+      "ticker": "376410",
+      "name": "TIGER 탄소효율그린뉴딜"
+    },
+    {
+      "ticker": "447770",
+      "name": "TIGER 테슬라채권혼합Fn"
+    },
+    {
+      "ticker": "0060H0",
+      "name": "TIGER 토탈월드스탁액티브"
+    },
+    {
+      "ticker": "387280",
+      "name": "TIGER 퓨처모빌리티액티브"
+    },
+    {
+      "ticker": "449690",
+      "name": "TIGER 한중반도체(합성)"
+    },
+    {
+      "ticker": "449680",
+      "name": "TIGER 한중전기차(합성)"
+    },
+    {
+      "ticker": "143860",
+      "name": "TIGER 헬스케어"
+    },
+    {
+      "ticker": "138540",
+      "name": "TIGER 현대차그룹플러스"
+    },
+    {
+      "ticker": "228790",
+      "name": "TIGER 화장품"
+    },
+    {
+      "ticker": "394670",
+      "name": "TIGER 글로벌리튬&2차전지SOLACTIVE(합성)"
+    },
+    {
+      "ticker": "394660",
+      "name": "TIGER 글로벌자율주행&전기차SOLACTIVE"
+    },
+    {
+      "ticker": "276000",
+      "name": "TIGER 글로벌자원생산기업(합성 H)"
+    },
+    {
+      "ticker": "449170",
+      "name": "TIGER KOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "458750",
+      "name": "TIGER 미국배당다우존스타겟커버드콜1호"
+    },
+    {
+      "ticker": "471780",
+      "name": "TIGER 코리아테크액티브"
+    },
+    {
+      "ticker": "139260",
+      "name": "TIGER 200 IT"
+    },
+    {
+      "ticker": "139220",
+      "name": "TIGER 200 건설"
+    },
+    {
+      "ticker": "139290",
+      "name": "TIGER 200 경기소비재"
+    },
+    {
+      "ticker": "139270",
+      "name": "TIGER 200 금융"
+    },
+    {
+      "ticker": "139250",
+      "name": "TIGER 200 에너지화학"
+    },
+    {
+      "ticker": "139230",
+      "name": "TIGER 200 중공업"
+    },
+    {
+      "ticker": "139240",
+      "name": "TIGER 200 철강소재"
+    },
+    {
+      "ticker": "289480",
+      "name": "TIGER 200커버드콜"
+    },
+    {
+      "ticker": "228820",
+      "name": "TIGER KTOP30"
+    },
+    {
+      "ticker": "463250",
+      "name": "TIGER K방산&우주"
+    },
+    {
+      "ticker": "225060",
+      "name": "TIGER 이머징마켓MSCI레버리지(합성 H)"
+    },
+    {
+      "ticker": "182480",
+      "name": "TIGER 미국MSCI리츠(합성 H)"
+    },
+    {
+      "ticker": "225040",
+      "name": "TIGER 미국S&P500레버리지(합성 H)"
+    },
+    {
+      "ticker": "225030",
+      "name": "TIGER 미국S&P500선물인버스(H)"
+    },
+    {
+      "ticker": "451530",
+      "name": "TIGER 국고채30년스트립액티브"
+    },
+    {
+      "ticker": "491010",
+      "name": "TIGER 글로벌AI전력인프라액티브"
+    },
+    {
+      "ticker": "412770",
+      "name": "TIGER 글로벌AI플랫폼액티브"
+    },
+    {
+      "ticker": "203780",
+      "name": "TIGER 미국나스닥바이오"
+    },
+    {
+      "ticker": "182490",
+      "name": "TIGER 단기선진하이일드(합성 H)"
+    },
+    {
+      "ticker": "174350",
+      "name": "TIGER 로우볼"
+    },
+    {
+      "ticker": "275980",
+      "name": "TIGER 글로벌4차산업혁신기술(합성 H)"
+    },
+    {
+      "ticker": "476550",
+      "name": "TIGER 미국30년국채커버드콜액티브(H)"
+    },
+    {
+      "ticker": "482730",
+      "name": "TIGER 미국S&P500타겟데일리커버드콜"
+    },
+    {
+      "ticker": "486290",
+      "name": "TIGER 미국나스닥100타겟데일리커버드콜"
+    },
+    {
+      "ticker": "458760",
+      "name": "TIGER 미국배당다우존스타겟커버드콜2호"
+    },
+    {
+      "ticker": "474220",
+      "name": "TIGER 미국테크TOP10타겟커버드콜"
+    },
+    {
+      "ticker": "211560",
+      "name": "TIGER 배당성장"
+    },
+    {
+      "ticker": "472150",
+      "name": "TIGER 배당커버드콜액티브"
+    },
+    {
+      "ticker": "438330",
+      "name": "TIGER 우량회사채액티브"
+    },
+    {
+      "ticker": "217770",
+      "name": "TIGER 원유선물인버스(H)"
+    },
+    {
+      "ticker": "225050",
+      "name": "TIGER 유로스탁스레버리지(합성 H)"
+    },
+    {
+      "ticker": "195930",
+      "name": "TIGER 유로스탁스50(합성 H)"
+    },
+    {
+      "ticker": "195920",
+      "name": "TIGER 일본TOPIX(합성 H)"
+    },
+    {
+      "ticker": "451540",
+      "name": "TIGER 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "204480",
+      "name": "TIGER 차이나CSI300레버리지(합성)"
+    },
+    {
+      "ticker": "217780",
+      "name": "TIGER 차이나CSI300인버스(합성)"
+    },
+    {
+      "ticker": "192090",
+      "name": "TIGER 차이나CSI300"
+    },
+    {
+      "ticker": "210780",
+      "name": "TIGER 코스피고배당"
+    },
+    {
+      "ticker": "423920",
+      "name": "TIGER 미국필라델피아반도체레버리지(합성)"
+    },
+    {
+      "ticker": "0098Z0",
+      "name": "FOCUS 200"
+    },
+    {
+      "ticker": "0176P0",
+      "name": "FOCUS AI반도체위클리고정커버드콜"
+    },
+    {
+      "ticker": "448570",
+      "name": "FOCUS AI코리아액티브"
+    },
+    {
+      "ticker": "0073X0",
+      "name": "FOCUS 알리바바미국채커버드콜혼합"
+    },
+    {
+      "ticker": "285690",
+      "name": "FOCUS ESG리더스"
+    },
+    {
+      "ticker": "278530",
+      "name": "KODEX 200TR"
+    },
+    {
+      "ticker": "226980",
+      "name": "KODEX 200 중소형"
+    },
+    {
+      "ticker": "337160",
+      "name": "KODEX 200ESG"
+    },
+    {
+      "ticker": "363580",
+      "name": "KODEX 200IT TR"
+    },
+    {
+      "ticker": "337150",
+      "name": "KODEX 200exTOP"
+    },
+    {
+      "ticker": "223190",
+      "name": "KODEX 200가치저변동"
+    },
+    {
+      "ticker": "237350",
+      "name": "KODEX 코스피100"
+    },
+    {
+      "ticker": "252650",
+      "name": "KODEX 200동일가중"
+    },
+    {
+      "ticker": "360140",
+      "name": "KODEX 200롱코스닥150숏선물"
+    },
+    {
+      "ticker": "284430",
+      "name": "KODEX 200미국채혼합50"
+    },
+    {
+      "ticker": "252670",
+      "name": "KODEX 200선물인버스2X"
+    },
+    {
+      "ticker": "494890",
+      "name": "KODEX 200액티브"
+    },
+    {
+      "ticker": "0219E0",
+      "name": "KODEX 200커버드콜액티브"
+    },
+    {
+      "ticker": "498400",
+      "name": "KODEX 200타겟위클리커버드콜"
+    },
+    {
+      "ticker": "0117L0",
+      "name": "KODEX 26-12 금융채(AA-이상)액티브"
+    },
+    {
+      "ticker": "473290",
+      "name": "KODEX 26-12 회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "0007F0",
+      "name": "KODEX 27-12 회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "0119H0",
+      "name": "KODEX 28-12 회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "462330",
+      "name": "KODEX 2차전지산업레버리지"
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업"
+    },
+    {
+      "ticker": "461950",
+      "name": "KODEX 2차전지핵심소재10"
+    },
+    {
+      "ticker": "457690",
+      "name": "KODEX 33-06 국고채액티브"
+    },
+    {
+      "ticker": "271060",
+      "name": "KODEX 3대농산물선물(H)"
+    },
+    {
+      "ticker": "457700",
+      "name": "KODEX 53-09 국고채액티브"
+    },
+    {
+      "ticker": "395160",
+      "name": "KODEX AI반도체TOP2플러스"
+    },
+    {
+      "ticker": "471990",
+      "name": "KODEX AI반도체핵심장비"
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비"
+    },
+    {
+      "ticker": "481050",
+      "name": "KODEX CD1년금리플러스액티브(합성)"
+    },
+    {
+      "ticker": "459580",
+      "name": "KODEX CD금리액티브(합성)"
+    },
+    {
+      "ticker": "439860",
+      "name": "KODEX ESG종합채권(A-이상)액티브"
+    },
+    {
+      "ticker": "266370",
+      "name": "KODEX IT"
+    },
+    {
+      "ticker": "101280",
+      "name": "KODEX 일본TOPIX100"
+    },
+    {
+      "ticker": "368680",
+      "name": "KODEX K-뉴딜디지털플러스"
+    },
+    {
+      "ticker": "423160",
+      "name": "KODEX KOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "306950",
+      "name": "KODEX KRX300레버리지"
+    },
+    {
+      "ticker": "292190",
+      "name": "KODEX KRX300"
+    },
+    {
+      "ticker": "229720",
+      "name": "KODEX KTOP30"
+    },
+    {
+      "ticker": "266360",
+      "name": "KODEX K콘텐츠"
+    },
+    {
+      "ticker": "289040",
+      "name": "KODEX MSCI KOREA ESG유니버설"
+    },
+    {
+      "ticker": "156080",
+      "name": "KODEX MSCI Korea"
+    },
+    {
+      "ticker": "278540",
+      "name": "KODEX MSCI Korea TR"
+    },
+    {
+      "ticker": "251350",
+      "name": "KODEX MSCI선진국"
+    },
+    {
+      "ticker": "269420",
+      "name": "KODEX S&P글로벌인프라(합성)"
+    },
+    {
+      "ticker": "291890",
+      "name": "KODEX MSCI EM선물(H)"
+    },
+    {
+      "ticker": "0193T0",
+      "name": "KODEX SK하이닉스단일종목레버리지"
+    },
+    {
+      "ticker": "329650",
+      "name": "KODEX TRF3070"
+    },
+    {
+      "ticker": "329660",
+      "name": "KODEX TRF5050"
+    },
+    {
+      "ticker": "329670",
+      "name": "KODEX TRF7030"
+    },
+    {
+      "ticker": "395170",
+      "name": "KODEX Top10동일가중"
+    },
+    {
+      "ticker": "315930",
+      "name": "KODEX Top5PlusTR"
+    },
+    {
+      "ticker": "271050",
+      "name": "KODEX WTI원유선물인버스(H)"
+    },
+    {
+      "ticker": "261220",
+      "name": "KODEX WTI원유선물(H)"
+    },
+    {
+      "ticker": "468380",
+      "name": "KODEX iShares미국하이일드액티브"
+    },
+    {
+      "ticker": "275290",
+      "name": "KODEX 가치주"
+    },
+    {
+      "ticker": "300950",
+      "name": "KODEX 게임산업"
+    },
+    {
+      "ticker": "266390",
+      "name": "KODEX 경기소비재"
+    },
+    {
+      "ticker": "279530",
+      "name": "KODEX 고배당주"
+    },
+    {
+      "ticker": "280940",
+      "name": "KODEX 골드선물인버스(H)"
+    },
+    {
+      "ticker": "132030",
+      "name": "KODEX 골드선물(H)"
+    },
+    {
+      "ticker": "138910",
+      "name": "KODEX 구리선물(H)"
+    },
+    {
+      "ticker": "471230",
+      "name": "KODEX 국고채10년액티브"
+    },
+    {
+      "ticker": "439870",
+      "name": "KODEX 국고채30년액티브"
+    },
+    {
+      "ticker": "114260",
+      "name": "KODEX 국고채3년"
+    },
+    {
+      "ticker": "292770",
+      "name": "KODEX 국채선물3년인버스"
+    },
+    {
+      "ticker": "276990",
+      "name": "KODEX 글로벌로봇(합성)"
+    },
+    {
+      "ticker": "476070",
+      "name": "KODEX 글로벌비만치료제TOP2 Plus"
+    },
+    {
+      "ticker": "0064K0",
+      "name": "KODEX 금액티브"
+    },
+    {
+      "ticker": "0089D0",
+      "name": "KODEX 금융고배당TOP10"
+    },
+    {
+      "ticker": "498410",
+      "name": "KODEX 금융고배당TOP10타겟위클리커버드콜"
+    },
+    {
+      "ticker": "0162M0",
+      "name": "KODEX 금융채1~2년(AA-이상)PLUS액티브"
+    },
+    {
+      "ticker": "102960",
+      "name": "KODEX 기계장비"
+    },
+    {
+      "ticker": "404260",
+      "name": "KODEX 기후변화솔루션"
+    },
+    {
+      "ticker": "273140",
+      "name": "KODEX 단기변동금리부채권액티브"
+    },
+    {
+      "ticker": "487950",
+      "name": "KODEX 대만테크고배당다우존스"
+    },
+    {
+      "ticker": "445290",
+      "name": "KODEX 로봇액티브"
+    },
+    {
+      "ticker": "488770",
+      "name": "KODEX 머니마켓액티브"
+    },
+    {
+      "ticker": "337120",
+      "name": "KODEX 멀티팩터"
+    },
+    {
+      "ticker": "401470",
+      "name": "KODEX 메타버스액티브"
+    },
+    {
+      "ticker": "244620",
+      "name": "KODEX 모멘텀Plus"
+    },
+    {
+      "ticker": "275280",
+      "name": "KODEX 모멘텀주"
+    },
+    {
+      "ticker": "308620",
+      "name": "KODEX 미국10년국채선물"
+    },
+    {
+      "ticker": "0091C0",
+      "name": "KODEX 미국10년국채액티브(H)"
+    },
+    {
+      "ticker": "484790",
+      "name": "KODEX 미국30년국채액티브(H)"
+    },
+    {
+      "ticker": "304670",
+      "name": "KODEX 미국30년국채울트라선물인버스(H)"
+    },
+    {
+      "ticker": "304660",
+      "name": "KODEX 미국30년국채울트라선물(H)"
+    },
+    {
+      "ticker": "481060",
+      "name": "KODEX 미국30년국채타겟커버드콜(합성 H)"
+    },
+    {
+      "ticker": "0173Y0",
+      "name": "KODEX 미국AI광통신네트워크"
+    },
+    {
+      "ticker": "0151S0",
+      "name": "KODEX 미국AI반도체TOP3플러스"
+    },
+    {
+      "ticker": "0041D0",
+      "name": "KODEX 미국AI소프트웨어TOP10"
+    },
+    {
+      "ticker": "487230",
+      "name": "KODEX 미국AI전력핵심인프라"
+    },
+    {
+      "ticker": "485540",
+      "name": "KODEX 미국AI테크TOP10"
+    },
+    {
+      "ticker": "483280",
+      "name": "KODEX 미국AI테크TOP10타겟커버드콜"
+    },
+    {
+      "ticker": "0225V0",
+      "name": "KODEX 미국CPU반도체TOP10"
+    },
+    {
+      "ticker": "428560",
+      "name": "KODEX 미국ETF산업Top10 Indxx"
+    },
+    {
+      "ticker": "379800",
+      "name": "KODEX 미국S&P500"
+    },
+    {
+      "ticker": "453660",
+      "name": "KODEX 미국S&P500경기소비재"
+    },
+    {
+      "ticker": "453650",
+      "name": "KODEX 미국S&P500금융"
+    },
+    {
+      "ticker": "0005A0",
+      "name": "KODEX 미국S&P500데일리커버드콜OTM"
+    },
+    {
+      "ticker": "276970",
+      "name": "KODEX 미국S&P500배당귀족커버드콜(합성 H)"
+    },
+    {
+      "ticker": "0026E0",
+      "name": "KODEX 미국S&P500버퍼3월액티브"
+    },
+    {
+      "ticker": "0068M0",
+      "name": "KODEX 미국S&P500버퍼6월액티브"
+    },
+    {
+      "ticker": "0089C0",
+      "name": "KODEX 미국S&P500변동성확대시커버드콜"
+    },
+    {
+      "ticker": "200030",
+      "name": "KODEX 미국S&P500산업재(합성)"
+    },
+    {
+      "ticker": "0041E0",
+      "name": "KODEX 미국S&P500액티브"
+    },
+    {
+      "ticker": "218420",
+      "name": "KODEX 미국S&P500에너지(합성)"
+    },
+    {
+      "ticker": "463640",
+      "name": "KODEX 미국S&P500유틸리티"
+    },
+    {
+      "ticker": "449180",
+      "name": "KODEX 미국S&P500(H)"
+    },
+    {
+      "ticker": "463690",
+      "name": "KODEX 미국S&P500커뮤니케이션"
+    },
+    {
+      "ticker": "463680",
+      "name": "KODEX 미국S&P500테크놀로지"
+    },
+    {
+      "ticker": "453630",
+      "name": "KODEX 미국S&P500필수소비재"
+    },
+    {
+      "ticker": "453640",
+      "name": "KODEX 미국S&P500헬스케어"
+    },
+    {
+      "ticker": "0028X0",
+      "name": "KODEX 미국금융테크액티브"
+    },
+    {
+      "ticker": "379810",
+      "name": "KODEX 미국나스닥100"
+    },
+    {
+      "ticker": "494300",
+      "name": "KODEX 미국나스닥100데일리커버드콜OTM"
+    },
+    {
+      "ticker": "409820",
+      "name": "KODEX 미국나스닥100레버리지(합성 H)"
+    },
+    {
+      "ticker": "409810",
+      "name": "KODEX 미국나스닥100선물인버스(H)"
+    },
+    {
+      "ticker": "304940",
+      "name": "KODEX 미국나스닥100선물(H)"
+    },
+    {
+      "ticker": "449190",
+      "name": "KODEX 미국나스닥100(H)"
+    },
+    {
+      "ticker": "411420",
+      "name": "KODEX 미국나스닥AI테크액티브"
+    },
+    {
+      "ticker": "455030",
+      "name": "KODEX 미국달러SOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "261250",
+      "name": "KODEX 미국달러선물레버리지"
+    },
+    {
+      "ticker": "261260",
+      "name": "KODEX 미국달러선물인버스2X"
+    },
+    {
+      "ticker": "261270",
+      "name": "KODEX 미국달러선물인버스"
+    },
+    {
+      "ticker": "261240",
+      "name": "KODEX 미국달러선물"
+    },
+    {
+      "ticker": "0144M0",
+      "name": "KODEX 미국드론UAM TOP10"
+    },
+    {
+      "ticker": "280930",
+      "name": "KODEX 미국러셀2000(H)"
+    },
+    {
+      "ticker": "0048J0",
+      "name": "KODEX 미국머니마켓액티브"
+    },
+    {
+      "ticker": "390390",
+      "name": "KODEX 미국반도체"
+    },
+    {
+      "ticker": "489250",
+      "name": "KODEX 미국배당다우존스"
+    },
+    {
+      "ticker": "483290",
+      "name": "KODEX 미국배당다우존스타겟커버드콜"
+    },
+    {
+      "ticker": "441640",
+      "name": "KODEX 미국배당커버드콜액티브"
+    },
+    {
+      "ticker": "352560",
+      "name": "KODEX 미국부동산리츠(H)"
+    },
+    {
+      "ticker": "314250",
+      "name": "KODEX 미국빅테크10(H)"
+    },
+    {
+      "ticker": "473460",
+      "name": "KODEX 미국서학개미"
+    },
+    {
+      "ticker": "0144L0",
+      "name": "KODEX 미국성장커버드콜액티브"
+    },
+    {
+      "ticker": "390400",
+      "name": "KODEX 미국스마트모빌리티S&P"
+    },
+    {
+      "ticker": "0167Z0",
+      "name": "KODEX 미국우주항공"
+    },
+    {
+      "ticker": "0132H0",
+      "name": "KODEX 미국원자력SMR"
+    },
+    {
+      "ticker": "437080",
+      "name": "KODEX 미국종합채권ESG액티브(H)"
+    },
+    {
+      "ticker": "419420",
+      "name": "KODEX 미국클린에너지나스닥"
+    },
+    {
+      "ticker": "491090",
+      "name": "KODEX 미국테크TOP3플러스"
+    },
+    {
+      "ticker": "0038A0",
+      "name": "KODEX 미국휴머노이드로봇"
+    },
+    {
+      "ticker": "244580",
+      "name": "KODEX 바이오"
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체"
+    },
+    {
+      "ticker": "494310",
+      "name": "KODEX 반도체레버리지"
+    },
+    {
+      "ticker": "0190G0",
+      "name": "KODEX 반도체타겟위클리커버드콜"
+    },
+    {
+      "ticker": "0100K0",
+      "name": "KODEX 방산TOP10레버리지"
+    },
+    {
+      "ticker": "0080G0",
+      "name": "KODEX 방산TOP10"
+    },
+    {
+      "ticker": "325020",
+      "name": "KODEX 배당가치"
+    },
+    {
+      "ticker": "244670",
+      "name": "KODEX 밸류Plus"
+    },
+    {
+      "ticker": "102780",
+      "name": "KODEX 삼성그룹"
+    },
+    {
+      "ticker": "0177N0",
+      "name": "KODEX 삼성전자SK하이닉스채권혼합50"
+    },
+    {
+      "ticker": "0193W0",
+      "name": "KODEX 삼성전자단일종목레버리지"
+    },
+    {
+      "ticker": "448330",
+      "name": "KODEX 삼성전자채권혼합"
+    },
+    {
+      "ticker": "325010",
+      "name": "KODEX 성장주"
+    },
+    {
+      "ticker": "385510",
+      "name": "KODEX 신재생에너지액티브"
+    },
+    {
+      "ticker": "446690",
+      "name": "KODEX 아시아AI반도체exChina액티브"
+    },
+    {
+      "ticker": "437070",
+      "name": "KODEX 아시아달러채권ESG플러스액티브"
+    },
+    {
+      "ticker": "275300",
+      "name": "KODEX 우량주"
+    },
+    {
+      "ticker": "0098F0",
+      "name": "KODEX 원자력SMR"
+    },
+    {
+      "ticker": "395150",
+      "name": "KODEX 웹툰&드라마"
+    },
+    {
+      "ticker": "456250",
+      "name": "KODEX 유럽명품TOP10 STOXX"
+    },
+    {
+      "ticker": "400570",
+      "name": "KODEX 유럽탄소배출권선물ICE(H)"
+    },
+    {
+      "ticker": "144600",
+      "name": "KODEX 은선물(H)"
+    },
+    {
+      "ticker": "091170",
+      "name": "KODEX 은행"
+    },
+    {
+      "ticker": "453820",
+      "name": "KODEX 인도Nifty50레버리지(합성)"
+    },
+    {
+      "ticker": "453810",
+      "name": "KODEX 인도Nifty50"
+    },
+    {
+      "ticker": "0000H0",
+      "name": "KODEX 인도Nifty미드캡100"
+    },
+    {
+      "ticker": "477730",
+      "name": "KODEX 인도타타그룹"
+    },
+    {
+      "ticker": "352540",
+      "name": "KODEX 일본부동산리츠(H)"
+    },
+    {
+      "ticker": "091180",
+      "name": "KODEX 자동차"
+    },
+    {
+      "ticker": "385520",
+      "name": "KODEX 자율주행액티브"
+    },
+    {
+      "ticker": "363570",
+      "name": "KODEX 장기종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "433970",
+      "name": "KODEX TDF2030액티브 적격"
+    },
+    {
+      "ticker": "433980",
+      "name": "KODEX TDF2040액티브 적격"
+    },
+    {
+      "ticker": "434060",
+      "name": "KODEX TDF2050액티브 적격"
+    },
+    {
+      "ticker": "0082V0",
+      "name": "KODEX TDF2060액티브 적격"
+    },
+    {
+      "ticker": "0209D0",
+      "name": "KODEX 전고체배터리ESS TOP2플러스"
+    },
+    {
+      "ticker": "0115D0",
+      "name": "KODEX 조선TOP10"
+    },
+    {
+      "ticker": "273130",
+      "name": "KODEX 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "0153K0",
+      "name": "KODEX 주주환원고배당주"
+    },
+    {
+      "ticker": "102970",
+      "name": "KODEX 증권"
+    },
+    {
+      "ticker": "419430",
+      "name": "KODEX 차이나2차전지MSCI(합성)"
+    },
+    {
+      "ticker": "0162L0",
+      "name": "KODEX 차이나AI반도체TOP10"
+    },
+    {
+      "ticker": "428510",
+      "name": "KODEX 차이나AI테크액티브"
+    },
+    {
+      "ticker": "283580",
+      "name": "KODEX 차이나CSI300"
+    },
+    {
+      "ticker": "169950",
+      "name": "KODEX 차이나A50"
+    },
+    {
+      "ticker": "204450",
+      "name": "KODEX 차이나H레버리지(H)"
+    },
+    {
+      "ticker": "099140",
+      "name": "KODEX 차이나H"
+    },
+    {
+      "ticker": "415340",
+      "name": "KODEX 차이나과창판STAR50(합성)"
+    },
+    {
+      "ticker": "256750",
+      "name": "KODEX 차이나심천ChiNext(합성)"
+    },
+    {
+      "ticker": "0065G0",
+      "name": "KODEX 차이나테크TOP10"
+    },
+    {
+      "ticker": "372330",
+      "name": "KODEX 차이나항셍테크"
+    },
+    {
+      "ticker": "0048K0",
+      "name": "KODEX 차이나휴머노이드로봇"
+    },
+    {
+      "ticker": "279540",
+      "name": "KODEX 최소변동성"
+    },
+    {
+      "ticker": "445150",
+      "name": "KODEX 친환경조선해운액티브"
+    },
+    {
+      "ticker": "211900",
+      "name": "KODEX 코리아배당성장"
+    },
+    {
+      "ticker": "237370",
+      "name": "KODEX 코리아배당성장채권혼합"
+    },
+    {
+      "ticker": "495850",
+      "name": "KODEX 코리아밸류업"
+    },
+    {
+      "ticker": "0115E0",
+      "name": "KODEX 코리아소버린AI"
+    },
+    {
+      "ticker": "373490",
+      "name": "KODEX 코리아혁신성장액티브"
+    },
+    {
+      "ticker": "229200",
+      "name": "KODEX 코스닥150"
+    },
+    {
+      "ticker": "233740",
+      "name": "KODEX 코스닥150레버리지"
+    },
+    {
+      "ticker": "360150",
+      "name": "KODEX 코스닥150롱코스피200숏선물"
+    },
+    {
+      "ticker": "251340",
+      "name": "KODEX 코스닥150선물인버스"
+    },
+    {
+      "ticker": "461450",
+      "name": "KODEX 코스닥글로벌"
+    },
+    {
+      "ticker": "226490",
+      "name": "KODEX 코스피"
+    },
+    {
+      "ticker": "359210",
+      "name": "KODEX 코스피TR"
+    },
+    {
+      "ticker": "337140",
+      "name": "KODEX 코스피대형주"
+    },
+    {
+      "ticker": "138920",
+      "name": "KODEX 콩선물(H)"
+    },
+    {
+      "ticker": "244660",
+      "name": "KODEX 퀄리티Plus"
+    },
+    {
+      "ticker": "375770",
+      "name": "KODEX 탄소효율그린뉴딜"
+    },
+    {
+      "ticker": "459560",
+      "name": "KODEX 테슬라밸류체인FactSet"
+    },
+    {
+      "ticker": "475080",
+      "name": "KODEX 테슬라커버드콜채권혼합액티브"
+    },
+    {
+      "ticker": "266410",
+      "name": "KODEX 필수소비재"
+    },
+    {
+      "ticker": "298770",
+      "name": "KODEX 한국대만IT프리미어"
+    },
+    {
+      "ticker": "476800",
+      "name": "KODEX 한국부동산리츠인프라"
+    },
+    {
+      "ticker": "450190",
+      "name": "KODEX 한중반도체(합성)"
+    },
+    {
+      "ticker": "450180",
+      "name": "KODEX 한중전기차(합성)"
+    },
+    {
+      "ticker": "266420",
+      "name": "KODEX 헬스케어"
+    },
+    {
+      "ticker": "364690",
+      "name": "KODEX 혁신기술테마액티브"
+    },
+    {
+      "ticker": "0204D0",
+      "name": "KODEX 현대차로보틱스밸류체인TOP3플러스"
+    },
+    {
+      "ticker": "069500",
+      "name": "KODEX 200"
+    },
+    {
+      "ticker": "321410",
+      "name": "KODEX 멀티에셋하이인컴(H)"
+    },
+    {
+      "ticker": "219480",
+      "name": "KODEX 미국S&P500선물(H)"
+    },
+    {
+      "ticker": "468370",
+      "name": "KODEX iShares미국인플레이션국채액티브"
+    },
+    {
+      "ticker": "468630",
+      "name": "KODEX iShares미국투자등급회사채액티브"
+    },
+    {
+      "ticker": "176950",
+      "name": "KODEX 국채선물10년인버스"
+    },
+    {
+      "ticker": "152380",
+      "name": "KODEX 국채선물10년"
+    },
+    {
+      "ticker": "117700",
+      "name": "KODEX 건설"
+    },
+    {
+      "ticker": "214980",
+      "name": "KODEX 단기채권PLUS"
+    },
+    {
+      "ticker": "153130",
+      "name": "KODEX 단기채권"
+    },
+    {
+      "ticker": "122630",
+      "name": "KODEX 레버리지"
+    },
+    {
+      "ticker": "185680",
+      "name": "KODEX 미국S&P바이오(합성)"
+    },
+    {
+      "ticker": "140700",
+      "name": "KODEX 보험"
+    },
+    {
+      "ticker": "213610",
+      "name": "KODEX 삼성그룹밸류"
+    },
+    {
+      "ticker": "117460",
+      "name": "KODEX 에너지화학"
+    },
+    {
+      "ticker": "140710",
+      "name": "KODEX 운송"
+    },
+    {
+      "ticker": "114800",
+      "name": "KODEX 인버스"
+    },
+    {
+      "ticker": "117680",
+      "name": "KODEX 철강"
+    },
+    {
+      "ticker": "487130",
+      "name": "KoAct AI인프라액티브"
+    },
+    {
+      "ticker": "0074K0",
+      "name": "KoAct K수출핵심기업TOP30액티브"
+    },
+    {
+      "ticker": "0222D0",
+      "name": "KoAct 고배당액티브"
+    },
+    {
+      "ticker": "0219B0",
+      "name": "KoAct 광통신&위성네트워크액티브"
+    },
+    {
+      "ticker": "471040",
+      "name": "KoAct 글로벌AI&로봇액티브"
+    },
+    {
+      "ticker": "0174B0",
+      "name": "KoAct 글로벌AI메모리반도체액티브"
+    },
+    {
+      "ticker": "0132D0",
+      "name": "KoAct 글로벌K컬처밸류체인액티브"
+    },
+    {
+      "ticker": "0020H0",
+      "name": "KoAct 글로벌양자컴퓨팅액티브"
+    },
+    {
+      "ticker": "475070",
+      "name": "KoAct 글로벌친환경전력인프라액티브"
+    },
+    {
+      "ticker": "0015B0",
+      "name": "KoAct 미국나스닥성장기업액티브"
+    },
+    {
+      "ticker": "0104H0",
+      "name": "KoAct 미국나스닥채권혼합50액티브"
+    },
+    {
+      "ticker": "0186L0",
+      "name": "KoAct 미국로봇피지컬AI액티브"
+    },
+    {
+      "ticker": "0113G0",
+      "name": "KoAct 미국바이오헬스케어액티브"
+    },
+    {
+      "ticker": "497780",
+      "name": "KoAct 미국천연가스인프라액티브"
+    },
+    {
+      "ticker": "490330",
+      "name": "KoAct 미국치매&뇌질환치료제액티브"
+    },
+    {
+      "ticker": "462900",
+      "name": "KoAct 바이오헬스케어액티브"
+    },
+    {
+      "ticker": "482030",
+      "name": "KoAct 반도체&2차전지핵심소재액티브"
+    },
+    {
+      "ticker": "476850",
+      "name": "KoAct 배당성장액티브"
+    },
+    {
+      "ticker": "0051A0",
+      "name": "KoAct 브로드컴밸류체인액티브"
+    },
+    {
+      "ticker": "0150K0",
+      "name": "KoAct 수소전력ESS인프라액티브"
+    },
+    {
+      "ticker": "0154H0",
+      "name": "KoAct 차이나바이오헬스케어액티브"
+    },
+    {
+      "ticker": "495230",
+      "name": "KoAct 코리아밸류업액티브"
+    },
+    {
+      "ticker": "0163Y0",
+      "name": "KoAct 코스닥액티브"
+    },
+    {
+      "ticker": "0193G0",
+      "name": "KoAct 코스피액티브"
+    },
+    {
+      "ticker": "0093D0",
+      "name": "KoAct 팔란티어밸류체인액티브"
+    },
+    {
+      "ticker": "411540",
+      "name": "SOL 200 Top10"
+    },
+    {
+      "ticker": "295040",
+      "name": "SOL 200TR"
+    },
+    {
+      "ticker": "0167B0",
+      "name": "SOL 200타겟위클리커버드콜"
+    },
+    {
+      "ticker": "488980",
+      "name": "SOL 26-12 회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "0092C0",
+      "name": "SOL 27-12 회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "455860",
+      "name": "SOL 2차전지소부장Fn"
+    },
+    {
+      "ticker": "0167A0",
+      "name": "SOL AI반도체TOP2플러스"
+    },
+    {
+      "ticker": "455850",
+      "name": "SOL AI반도체소부장"
+    },
+    {
+      "ticker": "497880",
+      "name": "SOL CD금리&머니마켓액티브"
+    },
+    {
+      "ticker": "363510",
+      "name": "SOL KIS단기통안채"
+    },
+    {
+      "ticker": "292500",
+      "name": "SOL KRX300"
+    },
+    {
+      "ticker": "404650",
+      "name": "SOL KRX기후변화솔루션"
+    },
+    {
+      "ticker": "490480",
+      "name": "SOL K방산"
+    },
+    {
+      "ticker": "0197W0",
+      "name": "SOL SK하이닉스단일종목레버리지"
+    },
+    {
+      "ticker": "0197X0",
+      "name": "SOL SK하이닉스선물단일종목인버스2X"
+    },
+    {
+      "ticker": "438570",
+      "name": "SOL 국고채10년"
+    },
+    {
+      "ticker": "474390",
+      "name": "SOL 국고채30년액티브"
+    },
+    {
+      "ticker": "438560",
+      "name": "SOL 국고채3년"
+    },
+    {
+      "ticker": "0022T0",
+      "name": "SOL 국제금커버드콜액티브"
+    },
+    {
+      "ticker": "0066W0",
+      "name": "SOL 국제금"
+    },
+    {
+      "ticker": "423170",
+      "name": "SOL 글로벌AI반도체탑픽액티브"
+    },
+    {
+      "ticker": "400590",
+      "name": "SOL 글로벌탄소배출권선물ICE(합성)"
+    },
+    {
+      "ticker": "484880",
+      "name": "SOL 금융지주플러스고배당"
+    },
+    {
+      "ticker": "484890",
+      "name": "SOL 머니마켓액티브"
+    },
+    {
+      "ticker": "461600",
+      "name": "SOL 미국30년국채액티브(H)"
+    },
+    {
+      "ticker": "473330",
+      "name": "SOL 미국30년국채커버드콜(합성)"
+    },
+    {
+      "ticker": "494210",
+      "name": "SOL 미국500타겟데일리커버드콜액티브"
+    },
+    {
+      "ticker": "479620",
+      "name": "SOL 미국AI반도체칩메이커"
+    },
+    {
+      "ticker": "481180",
+      "name": "SOL 미국AI소프트웨어"
+    },
+    {
+      "ticker": "486450",
+      "name": "SOL 미국AI전력인프라"
+    },
+    {
+      "ticker": "433330",
+      "name": "SOL 미국S&P500"
+    },
+    {
+      "ticker": "399110",
+      "name": "SOL 미국S&P500ESG"
+    },
+    {
+      "ticker": "0080X0",
+      "name": "SOL 미국S&P500미국채혼합50"
+    },
+    {
+      "ticker": "499150",
+      "name": "SOL 미국S&P500엔화노출(H)"
+    },
+    {
+      "ticker": "447620",
+      "name": "SOL 미국TOP5채권혼합50"
+    },
+    {
+      "ticker": "476030",
+      "name": "SOL 미국나스닥100"
+    },
+    {
+      "ticker": "0118S0",
+      "name": "SOL 미국넥스트테크TOP10액티브"
+    },
+    {
+      "ticker": "493420",
+      "name": "SOL 미국배당다우존스2호"
+    },
+    {
+      "ticker": "446720",
+      "name": "SOL 미국배당다우존스"
+    },
+    {
+      "ticker": "490490",
+      "name": "SOL 미국배당미국채혼합50"
+    },
+    {
+      "ticker": "0023A0",
+      "name": "SOL 미국양자컴퓨팅TOP10"
+    },
+    {
+      "ticker": "0181L0",
+      "name": "SOL 미국우주항공TOP10"
+    },
+    {
+      "ticker": "0051G0",
+      "name": "SOL 미국원자력SMR"
+    },
+    {
+      "ticker": "481190",
+      "name": "SOL 미국테크TOP10"
+    },
+    {
+      "ticker": "475300",
+      "name": "SOL 반도체전공정"
+    },
+    {
+      "ticker": "475310",
+      "name": "SOL 반도체후공정"
+    },
+    {
+      "ticker": "0152E0",
+      "name": "SOL 배당성향탑픽액티브"
+    },
+    {
+      "ticker": "0207G0",
+      "name": "SOL 우주항공밸류체인"
+    },
+    {
+      "ticker": "400580",
+      "name": "SOL 유럽탄소배출권선물S&P(H)"
+    },
+    {
+      "ticker": "464610",
+      "name": "SOL 의료기기소부장Fn"
+    },
+    {
+      "ticker": "466930",
+      "name": "SOL 자동차TOP3플러스"
+    },
+    {
+      "ticker": "464600",
+      "name": "SOL 자동차소부장Fn"
+    },
+    {
+      "ticker": "0005D0",
+      "name": "SOL 전고체배터리&실리콘음극재"
+    },
+    {
+      "ticker": "0080Y0",
+      "name": "SOL 조선TOP3플러스레버리지"
+    },
+    {
+      "ticker": "466920",
+      "name": "SOL 조선TOP3플러스"
+    },
+    {
+      "ticker": "0141S0",
+      "name": "SOL 조선기자재"
+    },
+    {
+      "ticker": "0141T0",
+      "name": "SOL 중기종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "0016X0",
+      "name": "SOL 중단기회사채(A-이상)액티브"
+    },
+    {
+      "ticker": "220130",
+      "name": "SOL 차이나강소기업CSI500(합성 H)"
+    },
+    {
+      "ticker": "0131A0",
+      "name": "SOL 차이나소비트렌드"
+    },
+    {
+      "ticker": "415760",
+      "name": "SOL 차이나육성산업액티브(합성)"
+    },
+    {
+      "ticker": "413220",
+      "name": "SOL 차이나태양광CSI(합성)"
+    },
+    {
+      "ticker": "469830",
+      "name": "SOL 초단기채권액티브"
+    },
+    {
+      "ticker": "0105E0",
+      "name": "SOL 코리아고배당"
+    },
+    {
+      "ticker": "444200",
+      "name": "SOL 코리아메가테크액티브"
+    },
+    {
+      "ticker": "495550",
+      "name": "SOL 코리아밸류업TR"
+    },
+    {
+      "ticker": "450910",
+      "name": "SOL 코스닥150"
+    },
+    {
+      "ticker": "0192T0",
+      "name": "SOL 코스닥TOP10"
+    },
+    {
+      "ticker": "0192S0",
+      "name": "SOL 코스피200채권혼합50"
+    },
+    {
+      "ticker": "0040X0",
+      "name": "SOL 팔란티어미국채커버드콜혼합"
+    },
+    {
+      "ticker": "0040Y0",
+      "name": "SOL 팔란티어커버드콜OTM채권혼합"
+    },
+    {
+      "ticker": "0105D0",
+      "name": "SOL 한국AI소프트웨어"
+    },
+    {
+      "ticker": "0092B0",
+      "name": "SOL 한국원자력SMR"
+    },
+    {
+      "ticker": "429980",
+      "name": "SOL 한국형글로벌전기차&2차전지액티브"
+    },
+    {
+      "ticker": "0008T0",
+      "name": "SOL 화장품TOP3플러스"
+    },
+    {
+      "ticker": "452360",
+      "name": "SOL 미국배당다우존스(H)"
+    },
+    {
+      "ticker": "436140",
+      "name": "SOL 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "462340",
+      "name": "에셋플러스 글로벌다이나믹시니어액티브"
+    },
+    {
+      "ticker": "433220",
+      "name": "에셋플러스 글로벌대장장이액티브"
+    },
+    {
+      "ticker": "451150",
+      "name": "에셋플러스 글로벌영에이지액티브"
+    },
+    {
+      "ticker": "477490",
+      "name": "에셋플러스 글로벌일등기업포커스10액티브"
+    },
+    {
+      "ticker": "407830",
+      "name": "에셋플러스 글로벌플랫폼액티브"
+    },
+    {
+      "ticker": "0002C0",
+      "name": "에셋플러스 인도일등기업포커스20액티브"
+    },
+    {
+      "ticker": "474920",
+      "name": "에셋플러스 차이나일등기업포커스10액티브"
+    },
+    {
+      "ticker": "442090",
+      "name": "에셋플러스 코리아대장장이액티브"
+    },
+    {
+      "ticker": "407820",
+      "name": "에셋플러스 코리아플랫폼액티브"
+    },
+    {
+      "ticker": "448100",
+      "name": "WON 200"
+    },
+    {
+      "ticker": "413930",
+      "name": "WON AI ESG액티브"
+    },
+    {
+      "ticker": "0088N0",
+      "name": "WON K-글로벌수급상위"
+    },
+    {
+      "ticker": "458030",
+      "name": "WON 국공채머니마켓액티브"
+    },
+    {
+      "ticker": "426150",
+      "name": "WON 대한민국국고채액티브"
+    },
+    {
+      "ticker": "0177A0",
+      "name": "WON 두산그룹포커스"
+    },
+    {
+      "ticker": "444490",
+      "name": "WON 미국S&P500"
+    },
+    {
+      "ticker": "489290",
+      "name": "WON 미국빌리어네어"
+    },
+    {
+      "ticker": "440910",
+      "name": "WON 미국우주항공방산"
+    },
+    {
+      "ticker": "474590",
+      "name": "WON 반도체밸류체인액티브"
+    },
+    {
+      "ticker": "0203S0",
+      "name": "WON 삼성전자현대차채권혼합50"
+    },
+    {
+      "ticker": "496020",
+      "name": "WON 전단채플러스액티브"
+    },
+    {
+      "ticker": "488720",
+      "name": "WON 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "0203R0",
+      "name": "WON 중단기종합채권(A-이상)액티브"
+    },
+    {
+      "ticker": "0154F0",
+      "name": "WON 초대형IB&금융지주"
+    },
+    {
+      "ticker": "0226G0",
+      "name": "WON 피지컬AI TOP2플러스액티브"
+    },
+    {
+      "ticker": "480460",
+      "name": "WON 한국부동산TOP3플러스"
+    },
+    {
+      "ticker": "108590",
+      "name": "TREX 200"
+    },
+    {
+      "ticker": "145850",
+      "name": "TREX 펀더멘탈 200"
+    },
+    {
+      "ticker": "483570",
+      "name": "KCGI 미국S&P500 TOP10"
+    },
+    {
+      "ticker": "153270",
+      "name": "KIWOOM 코스피100"
+    },
+    {
+      "ticker": "167860",
+      "name": "KIWOOM 국고채10년레버리지"
+    },
+    {
+      "ticker": "148070",
+      "name": "KIWOOM 국고채10년"
+    },
+    {
+      "ticker": "069660",
+      "name": "KIWOOM 200"
+    },
+    {
+      "ticker": "294400",
+      "name": "KIWOOM 200TR"
+    },
+    {
+      "ticker": "253250",
+      "name": "KIWOOM 200선물레버리지"
+    },
+    {
+      "ticker": "253230",
+      "name": "KIWOOM 200선물인버스2X"
+    },
+    {
+      "ticker": "253240",
+      "name": "KIWOOM 200선물인버스"
+    },
+    {
+      "ticker": "464240",
+      "name": "KIWOOM 26-09회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "458210",
+      "name": "KIWOOM CD금리액티브(합성)"
+    },
+    {
+      "ticker": "488200",
+      "name": "KIWOOM K-2차전지북미공급망"
+    },
+    {
+      "ticker": "488210",
+      "name": "KIWOOM K-반도체북미공급망"
+    },
+    {
+      "ticker": "100910",
+      "name": "KIWOOM KRX100"
+    },
+    {
+      "ticker": "200250",
+      "name": "KIWOOM 인도Nifty50(합성)"
+    },
+    {
+      "ticker": "0194R0",
+      "name": "KIWOOM SK하이닉스선물단일종목레버리지"
+    },
+    {
+      "ticker": "0084E0",
+      "name": "KIWOOM 미국대형주500월간목표헤지액티브"
+    },
+    {
+      "ticker": "0084D0",
+      "name": "KIWOOM 미국테크100월간목표헤지액티브"
+    },
+    {
+      "ticker": "114470",
+      "name": "KIWOOM 국고채3년"
+    },
+    {
+      "ticker": "471460",
+      "name": "KIWOOM 국고채30년액티브"
+    },
+    {
+      "ticker": "473490",
+      "name": "KIWOOM 글로벌AI반도체"
+    },
+    {
+      "ticker": "489860",
+      "name": "KIWOOM 글로벌전력GRID인프라"
+    },
+    {
+      "ticker": "130730",
+      "name": "KIWOOM 단기자금"
+    },
+    {
+      "ticker": "419890",
+      "name": "KIWOOM 단기채권ESG액티브"
+    },
+    {
+      "ticker": "411860",
+      "name": "KIWOOM 독일DAX"
+    },
+    {
+      "ticker": "476450",
+      "name": "KIWOOM 머니마켓액티브"
+    },
+    {
+      "ticker": "430500",
+      "name": "KIWOOM 물가채KIS"
+    },
+    {
+      "ticker": "0190M0",
+      "name": "KIWOOM 미국AI테크하이베타"
+    },
+    {
+      "ticker": "0224D0",
+      "name": "KIWOOM 미국CPU반도체TOP4+"
+    },
+    {
+      "ticker": "0127V0",
+      "name": "KIWOOM 미국S&P500 TOP10&배당다우비중전환"
+    },
+    {
+      "ticker": "0137W0",
+      "name": "KIWOOM 미국S&P500&GOLD"
+    },
+    {
+      "ticker": "0127T0",
+      "name": "KIWOOM 미국S&P500&배당다우존스비중전환"
+    },
+    {
+      "ticker": "0137V0",
+      "name": "KIWOOM 미국S&P500모멘텀"
+    },
+    {
+      "ticker": "449770",
+      "name": "KIWOOM 미국S&P500"
+    },
+    {
+      "ticker": "449780",
+      "name": "KIWOOM 미국S&P500(H)"
+    },
+    {
+      "ticker": "0107F0",
+      "name": "KIWOOM 미국고배당&AI테크"
+    },
+    {
+      "ticker": "453080",
+      "name": "KIWOOM 미국나스닥100(H)"
+    },
+    {
+      "ticker": "460270",
+      "name": "KIWOOM 미국달러SOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "230480",
+      "name": "KIWOOM 미국달러선물인버스2X"
+    },
+    {
+      "ticker": "225800",
+      "name": "KIWOOM 미국달러선물레버리지"
+    },
+    {
+      "ticker": "139660",
+      "name": "KIWOOM 미국달러선물인버스"
+    },
+    {
+      "ticker": "138230",
+      "name": "KIWOOM 미국달러선물"
+    },
+    {
+      "ticker": "373790",
+      "name": "KIWOOM 미국방어배당성장나스닥"
+    },
+    {
+      "ticker": "483030",
+      "name": "KIWOOM 미국블록버스터바이오테크의약품+"
+    },
+    {
+      "ticker": "459790",
+      "name": "KIWOOM 미국성장기업30액티브"
+    },
+    {
+      "ticker": "0174R0",
+      "name": "KIWOOM 미국성장다우존스"
+    },
+    {
+      "ticker": "498270",
+      "name": "KIWOOM 미국양자컴퓨팅"
+    },
+    {
+      "ticker": "0207Z0",
+      "name": "KIWOOM 미국우주데이터센터인프라"
+    },
+    {
+      "ticker": "0216K0",
+      "name": "KIWOOM 미국우주테크TOP2채권혼합50"
+    },
+    {
+      "ticker": "474800",
+      "name": "KIWOOM 미국원유에너지기업"
+    },
+    {
+      "ticker": "104520",
+      "name": "KIWOOM 블루칩"
+    },
+    {
+      "ticker": "0183V0",
+      "name": "KIWOOM 삼성전자&SK하이닉스채권혼합50"
+    },
+    {
+      "ticker": "0194N0",
+      "name": "KIWOOM 삼성전자선물단일종목레버리지"
+    },
+    {
+      "ticker": "0015E0",
+      "name": "KIWOOM 엔비디아미국30년국채혼합액티브(H)"
+    },
+    {
+      "ticker": "483020",
+      "name": "KIWOOM 의료AI"
+    },
+    {
+      "ticker": "435530",
+      "name": "KIWOOM TDF2030액티브 적격"
+    },
+    {
+      "ticker": "435540",
+      "name": "KIWOOM TDF2040액티브 적격"
+    },
+    {
+      "ticker": "435550",
+      "name": "KIWOOM TDF2050액티브 적격"
+    },
+    {
+      "ticker": "454780",
+      "name": "KIWOOM 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "454180",
+      "name": "KIWOOM 차이나내수소비TOP CSI"
+    },
+    {
+      "ticker": "104530",
+      "name": "KIWOOM 코리아고배당"
+    },
+    {
+      "ticker": "496090",
+      "name": "KIWOOM 코리아밸류업"
+    },
+    {
+      "ticker": "469790",
+      "name": "KIWOOM 코리아테크TOP10"
+    },
+    {
+      "ticker": "291630",
+      "name": "KIWOOM 코스닥150선물레버리지"
+    },
+    {
+      "ticker": "291620",
+      "name": "KIWOOM 코스닥150선물인버스"
+    },
+    {
+      "ticker": "316670",
+      "name": "KIWOOM 코스닥150"
+    },
+    {
+      "ticker": "0198A0",
+      "name": "KIWOOM 코스닥150커버드콜액티브"
+    },
+    {
+      "ticker": "122260",
+      "name": "KIWOOM 통안채1년"
+    },
+    {
+      "ticker": "0015F0",
+      "name": "KIWOOM 팔란티어미국30년국채혼합액티브(H)"
+    },
+    {
+      "ticker": "0097L0",
+      "name": "KIWOOM 한국고배당&미국AI테크"
+    },
+    {
+      "ticker": "0220A0",
+      "name": "KIWOOM 현대차그룹TOP3채권혼합50"
+    },
+    {
+      "ticker": "441800",
+      "name": "TIME Korea플러스배당액티브"
+    },
+    {
+      "ticker": "463050",
+      "name": "TIME K바이오액티브"
+    },
+    {
+      "ticker": "404120",
+      "name": "TIME K신재생에너지액티브"
+    },
+    {
+      "ticker": "385710",
+      "name": "TIME K이노베이션액티브"
+    },
+    {
+      "ticker": "410870",
+      "name": "TIME K컬처액티브"
+    },
+    {
+      "ticker": "456600",
+      "name": "TIME 글로벌AI인공지능액티브"
+    },
+    {
+      "ticker": "485810",
+      "name": "TIME 글로벌바이오액티브"
+    },
+    {
+      "ticker": "494180",
+      "name": "TIME 글로벌소비트렌드액티브"
+    },
+    {
+      "ticker": "478150",
+      "name": "TIME 글로벌우주테크&방산액티브"
+    },
+    {
+      "ticker": "0113D0",
+      "name": "TIME 글로벌탑픽액티브"
+    },
+    {
+      "ticker": "0185L0",
+      "name": "TIME 글로벌휴머노이드로봇산업액티브"
+    },
+    {
+      "ticker": "426020",
+      "name": "TIME 미국S&P500액티브"
+    },
+    {
+      "ticker": "426030",
+      "name": "TIME 미국나스닥100액티브"
+    },
+    {
+      "ticker": "0019K0",
+      "name": "TIME 미국나스닥100채권혼합50액티브"
+    },
+    {
+      "ticker": "0036D0",
+      "name": "TIME 미국배당다우존스액티브"
+    },
+    {
+      "ticker": "0043Y0",
+      "name": "TIME 차이나AI테크액티브"
+    },
+    {
+      "ticker": "495060",
+      "name": "TIME 코리아밸류업액티브"
+    },
+    {
+      "ticker": "0162Y0",
+      "name": "TIME 코스닥액티브"
+    },
+    {
+      "ticker": "385720",
+      "name": "TIME 코스피액티브"
+    },
+    {
+      "ticker": "472720",
+      "name": "TRUSTON 주주가치액티브"
+    },
+    {
+      "ticker": "496130",
+      "name": "TRUSTON 코리아밸류업액티브"
+    },
+    {
+      "ticker": "451060",
+      "name": "1Q 200액티브"
+    },
+    {
+      "ticker": "0184E0",
+      "name": "1Q 200채권혼합50액티브"
+    },
+    {
+      "ticker": "491610",
+      "name": "1Q CD금리액티브(합성)"
+    },
+    {
+      "ticker": "0182R0",
+      "name": "1Q K반도체TOP2+"
+    },
+    {
+      "ticker": "0182S0",
+      "name": "1Q K반도체TOP2채권혼합50"
+    },
+    {
+      "ticker": "0103T0",
+      "name": "1Q K소버린AI"
+    },
+    {
+      "ticker": "0198D0",
+      "name": "1Q SK하이닉스선물단일종목레버리지"
+    },
+    {
+      "ticker": "463290",
+      "name": "1Q 단기금융채액티브"
+    },
+    {
+      "ticker": "0131W0",
+      "name": "1Q 단기특수은행채액티브"
+    },
+    {
+      "ticker": "479080",
+      "name": "1Q 머니마켓액티브"
+    },
+    {
+      "ticker": "0052S0",
+      "name": "1Q 미국S&P500미국채혼합50액티브"
+    },
+    {
+      "ticker": "0026S0",
+      "name": "1Q 미국S&P500"
+    },
+    {
+      "ticker": "0111P0",
+      "name": "1Q 미국나스닥100미국채혼합50액티브"
+    },
+    {
+      "ticker": "0069M0",
+      "name": "1Q 미국나스닥100"
+    },
+    {
+      "ticker": "0083S0",
+      "name": "1Q 미국메디컬AI"
+    },
+    {
+      "ticker": "0004G0",
+      "name": "1Q 미국배당TOP30"
+    },
+    {
+      "ticker": "0131V0",
+      "name": "1Q 미국우주항공테크"
+    },
+    {
+      "ticker": "0198B0",
+      "name": "1Q 삼성전자선물단일종목레버리지"
+    },
+    {
+      "ticker": "0094X0",
+      "name": "1Q 샤오미밸류체인액티브"
+    },
+    {
+      "ticker": "0224X0",
+      "name": "1Q 엔비디아알파벳미국채혼합50"
+    },
+    {
+      "ticker": "0172V0",
+      "name": "1Q 은액티브"
+    },
+    {
+      "ticker": "0017Y0",
+      "name": "1Q 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "0052T0",
+      "name": "1Q 중단기회사채(A-이상)액티브"
+    },
+    {
+      "ticker": "495330",
+      "name": "1Q 코리아밸류업"
+    },
+    {
+      "ticker": "0186S0",
+      "name": "1Q 코스닥150채권혼합50액티브"
+    },
+    {
+      "ticker": "492500",
+      "name": "1Q 현대차그룹채권(A+이상)&국고통안"
+    },
+    {
+      "ticker": "0206G0",
+      "name": "1Q 현대차기아채권혼합50"
+    },
+    {
+      "ticker": "473440",
+      "name": "ACE 11월만기자동연장회사채AA-이상액티브"
+    },
+    {
+      "ticker": "332500",
+      "name": "ACE 200TR"
+    },
+    {
+      "ticker": "105190",
+      "name": "ACE 200"
+    },
+    {
+      "ticker": "475260",
+      "name": "ACE 2월만기자동연장회사채AA-이상액티브"
+    },
+    {
+      "ticker": "385600",
+      "name": "ACE 2차전지&친환경차액티브"
+    },
+    {
+      "ticker": "475270",
+      "name": "ACE 5월만기자동연장회사채AA-이상액티브"
+    },
+    {
+      "ticker": "475280",
+      "name": "ACE 8월만기자동연장회사채AA-이상액티브"
+    },
+    {
+      "ticker": "469150",
+      "name": "ACE AI반도체TOP3+"
+    },
+    {
+      "ticker": "0079X0",
+      "name": "ACE BYD밸류체인액티브"
+    },
+    {
+      "ticker": "385590",
+      "name": "ACE ESG액티브"
+    },
+    {
+      "ticker": "475050",
+      "name": "ACE KPOP포커스"
+    },
+    {
+      "ticker": "411060",
+      "name": "ACE KRX금현물"
+    },
+    {
+      "ticker": "0221Z0",
+      "name": "ACE K바이오코스닥액티브"
+    },
+    {
+      "ticker": "0210A0",
+      "name": "ACE K반도체TOP2+"
+    },
+    {
+      "ticker": "0216Z0",
+      "name": "ACE K방산TOP5+"
+    },
+    {
+      "ticker": "0172Y0",
+      "name": "ACE K수출핵심TOP10산업액티브"
+    },
+    {
+      "ticker": "0177X0",
+      "name": "ACE K휴머노이드로봇산업TOP2+"
+    },
+    {
+      "ticker": "291130",
+      "name": "ACE MSCI멕시코(합성)"
+    },
+    {
+      "ticker": "256440",
+      "name": "ACE MSCI인도네시아(합성)"
+    },
+    {
+      "ticker": "261920",
+      "name": "ACE MSCI필리핀(합성)"
+    },
+    {
+      "ticker": "0194T0",
+      "name": "ACE SK하이닉스단일종목레버리지"
+    },
+    {
+      "ticker": "0199C0",
+      "name": "ACE 고배당주Plus커버드콜액티브"
+    },
+    {
+      "ticker": "0139P0",
+      "name": "ACE 고배당주"
+    },
+    {
+      "ticker": "225130",
+      "name": "ACE 골드선물 레버리지(합성 H)"
+    },
+    {
+      "ticker": "483340",
+      "name": "ACE 구글밸류체인액티브"
+    },
+    {
+      "ticker": "114460",
+      "name": "ACE 국고채3년"
+    },
+    {
+      "ticker": "365780",
+      "name": "ACE 국고채10년"
+    },
+    {
+      "ticker": "494340",
+      "name": "ACE 글로벌AI맞춤형반도체"
+    },
+    {
+      "ticker": "446770",
+      "name": "ACE 글로벌반도체TOP4 Plus"
+    },
+    {
+      "ticker": "435040",
+      "name": "ACE 글로벌브랜드TOP10"
+    },
+    {
+      "ticker": "497510",
+      "name": "ACE 글로벌빅파마"
+    },
+    {
+      "ticker": "460960",
+      "name": "ACE 글로벌인컴TOP10"
+    },
+    {
+      "ticker": "414270",
+      "name": "ACE 글로벌자율주행액티브"
+    },
+    {
+      "ticker": "190620",
+      "name": "ACE 단기통안채"
+    },
+    {
+      "ticker": "440640",
+      "name": "ACE 단기채권알파액티브"
+    },
+    {
+      "ticker": "494330",
+      "name": "ACE 라이프자산주주가치액티브"
+    },
+    {
+      "ticker": "265690",
+      "name": "ACE 러시아MSCI(합성)"
+    },
+    {
+      "ticker": "152500",
+      "name": "ACE 레버리지"
+    },
+    {
+      "ticker": "0153P0",
+      "name": "ACE 리츠부동산인프라액티브"
+    },
+    {
+      "ticker": "483330",
+      "name": "ACE 마이크로소프트밸류체인액티브"
+    },
+    {
+      "ticker": "487340",
+      "name": "ACE 머니마켓액티브"
+    },
+    {
+      "ticker": "0085P0",
+      "name": "ACE 미국10년국채액티브"
+    },
+    {
+      "ticker": "0085N0",
+      "name": "ACE 미국10년국채액티브(H)"
+    },
+    {
+      "ticker": "452250",
+      "name": "ACE 미국30년국채선물레버리지(합성 H)"
+    },
+    {
+      "ticker": "476760",
+      "name": "ACE 미국30년국채액티브"
+    },
+    {
+      "ticker": "453850",
+      "name": "ACE 미국30년국채액티브(H)"
+    },
+    {
+      "ticker": "476750",
+      "name": "ACE 미국30년국채엔화노출액티브(H)"
+    },
+    {
+      "ticker": "480030",
+      "name": "ACE 미국500데일리타겟커버드콜(합성)"
+    },
+    {
+      "ticker": "0118Z0",
+      "name": "ACE 미국AI테크핵심산업액티브"
+    },
+    {
+      "ticker": "280320",
+      "name": "ACE 미국IT인터넷(합성 H)"
+    },
+    {
+      "ticker": "438080",
+      "name": "ACE 미국S&P500미국채혼합50액티브"
+    },
+    {
+      "ticker": "360200",
+      "name": "ACE 미국S&P500"
+    },
+    {
+      "ticker": "0155M0",
+      "name": "ACE 미국SMR원자력TOP10"
+    },
+    {
+      "ticker": "309230",
+      "name": "ACE 미국WideMoat동일가중"
+    },
+    {
+      "ticker": "438100",
+      "name": "ACE 미국나스닥100미국채혼합50액티브"
+    },
+    {
+      "ticker": "367380",
+      "name": "ACE 미국나스닥100"
+    },
+    {
+      "ticker": "456880",
+      "name": "ACE 미국달러SOFR금리(합성)"
+    },
+    {
+      "ticker": "440650",
+      "name": "ACE 미국달러단기채권액티브"
+    },
+    {
+      "ticker": "0127M0",
+      "name": "ACE 미국대형가치주액티브"
+    },
+    {
+      "ticker": "0127P0",
+      "name": "ACE 미국대형성장주액티브"
+    },
+    {
+      "ticker": "480040",
+      "name": "ACE 미국반도체데일리타겟커버드콜(합성)"
+    },
+    {
+      "ticker": "402970",
+      "name": "ACE 미국배당다우존스"
+    },
+    {
+      "ticker": "0049M0",
+      "name": "ACE 미국배당퀄리티+커버드콜액티브"
+    },
+    {
+      "ticker": "0046Y0",
+      "name": "ACE 미국배당퀄리티"
+    },
+    {
+      "ticker": "0049K0",
+      "name": "ACE 미국배당퀄리티채권혼합50"
+    },
+    {
+      "ticker": "181480",
+      "name": "ACE 미국부동산리츠(합성 H)"
+    },
+    {
+      "ticker": "480020",
+      "name": "ACE 미국빅테크7+데일리타겟커버드콜(합성)"
+    },
+    {
+      "ticker": "465610",
+      "name": "ACE 미국빅테크TOP7 Plus레버리지(합성)"
+    },
+    {
+      "ticker": "465620",
+      "name": "ACE 미국빅테크TOP7 Plus인버스(합성)"
+    },
+    {
+      "ticker": "465580",
+      "name": "ACE 미국빅테크TOP7 Plus"
+    },
+    {
+      "ticker": "0180V0",
+      "name": "ACE 미국우주테크액티브"
+    },
+    {
+      "ticker": "473590",
+      "name": "ACE 미국주식베스트셀러"
+    },
+    {
+      "ticker": "0008E0",
+      "name": "ACE 미국중심중소형제조업"
+    },
+    {
+      "ticker": "391600",
+      "name": "ACE 미국친환경그린테마"
+    },
+    {
+      "ticker": "455660",
+      "name": "ACE 미국하이일드액티브(H)"
+    },
+    {
+      "ticker": "245710",
+      "name": "ACE 베트남VN30(합성)"
+    },
+    {
+      "ticker": "131890",
+      "name": "ACE 삼성그룹동일가중"
+    },
+    {
+      "ticker": "108450",
+      "name": "ACE 삼성그룹섹터가중"
+    },
+    {
+      "ticker": "0194M0",
+      "name": "ACE 삼성전자단일종목레버리지"
+    },
+    {
+      "ticker": "226380",
+      "name": "ACE Fn성장소비주도주"
+    },
+    {
+      "ticker": "316300",
+      "name": "ACE 싱가포르리츠"
+    },
+    {
+      "ticker": "277540",
+      "name": "ACE 아시아TOP50"
+    },
+    {
+      "ticker": "483320",
+      "name": "ACE 엔비디아밸류체인액티브"
+    },
+    {
+      "ticker": "448540",
+      "name": "ACE 엔비디아채권혼합"
+    },
+    {
+      "ticker": "0099L0",
+      "name": "ACE 우량회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "433500",
+      "name": "ACE 원자력TOP10"
+    },
+    {
+      "ticker": "0102X0",
+      "name": "ACE 유럽방산TOP10"
+    },
+    {
+      "ticker": "487920",
+      "name": "ACE 인도시장대표BIG5그룹액티브"
+    },
+    {
+      "ticker": "487910",
+      "name": "ACE 인도컨슈머파워액티브"
+    },
+    {
+      "ticker": "145670",
+      "name": "ACE 인버스"
+    },
+    {
+      "ticker": "497520",
+      "name": "ACE 일라이릴리밸류체인"
+    },
+    {
+      "ticker": "196030",
+      "name": "ACE 일본TOPIX레버리지(H)"
+    },
+    {
+      "ticker": "238720",
+      "name": "ACE 일본Nikkei225(H)"
+    },
+    {
+      "ticker": "469160",
+      "name": "ACE 일본반도체"
+    },
+    {
+      "ticker": "205720",
+      "name": "ACE 일본TOPIX인버스(합성 H)"
+    },
+    {
+      "ticker": "356540",
+      "name": "ACE 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "447430",
+      "name": "ACE 주주환원가치주액티브"
+    },
+    {
+      "ticker": "416090",
+      "name": "ACE 중국과창판STAR50"
+    },
+    {
+      "ticker": "168580",
+      "name": "ACE 중국본토CSI300"
+    },
+    {
+      "ticker": "219900",
+      "name": "ACE 중국본토CSI300레버리지(합성)"
+    },
+    {
+      "ticker": "272910",
+      "name": "ACE 중장기국공채액티브"
+    },
+    {
+      "ticker": "0087F0",
+      "name": "ACE 차이나AI빅테크TOP2+액티브"
+    },
+    {
+      "ticker": "371870",
+      "name": "ACE 차이나항셍테크"
+    },
+    {
+      "ticker": "0209Z0",
+      "name": "ACE 코리아AI전력TOP10"
+    },
+    {
+      "ticker": "380340",
+      "name": "ACE 코리아AI테크핵심산업"
+    },
+    {
+      "ticker": "496120",
+      "name": "ACE 코리아밸류업"
+    },
+    {
+      "ticker": "354500",
+      "name": "ACE 코스닥150"
+    },
+    {
+      "ticker": "305050",
+      "name": "ACE 코스피"
+    },
+    {
+      "ticker": "457480",
+      "name": "ACE 테슬라밸류체인액티브"
+    },
+    {
+      "ticker": "469170",
+      "name": "ACE 포스코그룹포커스"
+    },
+    {
+      "ticker": "491220",
+      "name": "PLUS 200TR"
+    },
+    {
+      "ticker": "152100",
+      "name": "PLUS 200"
+    },
+    {
+      "ticker": "253150",
+      "name": "PLUS 200선물레버리지"
+    },
+    {
+      "ticker": "253160",
+      "name": "PLUS 200선물인버스2X"
+    },
+    {
+      "ticker": "0203D0",
+      "name": "PLUS 200위클리커버드콜채권혼합"
+    },
+    {
+      "ticker": "0210E0",
+      "name": "PLUS 200커버드콜액티브"
+    },
+    {
+      "ticker": "395750",
+      "name": "PLUS ESG가치주액티브"
+    },
+    {
+      "ticker": "395760",
+      "name": "PLUS ESG성장주액티브"
+    },
+    {
+      "ticker": "453010",
+      "name": "PLUS KOFR금리"
+    },
+    {
+      "ticker": "227830",
+      "name": "PLUS 코스피"
+    },
+    {
+      "ticker": "122090",
+      "name": "PLUS 코스피50"
+    },
+    {
+      "ticker": "429740",
+      "name": "PLUS K리츠"
+    },
+    {
+      "ticker": "0104G0",
+      "name": "PLUS K방산레버리지"
+    },
+    {
+      "ticker": "0090B0",
+      "name": "PLUS K방산소부장"
+    },
+    {
+      "ticker": "449450",
+      "name": "PLUS K방산"
+    },
+    {
+      "ticker": "0166S0",
+      "name": "PLUS K제조업핵심기업액티브"
+    },
+    {
+      "ticker": "269540",
+      "name": "PLUS 미국S&P500(H)"
+    },
+    {
+      "ticker": "269530",
+      "name": "PLUS S&P글로벌인프라"
+    },
+    {
+      "ticker": "0226A0",
+      "name": "PLUS SK하이닉스샌디스크채권혼합50"
+    },
+    {
+      "ticker": "251590",
+      "name": "PLUS 고배당저변동50"
+    },
+    {
+      "ticker": "161510",
+      "name": "PLUS 고배당주"
+    },
+    {
+      "ticker": "0018C0",
+      "name": "PLUS 고배당주위클리고정커버드콜"
+    },
+    {
+      "ticker": "489030",
+      "name": "PLUS 고배당주위클리커버드콜"
+    },
+    {
+      "ticker": "251600",
+      "name": "PLUS 고배당주채권혼합"
+    },
+    {
+      "ticker": "461460",
+      "name": "PLUS 국고채10년액티브"
+    },
+    {
+      "ticker": "451600",
+      "name": "PLUS 국고채30년액티브"
+    },
+    {
+      "ticker": "491230",
+      "name": "PLUS 국공채머니마켓액티브"
+    },
+    {
+      "ticker": "289670",
+      "name": "PLUS 국채선물10년"
+    },
+    {
+      "ticker": "298340",
+      "name": "PLUS 국채선물3년"
+    },
+    {
+      "ticker": "489010",
+      "name": "PLUS 글로벌AI인프라"
+    },
+    {
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체"
+    },
+    {
+      "ticker": "496770",
+      "name": "PLUS 글로벌방산"
+    },
+    {
+      "ticker": "419650",
+      "name": "PLUS 글로벌수소&차세대연료전지"
+    },
+    {
+      "ticker": "0007G0",
+      "name": "PLUS 글로벌원자력밸류체인"
+    },
+    {
+      "ticker": "0166T0",
+      "name": "PLUS 글로벌저작권핵심기업액티브"
+    },
+    {
+      "ticker": "0035T0",
+      "name": "PLUS 글로벌휴머노이드로봇액티브"
+    },
+    {
+      "ticker": "415920",
+      "name": "PLUS 글로벌희토류&전략자원생산기업"
+    },
+    {
+      "ticker": "0138Y0",
+      "name": "PLUS 금채권혼합"
+    },
+    {
+      "ticker": "278620",
+      "name": "PLUS 단기채권액티브"
+    },
+    {
+      "ticker": "477050",
+      "name": "PLUS 머니마켓액티브"
+    },
+    {
+      "ticker": "0050E0",
+      "name": "PLUS 미국AI에이전트"
+    },
+    {
+      "ticker": "429760",
+      "name": "PLUS 미국S&P500"
+    },
+    {
+      "ticker": "0057H0",
+      "name": "PLUS 미국S&P500미국채혼합50액티브"
+    },
+    {
+      "ticker": "494410",
+      "name": "PLUS 미국S&P500성장주"
+    },
+    {
+      "ticker": "0153X0",
+      "name": "PLUS 미국고배당주액티브"
+    },
+    {
+      "ticker": "0089B0",
+      "name": "PLUS 미국나스닥100미국채혼합50"
+    },
+    {
+      "ticker": "287180",
+      "name": "PLUS 미국나스닥테크"
+    },
+    {
+      "ticker": "332610",
+      "name": "PLUS 미국단기회사채(AAA~A)"
+    },
+    {
+      "ticker": "456200",
+      "name": "PLUS 미국달러SOFR금리액티브(합성)"
+    },
+    {
+      "ticker": "0078V0",
+      "name": "PLUS 미국로보택시"
+    },
+    {
+      "ticker": "494420",
+      "name": "PLUS 미국배당증가성장주데일리커버드콜"
+    },
+    {
+      "ticker": "0023B0",
+      "name": "PLUS 미국양자컴퓨팅TOP10"
+    },
+    {
+      "ticker": "332620",
+      "name": "PLUS 미국장기우량회사채"
+    },
+    {
+      "ticker": "464470",
+      "name": "PLUS 미국채30년액티브"
+    },
+    {
+      "ticker": "461900",
+      "name": "PLUS 미국테크TOP10"
+    },
+    {
+      "ticker": "0193K0",
+      "name": "PLUS 삼성전자단일종목레버리지"
+    },
+    {
+      "ticker": "0193L0",
+      "name": "PLUS 삼성전자선물단일종목인버스2X"
+    },
+    {
+      "ticker": "238670",
+      "name": "PLUS 스마트베타Quality채권혼합"
+    },
+    {
+      "ticker": "256450",
+      "name": "PLUS 심천차이넥스트(합성)"
+    },
+    {
+      "ticker": "447660",
+      "name": "PLUS 애플채권혼합"
+    },
+    {
+      "ticker": "239660",
+      "name": "PLUS 우량회사채50"
+    },
+    {
+      "ticker": "421320",
+      "name": "PLUS 우주항공"
+    },
+    {
+      "ticker": "0184N0",
+      "name": "PLUS 은채권혼합"
+    },
+    {
+      "ticker": "464920",
+      "name": "PLUS 일본반도체소부장"
+    },
+    {
+      "ticker": "489000",
+      "name": "PLUS 일본엔화초단기국채(합성)"
+    },
+    {
+      "ticker": "0098N0",
+      "name": "PLUS 자사주매입고배당주"
+    },
+    {
+      "ticker": "433880",
+      "name": "PLUS TDF2060액티브 적격"
+    },
+    {
+      "ticker": "451000",
+      "name": "PLUS 종합채권(AA-이상)액티브"
+    },
+    {
+      "ticker": "280920",
+      "name": "PLUS 주도업종"
+    },
+    {
+      "ticker": "0184L0",
+      "name": "PLUS 중기종합채권(A-이상)액티브"
+    },
+    {
+      "ticker": "266550",
+      "name": "PLUS 중형주저변동50"
+    },
+    {
+      "ticker": "0047N0",
+      "name": "PLUS 차이나AI테크TOP10"
+    },
+    {
+      "ticker": "0128D0",
+      "name": "PLUS 차이나항셍테크위클리타겟커버드콜"
+    },
+    {
+      "ticker": "495040",
+      "name": "PLUS 코리아밸류업"
+    },
+    {
+      "ticker": "0166N0",
+      "name": "PLUS 코스닥150액티브"
+    },
+    {
+      "ticker": "301400",
+      "name": "PLUS 코스닥150"
+    },
+    {
+      "ticker": "328370",
+      "name": "PLUS 코스피TR"
+    },
+    {
+      "ticker": "457990",
+      "name": "PLUS 태양광&ESS"
+    },
+    {
+      "ticker": "0132K0",
+      "name": "PLUS 테슬라위클리커버드콜채권혼합"
+    },
+    {
+      "ticker": "0000J0",
+      "name": "PLUS 한화그룹주"
+    },
+    {
+      "ticker": "461910",
+      "name": "PLUS 미국테크TOP10레버리지(합성)"
+    },
+    {
+      "ticker": "213630",
+      "name": "PLUS 미국다우존스고배당주(합성 H)"
+    },
+    {
+      "ticker": "189400",
+      "name": "PLUS 글로벌MSCI(합성 H)"
+    },
+    {
+      "ticker": "195970",
+      "name": "PLUS 선진국MSCI(합성 H)"
+    },
+    {
+      "ticker": "195980",
+      "name": "PLUS 신흥국MSCI(합성 H)"
+    },
+    {
+      "ticker": "0184V0",
+      "name": "UNICORN K바이오액티브"
+    },
+    {
+      "ticker": "433250",
+      "name": "UNICORN R&D 액티브"
+    },
+    {
+      "ticker": "494220",
+      "name": "UNICORN SK하이닉스밸류체인액티브"
+    },
+    {
+      "ticker": "470310",
+      "name": "UNICORN 생성형AI강소기업액티브"
+    },
+    {
+      "ticker": "476000",
+      "name": "UNICORN 포스트IPO액티브"
+    },
+    {
+      "ticker": "491700",
+      "name": "HK 200"
+    },
+    {
+      "ticker": "0000Y0",
+      "name": "HK 26-12 회사채(AA-이상)액티브"
+    },
+    {
+      "ticker": "215620",
+      "name": "HK S&P코리아로우볼"
+    },
+    {
+      "ticker": "0113P0",
+      "name": "HK 머니마켓액티브"
+    },
+    {
+      "ticker": "391670",
+      "name": "HK 베스트일레븐액티브"
+    },
+    {
+      "ticker": "472920",
+      "name": "HK 종합채권(AA-이상)액티브"
+    }
+  ]
+}
