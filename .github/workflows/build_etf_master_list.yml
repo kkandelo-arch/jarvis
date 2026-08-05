@@ -1,0 +1,32 @@
+name: DC 자비스 ETF 전체목록 갱신
+
+on:
+  schedule:
+    - cron: "0 21 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-list:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: 전체 ETF 목록 수집
+        env:
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
+        run: python build_etf_master_list.py
+      - name: 결과 커밋
+        run: |
+          git config user.name "dc-jarvis-bot"
+          git config user.email "actions@github.com"
+          git add data/etf_master_list.json
+          git diff --cached --quiet || git commit -m "ETF 전체목록 자동 갱신"
+          git pull --rebase
+          git push
