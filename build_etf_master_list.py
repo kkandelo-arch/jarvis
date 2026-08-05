@@ -1,5 +1,5 @@
 """
-DC 자비스 - ETF 전체목록 수집 (v1.1 - 최근 영업일 자동 보정 + 디버그 강화)
+DC 자비스 - ETF 전체목록 수집 (v1.2 - 이름 데이터 타입 오류 수정)
 KRX에 상장된 전체 ETF의 티커+이름을 수집해서 data/etf_master_list.json 에 저장
 """
 import json
@@ -10,7 +10,6 @@ from pykrx import stock
 
 
 def find_recent_trading_date():
-    """오늘부터 최대 7일 전까지 거슬러 올라가며, ETF 티커 목록이 실제로 나오는 날짜를 찾는다."""
     for i in range(7):
         candidate = (datetime.now() - timedelta(days=i)).strftime("%Y%m%d")
         try:
@@ -22,6 +21,13 @@ def find_recent_trading_date():
         if tickers:
             return candidate, tickers
     return None, []
+
+
+def safe_name(raw_name):
+    """get_etf_ticker_name 결과가 문자열이 아닌 경우(Series 등) 안전하게 문자열로 변환"""
+    if hasattr(raw_name, "iloc"):
+        raw_name = raw_name.iloc[0]
+    return str(raw_name)
 
 
 def main():
@@ -36,7 +42,7 @@ def main():
     etfs = []
     for i, ticker in enumerate(tickers):
         try:
-            name = stock.get_etf_ticker_name(ticker)
+            name = safe_name(stock.get_etf_ticker_name(ticker))
             etfs.append({"ticker": ticker, "name": name})
         except Exception as e:
             print(f"[경고] {ticker} 이름 조회 실패, 스킵: {e}")
