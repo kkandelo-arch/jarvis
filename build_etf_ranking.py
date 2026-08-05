@@ -1,8 +1,5 @@
 """
-DC 자비스 - ETF 랭킹 수집 (v1.2 - 환헤지(H) 제외, 커버드콜 포함)
-data/etf_master_list.json(이름 목록)을 기반으로 각 ETF의 최근 거래대금·시가총액을 조회해
-객관적 기준(거래대금 상위)으로 순위를 매김.
-전체 순위는 data/etf_ranking.json, 상위 30개는 data/etf_top30.json 에 저장
+DC 자비스 - ETF 랭킹 수집 (v1.3 - '금리' 키워드로 확장해 CD1년금리 등 변형까지 제외)
 """
 import json
 import os
@@ -12,7 +9,7 @@ from pykrx import stock
 
 EXCLUDE_KEYWORDS = [
     "레버리지", "인버스", "곱버스",
-    "국고채", "회사채", "단기채", "머니마켓", "채권", "CD금리",
+    "국고채", "회사채", "단기채", "머니마켓", "채권", "금리",
     "(H)",
 ]
 
@@ -93,14 +90,14 @@ def main():
     output_full = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "data_as_of": TO,
-        "ranking_basis": "최근 거래대금 상위 (레버리지/인버스/채권류/CD금리/환헤지(H) 자동 제외, 커버드콜 포함)",
+        "ranking_basis": "최근 거래대금 상위 (레버리지/인버스/채권류/금리연동/환헤지(H) 자동 제외, 커버드콜 포함)",
         "total_ranked": len(ranked),
         "ranking": ranked,
     }
     output_top30 = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "data_as_of": TO,
-        "ranking_basis": "최근 거래대금 상위 30개 (레버리지/인버스/채권류/CD금리/환헤지(H) 자동 제외, 커버드콜 포함)",
+        "ranking_basis": "최근 거래대금 상위 30개 (레버리지/인버스/채권류/금리연동/환헤지(H) 자동 제외, 커버드콜 포함)",
         "top30": top30,
     }
 
