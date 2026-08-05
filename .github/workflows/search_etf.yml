@@ -1,0 +1,34 @@
+name: DC 자비스 ETF 검색
+
+on:
+  workflow_dispatch:
+    inputs:
+      keyword:
+        description: '검색할 종목명 또는 티커코드'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: 검색 실행
+        env:
+          SEARCH_KEYWORD: ${{ inputs.keyword }}
+        run: python search_etf.py
+      - name: 결과 커밋
+        run: |
+          git config user.name "dc-jarvis-bot"
+          git config user.email "actions@github.com"
+          git add data/etf_search_result.json
+          git diff --cached --quiet || git commit -m "ETF 검색 결과 갱신"
+          git pull --rebase
+          git push
