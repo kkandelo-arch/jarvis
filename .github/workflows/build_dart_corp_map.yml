@@ -1,0 +1,31 @@
+name: DC 자비스 DART 기업고유번호 갱신
+
+on:
+  schedule:
+    - cron: "0 20 1 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-corp-map:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: DART 기업고유번호 수집
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python build_dart_corp_map.py
+      - name: 결과 커밋
+        run: |
+          git config user.name "dc-jarvis-bot"
+          git config user.email "actions@github.com"
+          git add data/dart_corp_map.json
+          git diff --cached --quiet || git commit -m "DART 기업고유번호 자동 갱신"
+          git pull --rebase
+          git push
