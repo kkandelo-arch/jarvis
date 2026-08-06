@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-08-05T10:41:20.297022+00:00",
+  "timestamp": "2026-08-06T02:56:05.040482+00:00",
   "composite_score": 42,
   "level": "주의",
   "components": {
     "vix": {
-      "raw": 15.86,
+      "raw": 16.5,
       "score": 35
     },
     "high_yield_spread": {
-      "raw": 2.78,
+      "raw": 2.73,
       "score": 10
     },
     "yield_curve_10y2y": {
-      "raw": 0.43,
+      "raw": 0.45,
       "score": 40
     },
     "kospi_drawdown_pct": {
-      "raw": -11.74,
+      "raw": -15.12,
       "score": 100
     }
   }
