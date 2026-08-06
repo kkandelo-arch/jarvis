@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-06T08:28:50.181706+00:00",
+  "timestamp": "2026-08-06T08:36:47.632330+00:00",
   "macro_composite_score": 42,
   "scanned_count": 30,
   "ranking_basis": "adjusted_score (원점수 x 백테스트 신뢰도 가중치), 기본목록은 거래대금 상위 자동선정",
@@ -878,7 +878,7 @@
         "band_position_pct": 32.5,
         "band_score": 59,
         "macro_score": 100,
-        "supply_net_eok": -341.4,
+        "supply_net_eok": -341.6,
         "supply_score": 0
       }
     }
