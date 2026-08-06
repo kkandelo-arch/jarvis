@@ -1,16 +1,34 @@
 {
-  "timestamp": "2026-08-06T01:53:04.194265+00:00",
+  "timestamp": "2026-08-06T04:15:43.458077+00:00",
   "checked_count": 30,
-  "alert_count": 17,
+  "alert_count": 16,
   "alerts": [
+    {
+      "ticker": "102110",
+      "name": "TIGER 200",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": -5.3,
+      "message": "TIGER 200 1일 급락 5.3%"
+    },
     {
       "ticker": "148020",
       "name": "RISE 200",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -5.01,
-      "message": "RISE 200 1일 급락 5.01%"
+      "change_pct": -5.24,
+      "message": "RISE 200 1일 급락 5.24%"
+    },
+    {
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.76,
+      "message": "RISE 삼성전자SK하이닉스채권혼합50 1일 급락 3.76%"
     },
     {
       "ticker": "395270",
@@ -18,8 +36,44 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": -8.24,
-      "message": "HANARO Fn K-반도체 1일 급락 8.24%"
+      "change_pct": -8.3,
+      "message": "HANARO Fn K-반도체 1일 급락 8.3%"
+    },
+    {
+      "ticker": "367760",
+      "name": "RISE 네트워크인프라",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": -6.78,
+      "message": "RISE 네트워크인프라 1일 급락 6.78%"
+    },
+    {
+      "ticker": "491820",
+      "name": "HANARO 전력설비투자",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -4.01,
+      "message": "HANARO 전력설비투자 1일 급락 4.01%"
+    },
+    {
+      "ticker": "0101N0",
+      "name": "RISE AI전력인프라",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.42,
+      "message": "RISE AI전력인프라 1일 급락 3.42%"
+    },
+    {
+      "ticker": "471760",
+      "name": "TIGER AI반도체핵심공정",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -4.54,
+      "message": "TIGER AI반도체핵심공정 1일 급락 4.54%"
     },
     {
       "ticker": "490590",
@@ -27,26 +81,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.87,
-      "message": "RISE 미국AI밸류체인데일리고정커버드콜 1일 급락 3.87%"
+      "change_pct": -3.44,
+      "message": "RISE 미국AI밸류체인데일리고정커버드콜 1일 급락 3.44%"
     },
     {
-      "ticker": "367760",
-      "name": "RISE 네트워크인프라",
+      "ticker": "0181B0",
+      "name": "HANARO 미국AI메모리반도체TOP4+",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": -7.13,
-      "message": "RISE 네트워크인프라 1일 급락 7.13%"
-    },
-    {
-      "ticker": "361580",
-      "name": "RISE 200TR",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.97,
-      "message": "RISE 200TR 1일 급락 4.97%"
+      "change_pct": -8.19,
+      "message": "HANARO 미국AI메모리반도체TOP4+ 1일 급락 8.19%"
     },
     {
       "ticker": "290130",
@@ -54,17 +99,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -6.12,
-      "message": "RISE ESG사회책임투자 1일 급락 6.12%"
-    },
-    {
-      "ticker": "495050",
-      "name": "RISE 코리아밸류업",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.81,
-      "message": "RISE 코리아밸류업 1일 급락 3.81%"
+      "change_pct": -6.29,
+      "message": "RISE ESG사회책임투자 1일 급락 6.29%"
     },
     {
       "ticker": "315960",
@@ -76,31 +112,13 @@
       "message": "RISE 대형고배당10TR 1일 급락 3.64%"
     },
     {
-      "ticker": "388420",
-      "name": "RISE 비메모리반도체액티브",
+      "ticker": "377990",
+      "name": "TIGER Fn신재생에너지",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": -5.24,
-      "message": "RISE 비메모리반도체액티브 1일 급락 5.24%"
-    },
-    {
-      "ticker": "490600",
-      "name": "RISE 미국배당100데일리고정커버드콜",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 2.0,
-      "message": "RISE 미국배당100데일리고정커버드콜 52주 밴드 하단 근접(2.0%) - 저가매수 후보 검토"
-    },
-    {
-      "ticker": "0093A0",
-      "name": "RISE AI반도체TOP10",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": -6.44,
-      "message": "RISE AI반도체TOP10 1일 급락 6.44%"
+      "level": "정보",
+      "change_pct": -3.37,
+      "message": "TIGER Fn신재생에너지 1일 급락 3.37%"
     },
     {
       "ticker": "0151P0",
@@ -108,53 +126,26 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -6.02,
-      "message": "RISE 코리아전략산업액티브 1일 급락 6.02%"
-    },
-    {
-      "ticker": "469060",
-      "name": "RISE 미국반도체NYSE",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.82,
-      "message": "RISE 미국반도체NYSE 1일 급락 3.82%"
+      "change_pct": -6.09,
+      "message": "RISE 코리아전략산업액티브 1일 급락 6.09%"
     },
     {
       "ticker": "293180",
       "name": "HANARO 200",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.88,
-      "message": "HANARO 200 1일 급락 4.88%"
-    },
-    {
-      "ticker": "495940",
-      "name": "RISE 미국AI테크액티브",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.86,
-      "message": "RISE 미국AI테크액티브 1일 급락 3.86%"
-    },
-    {
-      "ticker": "0218J0",
-      "name": "RISE 미국우주&로봇TOP2미국채혼합50",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "RISE 미국우주&로봇TOP2미국채혼합50 52주 밴드 하단 근접(0.0%) - 저가매수 후보 검토"
+      "change_pct": -5.07,
+      "message": "HANARO 200 1일 급락 5.07%"
     },
     {
-      "ticker": "0222F0",
-      "name": "마이티 AI데이터센터밸류체인",
+      "ticker": "361580",
+      "name": "RISE 200TR",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.47,
-      "message": "마이티 AI데이터센터밸류체인 1일 급락 3.47%"
+      "level": "주의",
+      "change_pct": -5.31,
+      "message": "RISE 200TR 1일 급락 5.31%"
     }
   ]
 }
