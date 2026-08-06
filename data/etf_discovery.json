@@ -1,41 +1,41 @@
 {
-  "timestamp": "2026-08-05T09:36:58.153058+00:00",
+  "timestamp": "2026-08-06T08:28:50.181706+00:00",
   "macro_composite_score": 42,
   "scanned_count": 30,
   "ranking_basis": "adjusted_score (원점수 x 백테스트 신뢰도 가중치), 기본목록은 거래대금 상위 자동선정",
   "note": "기본 30개는 매일 거래대금 기준 자동 갱신(etf_top30.json). custom_universe.json으로 종목 임의추가 가능.",
   "top5": [
     {
-      "ticker": "469070",
-      "name": "RISE AI&로봇",
+      "ticker": "091160",
+      "name": "KODEX 반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 72,
-      "adjusted_score": 61,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
+      "total_score": 62,
+      "adjusted_score": 68,
+      "stars": 4,
+      "confidence_multiplier": 1.1,
       "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
+        "label": "높음",
+        "backtest_win_rate_pct": 66.7,
+        "backtest_sample_count": 48
       },
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": 17.49,
-        "momentum_score": 100,
-        "band_position_pct": 28.1,
-        "band_score": 52,
+        "momentum_20d_pct": -21.02,
+        "momentum_score": 0,
+        "band_position_pct": 49.3,
+        "band_score": 84,
         "macro_score": 100,
-        "supply_net_eok": -23.6,
-        "supply_score": 38
+        "supply_net_eok": 248.2,
+        "supply_score": 100
       }
     },
     {
-      "ticker": "0101N0",
-      "name": "RISE AI전력인프라",
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 67,
-      "adjusted_score": 57,
+      "total_score": 64,
+      "adjusted_score": 54,
       "stars": 3,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -46,21 +46,46 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": 2.56,
-        "momentum_score": 63,
-        "band_position_pct": 41.9,
-        "band_score": 73,
+        "momentum_20d_pct": -21.53,
+        "momentum_score": 0,
+        "band_position_pct": 55.2,
+        "band_score": 93,
         "macro_score": 100,
-        "supply_net_eok": -0.8,
-        "supply_score": 50
+        "supply_net_eok": 270.6,
+        "supply_score": 100
+      }
+    },
+    {
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
+      "origin": "기본(거래대금상위)",
+      "total_score": 62,
+      "adjusted_score": 53,
+      "stars": 3,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -21.45,
+        "momentum_score": 0,
+        "band_position_pct": 49.4,
+        "band_score": 84,
+        "macro_score": 100,
+        "supply_net_eok": 258.5,
+        "supply_score": 100
       }
     },
     {
       "ticker": "395270",
       "name": "HANARO Fn K-반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 64,
-      "adjusted_score": 54,
+      "total_score": 62,
+      "adjusted_score": 53,
       "stars": 3,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -71,21 +96,21 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -12.08,
+        "momentum_20d_pct": -23.23,
         "momentum_score": 0,
-        "band_position_pct": 55.7,
-        "band_score": 94,
+        "band_position_pct": 49.0,
+        "band_score": 84,
         "macro_score": 100,
-        "supply_net_eok": 2458.9,
+        "supply_net_eok": 2640.3,
         "supply_score": 100
       }
     },
     {
-      "ticker": "367760",
-      "name": "RISE 네트워크인프라",
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
       "origin": "기본(거래대금상위)",
-      "total_score": 64,
-      "adjusted_score": 54,
+      "total_score": 60,
+      "adjusted_score": 51,
       "stars": 3,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -94,75 +119,50 @@
         "backtest_sample_count": 0
       },
       "leading_actor": "기관",
-      "volume_evaluation": "부족",
+      "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -10.89,
-        "momentum_score": 0,
-        "band_position_pct": 56.5,
-        "band_score": 95,
+        "momentum_20d_pct": 11.63,
+        "momentum_score": 100,
+        "band_position_pct": 25.7,
+        "band_score": 49,
         "macro_score": 100,
-        "supply_net_eok": 239.4,
-        "supply_score": 100
-      }
-    },
-    {
-      "ticker": "270810",
-      "name": "RISE 코스닥150",
-      "origin": "기본(거래대금상위)",
-      "total_score": 56,
-      "adjusted_score": 48,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -0.37,
-        "momentum_score": 48,
-        "band_position_pct": 28.0,
-        "band_score": 52,
-        "macro_score": 100,
-        "supply_net_eok": -8.7,
-        "supply_score": 46
+        "supply_net_eok": -412.7,
+        "supply_score": 0
       }
     }
   ],
   "all_results": [
     {
-      "ticker": "469070",
-      "name": "RISE AI&로봇",
+      "ticker": "091160",
+      "name": "KODEX 반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 72,
-      "adjusted_score": 61,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
+      "total_score": 62,
+      "adjusted_score": 68,
+      "stars": 4,
+      "confidence_multiplier": 1.1,
       "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
+        "label": "높음",
+        "backtest_win_rate_pct": 66.7,
+        "backtest_sample_count": 48
       },
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": 17.49,
-        "momentum_score": 100,
-        "band_position_pct": 28.1,
-        "band_score": 52,
+        "momentum_20d_pct": -21.02,
+        "momentum_score": 0,
+        "band_position_pct": 49.3,
+        "band_score": 84,
         "macro_score": 100,
-        "supply_net_eok": -23.6,
-        "supply_score": 38
+        "supply_net_eok": 248.2,
+        "supply_score": 100
       }
     },
     {
-      "ticker": "0101N0",
-      "name": "RISE AI전력인프라",
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 67,
-      "adjusted_score": 57,
+      "total_score": 64,
+      "adjusted_score": 54,
       "stars": 3,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -173,21 +173,46 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": 2.56,
-        "momentum_score": 63,
-        "band_position_pct": 41.9,
-        "band_score": 73,
+        "momentum_20d_pct": -21.53,
+        "momentum_score": 0,
+        "band_position_pct": 55.2,
+        "band_score": 93,
         "macro_score": 100,
-        "supply_net_eok": -0.8,
-        "supply_score": 50
+        "supply_net_eok": 270.6,
+        "supply_score": 100
+      }
+    },
+    {
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
+      "origin": "기본(거래대금상위)",
+      "total_score": 62,
+      "adjusted_score": 53,
+      "stars": 3,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -21.45,
+        "momentum_score": 0,
+        "band_position_pct": 49.4,
+        "band_score": 84,
+        "macro_score": 100,
+        "supply_net_eok": 258.5,
+        "supply_score": 100
       }
     },
     {
       "ticker": "395270",
       "name": "HANARO Fn K-반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 64,
-      "adjusted_score": 54,
+      "total_score": 62,
+      "adjusted_score": 53,
       "stars": 3,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -198,21 +223,21 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -12.08,
+        "momentum_20d_pct": -23.23,
         "momentum_score": 0,
-        "band_position_pct": 55.7,
-        "band_score": 94,
+        "band_position_pct": 49.0,
+        "band_score": 84,
         "macro_score": 100,
-        "supply_net_eok": 2458.9,
+        "supply_net_eok": 2640.3,
         "supply_score": 100
       }
     },
     {
-      "ticker": "367760",
-      "name": "RISE 네트워크인프라",
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
       "origin": "기본(거래대금상위)",
-      "total_score": 64,
-      "adjusted_score": 54,
+      "total_score": 60,
+      "adjusted_score": 51,
       "stars": 3,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -221,45 +246,20 @@
         "backtest_sample_count": 0
       },
       "leading_actor": "기관",
-      "volume_evaluation": "부족",
+      "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -10.89,
-        "momentum_score": 0,
-        "band_position_pct": 56.5,
-        "band_score": 95,
+        "momentum_20d_pct": 11.63,
+        "momentum_score": 100,
+        "band_position_pct": 25.7,
+        "band_score": 49,
         "macro_score": 100,
-        "supply_net_eok": 239.4,
-        "supply_score": 100
+        "supply_net_eok": -412.7,
+        "supply_score": 0
       }
     },
     {
-      "ticker": "270810",
-      "name": "RISE 코스닥150",
-      "origin": "기본(거래대금상위)",
-      "total_score": 56,
-      "adjusted_score": 48,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -0.37,
-        "momentum_score": 48,
-        "band_position_pct": 28.0,
-        "band_score": 52,
-        "macro_score": 100,
-        "supply_net_eok": -8.7,
-        "supply_score": 46
-      }
-    },
-    {
-      "ticker": "315960",
-      "name": "RISE 대형고배당10TR",
+      "ticker": "102970",
+      "name": "KODEX 증권",
       "origin": "기본(거래대금상위)",
       "total_score": 57,
       "adjusted_score": 48,
@@ -273,20 +273,20 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -11.55,
-        "momentum_score": 0,
-        "band_position_pct": 63.5,
-        "band_score": 95,
+        "momentum_20d_pct": -9.48,
+        "momentum_score": 3,
+        "band_position_pct": 31.5,
+        "band_score": 57,
         "macro_score": 100,
-        "supply_net_eok": 51.2,
-        "supply_score": 76
+        "supply_net_eok": 229.0,
+        "supply_score": 100
       }
     },
     {
-      "ticker": "442570",
-      "name": "RISE TDF2050액티브 적격",
+      "ticker": "495850",
+      "name": "KODEX 코리아밸류업",
       "origin": "기본(거래대금상위)",
-      "total_score": 56,
+      "total_score": 57,
       "adjusted_score": 48,
       "stars": 2,
       "confidence_multiplier": 0.85,
@@ -296,23 +296,23 @@
         "backtest_sample_count": 0
       },
       "leading_actor": "기관",
-      "volume_evaluation": "부족",
+      "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -2.29,
-        "momentum_score": 39,
-        "band_position_pct": 69.6,
-        "band_score": 86,
+        "momentum_20d_pct": -11.87,
+        "momentum_score": 0,
+        "band_position_pct": 61.2,
+        "band_score": 98,
         "macro_score": 100,
-        "supply_net_eok": -32.8,
-        "supply_score": 34
+        "supply_net_eok": 47.7,
+        "supply_score": 74
       }
     },
     {
-      "ticker": "495050",
-      "name": "RISE 코리아밸류업",
+      "ticker": "315930",
+      "name": "KODEX Top5PlusTR",
       "origin": "기본(거래대금상위)",
-      "total_score": 53,
-      "adjusted_score": 45,
+      "total_score": 55,
+      "adjusted_score": 47,
       "stars": 2,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -321,70 +321,45 @@
         "backtest_sample_count": 0
       },
       "leading_actor": "기관",
-      "volume_evaluation": "부족",
+      "volume_evaluation": "높음",
       "components": {
-        "momentum_20d_pct": -8.56,
-        "momentum_score": 7,
-        "band_position_pct": 64.9,
-        "band_score": 93,
+        "momentum_20d_pct": -12.07,
+        "momentum_score": 0,
+        "band_position_pct": 62.6,
+        "band_score": 96,
         "macro_score": 100,
-        "supply_net_eok": 13.8,
-        "supply_score": 57
+        "supply_net_eok": 36.1,
+        "supply_score": 68
       }
     },
     {
-      "ticker": "472870",
-      "name": "RISE 미국30년국채엔화노출(합성 H)",
+      "ticker": "133690",
+      "name": "TIGER 미국나스닥100",
       "origin": "기본(거래대금상위)",
-      "total_score": 53,
+      "total_score": 41,
       "adjusted_score": 45,
       "stars": 2,
-      "confidence_multiplier": 0.85,
+      "confidence_multiplier": 1.1,
       "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
+        "label": "높음",
+        "backtest_win_rate_pct": 83.9,
+        "backtest_sample_count": 31
       },
       "leading_actor": "기관",
       "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -4.34,
-        "momentum_score": 28,
-        "band_position_pct": 17.1,
-        "band_score": 36,
+        "momentum_20d_pct": -5.62,
+        "momentum_score": 22,
+        "band_position_pct": 66.5,
+        "band_score": 90,
         "macro_score": 100,
-        "supply_net_eok": 39.4,
-        "supply_score": 70
+        "supply_net_eok": -4234.2,
+        "supply_score": 0
       }
     },
     {
-      "ticker": "495940",
-      "name": "RISE 미국AI테크액티브",
-      "origin": "기본(거래대금상위)",
-      "total_score": 53,
-      "adjusted_score": 45,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": -6.17,
-        "momentum_score": 19,
-        "band_position_pct": 71.7,
-        "band_score": 83,
-        "macro_score": 100,
-        "supply_net_eok": -2.2,
-        "supply_score": 49
-      }
-    },
-    {
-      "ticker": "0093A0",
-      "name": "RISE AI반도체TOP10",
+      "ticker": "0177N0",
+      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
       "origin": "기본(거래대금상위)",
       "total_score": 51,
       "adjusted_score": 43,
@@ -395,71 +370,21 @@
         "backtest_win_rate_pct": null,
         "backtest_sample_count": 0
       },
-      "leading_actor": "외국인",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -8.57,
-        "momentum_score": 7,
-        "band_position_pct": 55.6,
-        "band_score": 93,
-        "macro_score": 100,
-        "supply_net_eok": 0.7,
-        "supply_score": 50
-      }
-    },
-    {
-      "ticker": "490590",
-      "name": "RISE 미국AI밸류체인데일리고정커버드콜",
-      "origin": "기본(거래대금상위)",
-      "total_score": 49,
-      "adjusted_score": 42,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -1.27,
-        "momentum_score": 44,
-        "band_position_pct": 55.3,
-        "band_score": 93,
-        "macro_score": 100,
-        "supply_net_eok": -547.1,
-        "supply_score": 0
-      }
-    },
-    {
-      "ticker": "388420",
-      "name": "RISE 비메모리반도체액티브",
-      "origin": "기본(거래대금상위)",
-      "total_score": 49,
-      "adjusted_score": 42,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "외국인",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": -13.43,
+        "momentum_20d_pct": -11.79,
         "momentum_score": 0,
-        "band_position_pct": 49.4,
-        "band_score": 84,
+        "band_position_pct": 38.8,
+        "band_score": 68,
         "macro_score": 100,
-        "supply_net_eok": 15.4,
-        "supply_score": 58
+        "supply_net_eok": 47.0,
+        "supply_score": 74
       }
     },
     {
-      "ticker": "469060",
-      "name": "RISE 미국반도체NYSE",
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
       "origin": "기본(거래대금상위)",
       "total_score": 50,
       "adjusted_score": 42,
@@ -471,73 +396,23 @@
         "backtest_sample_count": 0
       },
       "leading_actor": "기관",
-      "volume_evaluation": "양호",
+      "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -5.23,
-        "momentum_score": 24,
-        "band_position_pct": 67.8,
-        "band_score": 88,
-        "macro_score": 100,
-        "supply_net_eok": -41.2,
-        "supply_score": 29
-      }
-    },
-    {
-      "ticker": "293180",
-      "name": "HANARO 200",
-      "origin": "기본(거래대금상위)",
-      "total_score": 48,
-      "adjusted_score": 41,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": -10.64,
+        "momentum_20d_pct": -11.99,
         "momentum_score": 0,
-        "band_position_pct": 58.7,
-        "band_score": 98,
+        "band_position_pct": 45.1,
+        "band_score": 78,
         "macro_score": 100,
-        "supply_net_eok": -11.9,
-        "supply_score": 44
-      }
-    },
-    {
-      "ticker": "0151P0",
-      "name": "RISE 코리아전략산업액티브",
-      "origin": "기본(거래대금상위)",
-      "total_score": 47,
-      "adjusted_score": 40,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": -10.47,
-        "momentum_score": 0,
-        "band_position_pct": 34.4,
-        "band_score": 62,
-        "macro_score": 100,
-        "supply_net_eok": 29.3,
+        "supply_net_eok": 30.4,
         "supply_score": 65
       }
     },
     {
-      "ticker": "0190C0",
-      "name": "RISE 현대차고정피지컬AI",
+      "ticker": "390390",
+      "name": "KODEX 미국반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 46,
-      "adjusted_score": 39,
+      "total_score": 49,
+      "adjusted_score": 42,
       "stars": 2,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -545,46 +420,46 @@
         "backtest_win_rate_pct": null,
         "backtest_sample_count": 0
       },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
+      "leading_actor": "외국인",
+      "volume_evaluation": "높음",
       "components": {
-        "momentum_20d_pct": -6.16,
-        "momentum_score": 19,
-        "band_position_pct": 18.3,
-        "band_score": 38,
+        "momentum_20d_pct": -10.89,
+        "momentum_score": 0,
+        "band_position_pct": 65.9,
+        "band_score": 91,
         "macro_score": 100,
-        "supply_net_eok": 14.8,
-        "supply_score": 57
+        "supply_net_eok": 7.9,
+        "supply_score": 54
       }
     },
     {
-      "ticker": "490600",
-      "name": "RISE 미국배당100데일리고정커버드콜",
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
       "origin": "기본(거래대금상위)",
-      "total_score": 46,
-      "adjusted_score": 39,
+      "total_score": 41,
+      "adjusted_score": 41,
       "stars": 2,
-      "confidence_multiplier": 0.85,
+      "confidence_multiplier": 1.0,
       "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
+        "label": "보통",
+        "backtest_win_rate_pct": 59.5,
+        "backtest_sample_count": 37
       },
       "leading_actor": "기관",
       "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -2.95,
-        "momentum_score": 35,
-        "band_position_pct": 65.1,
-        "band_score": 92,
+        "momentum_20d_pct": -1.38,
+        "momentum_score": 43,
+        "band_position_pct": 28.3,
+        "band_score": 53,
         "macro_score": 100,
-        "supply_net_eok": -140.5,
+        "supply_net_eok": -3791.3,
         "supply_score": 0
       }
     },
     {
-      "ticker": "0000Z0",
-      "name": "RISE 바이오TOP10액티브",
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
       "origin": "기본(거래대금상위)",
       "total_score": 45,
       "adjusted_score": 38,
@@ -595,24 +470,49 @@
         "backtest_win_rate_pct": null,
         "backtest_sample_count": 0
       },
-      "leading_actor": "외국인",
-      "volume_evaluation": "양호",
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -4.52,
-        "momentum_score": 27,
-        "band_position_pct": 15.8,
-        "band_score": 34,
+        "momentum_20d_pct": -0.83,
+        "momentum_score": 46,
+        "band_position_pct": 40.8,
+        "band_score": 71,
         "macro_score": 100,
-        "supply_net_eok": -7.2,
-        "supply_score": 46
+        "supply_net_eok": -1403.6,
+        "supply_score": 0
       }
     },
     {
-      "ticker": "368590",
-      "name": "RISE 미국나스닥100",
+      "ticker": "069500",
+      "name": "KODEX 200",
       "origin": "기본(거래대금상위)",
-      "total_score": 44,
-      "adjusted_score": 37,
+      "total_score": 33,
+      "adjusted_score": 36,
+      "stars": 2,
+      "confidence_multiplier": 1.1,
+      "backtest_confidence": {
+        "label": "높음",
+        "backtest_win_rate_pct": 79.2,
+        "backtest_sample_count": 48
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -15.97,
+        "momentum_score": 0,
+        "band_position_pct": 53.4,
+        "band_score": 90,
+        "macro_score": 100,
+        "supply_net_eok": -8163.9,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "360750",
+      "name": "TIGER 미국S&P500",
+      "origin": "기본(거래대금상위)",
+      "total_score": 42,
+      "adjusted_score": 36,
       "stars": 2,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -621,95 +521,20 @@
         "backtest_sample_count": 0
       },
       "leading_actor": "기관",
-      "volume_evaluation": "부족",
+      "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -2.7,
+        "momentum_20d_pct": -2.85,
         "momentum_score": 36,
-        "band_position_pct": 70.8,
-        "band_score": 84,
+        "band_position_pct": 78.3,
+        "band_score": 73,
         "macro_score": 100,
-        "supply_net_eok": -243.0,
+        "supply_net_eok": -8139.5,
         "supply_score": 0
       }
     },
     {
-      "ticker": "361580",
-      "name": "RISE 200TR",
-      "origin": "기본(거래대금상위)",
-      "total_score": 44,
-      "adjusted_score": 37,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -10.51,
-        "momentum_score": 0,
-        "band_position_pct": 59.0,
-        "band_score": 99,
-        "macro_score": 100,
-        "supply_net_eok": -36.5,
-        "supply_score": 32
-      }
-    },
-    {
-      "ticker": "379780",
-      "name": "RISE 미국S&P500",
-      "origin": "기본(거래대금상위)",
-      "total_score": 44,
-      "adjusted_score": 37,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": -1.52,
-        "momentum_score": 42,
-        "band_position_pct": 80.6,
-        "band_score": 69,
-        "macro_score": 100,
-        "supply_net_eok": -137.1,
-        "supply_score": 0
-      }
-    },
-    {
-      "ticker": "290130",
-      "name": "RISE ESG사회책임투자",
-      "origin": "기본(거래대금상위)",
-      "total_score": 44,
-      "adjusted_score": 37,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -10.5,
-        "momentum_score": 0,
-        "band_position_pct": 59.6,
-        "band_score": 99,
-        "macro_score": 100,
-        "supply_net_eok": -37.7,
-        "supply_score": 31
-      }
-    },
-    {
-      "ticker": "491620",
-      "name": "RISE 미국테크100데일리고정커버드콜",
+      "ticker": "379800",
+      "name": "KODEX 미국S&P500",
       "origin": "기본(거래대금상위)",
       "total_score": 42,
       "adjusted_score": 36,
@@ -723,47 +548,22 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -3.61,
-        "momentum_score": 32,
-        "band_position_pct": 44.7,
-        "band_score": 77,
+        "momentum_20d_pct": -3.11,
+        "momentum_score": 34,
+        "band_position_pct": 76.7,
+        "band_score": 75,
         "macro_score": 100,
-        "supply_net_eok": -689.2,
+        "supply_net_eok": -4509.0,
         "supply_score": 0
       }
     },
     {
-      "ticker": "0222F0",
-      "name": "마이티 AI데이터센터밸류체인",
+      "ticker": "379810",
+      "name": "KODEX 미국나스닥100",
       "origin": "기본(거래대금상위)",
-      "total_score": 38,
-      "adjusted_score": 32,
-      "stars": 1,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "데이터부족",
-      "components": {
-        "momentum_20d_pct": null,
-        "momentum_score": 0,
-        "band_position_pct": 100.0,
-        "band_score": 40,
-        "macro_score": 100,
-        "supply_net_eok": -1.1,
-        "supply_score": 49
-      }
-    },
-    {
-      "ticker": "0094M0",
-      "name": "RISE 코리아밸류업위클리고정커버드콜",
-      "origin": "기본(거래대금상위)",
-      "total_score": 37,
-      "adjusted_score": 31,
-      "stars": 1,
+      "total_score": 41,
+      "adjusted_score": 35,
+      "stars": 2,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -773,22 +573,22 @@
       "leading_actor": "기관",
       "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -8.91,
-        "momentum_score": 5,
-        "band_position_pct": 59.4,
-        "band_score": 99,
+        "momentum_20d_pct": -5.77,
+        "momentum_score": 21,
+        "band_position_pct": 65.9,
+        "band_score": 91,
         "macro_score": 100,
-        "supply_net_eok": -490.7,
+        "supply_net_eok": -5969.6,
         "supply_score": 0
       }
     },
     {
-      "ticker": "148020",
-      "name": "RISE 200",
+      "ticker": "0117V0",
+      "name": "TIGER 코리아AI전력기기TOP3플러스",
       "origin": "기본(거래대금상위)",
-      "total_score": 35,
-      "adjusted_score": 30,
-      "stars": 1,
+      "total_score": 41,
+      "adjusted_score": 35,
+      "stars": 2,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -796,73 +596,23 @@
         "backtest_sample_count": 0
       },
       "leading_actor": "기관",
-      "volume_evaluation": "양호",
+      "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -10.64,
-        "momentum_score": 0,
-        "band_position_pct": 58.6,
-        "band_score": 98,
+        "momentum_20d_pct": -2.46,
+        "momentum_score": 38,
+        "band_position_pct": 34.8,
+        "band_score": 62,
         "macro_score": 100,
-        "supply_net_eok": -525.0,
+        "supply_net_eok": -446.9,
         "supply_score": 0
       }
     },
     {
-      "ticker": "0223A0",
-      "name": "RISE 코스닥커버드콜액티브",
+      "ticker": "381180",
+      "name": "TIGER 미국필라델피아반도체나스닥",
       "origin": "기본(거래대금상위)",
       "total_score": 34,
       "adjusted_score": 29,
-      "stars": 1,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "데이터부족",
-      "components": {
-        "momentum_20d_pct": null,
-        "momentum_score": 0,
-        "band_position_pct": 100.0,
-        "band_score": 40,
-        "macro_score": 100,
-        "supply_net_eok": -27.6,
-        "supply_score": 36
-      }
-    },
-    {
-      "ticker": "0218J0",
-      "name": "RISE 미국우주&로봇TOP2미국채혼합50",
-      "origin": "기본(거래대금상위)",
-      "total_score": 34,
-      "adjusted_score": 29,
-      "stars": 1,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "데이터부족",
-      "components": {
-        "momentum_20d_pct": null,
-        "momentum_score": 0,
-        "band_position_pct": 13.8,
-        "band_score": 31,
-        "macro_score": 100,
-        "supply_net_eok": -16.3,
-        "supply_score": 42
-      }
-    },
-    {
-      "ticker": "475720",
-      "name": "RISE 200위클리커버드콜",
-      "origin": "기본(거래대금상위)",
-      "total_score": 29,
-      "adjusted_score": 25,
       "stars": 1,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
@@ -873,12 +623,262 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -12.0,
+        "momentum_20d_pct": -11.94,
         "momentum_score": 0,
-        "band_position_pct": 39.2,
-        "band_score": 69,
+        "band_position_pct": 63.8,
+        "band_score": 94,
         "macro_score": 100,
-        "supply_net_eok": -520.9,
+        "supply_net_eok": -966.6,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "102110",
+      "name": "TIGER 200",
+      "origin": "기본(거래대금상위)",
+      "total_score": 33,
+      "adjusted_score": 28,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -15.98,
+        "momentum_score": 0,
+        "band_position_pct": 53.7,
+        "band_score": 91,
+        "macro_score": 100,
+        "supply_net_eok": -1105.3,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "148020",
+      "name": "RISE 200",
+      "origin": "기본(거래대금상위)",
+      "total_score": 33,
+      "adjusted_score": 28,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -15.81,
+        "momentum_score": 0,
+        "band_position_pct": 53.5,
+        "band_score": 90,
+        "macro_score": 100,
+        "supply_net_eok": -461.2,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "278530",
+      "name": "KODEX 200TR",
+      "origin": "기본(거래대금상위)",
+      "total_score": 33,
+      "adjusted_score": 28,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -15.7,
+        "momentum_score": 0,
+        "band_position_pct": 54.0,
+        "band_score": 91,
+        "macro_score": 100,
+        "supply_net_eok": -393.6,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "105190",
+      "name": "ACE 200",
+      "origin": "기본(거래대금상위)",
+      "total_score": 33,
+      "adjusted_score": 28,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -15.92,
+        "momentum_score": 0,
+        "band_position_pct": 53.5,
+        "band_score": 90,
+        "macro_score": 100,
+        "supply_net_eok": -120.0,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "426030",
+      "name": "TIME 미국나스닥100액티브",
+      "origin": "기본(거래대금상위)",
+      "total_score": 32,
+      "adjusted_score": 27,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -13.64,
+        "momentum_score": 0,
+        "band_position_pct": 48.8,
+        "band_score": 83,
+        "macro_score": 100,
+        "supply_net_eok": -1540.0,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10",
+      "origin": "기본(거래대금상위)",
+      "total_score": 30,
+      "adjusted_score": 26,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -22.59,
+        "momentum_score": 0,
+        "band_position_pct": 44.6,
+        "band_score": 77,
+        "macro_score": 100,
+        "supply_net_eok": -1876.7,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "395160",
+      "name": "KODEX AI반도체TOP2플러스",
+      "origin": "기본(거래대금상위)",
+      "total_score": 31,
+      "adjusted_score": 26,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -23.29,
+        "momentum_score": 0,
+        "band_position_pct": 46.7,
+        "band_score": 80,
+        "macro_score": 100,
+        "supply_net_eok": -993.1,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "origin": "기본(거래대금상위)",
+      "total_score": 31,
+      "adjusted_score": 26,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -16.8,
+        "momentum_score": 0,
+        "band_position_pct": 46.0,
+        "band_score": 79,
+        "macro_score": 100,
+        "supply_net_eok": -5735.5,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "472150",
+      "name": "TIGER 배당커버드콜액티브",
+      "origin": "기본(거래대금상위)",
+      "total_score": 30,
+      "adjusted_score": 26,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -17.53,
+        "momentum_score": 0,
+        "band_position_pct": 42.0,
+        "band_score": 73,
+        "macro_score": 100,
+        "supply_net_eok": -3502.5,
+        "supply_score": 0
+      }
+    },
+    {
+      "ticker": "0167A0",
+      "name": "SOL AI반도체TOP2플러스",
+      "origin": "기본(거래대금상위)",
+      "total_score": 27,
+      "adjusted_score": 23,
+      "stars": 1,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -25.15,
+        "momentum_score": 0,
+        "band_position_pct": 32.5,
+        "band_score": 59,
+        "macro_score": 100,
+        "supply_net_eok": -341.4,
         "supply_score": 0
       }
     }
