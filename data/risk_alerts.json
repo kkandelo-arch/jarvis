@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-08-06T04:15:43.458077+00:00",
+  "timestamp": "2026-08-06T07:42:46.377803+00:00",
   "checked_count": 30,
-  "alert_count": 16,
+  "alert_count": 15,
   "alerts": [
     {
       "ticker": "102110",
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -5.3,
-      "message": "TIGER 200 1일 급락 5.3%"
+      "change_pct": -5.33,
+      "message": "TIGER 200 1일 급락 5.33%"
     },
     {
       "ticker": "148020",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -5.24,
-      "message": "RISE 200 1일 급락 5.24%"
+      "change_pct": -5.18,
+      "message": "RISE 200 1일 급락 5.18%"
     },
     {
       "ticker": "0162Z0",
@@ -27,8 +27,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.76,
-      "message": "RISE 삼성전자SK하이닉스채권혼합50 1일 급락 3.76%"
+      "change_pct": -4.33,
+      "message": "RISE 삼성전자SK하이닉스채권혼합50 1일 급락 4.33%"
     },
     {
       "ticker": "395270",
@@ -36,17 +36,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": -8.3,
-      "message": "HANARO Fn K-반도체 1일 급락 8.3%"
+      "change_pct": -9.42,
+      "message": "HANARO Fn K-반도체 1일 급락 9.42%"
     },
     {
       "ticker": "367760",
       "name": "RISE 네트워크인프라",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": -6.78,
-      "message": "RISE 네트워크인프라 1일 급락 6.78%"
+      "level": "경고",
+      "change_pct": -7.77,
+      "message": "RISE 네트워크인프라 1일 급락 7.77%"
     },
     {
       "ticker": "491820",
@@ -54,26 +54,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.01,
-      "message": "HANARO 전력설비투자 1일 급락 4.01%"
-    },
-    {
-      "ticker": "0101N0",
-      "name": "RISE AI전력인프라",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.42,
-      "message": "RISE AI전력인프라 1일 급락 3.42%"
+      "change_pct": -4.73,
+      "message": "HANARO 전력설비투자 1일 급락 4.73%"
     },
     {
       "ticker": "471760",
       "name": "TIGER AI반도체핵심공정",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.54,
-      "message": "TIGER AI반도체핵심공정 1일 급락 4.54%"
+      "level": "주의",
+      "change_pct": -5.23,
+      "message": "TIGER AI반도체핵심공정 1일 급락 5.23%"
     },
     {
       "ticker": "490590",
@@ -81,8 +72,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.44,
-      "message": "RISE 미국AI밸류체인데일리고정커버드콜 1일 급락 3.44%"
+      "change_pct": -3.24,
+      "message": "RISE 미국AI밸류체인데일리고정커버드콜 1일 급락 3.24%"
     },
     {
       "ticker": "0181B0",
@@ -90,8 +81,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": -8.19,
-      "message": "HANARO 미국AI메모리반도체TOP4+ 1일 급락 8.19%"
+      "change_pct": -8.73,
+      "message": "HANARO 미국AI메모리반도체TOP4+ 1일 급락 8.73%"
     },
     {
       "ticker": "290130",
@@ -99,8 +90,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -6.29,
-      "message": "RISE ESG사회책임투자 1일 급락 6.29%"
+      "change_pct": -6.33,
+      "message": "RISE ESG사회책임투자 1일 급락 6.33%"
     },
     {
       "ticker": "315960",
@@ -108,17 +99,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.64,
-      "message": "RISE 대형고배당10TR 1일 급락 3.64%"
-    },
-    {
-      "ticker": "377990",
-      "name": "TIGER Fn신재생에너지",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.37,
-      "message": "TIGER Fn신재생에너지 1일 급락 3.37%"
+      "change_pct": -3.63,
+      "message": "RISE 대형고배당10TR 1일 급락 3.63%"
     },
     {
       "ticker": "0151P0",
@@ -126,8 +108,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -6.09,
-      "message": "RISE 코리아전략산업액티브 1일 급락 6.09%"
+      "change_pct": -6.96,
+      "message": "RISE 코리아전략산업액티브 1일 급락 6.96%"
     },
     {
       "ticker": "293180",
@@ -135,8 +117,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -5.07,
-      "message": "HANARO 200 1일 급락 5.07%"
+      "change_pct": -5.21,
+      "message": "HANARO 200 1일 급락 5.21%"
     },
     {
       "ticker": "361580",
@@ -144,8 +126,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -5.31,
-      "message": "RISE 200TR 1일 급락 5.31%"
+      "change_pct": -5.2,
+      "message": "RISE 200TR 1일 급락 5.2%"
+    },
+    {
+      "ticker": "0000Z0",
+      "name": "RISE 바이오TOP10액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.28,
+      "message": "RISE 바이오TOP10액티브 1일 급등 3.28%"
     }
   ]
 }
