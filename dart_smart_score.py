@@ -1,5 +1,6 @@
 """
-DC 자비스 - DART 스마트발굴 (v1.1 - fs_div 필수 파라미터 누락 수정)
+DC 자비스 - DART 스마트발굴 (v1.2 - 검증용 상세 로그 추가)
+각 종목별로 어떤 계정항목(sj_nm, account_detail)에서 당기/전기 금액을 가져왔는지 낱개로 로그 출력
 """
 import json
 import os
@@ -79,7 +80,7 @@ def parse_amount(raw):
         return None
 
 
-def get_net_income_growth(corp_code, debug_shown):
+def get_net_income_growth(corp_code, corp_name, debug_shown):
     for year, reprt_code in REPORT_ATTEMPTS:
         for fs_div in FS_DIV_ATTEMPTS:
             try:
@@ -95,8 +96,6 @@ def get_net_income_growth(corp_code, debug_shown):
 
                 if not debug_shown[0]:
                     print(f"[디버그] DART 응답 예시(연도{year}, 보고서{reprt_code}, {fs_div}): status={data.get('status')}")
-                    if data.get("list"):
-                        print(f"[디버그] 첫 항목 키: {list(data['list'][0].keys())}")
                     debug_shown[0] = True
 
                 if data.get("status") != "000":
@@ -108,9 +107,24 @@ def get_net_income_growth(corp_code, debug_shown):
                 if not rows:
                     continue
 
+                if len(rows) > 1:
+                    print(f"[검증] {corp_name} 당기순이익 후보 {len(rows)}개 발견:")
+                    for r in rows:
+                        print(
+                            f"       sj_nm={r.get('sj_nm')} account_detail={r.get('account_detail')} "
+                            f"당기={r.get('thstrm_amount')} 전기={r.get('frmtrm_amount')}"
+                        )
+
                 row = rows[0]
                 this_term = parse_amount(row.get("thstrm_amount"))
                 prev_term = parse_amount(row.get("frmtrm_amount"))
+
+                print(
+                    f"[검증] {corp_name} 선택된 항목: sj_nm={row.get('sj_nm')} "
+                    f"account_detail={row.get('account_detail')} "
+                    f"당기금액={row.get('thstrm_amount')} 전기금액={row.get('frmtrm_amount')} "
+                    f"당기명칭={row.get('thstrm_nm')} 전기명칭={row.get('frmtrm_nm')}"
+                )
 
                 if this_term is None or prev_term is None or prev_term == 0:
                     continue
@@ -154,7 +168,9 @@ def main():
                     print(f"[정보] {etf_name} 구성종목 {stock_code} DART 매핑 없음(상장사 아닐 수 있음), 스킵")
                     continue
 
-                growth_pct, source = get_net_income_growth(corp_info["corp_code"], debug_shown)
+                growth_pct, source = get_net_income_growth(
+                    corp_info["corp_code"], corp_info["corp_name"], debug_shown
+                )
                 time.sleep(REQUEST_DELAY_SEC)
 
                 if growth_pct is None:
