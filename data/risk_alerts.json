@@ -1,34 +1,16 @@
 {
-  "timestamp": "2026-08-07T03:52:01.838395+00:00",
+  "timestamp": "2026-08-07T05:43:10.860904+00:00",
   "checked_count": 30,
-  "alert_count": 4,
+  "alert_count": 2,
   "alerts": [
-    {
-      "ticker": "229200",
-      "name": "KODEX 코스닥150",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.13,
-      "message": "KODEX 코스닥150 1일 급락 3.13%"
-    },
-    {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.67,
-      "message": "KODEX 반도체 1일 급락 3.67%"
-    },
     {
       "ticker": "0148J0",
       "name": "TIGER 코리아휴머노이드로봇산업",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.7,
-      "message": "TIGER 코리아휴머노이드로봇산업 1일 급락 4.7%"
+      "change_pct": -3.47,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급락 3.47%"
     },
     {
       "ticker": "102970",
@@ -36,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.71,
-      "message": "KODEX 증권 1일 급락 3.71%"
+      "change_pct": -3.89,
+      "message": "KODEX 증권 1일 급락 3.89%"
     }
   ]
 }
