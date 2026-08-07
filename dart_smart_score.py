@@ -1,8 +1,5 @@
 """
-DC 자비스 - DART 스마트발굴 (재무데이터 기반)
-각 ETF의 구성종목 상위 5개(금액 비중 기준)를 뽑아 DART 재무데이터로
-순이익 증가율을 조회하고, 비중 가중평균해서 ETF 단위 "재무건전성 점수"를 산출
-결과는 data/dart_smart_scores.json 에 저장
+DC 자비스 - DART 스마트발굴 (v1.1 - fs_div 필수 파라미터 누락 수정)
 """
 import json
 import os
@@ -23,6 +20,7 @@ REPORT_ATTEMPTS = [
     (datetime.now().year, "11012"),
     (datetime.now().year - 1, "11011"),
 ]
+FS_DIV_ATTEMPTS = ["CFS", "OFS"]
 
 
 def load_universe():
@@ -83,45 +81,46 @@ def parse_amount(raw):
 
 def get_net_income_growth(corp_code, debug_shown):
     for year, reprt_code in REPORT_ATTEMPTS:
-        try:
-            params = {
-                "crtfc_key": DART_API_KEY,
-                "corp_code": corp_code,
-                "bsns_year": str(year),
-                "reprt_code": reprt_code,
-            }
-            resp = requests.get(DART_FINANCIAL_URL, params=params, timeout=15)
-            data = resp.json()
+        for fs_div in FS_DIV_ATTEMPTS:
+            try:
+                params = {
+                    "crtfc_key": DART_API_KEY,
+                    "corp_code": corp_code,
+                    "bsns_year": str(year),
+                    "reprt_code": reprt_code,
+                    "fs_div": fs_div,
+                }
+                resp = requests.get(DART_FINANCIAL_URL, params=params, timeout=15)
+                data = resp.json()
 
-            if not debug_shown[0]:
-                print(f"[디버그] DART 응답 예시(연도{year}, 보고서{reprt_code}): status={data.get('status')}")
-                if data.get("list"):
-                    print(f"[디버그] 첫 항목 키: {list(data['list'][0].keys())}")
-                debug_shown[0] = True
+                if not debug_shown[0]:
+                    print(f"[디버그] DART 응답 예시(연도{year}, 보고서{reprt_code}, {fs_div}): status={data.get('status')}")
+                    if data.get("list"):
+                        print(f"[디버그] 첫 항목 키: {list(data['list'][0].keys())}")
+                    debug_shown[0] = True
 
-            if data.get("status") != "000":
+                if data.get("status") != "000":
+                    continue
+
+                rows = [r for r in data.get("list", []) if r.get("account_nm") == "당기순이익"]
+                if not rows:
+                    rows = [r for r in data.get("list", []) if "당기순이익" in (r.get("account_nm") or "")]
+                if not rows:
+                    continue
+
+                row = rows[0]
+                this_term = parse_amount(row.get("thstrm_amount"))
+                prev_term = parse_amount(row.get("frmtrm_amount"))
+
+                if this_term is None or prev_term is None or prev_term == 0:
+                    continue
+
+                growth_pct = (this_term - prev_term) / abs(prev_term) * 100
+                return round(growth_pct, 2), f"{year}년 보고서{reprt_code} {fs_div}"
+
+            except Exception as e:
+                print(f"[경고] {corp_code} DART 조회 실패({year}/{reprt_code}/{fs_div}): {e}")
                 continue
-
-            rows = [r for r in data.get("list", []) if r.get("account_nm") == "당기순이익"]
-            if not rows:
-                rows = [r for r in data.get("list", []) if "당기순이익" in (r.get("account_nm") or "")]
-            if not rows:
-                continue
-
-            row = next((r for r in rows if r.get("fs_div") == "CFS"), rows[0])
-
-            this_term = parse_amount(row.get("thstrm_amount"))
-            prev_term = parse_amount(row.get("frmtrm_amount"))
-
-            if this_term is None or prev_term is None or prev_term == 0:
-                continue
-
-            growth_pct = (this_term - prev_term) / abs(prev_term) * 100
-            return round(growth_pct, 2), f"{year}년 보고서코드{reprt_code}"
-
-        except Exception as e:
-            print(f"[경고] {corp_code} DART 조회 실패({year}/{reprt_code}): {e}")
-            continue
 
     return None, None
 
