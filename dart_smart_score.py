@@ -1,6 +1,6 @@
 """
-DC 자비스 - DART 스마트발굴 (v1.2 - 검증용 상세 로그 추가)
-각 종목별로 어떤 계정항목(sj_nm, account_detail)에서 당기/전기 금액을 가져왔는지 낱개로 로그 출력
+DC 자비스 - DART 스마트발굴 (v1.3 - 최신순 보고서 우선순위 교정 + 점수구간 확대)
+반기(가장 최신) -> 1분기 -> 작년 연간 순으로 시도해 가장 최근 실적을 우선 사용
 """
 import json
 import os
@@ -16,10 +16,12 @@ DART_FINANCIAL_URL = "https://opendart.fss.or.kr/api/fnlttSinglAcntAll.json"
 TOP_N_HOLDINGS = 5
 REQUEST_DELAY_SEC = 0.3
 
+CUR_YEAR = datetime.now().year
 REPORT_ATTEMPTS = [
-    (datetime.now().year, "11013"),
-    (datetime.now().year, "11012"),
-    (datetime.now().year - 1, "11011"),
+    (CUR_YEAR, "11012"),       # 올해 반기보고서 (가장 최신, 8월 중순 마감)
+    (CUR_YEAR, "11013"),       # 올해 1분기보고서
+    (CUR_YEAR - 1, "11014"),   # 작년 3분기보고서
+    (CUR_YEAR - 1, "11011"),   # 작년 사업보고서(연간)
 ]
 FS_DIV_ATTEMPTS = ["CFS", "OFS"]
 
@@ -107,30 +109,16 @@ def get_net_income_growth(corp_code, corp_name, debug_shown):
                 if not rows:
                     continue
 
-                if len(rows) > 1:
-                    print(f"[검증] {corp_name} 당기순이익 후보 {len(rows)}개 발견:")
-                    for r in rows:
-                        print(
-                            f"       sj_nm={r.get('sj_nm')} account_detail={r.get('account_detail')} "
-                            f"당기={r.get('thstrm_amount')} 전기={r.get('frmtrm_amount')}"
-                        )
-
                 row = rows[0]
                 this_term = parse_amount(row.get("thstrm_amount"))
                 prev_term = parse_amount(row.get("frmtrm_amount"))
-
-                print(
-                    f"[검증] {corp_name} 선택된 항목: sj_nm={row.get('sj_nm')} "
-                    f"account_detail={row.get('account_detail')} "
-                    f"당기금액={row.get('thstrm_amount')} 전기금액={row.get('frmtrm_amount')} "
-                    f"당기명칭={row.get('thstrm_nm')} 전기명칭={row.get('frmtrm_nm')}"
-                )
 
                 if this_term is None or prev_term is None or prev_term == 0:
                     continue
 
                 growth_pct = (this_term - prev_term) / abs(prev_term) * 100
-                return round(growth_pct, 2), f"{year}년 보고서{reprt_code} {fs_div}"
+                period_label = f"{year}년 보고서{reprt_code} {fs_div} ({row.get('thstrm_nm')} vs {row.get('frmtrm_nm')})"
+                return round(growth_pct, 2), period_label
 
             except Exception as e:
                 print(f"[경고] {corp_code} DART 조회 실패({year}/{reprt_code}/{fs_div}): {e}")
@@ -142,8 +130,8 @@ def get_net_income_growth(corp_code, corp_name, debug_shown):
 def score_growth(growth_pct):
     if growth_pct is None:
         return None
-    clipped = max(-30, min(30, growth_pct))
-    return round((clipped + 30) * 100 / 60)
+    clipped = max(-30, min(100, growth_pct))
+    return round((clipped + 30) * 100 / 130)
 
 
 def main():
@@ -186,6 +174,7 @@ def main():
                         "source": source,
                     }
                 )
+                print(f"[디버그] {corp_info['corp_name']} 사용된 기준: {source}, 증가율 {growth_pct}%")
 
             if not holding_scores:
                 print(f"[경고] {etf_name}({etf_ticker}) 유효한 재무데이터 없음, 스킵")
