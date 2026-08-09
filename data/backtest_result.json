@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-08-03T02:10:48.098289+00:00",
+  "timestamp": "2026-08-09T20:29:02.599749+00:00",
   "method": "과거 시점별 모멘텀+52주밴드 점수(거시점수는 중립 50점 고정) vs 이후 20일 수익률 비교",
   "buy_threshold": 60,
-  "overall_buy_signal_win_rate_pct": 62.0,
-  "overall_buy_signal_count": 413,
+  "overall_buy_signal_win_rate_pct": 63.1,
+  "overall_buy_signal_count": 415,
   "per_etf": [
     {
       "ticker": "069500",
       "name": "KODEX 200",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 48,
-        "win_rate_pct": 79.2,
-        "avg_return_pct": 8.34
+        "count": 52,
+        "win_rate_pct": 73.1,
+        "avg_return_pct": 7.71
       },
       "other_group": {
-        "count": 33,
-        "win_rate_pct": 81.8,
-        "avg_return_pct": 4.29
+        "count": 29,
+        "win_rate_pct": 75.9,
+        "avg_return_pct": 4.08
       }
     },
     {
@@ -26,13 +26,13 @@
       "total_test_points": 81,
       "buy_signal_group": {
         "count": 37,
-        "win_rate_pct": 59.5,
-        "avg_return_pct": 1.58
+        "win_rate_pct": 64.9,
+        "avg_return_pct": 0.92
       },
       "other_group": {
         "count": 44,
-        "win_rate_pct": 56.8,
-        "avg_return_pct": 0.27
+        "win_rate_pct": 52.3,
+        "avg_return_pct": 0.8
       }
     },
     {
@@ -40,14 +40,14 @@
       "name": "KODEX 반도체",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 48,
-        "win_rate_pct": 66.7,
-        "avg_return_pct": 8.13
+        "count": 50,
+        "win_rate_pct": 70.0,
+        "avg_return_pct": 8.72
       },
       "other_group": {
-        "count": 33,
-        "win_rate_pct": 72.7,
-        "avg_return_pct": 9.29
+        "count": 31,
+        "win_rate_pct": 74.2,
+        "avg_return_pct": 7.91
       }
     },
     {
@@ -56,13 +56,13 @@
       "total_test_points": 81,
       "buy_signal_group": {
         "count": 28,
-        "win_rate_pct": 50.0,
-        "avg_return_pct": 0.55
+        "win_rate_pct": 46.4,
+        "avg_return_pct": -0.53
       },
       "other_group": {
         "count": 53,
-        "win_rate_pct": 45.3,
-        "avg_return_pct": 0.46
+        "win_rate_pct": 47.2,
+        "avg_return_pct": 0.93
       }
     },
     {
@@ -70,14 +70,14 @@
       "name": "TIGER 미국S&P500",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 14,
-        "win_rate_pct": 71.4,
-        "avg_return_pct": 1.53
+        "count": 12,
+        "win_rate_pct": 83.3,
+        "avg_return_pct": 2.06
       },
       "other_group": {
-        "count": 67,
-        "win_rate_pct": 56.7,
-        "avg_return_pct": 0.75
+        "count": 69,
+        "win_rate_pct": 58.0,
+        "avg_return_pct": 0.66
       }
     },
     {
@@ -85,14 +85,14 @@
       "name": "TIGER 미국나스닥100",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 31,
-        "win_rate_pct": 83.9,
+        "count": 30,
+        "win_rate_pct": 83.3,
         "avg_return_pct": 3.62
       },
       "other_group": {
-        "count": 50,
-        "win_rate_pct": 58.0,
-        "avg_return_pct": 1.1
+        "count": 51,
+        "win_rate_pct": 60.8,
+        "avg_return_pct": 1.01
       }
     },
     {
@@ -100,14 +100,14 @@
       "name": "KODEX 골드선물(H)",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 37,
-        "win_rate_pct": 62.2,
-        "avg_return_pct": 1.9
+        "count": 35,
+        "win_rate_pct": 65.7,
+        "avg_return_pct": 2.33
       },
       "other_group": {
-        "count": 44,
-        "win_rate_pct": 63.6,
-        "avg_return_pct": 1.96
+        "count": 46,
+        "win_rate_pct": 58.7,
+        "avg_return_pct": 1.75
       }
     },
     {
@@ -115,14 +115,14 @@
       "name": "KOSEF 국고채10년",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 16,
-        "win_rate_pct": 18.8,
-        "avg_return_pct": -0.96
+        "count": 17,
+        "win_rate_pct": 29.4,
+        "avg_return_pct": -0.61
       },
       "other_group": {
-        "count": 65,
-        "win_rate_pct": 46.2,
-        "avg_return_pct": -0.46
+        "count": 64,
+        "win_rate_pct": 46.9,
+        "avg_return_pct": -0.58
       }
     },
     {
@@ -130,14 +130,14 @@
       "name": "KODEX 은행",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 37,
-        "win_rate_pct": 48.6,
-        "avg_return_pct": 1.5
+        "count": 39,
+        "win_rate_pct": 51.3,
+        "avg_return_pct": 2.0
       },
       "other_group": {
-        "count": 44,
-        "win_rate_pct": 70.5,
-        "avg_return_pct": 4.6
+        "count": 42,
+        "win_rate_pct": 73.8,
+        "avg_return_pct": 4.19
       }
     },
     {
@@ -146,13 +146,13 @@
       "total_test_points": 81,
       "buy_signal_group": {
         "count": 36,
-        "win_rate_pct": 52.8,
-        "avg_return_pct": 1.98
+        "win_rate_pct": 50.0,
+        "avg_return_pct": 2.72
       },
       "other_group": {
         "count": 45,
         "win_rate_pct": 57.8,
-        "avg_return_pct": 1.21
+        "avg_return_pct": 0.41
       }
     },
     {
@@ -160,14 +160,14 @@
       "name": "KODEX 자동차",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 44,
-        "win_rate_pct": 56.8,
-        "avg_return_pct": 3.21
+        "count": 40,
+        "win_rate_pct": 57.5,
+        "avg_return_pct": 2.68
       },
       "other_group": {
-        "count": 37,
-        "win_rate_pct": 78.4,
-        "avg_return_pct": 2.6
+        "count": 41,
+        "win_rate_pct": 61.0,
+        "avg_return_pct": 2.84
       }
     },
     {
@@ -175,14 +175,14 @@
       "name": "KODEX 바이오",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 37,
-        "win_rate_pct": 70.3,
-        "avg_return_pct": 2.43
+        "count": 39,
+        "win_rate_pct": 71.8,
+        "avg_return_pct": 3.04
       },
       "other_group": {
-        "count": 44,
-        "win_rate_pct": 63.6,
-        "avg_return_pct": 3.59
+        "count": 42,
+        "win_rate_pct": 64.3,
+        "avg_return_pct": 2.87
       }
     }
   ]
