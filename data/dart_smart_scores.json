@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10T05:04:38.595978+00:00",
+  "timestamp": "2026-08-10T05:28:28.136026+00:00",
   "scored_count": 23,
   "results": [
     {
@@ -93,8 +93,8 @@
     {
       "ticker": "229200",
       "name": "KODEX 코스닥150",
-      "smart_score": 92,
-      "weighted_avg_growth_pct": 90.13,
+      "smart_score": 94,
+      "weighted_avg_growth_pct": 92.16,
       "scored_holdings_count": 5,
       "holdings": [
         {
@@ -122,7 +122,7 @@
           "stock_code": "028300",
           "corp_name": "HLB",
           "weight": 0.0268,
-          "net_income_growth_pct": -117.92,
+          "net_income_growth_pct": -100,
           "source": "2025년 보고서11011 CFS (제 41 기 vs 제 40 기)"
         },
         {
@@ -438,8 +438,8 @@
     {
       "ticker": "442580",
       "name": "PLUS 글로벌HBM반도체",
-      "smart_score": 82,
-      "weighted_avg_growth_pct": 76.64,
+      "smart_score": 81,
+      "weighted_avg_growth_pct": 75.53,
       "scored_holdings_count": 5,
       "holdings": [
         {
@@ -460,7 +460,7 @@
           "stock_code": "003160",
           "corp_name": "디아이",
           "weight": 0.0126,
-          "net_income_growth_pct": 387.81,
+          "net_income_growth_pct": 300,
           "source": "2025년 보고서11011 CFS (제 65 기 vs 제 64 기)"
         },
         {
@@ -633,7 +633,7 @@
       "ticker": "305720",
       "name": "KODEX 2차전지산업",
       "smart_score": 0,
-      "weighted_avg_growth_pct": -68.17,
+      "weighted_avg_growth_pct": -29.99,
       "scored_holdings_count": 4,
       "holdings": [
         {
@@ -654,7 +654,7 @@
           "stock_code": "051910",
           "corp_name": "LG화학",
           "weight": 0.1094,
-          "net_income_growth_pct": -289.72,
+          "net_income_growth_pct": -100,
           "source": "2025년 보고서11011 CFS (제 25 기 vs 제 24 기)"
         },
         {
@@ -714,7 +714,7 @@
       "ticker": "364980",
       "name": "TIGER 2차전지TOP10",
       "smart_score": 0,
-      "weighted_avg_growth_pct": -85.04,
+      "weighted_avg_growth_pct": -65.65,
       "scored_holdings_count": 3,
       "holdings": [
         {
@@ -735,7 +735,7 @@
           "stock_code": "051910",
           "corp_name": "LG화학",
           "weight": 0.0568,
-          "net_income_growth_pct": -289.72,
+          "net_income_growth_pct": -100,
           "source": "2025년 보고서11011 CFS (제 25 기 vs 제 24 기)"
         }
       ]
@@ -743,22 +743,22 @@
     {
       "ticker": "457990",
       "name": "PLUS 태양광&ESS",
-      "smart_score": 100,
-      "weighted_avg_growth_pct": 11234.13,
+      "smart_score": 46,
+      "weighted_avg_growth_pct": 29.87,
       "scored_holdings_count": 3,
       "holdings": [
         {
           "stock_code": "010060",
           "corp_name": "OCI홀딩스",
           "weight": 0.1994,
-          "net_income_growth_pct": -228.6,
+          "net_income_growth_pct": -100,
           "source": "2025년 보고서11011 CFS (제 52 기 vs 제 51 기)"
         },
         {
           "stock_code": "322000",
           "corp_name": "HD현대에너지솔루션",
           "weight": 0.13,
-          "net_income_growth_pct": 36385.38,
+          "net_income_growth_pct": 300,
           "source": "2025년 보고서11011 CFS (제 10 기 vs 제 9 기)"
         },
         {
@@ -773,8 +773,8 @@
     {
       "ticker": "0148J0",
       "name": "TIGER 코리아휴머노이드로봇산업",
-      "smart_score": 23,
-      "weighted_avg_growth_pct": 0.46,
+      "smart_score": 47,
+      "weighted_avg_growth_pct": 31.37,
       "scored_holdings_count": 5,
       "holdings": [
         {
@@ -809,7 +809,7 @@
           "stock_code": "090360",
           "corp_name": "로보스타",
           "weight": 0.0785,
-          "net_income_growth_pct": -334.56,
+          "net_income_growth_pct": -100,
           "source": "2025년 보고서11011 CFS (제 27 기 vs 제 26 기)"
         }
       ]
