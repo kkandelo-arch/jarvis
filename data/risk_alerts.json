@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-08-10T05:36:37.668135+00:00",
+  "timestamp": "2026-08-10T07:47:41.926912+00:00",
   "checked_count": 30,
-  "alert_count": 6,
+  "alert_count": 8,
   "alerts": [
     {
       "ticker": "229200",
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": 7.75,
-      "message": "KODEX 코스닥150 1일 급등 7.75%"
+      "change_pct": 8.64,
+      "message": "KODEX 코스닥150 1일 급등 8.64%"
     },
     {
       "ticker": "091160",
@@ -18,8 +18,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.44,
-      "message": "KODEX 반도체 1일 급등 3.44%"
+      "change_pct": 3.57,
+      "message": "KODEX 반도체 1일 급등 3.57%"
+    },
+    {
+      "ticker": "381180",
+      "name": "TIGER 미국필라델피아반도체나스닥",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.02,
+      "message": "TIGER 미국필라델피아반도체나스닥 1일 급등 3.02%"
     },
     {
       "ticker": "487240",
@@ -27,8 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.53,
-      "message": "KODEX AI전력핵심설비 1일 급등 3.53%"
+      "change_pct": 4.08,
+      "message": "KODEX AI전력핵심설비 1일 급등 4.08%"
     },
     {
       "ticker": "305720",
@@ -36,8 +45,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.5,
-      "message": "KODEX 2차전지산업 1일 급등 3.5%"
+      "change_pct": 4.21,
+      "message": "KODEX 2차전지산업 1일 급등 4.21%"
+    },
+    {
+      "ticker": "364980",
+      "name": "TIGER 2차전지TOP10",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.51,
+      "message": "TIGER 2차전지TOP10 1일 급등 3.51%"
     },
     {
       "ticker": "457990",
@@ -45,8 +63,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.54,
-      "message": "PLUS 태양광&ESS 1일 급등 3.54%"
+      "change_pct": 3.41,
+      "message": "PLUS 태양광&ESS 1일 급등 3.41%"
     },
     {
       "ticker": "0148J0",
@@ -54,8 +72,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.95,
-      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 3.95%"
+      "change_pct": 4.6,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 4.6%"
     }
   ]
 }
