@@ -1,6 +1,8 @@
 """
-DC 자비스 - DART 스마트발굴 (v1.3 - 최신순 보고서 우선순위 교정 + 점수구간 확대)
-반기(가장 최신) -> 1분기 -> 작년 연간 순으로 시도해 가장 최근 실적을 우선 사용
+DC 자비스 - DART 스마트발굴 (v1.4 - 개별 종목 증가율 극단치 클리핑 추가)
+반기(가장 최신) -> 1분기 -> 작년 3분기 -> 작년 연간 순으로 시도해 가장 최근 실적을 우선 사용
+전기 금액이 0에 가까워 증가율(%)이 비정상적으로 폭발하는 걸 막기 위해
+개별 종목 단위에서 -100%~+300% 범위로 먼저 클리핑한 뒤 가중평균
 """
 import json
 import os
@@ -117,6 +119,9 @@ def get_net_income_growth(corp_code, corp_name, debug_shown):
                     continue
 
                 growth_pct = (this_term - prev_term) / abs(prev_term) * 100
+                # 전기 금액이 0에 가까우면 %가 수천~수만%로 폭발하는 착시가 생기므로,
+                # 개별 종목 단위에서 먼저 상한선을 씌워 가중평균 왜곡을 방지
+                growth_pct = max(-100, min(300, growth_pct))
                 period_label = f"{year}년 보고서{reprt_code} {fs_div} ({row.get('thstrm_nm')} vs {row.get('frmtrm_nm')})"
                 return round(growth_pct, 2), period_label
 
