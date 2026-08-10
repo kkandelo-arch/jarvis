@@ -1,16 +1,43 @@
 {
-  "timestamp": "2026-08-07T07:20:55.797538+00:00",
+  "timestamp": "2026-08-10T03:13:11.558133+00:00",
   "checked_count": 30,
-  "alert_count": 1,
+  "alert_count": 4,
   "alerts": [
     {
-      "ticker": "102970",
-      "name": "KODEX 증권",
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": 7.98,
+      "message": "KODEX 코스닥150 1일 급등 7.98%"
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.68,
-      "message": "KODEX 증권 1일 급락 3.68%"
+      "change_pct": 3.87,
+      "message": "KODEX 반도체 1일 급등 3.87%"
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.86,
+      "message": "KODEX AI전력핵심설비 1일 급등 3.86%"
+    },
+    {
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 4.17,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 4.17%"
     }
   ]
 }
