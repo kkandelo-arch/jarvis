@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-08-10T03:13:11.558133+00:00",
+  "timestamp": "2026-08-10T05:36:37.668135+00:00",
   "checked_count": 30,
-  "alert_count": 4,
+  "alert_count": 6,
   "alerts": [
     {
       "ticker": "229200",
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": 7.98,
-      "message": "KODEX 코스닥150 1일 급등 7.98%"
+      "change_pct": 7.75,
+      "message": "KODEX 코스닥150 1일 급등 7.75%"
     },
     {
       "ticker": "091160",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.87,
-      "message": "KODEX 반도체 1일 급등 3.87%"
+      "change_pct": 3.44,
+      "message": "KODEX 반도체 1일 급등 3.44%"
     },
     {
       "ticker": "487240",
@@ -27,8 +27,26 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.86,
-      "message": "KODEX AI전력핵심설비 1일 급등 3.86%"
+      "change_pct": 3.53,
+      "message": "KODEX AI전력핵심설비 1일 급등 3.53%"
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.5,
+      "message": "KODEX 2차전지산업 1일 급등 3.5%"
+    },
+    {
+      "ticker": "457990",
+      "name": "PLUS 태양광&ESS",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.54,
+      "message": "PLUS 태양광&ESS 1일 급등 3.54%"
     },
     {
       "ticker": "0148J0",
@@ -36,8 +54,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 4.17,
-      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 4.17%"
+      "change_pct": 3.95,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 3.95%"
     }
   ]
 }
