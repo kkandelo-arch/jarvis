@@ -1,7 +1,8 @@
 """
-DC 자비스 - ETF 발굴 엔진 (v2.0 - 최종 통합: 거래대금 랭킹 자동선정 + 임의추가 + 4지표 + 신뢰도가중 + 모바일라벨)
+DC 자비스 - ETF 발굴 엔진 (v2.1 - DART 스마트점수 5번째 지표 통합)
 기본 30개는 data/etf_top30.json(거래대금 상위, 매일 자동 갱신)에서 로드.
 data/custom_universe.json 에 종목을 추가하면 기본목록과 병합.
+5지표: 모멘텀30% + 52주밴드15% + 거시10% + 수급25% + DART스마트(재무)20%
 결과는 data/etf_discovery.json 에 저장됨
 """
 import json
@@ -31,7 +32,6 @@ TO = TODAY.strftime("%Y%m%d")
 
 
 def load_universe():
-    """기본 30개(거래대금 랭킹 자동선정) + 사용자 임의추가 목록을 병합"""
     universe = []
     existing_tickers = set()
 
@@ -102,6 +102,20 @@ def load_backtest_confidence():
             "backtest_sample_count": count,
         }
     return confidence_map
+
+
+def load_smart_scores():
+    try:
+        with open("data/dart_smart_scores.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+        smart_map = {}
+        for item in data.get("results", []):
+            smart_map[item["ticker"]] = item["smart_score"]
+        print(f"[디버그] DART 스마트점수 {len(smart_map)}개 종목 로드")
+        return smart_map
+    except Exception as e:
+        print(f"[경고] dart_smart_scores.json 로드 실패, 전종목 중립값(50) 처리: {e}")
+        return {}
 
 
 def score_momentum(ohlcv):
@@ -187,6 +201,7 @@ def main():
     print(f"[디버그] 거시 위험도 {macro_composite}점 -> 발굴 거시점수 {macro_score}점 적용")
 
     confidence_map = load_backtest_confidence()
+    smart_score_map = load_smart_scores()
     universe = load_universe()
     print(f"[디버그] 총 스캔 대상 {len(universe)}개")
 
@@ -207,11 +222,17 @@ def main():
             supply_raw, supply_score, leading_actor = score_supply(ticker)
             volume_label = evaluate_volume(ohlcv)
 
+            smart_score = smart_score_map.get(ticker)
+            smart_available = smart_score is not None
+            if smart_score is None:
+                smart_score = 50
+
             total_score = round(
-                mom_score * 0.35
-                + band_score * 0.20
-                + macro_score * 0.15
-                + supply_score * 0.30
+                mom_score * 0.30
+                + band_score * 0.15
+                + macro_score * 0.10
+                + supply_score * 0.25
+                + smart_score * 0.20
             )
 
             confidence = confidence_map.get(
@@ -242,12 +263,14 @@ def main():
                         "macro_score": macro_score,
                         "supply_net_eok": supply_raw,
                         "supply_score": supply_score,
+                        "smart_score": smart_score,
+                        "smart_score_available": smart_available,
                     },
                 }
             )
             print(
                 f"[디버그] {name}({ticker}) 조정점수 {adjusted_score} "
-                f"별점 {stars} 주도주체 {leading_actor} 거래량 {volume_label}"
+                f"별점 {stars} 스마트점수 {smart_score}({'실데이터' if smart_available else '중립값'})"
             )
 
         except Exception as e:
@@ -261,8 +284,15 @@ def main():
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "macro_composite_score": macro_composite,
         "scanned_count": len(results),
-        "ranking_basis": "adjusted_score (원점수 x 백테스트 신뢰도 가중치), 기본목록은 거래대금 상위 자동선정",
-        "note": "기본 30개는 매일 거래대금 기준 자동 갱신(etf_top30.json). custom_universe.json으로 종목 임의추가 가능.",
+        "ranking_basis": "adjusted_score (5지표 가중합산 x 백테스트 신뢰도), 기본목록은 거래대금 상위 자동선정",
+        "weights": {
+            "momentum": 0.30,
+            "band_52w": 0.15,
+            "macro": 0.10,
+            "supply": 0.25,
+            "dart_smart": 0.20,
+        },
+        "note": "기본 30개는 매일 거래대금 기준 자동 갱신. DART 스마트점수 없는 종목은 중립값(50) 처리.",
         "top5": top5,
         "all_results": results,
     }
