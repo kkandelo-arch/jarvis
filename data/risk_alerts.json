@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-08-11T03:05:47.501901+00:00",
+  "timestamp": "2026-08-11T05:12:50.113288+00:00",
   "checked_count": 30,
   "alert_count": 2,
   "alerts": [
     {
-      "ticker": "381180",
-      "name": "TIGER 미국필라델피아반도체나스닥",
+      "ticker": "364980",
+      "name": "TIGER 2차전지TOP10",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.01,
-      "message": "TIGER 미국필라델피아반도체나스닥 1일 급락 3.01%"
+      "change_pct": -3.19,
+      "message": "TIGER 2차전지TOP10 1일 급락 3.19%"
     },
     {
       "ticker": "466920",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.08,
-      "message": "SOL 조선TOP3플러스 1일 급락 3.08%"
+      "change_pct": -3.34,
+      "message": "SOL 조선TOP3플러스 1일 급락 3.34%"
     }
   ]
 }
