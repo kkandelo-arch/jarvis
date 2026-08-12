@@ -1,8 +1,8 @@
 """
-DC 자비스 - ETF 발굴 엔진 (v2.1 - DART 스마트점수 5번째 지표 통합)
-기본 30개는 data/etf_top30.json(거래대금 상위, 매일 자동 갱신)에서 로드.
-data/custom_universe.json 에 종목을 추가하면 기본목록과 병합.
-5지표: 모멘텀30% + 52주밴드15% + 거시10% + 수급25% + DART스마트(재무)20%
+DC 자비스 - ETF 발굴 엔진 (v2.2 - 판단 라벨 + 근거 요약 추가)
+5지표(모멘텀30%+52주밴드15%+거시10%+수급25%+DART스마트20%) 가중합산 후
+신뢰도 반영 조정점수를 산출하고, 매수후보/관심종목/관망/제외권장 라벨과
+근거 한 줄 요약을 함께 표시
 결과는 data/etf_discovery.json 에 저장됨
 """
 import json
@@ -194,6 +194,63 @@ def to_stars(adjusted_score):
     return 1
 
 
+DECISION_TIERS = ["제외권장", "관망", "관심종목", "매수후보"]
+
+
+def get_decision(adjusted_score, confidence_label):
+    if adjusted_score >= 75:
+        tier_idx = 3
+    elif adjusted_score >= 60:
+        tier_idx = 2
+    elif adjusted_score >= 45:
+        tier_idx = 1
+    else:
+        tier_idx = 0
+
+    if confidence_label == "낮음" and tier_idx > 0:
+        tier_idx -= 1
+
+    return DECISION_TIERS[tier_idx]
+
+
+def build_reason(mom_raw, band_raw, supply_raw, smart_score, smart_available, confidence_label):
+    phrases = []
+
+    if smart_available:
+        if smart_score >= 70:
+            phrases.append(f"재무건전성 양호({smart_score}점)")
+        elif smart_score <= 30:
+            phrases.append(f"재무 부진({smart_score}점)")
+
+    if supply_raw is not None:
+        if supply_raw >= 50:
+            phrases.append(f"수급 강한 매수세({supply_raw}억)")
+        elif supply_raw <= -50:
+            phrases.append(f"수급 매도세({supply_raw}억)")
+
+    if mom_raw is not None:
+        if mom_raw >= 5:
+            phrases.append(f"최근 20일 +{mom_raw}% 상승")
+        elif mom_raw <= -5:
+            phrases.append(f"최근 20일 {mom_raw}% 하락")
+
+    if band_raw is not None:
+        if band_raw >= 90:
+            phrases.append("52주 밴드 상단 근접(과열 주의)")
+        elif band_raw <= 10:
+            phrases.append("52주 밴드 하단(저가 구간)")
+
+    if confidence_label == "낮음":
+        phrases.append("신호 신뢰도 낮음(주의)")
+    elif confidence_label in ("표본부족", "검증전"):
+        phrases.append("백테스트 미검증")
+
+    if not phrases:
+        phrases.append("특별한 신호 없이 중립적")
+
+    return ", ".join(phrases[:3])
+
+
 def main():
     macro_composite = load_macro_risk_level()
     macro_penalty = max(0, (macro_composite - 50)) * 0.5
@@ -243,14 +300,21 @@ def main():
             adjusted_score = round(total_score * multiplier)
             stars = to_stars(adjusted_score)
 
+            decision = get_decision(adjusted_score, confidence["label"])
+            reason = build_reason(
+                mom_raw, band_raw, supply_raw, smart_score, smart_available, confidence["label"]
+            )
+
             results.append(
                 {
                     "ticker": ticker,
                     "name": name,
                     "origin": origin,
-                    "total_score": total_score,
+                    "decision": decision,
+                    "reason": reason,
                     "adjusted_score": adjusted_score,
                     "stars": stars,
+                    "total_score": total_score,
                     "confidence_multiplier": multiplier,
                     "backtest_confidence": confidence,
                     "leading_actor": leading_actor,
@@ -268,10 +332,7 @@ def main():
                     },
                 }
             )
-            print(
-                f"[디버그] {name}({ticker}) 조정점수 {adjusted_score} "
-                f"별점 {stars} 스마트점수 {smart_score}({'실데이터' if smart_available else '중립값'})"
-            )
+            print(f"[디버그] {name}({ticker}) [{decision}] {reason} (조정점수 {adjusted_score})")
 
         except Exception as e:
             print(f"[경고] {name}({ticker}) 처리 중 오류 발생, 스킵: {e}")
@@ -292,7 +353,7 @@ def main():
             "supply": 0.25,
             "dart_smart": 0.20,
         },
-        "note": "기본 30개는 매일 거래대금 기준 자동 갱신. DART 스마트점수 없는 종목은 중립값(50) 처리.",
+        "note": "판단(decision)은 매수후보/관심종목/관망/제외권장 4단계. 신뢰도 낮음이면 한 단계 강등.",
         "top5": top5,
         "all_results": results,
     }
