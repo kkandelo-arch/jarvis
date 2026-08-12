@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-11T08:10:11.020875+00:00",
-  "macro_composite_score": 34,
+  "timestamp": "2026-08-12T04:41:57.050083+00:00",
+  "macro_composite_score": 36,
   "scanned_count": 30,
   "ranking_basis": "adjusted_score (5지표 가중합산 x 백테스트 신뢰도), 기본목록은 거래대금 상위 자동선정",
   "weights": {
@@ -10,69 +10,17 @@
     "supply": 0.25,
     "dart_smart": 0.2
   },
-  "note": "기본 30개는 매일 거래대금 기준 자동 갱신. DART 스마트점수 없는 종목은 중립값(50) 처리.",
+  "note": "판단(decision)은 매수후보/관심종목/관망/제외권장 4단계. 신뢰도 낮음이면 한 단계 강등.",
   "top5": [
     {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "origin": "기본(거래대금상위)",
-      "total_score": 64,
-      "adjusted_score": 70,
-      "stars": 4,
-      "confidence_multiplier": 1.1,
-      "backtest_confidence": {
-        "label": "높음",
-        "backtest_win_rate_pct": 70.0,
-        "backtest_sample_count": 50
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -14.29,
-        "momentum_score": 0,
-        "band_position_pct": 51.4,
-        "band_score": 87,
-        "macro_score": 100,
-        "supply_net_eok": 249.7,
-        "supply_score": 100,
-        "smart_score": 78,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "229200",
-      "name": "KODEX 코스닥150",
-      "origin": "기본(거래대금상위)",
-      "total_score": 69,
-      "adjusted_score": 69,
-      "stars": 4,
-      "confidence_multiplier": 1.0,
-      "backtest_confidence": {
-        "label": "보통",
-        "backtest_win_rate_pct": 64.9,
-        "backtest_sample_count": 37
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": 10.22,
-        "momentum_score": 100,
-        "band_position_pct": 39.8,
-        "band_score": 70,
-        "macro_score": 100,
-        "supply_net_eok": -3650.9,
-        "supply_score": 0,
-        "smart_score": 94,
-        "smart_score_available": true
-      }
-    },
-    {
       "ticker": "228790",
       "name": "TIGER 화장품",
       "origin": "기본(거래대금상위)",
-      "total_score": 76,
-      "adjusted_score": 65,
+      "decision": "매수후보",
+      "reason": "재무건전성 양호(98점), 수급 강한 매수세(75.0억), 최근 20일 +24.25% 상승",
+      "adjusted_score": 75,
       "stars": 4,
+      "total_score": 88,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -82,80 +30,26 @@
       "leading_actor": "기관",
       "volume_evaluation": "높음",
       "components": {
-        "momentum_20d_pct": 17.74,
+        "momentum_20d_pct": 24.25,
         "momentum_score": 100,
-        "band_position_pct": 93.2,
-        "band_score": 50,
+        "band_position_pct": 100.0,
+        "band_score": 40,
         "macro_score": 100,
-        "supply_net_eok": 48.9,
-        "supply_score": 74,
-        "smart_score": 50,
-        "smart_score_available": false
-      }
-    },
-    {
-      "ticker": "232080",
-      "name": "TIGER 코스닥150",
-      "origin": "기본(거래대금상위)",
-      "total_score": 69,
-      "adjusted_score": 59,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": 10.29,
-        "momentum_score": 100,
-        "band_position_pct": 39.6,
-        "band_score": 69,
-        "macro_score": 100,
-        "supply_net_eok": -702.2,
-        "supply_score": 0,
-        "smart_score": 94,
+        "supply_net_eok": 75.0,
+        "supply_score": 88,
+        "smart_score": 98,
         "smart_score_available": true
       }
     },
-    {
-      "ticker": "0162Z0",
-      "name": "RISE 삼성전자SK하이닉스채권혼합50",
-      "origin": "기본(거래대금상위)",
-      "total_score": 66,
-      "adjusted_score": 56,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -7.79,
-        "momentum_score": 11,
-        "band_position_pct": 45.3,
-        "band_score": 78,
-        "macro_score": 100,
-        "supply_net_eok": 102.2,
-        "supply_score": 100,
-        "smart_score": 80,
-        "smart_score_available": true
-      }
-    }
-  ],
-  "all_results": [
     {
       "ticker": "091160",
       "name": "KODEX 반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 64,
+      "decision": "관심종목",
+      "reason": "재무건전성 양호(77점), 수급 강한 매수세(582.1억), 최근 20일 -17.98% 하락",
       "adjusted_score": 70,
       "stars": 4,
+      "total_score": 64,
       "confidence_multiplier": 1.1,
       "backtest_confidence": {
         "label": "높음",
@@ -165,14 +59,14 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -14.29,
+        "momentum_20d_pct": -17.98,
         "momentum_score": 0,
-        "band_position_pct": 51.4,
-        "band_score": 87,
+        "band_position_pct": 55.1,
+        "band_score": 93,
         "macro_score": 100,
-        "supply_net_eok": 249.7,
+        "supply_net_eok": 582.1,
         "supply_score": 100,
-        "smart_score": 78,
+        "smart_score": 77,
         "smart_score_available": true
       }
     },
@@ -180,9 +74,11 @@
       "ticker": "229200",
       "name": "KODEX 코스닥150",
       "origin": "기본(거래대금상위)",
-      "total_score": 69,
-      "adjusted_score": 69,
-      "stars": 4,
+      "decision": "관망",
+      "reason": "재무건전성 양호(94점), 수급 매도세(-3184.6억)",
+      "adjusted_score": 58,
+      "stars": 3,
+      "total_score": 58,
       "confidence_multiplier": 1.0,
       "backtest_confidence": {
         "label": "보통",
@@ -192,66 +88,12 @@
       "leading_actor": "기관",
       "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": 10.22,
-        "momentum_score": 100,
-        "band_position_pct": 39.8,
-        "band_score": 70,
-        "macro_score": 100,
-        "supply_net_eok": -3650.9,
-        "supply_score": 0,
-        "smart_score": 94,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "228790",
-      "name": "TIGER 화장품",
-      "origin": "기본(거래대금상위)",
-      "total_score": 76,
-      "adjusted_score": 65,
-      "stars": 4,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "높음",
-      "components": {
-        "momentum_20d_pct": 17.74,
-        "momentum_score": 100,
-        "band_position_pct": 93.2,
-        "band_score": 50,
-        "macro_score": 100,
-        "supply_net_eok": 48.9,
-        "supply_score": 74,
-        "smart_score": 50,
-        "smart_score_available": false
-      }
-    },
-    {
-      "ticker": "232080",
-      "name": "TIGER 코스닥150",
-      "origin": "기본(거래대금상위)",
-      "total_score": 69,
-      "adjusted_score": 59,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": 10.29,
-        "momentum_score": 100,
-        "band_position_pct": 39.6,
+        "momentum_20d_pct": 2.61,
+        "momentum_score": 63,
+        "band_position_pct": 39.2,
         "band_score": 69,
         "macro_score": 100,
-        "supply_net_eok": -702.2,
+        "supply_net_eok": -3184.6,
         "supply_score": 0,
         "smart_score": 94,
         "smart_score_available": true
@@ -261,9 +103,11 @@
       "ticker": "0162Z0",
       "name": "RISE 삼성전자SK하이닉스채권혼합50",
       "origin": "기본(거래대금상위)",
-      "total_score": 66,
-      "adjusted_score": 56,
+      "decision": "관망",
+      "reason": "재무건전성 양호(80점), 수급 강한 매수세(150.8억), 최근 20일 -8.04% 하락",
+      "adjusted_score": 57,
       "stars": 3,
+      "total_score": 67,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -273,12 +117,12 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -7.79,
-        "momentum_score": 11,
-        "band_position_pct": 45.3,
-        "band_score": 78,
+        "momentum_20d_pct": -8.04,
+        "momentum_score": 10,
+        "band_position_pct": 51.8,
+        "band_score": 88,
         "macro_score": 100,
-        "supply_net_eok": 102.2,
+        "supply_net_eok": 150.8,
         "supply_score": 100,
         "smart_score": 80,
         "smart_score_available": true
@@ -288,9 +132,11 @@
       "ticker": "442580",
       "name": "PLUS 글로벌HBM반도체",
       "origin": "기본(거래대금상위)",
-      "total_score": 65,
-      "adjusted_score": 55,
+      "decision": "관망",
+      "reason": "재무건전성 양호(81점), 수급 강한 매수세(550.6억), 최근 20일 -18.68% 하락",
+      "adjusted_score": 56,
       "stars": 3,
+      "total_score": 66,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -300,267 +146,28 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -16.95,
+        "momentum_20d_pct": -18.68,
         "momentum_score": 0,
-        "band_position_pct": 55.1,
-        "band_score": 93,
+        "band_position_pct": 57.9,
+        "band_score": 97,
         "macro_score": 100,
-        "supply_net_eok": 510.3,
+        "supply_net_eok": 550.6,
         "supply_score": 100,
         "smart_score": 81,
         "smart_score_available": true
       }
-    },
+    }
+  ],
+  "all_results": [
     {
-      "ticker": "395270",
-      "name": "HANARO Fn K-반도체",
+      "ticker": "228790",
+      "name": "TIGER 화장품",
       "origin": "기본(거래대금상위)",
-      "total_score": 64,
-      "adjusted_score": 54,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -14.85,
-        "momentum_score": 0,
-        "band_position_pct": 49.7,
-        "band_score": 85,
-        "macro_score": 100,
-        "supply_net_eok": 2736.7,
-        "supply_score": 100,
-        "smart_score": 81,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "0177N0",
-      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
-      "origin": "기본(거래대금상위)",
-      "total_score": 64,
-      "adjusted_score": 54,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -7.92,
-        "momentum_score": 10,
-        "band_position_pct": 38.1,
-        "band_score": 67,
-        "macro_score": 100,
-        "supply_net_eok": 97.4,
-        "supply_score": 99,
-        "smart_score": 80,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "0167A0",
-      "name": "SOL AI반도체TOP2플러스",
-      "origin": "기본(거래대금상위)",
-      "total_score": 60,
-      "adjusted_score": 51,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -16.54,
-        "momentum_score": 0,
-        "band_position_pct": 34.1,
-        "band_score": 61,
-        "macro_score": 100,
-        "supply_net_eok": 221.6,
-        "supply_score": 100,
-        "smart_score": 79,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "411060",
-      "name": "ACE KRX금현물",
-      "origin": "기본(거래대금상위)",
-      "total_score": 59,
-      "adjusted_score": 50,
-      "stars": 3,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "외국인",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": 4.37,
-        "momentum_score": 72,
-        "band_position_pct": 41.9,
-        "band_score": 73,
-        "macro_score": 100,
-        "supply_net_eok": -52.5,
-        "supply_score": 24,
-        "smart_score": 50,
-        "smart_score_available": false
-      }
-    },
-    {
-      "ticker": "139260",
-      "name": "TIGER 200 IT",
-      "origin": "기본(거래대금상위)",
-      "total_score": 58,
-      "adjusted_score": 49,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -12.33,
-        "momentum_score": 0,
-        "band_position_pct": 49.9,
-        "band_score": 85,
-        "macro_score": 100,
-        "supply_net_eok": 247.9,
-        "supply_score": 100,
-        "smart_score": 50,
-        "smart_score_available": false
-      }
-    },
-    {
-      "ticker": "0148J0",
-      "name": "TIGER 코리아휴머노이드로봇산업",
-      "origin": "기본(거래대금상위)",
-      "total_score": 57,
-      "adjusted_score": 48,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": 22.59,
-        "momentum_score": 100,
-        "band_position_pct": 28.9,
-        "band_score": 53,
-        "macro_score": 100,
-        "supply_net_eok": -332.7,
-        "supply_score": 0,
-        "smart_score": 47,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "133690",
-      "name": "TIGER 미국나스닥100",
-      "origin": "기본(거래대금상위)",
-      "total_score": 42,
-      "adjusted_score": 46,
-      "stars": 2,
-      "confidence_multiplier": 1.1,
-      "backtest_confidence": {
-        "label": "높음",
-        "backtest_win_rate_pct": 83.3,
-        "backtest_sample_count": 30
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": -4.47,
-        "momentum_score": 28,
-        "band_position_pct": 67.3,
-        "band_score": 89,
-        "macro_score": 100,
-        "supply_net_eok": -4421.4,
-        "supply_score": 0,
-        "smart_score": 50,
-        "smart_score_available": false
-      }
-    },
-    {
-      "ticker": "487240",
-      "name": "KODEX AI전력핵심설비",
-      "origin": "기본(거래대금상위)",
-      "total_score": 54,
-      "adjusted_score": 46,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": 3.14,
-        "momentum_score": 66,
-        "band_position_pct": 42.3,
-        "band_score": 74,
-        "macro_score": 100,
-        "supply_net_eok": -783.4,
-        "supply_score": 0,
-        "smart_score": 64,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "069500",
-      "name": "KODEX 200",
-      "origin": "기본(거래대금상위)",
-      "total_score": 39,
-      "adjusted_score": 43,
-      "stars": 2,
-      "confidence_multiplier": 1.1,
-      "backtest_confidence": {
-        "label": "높음",
-        "backtest_win_rate_pct": 73.1,
-        "backtest_sample_count": 52
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -9.53,
-        "momentum_score": 2,
-        "band_position_pct": 53.8,
-        "band_score": 91,
-        "macro_score": 100,
-        "supply_net_eok": -7729.3,
-        "supply_score": 0,
-        "smart_score": 74,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "390390",
-      "name": "KODEX 미국반도체",
-      "origin": "기본(거래대금상위)",
-      "total_score": 48,
-      "adjusted_score": 41,
-      "stars": 2,
+      "decision": "매수후보",
+      "reason": "재무건전성 양호(98점), 수급 강한 매수세(75.0억), 최근 20일 +24.25% 상승",
+      "adjusted_score": 75,
+      "stars": 4,
+      "total_score": 88,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -570,78 +177,490 @@
       "leading_actor": "기관",
       "volume_evaluation": "높음",
       "components": {
-        "momentum_20d_pct": -8.63,
-        "momentum_score": 7,
+        "momentum_20d_pct": 24.25,
+        "momentum_score": 100,
+        "band_position_pct": 100.0,
+        "band_score": 40,
+        "macro_score": 100,
+        "supply_net_eok": 75.0,
+        "supply_score": 88,
+        "smart_score": 98,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "origin": "기본(거래대금상위)",
+      "decision": "관심종목",
+      "reason": "재무건전성 양호(77점), 수급 강한 매수세(582.1억), 최근 20일 -17.98% 하락",
+      "adjusted_score": 70,
+      "stars": 4,
+      "total_score": 64,
+      "confidence_multiplier": 1.1,
+      "backtest_confidence": {
+        "label": "높음",
+        "backtest_win_rate_pct": 70.0,
+        "backtest_sample_count": 50
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -17.98,
+        "momentum_score": 0,
+        "band_position_pct": 55.1,
+        "band_score": 93,
+        "macro_score": 100,
+        "supply_net_eok": 582.1,
+        "supply_score": 100,
+        "smart_score": 77,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "재무건전성 양호(94점), 수급 매도세(-3184.6억)",
+      "adjusted_score": 58,
+      "stars": 3,
+      "total_score": 58,
+      "confidence_multiplier": 1.0,
+      "backtest_confidence": {
+        "label": "보통",
+        "backtest_win_rate_pct": 64.9,
+        "backtest_sample_count": 37
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": 2.61,
+        "momentum_score": 63,
+        "band_position_pct": 39.2,
+        "band_score": 69,
+        "macro_score": 100,
+        "supply_net_eok": -3184.6,
+        "supply_score": 0,
+        "smart_score": 94,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "재무건전성 양호(80점), 수급 강한 매수세(150.8억), 최근 20일 -8.04% 하락",
+      "adjusted_score": 57,
+      "stars": 3,
+      "total_score": 67,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -8.04,
+        "momentum_score": 10,
+        "band_position_pct": 51.8,
+        "band_score": 88,
+        "macro_score": 100,
+        "supply_net_eok": 150.8,
+        "supply_score": 100,
+        "smart_score": 80,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "재무건전성 양호(81점), 수급 강한 매수세(550.6억), 최근 20일 -18.68% 하락",
+      "adjusted_score": 56,
+      "stars": 3,
+      "total_score": 66,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -18.68,
+        "momentum_score": 0,
+        "band_position_pct": 57.9,
+        "band_score": 97,
+        "macro_score": 100,
+        "supply_net_eok": 550.6,
+        "supply_score": 100,
+        "smart_score": 81,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "0177N0",
+      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "재무건전성 양호(80점), 수급 강한 매수세(99.8억), 최근 20일 -8.16% 하락",
+      "adjusted_score": 56,
+      "stars": 3,
+      "total_score": 66,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -8.16,
+        "momentum_score": 9,
+        "band_position_pct": 45.7,
+        "band_score": 79,
+        "macro_score": 100,
+        "supply_net_eok": 99.8,
+        "supply_score": 100,
+        "smart_score": 80,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "재무건전성 양호(84점), 수급 강한 매수세(283.4억), 최근 20일 -15.25% 하락",
+      "adjusted_score": 56,
+      "stars": 3,
+      "total_score": 66,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -15.25,
+        "momentum_score": 0,
+        "band_position_pct": 54.6,
+        "band_score": 92,
+        "macro_score": 100,
+        "supply_net_eok": 283.4,
+        "supply_score": 100,
+        "smart_score": 84,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "395270",
+      "name": "HANARO Fn K-반도체",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "재무건전성 양호(81점), 수급 강한 매수세(2880.3억), 최근 20일 -17.84% 하락",
+      "adjusted_score": 55,
+      "stars": 3,
+      "total_score": 65,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -17.84,
+        "momentum_score": 0,
+        "band_position_pct": 53.9,
+        "band_score": 91,
+        "macro_score": 100,
+        "supply_net_eok": 2880.3,
+        "supply_score": 100,
+        "smart_score": 81,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "0167A0",
+      "name": "SOL AI반도체TOP2플러스",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "재무건전성 양호(79점), 수급 강한 매수세(1083.1억), 최근 20일 -19.15% 하락",
+      "adjusted_score": 52,
+      "stars": 3,
+      "total_score": 61,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -19.15,
+        "momentum_score": 0,
+        "band_position_pct": 38.8,
+        "band_score": 68,
+        "macro_score": 100,
+        "supply_net_eok": 1083.1,
+        "supply_score": 100,
+        "smart_score": 79,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "411060",
+      "name": "ACE KRX금현물",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "수급 매도세(-62.0억), 최근 20일 +5.69% 상승, 백테스트 미검증",
+      "adjusted_score": 50,
+      "stars": 3,
+      "total_score": 59,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "외국인",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": 5.69,
+        "momentum_score": 78,
+        "band_position_pct": 42.7,
+        "band_score": 74,
+        "macro_score": 100,
+        "supply_net_eok": -62.0,
+        "supply_score": 19,
+        "smart_score": 50,
+        "smart_score_available": false
+      }
+    },
+    {
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "수급 매도세(-303.0억), 최근 20일 +15.72% 상승, 백테스트 미검증",
+      "adjusted_score": 49,
+      "stars": 2,
+      "total_score": 58,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": 15.72,
+        "momentum_score": 100,
+        "band_position_pct": 30.0,
+        "band_score": 55,
+        "macro_score": 100,
+        "supply_net_eok": -303.0,
+        "supply_score": 0,
+        "smart_score": 49,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "재무건전성 양호(94점), 수급 매도세(-643.5억), 백테스트 미검증",
+      "adjusted_score": 49,
+      "stars": 2,
+      "total_score": 58,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": 2.88,
+        "momentum_score": 64,
+        "band_position_pct": 39.2,
+        "band_score": 69,
+        "macro_score": 100,
+        "supply_net_eok": -643.5,
+        "supply_score": 0,
+        "smart_score": 94,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "390390",
+      "name": "KODEX 미국반도체",
+      "origin": "기본(거래대금상위)",
+      "decision": "관망",
+      "reason": "수급 강한 매수세(73.1억), 최근 20일 -10.84% 하락, 백테스트 미검증",
+      "adjusted_score": 47,
+      "stars": 2,
+      "total_score": 55,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "외국인",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -10.84,
+        "momentum_score": 0,
+        "band_position_pct": 67.0,
+        "band_score": 90,
+        "macro_score": 100,
+        "supply_net_eok": 73.1,
+        "supply_score": 87,
+        "smart_score": 50,
+        "smart_score_available": false
+      }
+    },
+    {
+      "ticker": "069500",
+      "name": "KODEX 200",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "재무건전성 양호(74점), 수급 매도세(-5879.9억), 최근 20일 -10.76% 하락",
+      "adjusted_score": 44,
+      "stars": 2,
+      "total_score": 40,
+      "confidence_multiplier": 1.1,
+      "backtest_confidence": {
+        "label": "높음",
+        "backtest_win_rate_pct": 73.1,
+        "backtest_sample_count": 52
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -10.76,
+        "momentum_score": 0,
+        "band_position_pct": 58.4,
+        "band_score": 98,
+        "macro_score": 100,
+        "supply_net_eok": -5879.9,
+        "supply_score": 0,
+        "smart_score": 74,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "133690",
+      "name": "TIGER 미국나스닥100",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "수급 매도세(-4280.3억), 최근 20일 -5.72% 하락",
+      "adjusted_score": 44,
+      "stars": 2,
+      "total_score": 40,
+      "confidence_multiplier": 1.1,
+      "backtest_confidence": {
+        "label": "높음",
+        "backtest_win_rate_pct": 83.3,
+        "backtest_sample_count": 30
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -5.72,
+        "momentum_score": 21,
         "band_position_pct": 66.5,
         "band_score": 90,
         "macro_score": 100,
-        "supply_net_eok": -2.4,
-        "supply_score": 49,
+        "supply_net_eok": -4280.3,
+        "supply_score": 0,
         "smart_score": 50,
         "smart_score_available": false
+      }
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "수급 매도세(-582.6억), 백테스트 미검증",
+      "adjusted_score": 44,
+      "stars": 2,
+      "total_score": 52,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": 1.77,
+        "momentum_score": 59,
+        "band_position_pct": 45.0,
+        "band_score": 77,
+        "macro_score": 100,
+        "supply_net_eok": -582.6,
+        "supply_score": 0,
+        "smart_score": 64,
+        "smart_score_available": true
       }
     },
     {
       "ticker": "152100",
       "name": "PLUS 200",
       "origin": "기본(거래대금상위)",
-      "total_score": 47,
-      "adjusted_score": 40,
+      "decision": "제외권장",
+      "reason": "재무건전성 양호(74점), 최근 20일 -10.82% 하락, 백테스트 미검증",
+      "adjusted_score": 42,
       "stars": 2,
+      "total_score": 49,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
         "backtest_win_rate_pct": null,
         "backtest_sample_count": 0
       },
-      "leading_actor": "기관",
+      "leading_actor": "외국인",
       "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -9.54,
-        "momentum_score": 2,
-        "band_position_pct": 53.8,
-        "band_score": 91,
+        "momentum_20d_pct": -10.82,
+        "momentum_score": 0,
+        "band_position_pct": 58.5,
+        "band_score": 98,
         "macro_score": 100,
-        "supply_net_eok": -35.3,
-        "supply_score": 32,
+        "supply_net_eok": -25.9,
+        "supply_score": 37,
         "smart_score": 74,
         "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "origin": "기본(거래대금상위)",
-      "total_score": 55,
-      "adjusted_score": 38,
-      "stars": 2,
-      "confidence_multiplier": 0.7,
-      "backtest_confidence": {
-        "label": "낮음",
-        "backtest_win_rate_pct": 46.4,
-        "backtest_sample_count": 28
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": 8.99,
-        "momentum_score": 95,
-        "band_position_pct": 23.0,
-        "band_score": 44,
-        "macro_score": 100,
-        "supply_net_eok": -123.4,
-        "supply_score": 0,
-        "smart_score": 50,
-        "smart_score_available": false
       }
     },
     {
       "ticker": "360750",
       "name": "TIGER 미국S&P500",
       "origin": "기본(거래대금상위)",
-      "total_score": 42,
+      "decision": "제외권장",
+      "reason": "수급 매도세(-8344.4억), 백테스트 미검증",
       "adjusted_score": 36,
       "stars": 2,
+      "total_score": 42,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -651,39 +670,12 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -2.49,
-        "momentum_score": 38,
-        "band_position_pct": 77.5,
-        "band_score": 74,
+        "momentum_20d_pct": -2.86,
+        "momentum_score": 36,
+        "band_position_pct": 76.2,
+        "band_score": 76,
         "macro_score": 100,
-        "supply_net_eok": -8506.6,
-        "supply_score": 0,
-        "smart_score": 50,
-        "smart_score_available": false
-      }
-    },
-    {
-      "ticker": "379810",
-      "name": "KODEX 미국나스닥100",
-      "origin": "기본(거래대금상위)",
-      "total_score": 42,
-      "adjusted_score": 36,
-      "stars": 2,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": -4.67,
-        "momentum_score": 27,
-        "band_position_pct": 66.9,
-        "band_score": 90,
-        "macro_score": 100,
-        "supply_net_eok": -6175.4,
+        "supply_net_eok": -8344.4,
         "supply_score": 0,
         "smart_score": 50,
         "smart_score_available": false
@@ -693,9 +685,11 @@
       "ticker": "379800",
       "name": "KODEX 미국S&P500",
       "origin": "기본(거래대금상위)",
-      "total_score": 42,
+      "decision": "제외권장",
+      "reason": "수급 매도세(-4645.5억), 백테스트 미검증",
       "adjusted_score": 36,
       "stars": 2,
+      "total_score": 42,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -705,12 +699,12 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -2.75,
-        "momentum_score": 36,
-        "band_position_pct": 75.9,
-        "band_score": 76,
+        "momentum_20d_pct": -3.1,
+        "momentum_score": 34,
+        "band_position_pct": 74.7,
+        "band_score": 78,
         "macro_score": 100,
-        "supply_net_eok": -4731.6,
+        "supply_net_eok": -4645.5,
         "supply_score": 0,
         "smart_score": 50,
         "smart_score_available": false
@@ -720,9 +714,11 @@
       "ticker": "396500",
       "name": "TIGER 반도체TOP10",
       "origin": "기본(거래대금상위)",
-      "total_score": 40,
-      "adjusted_score": 34,
-      "stars": 1,
+      "decision": "제외권장",
+      "reason": "재무건전성 양호(90점), 수급 매도세(-1067.1억), 최근 20일 -18.8% 하락",
+      "adjusted_score": 35,
+      "stars": 2,
+      "total_score": 41,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -732,12 +728,12 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -15.53,
+        "momentum_20d_pct": -18.8,
         "momentum_score": 0,
-        "band_position_pct": 46.2,
-        "band_score": 79,
+        "band_position_pct": 50.8,
+        "band_score": 86,
         "macro_score": 100,
-        "supply_net_eok": -1638.9,
+        "supply_net_eok": -1067.1,
         "supply_score": 0,
         "smart_score": 90,
         "smart_score_available": true
@@ -747,9 +743,11 @@
       "ticker": "102110",
       "name": "TIGER 200",
       "origin": "기본(거래대금상위)",
-      "total_score": 39,
-      "adjusted_score": 33,
+      "decision": "제외권장",
+      "reason": "재무건전성 양호(74점), 수급 매도세(-831.8억), 최근 20일 -10.71% 하락",
+      "adjusted_score": 34,
       "stars": 1,
+      "total_score": 40,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -759,24 +757,55 @@
       "leading_actor": "기관",
       "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -9.47,
-        "momentum_score": 3,
-        "band_position_pct": 54.0,
-        "band_score": 91,
+        "momentum_20d_pct": -10.71,
+        "momentum_score": 0,
+        "band_position_pct": 58.7,
+        "band_score": 98,
         "macro_score": 100,
-        "supply_net_eok": -1147.8,
+        "supply_net_eok": -831.8,
         "supply_score": 0,
         "smart_score": 74,
         "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "379810",
+      "name": "KODEX 미국나스닥100",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "수급 매도세(-6022.8억), 최근 20일 -5.86% 하락, 백테스트 미검증",
+      "adjusted_score": 34,
+      "stars": 1,
+      "total_score": 40,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -5.86,
+        "momentum_score": 21,
+        "band_position_pct": 66.0,
+        "band_score": 91,
+        "macro_score": 100,
+        "supply_net_eok": -6022.8,
+        "supply_score": 0,
+        "smart_score": 50,
+        "smart_score_available": false
       }
     },
     {
       "ticker": "148020",
       "name": "RISE 200",
       "origin": "기본(거래대금상위)",
-      "total_score": 39,
-      "adjusted_score": 33,
+      "decision": "제외권장",
+      "reason": "재무건전성 양호(74점), 수급 매도세(-394.5억), 최근 20일 -10.7% 하락",
+      "adjusted_score": 34,
       "stars": 1,
+      "total_score": 40,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -786,41 +815,14 @@
       "leading_actor": "기관",
       "volume_evaluation": "양호",
       "components": {
-        "momentum_20d_pct": -9.54,
-        "momentum_score": 2,
-        "band_position_pct": 53.7,
-        "band_score": 91,
+        "momentum_20d_pct": -10.7,
+        "momentum_score": 0,
+        "band_position_pct": 58.4,
+        "band_score": 98,
         "macro_score": 100,
-        "supply_net_eok": -441.8,
+        "supply_net_eok": -394.5,
         "supply_score": 0,
         "smart_score": 74,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "498400",
-      "name": "KODEX 200타겟위클리커버드콜",
-      "origin": "기본(거래대금상위)",
-      "total_score": 39,
-      "adjusted_score": 33,
-      "stars": 1,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "부족",
-      "components": {
-        "momentum_20d_pct": -9.02,
-        "momentum_score": 5,
-        "band_position_pct": 46.3,
-        "band_score": 80,
-        "macro_score": 100,
-        "supply_net_eok": -5746.7,
-        "supply_score": 0,
-        "smart_score": 76,
         "smart_score_available": true
       }
     },
@@ -828,9 +830,11 @@
       "ticker": "395160",
       "name": "KODEX AI반도체TOP2플러스",
       "origin": "기본(거래대금상위)",
-      "total_score": 38,
-      "adjusted_score": 32,
+      "decision": "제외권장",
+      "reason": "재무건전성 양호(80점), 수급 매도세(-563.7억), 최근 20일 -17.81% 하락",
+      "adjusted_score": 33,
       "stars": 1,
+      "total_score": 39,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -840,24 +844,26 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -14.64,
+        "momentum_20d_pct": -17.81,
         "momentum_score": 0,
-        "band_position_pct": 47.0,
-        "band_score": 80,
+        "band_position_pct": 51.4,
+        "band_score": 87,
         "macro_score": 100,
-        "supply_net_eok": -759.0,
+        "supply_net_eok": -563.7,
         "supply_score": 0,
         "smart_score": 80,
         "smart_score_available": true
       }
     },
     {
-      "ticker": "381180",
-      "name": "TIGER 미국필라델피아반도체나스닥",
+      "ticker": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
       "origin": "기본(거래대금상위)",
-      "total_score": 36,
-      "adjusted_score": 31,
+      "decision": "제외권장",
+      "reason": "재무건전성 양호(76점), 수급 매도세(-4659.8억), 최근 20일 -10.13% 하락",
+      "adjusted_score": 32,
       "stars": 1,
+      "total_score": 38,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -867,24 +873,26 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -8.77,
-        "momentum_score": 6,
-        "band_position_pct": 64.8,
-        "band_score": 93,
+        "momentum_20d_pct": -10.13,
+        "momentum_score": 0,
+        "band_position_pct": 51.4,
+        "band_score": 87,
         "macro_score": 100,
-        "supply_net_eok": -911.4,
+        "supply_net_eok": -4659.8,
         "supply_score": 0,
-        "smart_score": 50,
-        "smart_score_available": false
+        "smart_score": 76,
+        "smart_score_available": true
       }
     },
     {
       "ticker": "472150",
       "name": "TIGER 배당커버드콜액티브",
       "origin": "기본(거래대금상위)",
-      "total_score": 37,
-      "adjusted_score": 31,
+      "decision": "제외권장",
+      "reason": "재무건전성 양호(78점), 수급 매도세(-3173.6억), 최근 20일 -12.84% 하락",
+      "adjusted_score": 32,
       "stars": 1,
+      "total_score": 38,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -894,12 +902,12 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -11.03,
+        "momentum_20d_pct": -12.84,
         "momentum_score": 0,
-        "band_position_pct": 42.9,
-        "band_score": 74,
+        "band_position_pct": 47.7,
+        "band_score": 82,
         "macro_score": 100,
-        "supply_net_eok": -3526.2,
+        "supply_net_eok": -3173.6,
         "supply_score": 0,
         "smart_score": 78,
         "smart_score_available": true
@@ -909,9 +917,11 @@
       "ticker": "455850",
       "name": "SOL AI반도체소부장",
       "origin": "기본(거래대금상위)",
-      "total_score": 34,
+      "decision": "제외권장",
+      "reason": "수급 매도세(-186.9억), 최근 20일 -16.96% 하락, 백테스트 미검증",
       "adjusted_score": 29,
       "stars": 1,
+      "total_score": 34,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -921,14 +931,72 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -10.06,
+        "momentum_20d_pct": -16.96,
         "momentum_score": 0,
-        "band_position_pct": 48.0,
-        "band_score": 82,
+        "band_position_pct": 50.6,
+        "band_score": 86,
         "macro_score": 100,
-        "supply_net_eok": -209.0,
+        "supply_net_eok": -186.9,
         "supply_score": 0,
-        "smart_score": 57,
+        "smart_score": 56,
+        "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "381180",
+      "name": "TIGER 미국필라델피아반도체나스닥",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "수급 매도세(-737.6억), 최근 20일 -11.12% 하락, 백테스트 미검증",
+      "adjusted_score": 29,
+      "stars": 1,
+      "total_score": 34,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": -11.12,
+        "momentum_score": 0,
+        "band_position_pct": 65.6,
+        "band_score": 92,
+        "macro_score": 100,
+        "supply_net_eok": -737.6,
+        "supply_score": 0,
+        "smart_score": 50,
+        "smart_score_available": false
+      }
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "재무 부진(2점), 수급 매도세(-117.5억), 신호 신뢰도 낮음(주의)",
+      "adjusted_score": 27,
+      "stars": 1,
+      "total_score": 38,
+      "confidence_multiplier": 0.7,
+      "backtest_confidence": {
+        "label": "낮음",
+        "backtest_win_rate_pct": 46.4,
+        "backtest_sample_count": 28
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "부족",
+      "components": {
+        "momentum_20d_pct": 3.62,
+        "momentum_score": 68,
+        "band_position_pct": 24.3,
+        "band_score": 46,
+        "macro_score": 100,
+        "supply_net_eok": -117.5,
+        "supply_score": 0,
+        "smart_score": 2,
         "smart_score_available": true
       }
     },
@@ -936,9 +1004,11 @@
       "ticker": "475300",
       "name": "SOL 반도체전공정",
       "origin": "기본(거래대금상위)",
-      "total_score": 25,
-      "adjusted_score": 21,
+      "decision": "제외권장",
+      "reason": "재무 부진(5점), 수급 매도세(-275.6억), 최근 20일 -21.2% 하락",
+      "adjusted_score": 22,
       "stars": 1,
+      "total_score": 26,
       "confidence_multiplier": 0.85,
       "backtest_confidence": {
         "label": "검증전",
@@ -948,14 +1018,14 @@
       "leading_actor": "기관",
       "volume_evaluation": "부족",
       "components": {
-        "momentum_20d_pct": -19.86,
+        "momentum_20d_pct": -21.2,
         "momentum_score": 0,
-        "band_position_pct": 54.5,
-        "band_score": 92,
+        "band_position_pct": 58.1,
+        "band_score": 97,
         "macro_score": 100,
-        "supply_net_eok": -272.0,
+        "supply_net_eok": -275.6,
         "supply_score": 0,
-        "smart_score": 6,
+        "smart_score": 5,
         "smart_score_available": true
       }
     }
