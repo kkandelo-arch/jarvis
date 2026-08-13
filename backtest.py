@@ -1,6 +1,7 @@
 """
-DC 자비스 - 백테스팅 모듈 (3단계 MVP)
+DC 자비스 - 백테스팅 모듈 (v2.0 - etf_top30.json 기준 동적 목록으로 전환)
 발굴엔진의 점수(모멘텀+52주밴드)가 과거에 실제로 유효했는지 검증
+매일 갱신되는 거래대금 상위 30개(+임의추가 종목) 전체를 대상으로 검증하도록 변경
 과거 각 시점의 점수 vs 이후 20일 수익률을 비교해 승률·평균수익률 산출
 결과는 data/backtest_result.json 에 저장됨
 
@@ -12,30 +13,47 @@ from datetime import datetime, timedelta, timezone
 
 from pykrx import stock
 
-UNIVERSE = [
-    ("069500", "KODEX 200"),
-    ("229200", "KODEX 코스닥150"),
-    ("091160", "KODEX 반도체"),
-    ("305720", "KODEX 2차전지산업"),
-    ("143850", "TIGER 미국S&P500"),
-    ("133690", "TIGER 미국나스닥100"),
-    ("132030", "KODEX 골드선물(H)"),
-    ("148070", "KOSEF 국고채10년"),
-    ("091170", "KODEX 은행"),
-    ("117460", "KODEX 에너지화학"),
-    ("091180", "KODEX 자동차"),
-    ("244620", "KODEX 바이오"),
-]
+MACRO_SCORE_NEUTRAL = 50
+LOOKBACK = 60
+FORWARD = 20
+STEP = 5
+BUY_THRESHOLD = 60
 
 TODAY = datetime.now()
-FROM_DATE = (TODAY - timedelta(days=730)).strftime("%Y%m%d")  # 검증을 위해 2년치 확보
+FROM_DATE = (TODAY - timedelta(days=730)).strftime("%Y%m%d")
 TO_DATE = TODAY.strftime("%Y%m%d")
 
-MACRO_SCORE_NEUTRAL = 50  # 과거 거시점수 이력이 없어 중립값 고정
-LOOKBACK = 60   # 점수 계산에 필요한 최소 과거 데이터(일)
-FORWARD = 20    # 점수 매긴 후 며칠 뒤 수익률을 볼지
-STEP = 5        # 며칠 간격으로 테스트 시점을 잡을지 (촘촘할수록 느려짐)
-BUY_THRESHOLD = 60  # 이 점수 이상을 "매수신호"로 간주
+
+def load_universe():
+    universe = []
+    existing = set()
+
+    try:
+        with open("data/etf_top30.json", "r", encoding="utf-8") as f:
+            ranking = json.load(f)
+        for item in ranking.get("top30", []):
+            universe.append((item["ticker"], item["name"]))
+            existing.add(item["ticker"])
+        print(f"[디버그] 랭킹 기반 목록 {len(universe)}개 로드 (기준일: {ranking.get('data_as_of')})")
+    except Exception as e:
+        print(f"[경고] etf_top30.json 로드 실패: {e}")
+
+    try:
+        with open("data/custom_universe.json", "r", encoding="utf-8") as f:
+            custom = json.load(f)
+        added = 0
+        for item in custom:
+            ticker = item.get("ticker")
+            name = item.get("name", ticker)
+            if ticker and ticker not in existing:
+                universe.append((ticker, name))
+                existing.add(ticker)
+                added += 1
+        print(f"[디버그] 사용자 임의추가 종목 {added}개 병합")
+    except Exception as e:
+        print(f"[경고] custom_universe.json 로드 실패(없어도 정상 동작): {e}")
+
+    return universe
 
 
 def score_momentum(closes, i):
@@ -111,8 +129,11 @@ def backtest_ticker(ticker, name):
 
 
 def main():
+    universe = load_universe()
+    print(f"[디버그] 총 백테스트 대상 {len(universe)}개")
+
     per_etf_results = []
-    for ticker, name in UNIVERSE:
+    for ticker, name in universe:
         r = backtest_ticker(ticker, name)
         if r:
             per_etf_results.append(r)
@@ -129,6 +150,7 @@ def main():
     output = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "method": "과거 시점별 모멘텀+52주밴드 점수(거시점수는 중립 50점 고정) vs 이후 20일 수익률 비교",
+        "universe_source": "etf_top30.json(거래대금 상위, 매일 자동 갱신) + custom_universe.json",
         "buy_threshold": BUY_THRESHOLD,
         "overall_buy_signal_win_rate_pct": overall_win_rate,
         "overall_buy_signal_count": total_buy_count,
