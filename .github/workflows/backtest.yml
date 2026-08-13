@@ -35,5 +35,5 @@ jobs:
           git config user.email "actions@github.com"
           git add data/backtest_result.json
           git diff --cached --quiet || git commit -m "백테스팅 결과 자동 갱신"
-          git pull --rebase
+          git pull --no-rebase -X ours
           git push
