@@ -1,23 +1,69 @@
 {
-  "timestamp": "2026-08-09T20:29:02.599749+00:00",
+  "timestamp": "2026-08-13T04:53:20.423295+00:00",
   "method": "과거 시점별 모멘텀+52주밴드 점수(거시점수는 중립 50점 고정) vs 이후 20일 수익률 비교",
+  "universe_source": "etf_top30.json(거래대금 상위, 매일 자동 갱신) + custom_universe.json",
   "buy_threshold": 60,
-  "overall_buy_signal_win_rate_pct": 63.1,
-  "overall_buy_signal_count": 415,
+  "overall_buy_signal_win_rate_pct": 70.2,
+  "overall_buy_signal_count": 1087,
   "per_etf": [
     {
       "ticker": "069500",
       "name": "KODEX 200",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 52,
-        "win_rate_pct": 73.1,
-        "avg_return_pct": 7.71
+        "count": 46,
+        "win_rate_pct": 73.9,
+        "avg_return_pct": 7.41
       },
       "other_group": {
-        "count": 29,
-        "win_rate_pct": 75.9,
-        "avg_return_pct": 4.08
+        "count": 35,
+        "win_rate_pct": 77.1,
+        "avg_return_pct": 5.66
+      }
+    },
+    {
+      "ticker": "102110",
+      "name": "TIGER 200",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 47,
+        "win_rate_pct": 74.5,
+        "avg_return_pct": 7.26
+      },
+      "other_group": {
+        "count": 34,
+        "win_rate_pct": 76.5,
+        "avg_return_pct": 5.82
+      }
+    },
+    {
+      "ticker": "360750",
+      "name": "TIGER 미국S&P500",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 27,
+        "win_rate_pct": 92.6,
+        "avg_return_pct": 3.05
+      },
+      "other_group": {
+        "count": 54,
+        "win_rate_pct": 55.6,
+        "avg_return_pct": 0.53
+      }
+    },
+    {
+      "ticker": "379800",
+      "name": "KODEX 미국S&P500",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 27,
+        "win_rate_pct": 88.9,
+        "avg_return_pct": 2.89
+      },
+      "other_group": {
+        "count": 54,
+        "win_rate_pct": 55.6,
+        "avg_return_pct": 0.54
       }
     },
     {
@@ -25,59 +71,29 @@
       "name": "KODEX 코스닥150",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 37,
-        "win_rate_pct": 64.9,
-        "avg_return_pct": 0.92
+        "count": 34,
+        "win_rate_pct": 64.7,
+        "avg_return_pct": 1.45
       },
       "other_group": {
-        "count": 44,
-        "win_rate_pct": 52.3,
-        "avg_return_pct": 0.8
-      }
-    },
-    {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "total_test_points": 81,
-      "buy_signal_group": {
-        "count": 50,
-        "win_rate_pct": 70.0,
-        "avg_return_pct": 8.72
-      },
-      "other_group": {
-        "count": 31,
-        "win_rate_pct": 74.2,
-        "avg_return_pct": 7.91
-      }
-    },
-    {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "total_test_points": 81,
-      "buy_signal_group": {
-        "count": 28,
-        "win_rate_pct": 46.4,
-        "avg_return_pct": -0.53
-      },
-      "other_group": {
-        "count": 53,
-        "win_rate_pct": 47.2,
-        "avg_return_pct": 0.93
-      }
-    },
-    {
-      "ticker": "143850",
-      "name": "TIGER 미국S&P500",
-      "total_test_points": 81,
-      "buy_signal_group": {
-        "count": 12,
-        "win_rate_pct": 83.3,
-        "avg_return_pct": 2.06
-      },
-      "other_group": {
-        "count": 69,
-        "win_rate_pct": 58.0,
+        "count": 47,
+        "win_rate_pct": 53.2,
         "avg_return_pct": 0.66
+      }
+    },
+    {
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 45,
+        "win_rate_pct": 68.9,
+        "avg_return_pct": 8.58
+      },
+      "other_group": {
+        "count": 36,
+        "win_rate_pct": 72.2,
+        "avg_return_pct": 7.43
       }
     },
     {
@@ -85,104 +101,344 @@
       "name": "TIGER 미국나스닥100",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 30,
-        "win_rate_pct": 83.3,
-        "avg_return_pct": 3.62
+        "count": 32,
+        "win_rate_pct": 81.2,
+        "avg_return_pct": 3.78
       },
       "other_group": {
-        "count": 51,
-        "win_rate_pct": 60.8,
-        "avg_return_pct": 1.01
+        "count": 49,
+        "win_rate_pct": 59.2,
+        "avg_return_pct": 0.71
       }
     },
     {
-      "ticker": "132030",
-      "name": "KODEX 골드선물(H)",
+      "ticker": "0167A0",
+      "name": "SOL AI반도체TOP2플러스",
+      "total_test_points": 5,
+      "buy_signal_group": {
+        "count": 3,
+        "win_rate_pct": 0.0,
+        "avg_return_pct": -31.41
+      },
+      "other_group": {
+        "count": 2,
+        "win_rate_pct": 0.0,
+        "avg_return_pct": -28.34
+      }
+    },
+    {
+      "ticker": "379810",
+      "name": "KODEX 미국나스닥100",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 35,
-        "win_rate_pct": 65.7,
-        "avg_return_pct": 2.33
+        "count": 32,
+        "win_rate_pct": 81.2,
+        "avg_return_pct": 3.75
       },
       "other_group": {
-        "count": 46,
-        "win_rate_pct": 58.7,
-        "avg_return_pct": 1.75
+        "count": 49,
+        "win_rate_pct": 59.2,
+        "avg_return_pct": 0.7
       }
     },
     {
-      "ticker": "148070",
-      "name": "KOSEF 국고채10년",
+      "ticker": "395160",
+      "name": "KODEX AI반도체TOP2플러스",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 17,
-        "win_rate_pct": 29.4,
-        "avg_return_pct": -0.61
+        "count": 48,
+        "win_rate_pct": 77.1,
+        "avg_return_pct": 10.88
       },
       "other_group": {
-        "count": 64,
-        "win_rate_pct": 46.9,
-        "avg_return_pct": -0.58
+        "count": 33,
+        "win_rate_pct": 72.7,
+        "avg_return_pct": 7.41
       }
     },
     {
-      "ticker": "091170",
-      "name": "KODEX 은행",
+      "ticker": "091160",
+      "name": "KODEX 반도체",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 39,
-        "win_rate_pct": 51.3,
-        "avg_return_pct": 2.0
+        "count": 49,
+        "win_rate_pct": 67.3,
+        "avg_return_pct": 9.34
       },
       "other_group": {
-        "count": 42,
-        "win_rate_pct": 73.8,
-        "avg_return_pct": 4.19
+        "count": 32,
+        "win_rate_pct": 78.1,
+        "avg_return_pct": 7.48
       }
     },
     {
-      "ticker": "117460",
-      "name": "KODEX 에너지화학",
-      "total_test_points": 81,
-      "buy_signal_group": {
-        "count": 36,
-        "win_rate_pct": 50.0,
-        "avg_return_pct": 2.72
-      },
-      "other_group": {
-        "count": 45,
-        "win_rate_pct": 57.8,
-        "avg_return_pct": 0.41
-      }
-    },
-    {
-      "ticker": "091180",
-      "name": "KODEX 자동차",
-      "total_test_points": 81,
+      "ticker": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "total_test_points": 67,
       "buy_signal_group": {
         "count": 40,
-        "win_rate_pct": 57.5,
-        "avg_return_pct": 2.68
+        "win_rate_pct": 75.0,
+        "avg_return_pct": 6.86
       },
       "other_group": {
-        "count": 41,
-        "win_rate_pct": 61.0,
-        "avg_return_pct": 2.84
+        "count": 27,
+        "win_rate_pct": 59.3,
+        "avg_return_pct": 1.93
       }
     },
     {
-      "ticker": "244620",
-      "name": "KODEX 바이오",
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
       "total_test_points": 81,
       "buy_signal_group": {
-        "count": 39,
-        "win_rate_pct": 71.8,
-        "avg_return_pct": 3.04
+        "count": 45,
+        "win_rate_pct": 71.1,
+        "avg_return_pct": 12.86
       },
       "other_group": {
-        "count": 42,
-        "win_rate_pct": 64.3,
-        "avg_return_pct": 2.87
+        "count": 36,
+        "win_rate_pct": 66.7,
+        "avg_return_pct": 5.7
+      }
+    },
+    {
+      "ticker": "0008T0",
+      "name": "SOL 화장품TOP3플러스",
+      "total_test_points": 60,
+      "buy_signal_group": {
+        "count": 29,
+        "win_rate_pct": 41.4,
+        "avg_return_pct": 1.93
+      },
+      "other_group": {
+        "count": 31,
+        "win_rate_pct": 48.4,
+        "avg_return_pct": 1.99
+      }
+    },
+    {
+      "ticker": "228790",
+      "name": "TIGER 화장품",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 38,
+        "win_rate_pct": 50.0,
+        "avg_return_pct": 2.09
+      },
+      "other_group": {
+        "count": 43,
+        "win_rate_pct": 55.8,
+        "avg_return_pct": 2.99
+      }
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 49,
+        "win_rate_pct": 73.5,
+        "avg_return_pct": 10.17
+      },
+      "other_group": {
+        "count": 32,
+        "win_rate_pct": 56.2,
+        "avg_return_pct": 5.99
+      }
+    },
+    {
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
+      "total_test_points": 7,
+      "buy_signal_group": {
+        "count": 5,
+        "win_rate_pct": 20.0,
+        "avg_return_pct": -5.22
+      },
+      "other_group": {
+        "count": 2,
+        "win_rate_pct": 0.0,
+        "avg_return_pct": -8.9
+      }
+    },
+    {
+      "ticker": "148020",
+      "name": "RISE 200",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 46,
+        "win_rate_pct": 73.9,
+        "avg_return_pct": 7.39
+      },
+      "other_group": {
+        "count": 35,
+        "win_rate_pct": 77.1,
+        "avg_return_pct": 5.67
+      }
+    },
+    {
+      "ticker": "395270",
+      "name": "HANARO Fn K-반도체",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 53,
+        "win_rate_pct": 77.4,
+        "avg_return_pct": 12.44
+      },
+      "other_group": {
+        "count": 28,
+        "win_rate_pct": 85.7,
+        "avg_return_pct": 7.9
+      }
+    },
+    {
+      "ticker": "472150",
+      "name": "TIGER 배당커버드콜액티브",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 44,
+        "win_rate_pct": 68.2,
+        "avg_return_pct": 4.72
+      },
+      "other_group": {
+        "count": 37,
+        "win_rate_pct": 73.0,
+        "avg_return_pct": 3.58
+      }
+    },
+    {
+      "ticker": "381180",
+      "name": "TIGER 미국필라델피아반도체나스닥",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 44,
+        "win_rate_pct": 72.7,
+        "avg_return_pct": 6.64
+      },
+      "other_group": {
+        "count": 37,
+        "win_rate_pct": 64.9,
+        "avg_return_pct": 3.69
+      }
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 26,
+        "win_rate_pct": 38.5,
+        "avg_return_pct": -0.11
+      },
+      "other_group": {
+        "count": 55,
+        "win_rate_pct": 41.8,
+        "avg_return_pct": 1.1
+      }
+    },
+    {
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 51,
+        "win_rate_pct": 68.6,
+        "avg_return_pct": 12.41
+      },
+      "other_group": {
+        "count": 30,
+        "win_rate_pct": 83.3,
+        "avg_return_pct": 8.64
+      }
+    },
+    {
+      "ticker": "475300",
+      "name": "SOL 반도체전공정",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 49,
+        "win_rate_pct": 73.5,
+        "avg_return_pct": 7.28
+      },
+      "other_group": {
+        "count": 32,
+        "win_rate_pct": 65.6,
+        "avg_return_pct": 4.64
+      }
+    },
+    {
+      "ticker": "466920",
+      "name": "SOL 조선TOP3플러스",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 43,
+        "win_rate_pct": 55.8,
+        "avg_return_pct": 1.83
+      },
+      "other_group": {
+        "count": 38,
+        "win_rate_pct": 63.2,
+        "avg_return_pct": 7.35
+      }
+    },
+    {
+      "ticker": "278530",
+      "name": "KODEX 200TR",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 46,
+        "win_rate_pct": 78.3,
+        "avg_return_pct": 7.82
+      },
+      "other_group": {
+        "count": 35,
+        "win_rate_pct": 74.3,
+        "avg_return_pct": 5.48
+      }
+    },
+    {
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
+      "total_test_points": 14,
+      "buy_signal_group": {
+        "count": 5,
+        "win_rate_pct": 20.0,
+        "avg_return_pct": -7.23
+      },
+      "other_group": {
+        "count": 9,
+        "win_rate_pct": 33.3,
+        "avg_return_pct": -5.6
+      }
+    },
+    {
+      "ticker": "455850",
+      "name": "SOL AI반도체소부장",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 43,
+        "win_rate_pct": 67.4,
+        "avg_return_pct": 6.14
+      },
+      "other_group": {
+        "count": 38,
+        "win_rate_pct": 63.2,
+        "avg_return_pct": 3.92
+      }
+    },
+    {
+      "ticker": "390390",
+      "name": "KODEX 미국반도체",
+      "total_test_points": 81,
+      "buy_signal_group": {
+        "count": 41,
+        "win_rate_pct": 78.0,
+        "avg_return_pct": 6.42
+      },
+      "other_group": {
+        "count": 40,
+        "win_rate_pct": 62.5,
+        "avg_return_pct": 3.53
       }
     }
   ]
