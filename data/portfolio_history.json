@@ -93,5 +93,10 @@
     "date": "2026-08-13",
     "total_eval_amount": 89350,
     "total_pnl_pct": -25.71
+  },
+  {
+    "date": "2026-08-13",
+    "total_eval_amount": 89650,
+    "total_pnl_pct": -25.47
   }
 ]
