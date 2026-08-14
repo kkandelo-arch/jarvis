@@ -1,133 +1,16 @@
 {
-  "timestamp": "2026-08-13T07:39:19.195107+00:00",
+  "timestamp": "2026-08-14T03:26:06.919628+00:00",
   "checked_count": 30,
-  "alert_count": 14,
+  "alert_count": 1,
   "alerts": [
     {
-      "ticker": "069500",
-      "name": "KODEX 200",
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.89,
-      "message": "KODEX 200 1일 급등 3.89%"
-    },
-    {
-      "ticker": "102110",
-      "name": "TIGER 200",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.93,
-      "message": "TIGER 200 1일 급등 3.93%"
-    },
-    {
-      "ticker": "396500",
-      "name": "TIGER 반도체TOP10",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.79,
-      "message": "TIGER 반도체TOP10 1일 급등 4.79%"
-    },
-    {
-      "ticker": "0167A0",
-      "name": "SOL AI반도체TOP2플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.45,
-      "message": "SOL AI반도체TOP2플러스 1일 급등 6.45%"
-    },
-    {
-      "ticker": "395160",
-      "name": "KODEX AI반도체TOP2플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.97,
-      "message": "KODEX AI반도체TOP2플러스 1일 급등 6.97%"
-    },
-    {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.88,
-      "message": "KODEX 반도체 1일 급등 3.88%"
-    },
-    {
-      "ticker": "139260",
-      "name": "TIGER 200 IT",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.49,
-      "message": "TIGER 200 IT 1일 급등 6.49%"
-    },
-    {
-      "ticker": "0008T0",
-      "name": "SOL 화장품TOP3플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.21,
-      "message": "SOL 화장품TOP3플러스 1일 급락 3.21%"
-    },
-    {
-      "ticker": "148020",
-      "name": "RISE 200",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.86,
-      "message": "RISE 200 1일 급등 3.86%"
-    },
-    {
-      "ticker": "395270",
-      "name": "HANARO Fn K-반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.89,
-      "message": "HANARO Fn K-반도체 1일 급등 6.89%"
-    },
-    {
-      "ticker": "472150",
-      "name": "TIGER 배당커버드콜액티브",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.71,
-      "message": "TIGER 배당커버드콜액티브 1일 급등 3.71%"
-    },
-    {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.93,
-      "message": "PLUS 글로벌HBM반도체 1일 급등 4.93%"
-    },
-    {
-      "ticker": "278530",
-      "name": "KODEX 200TR",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.85,
-      "message": "KODEX 200TR 1일 급등 3.85%"
-    },
-    {
-      "ticker": "455850",
-      "name": "SOL AI반도체소부장",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.12,
-      "message": "SOL AI반도체소부장 1일 급등 3.12%"
+      "change_pct": 3.22,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 3.22%"
     }
   ]
 }
