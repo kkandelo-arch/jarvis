@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-14T03:26:06.919628+00:00",
+  "timestamp": "2026-08-14T05:40:34.199900+00:00",
   "checked_count": 30,
   "alert_count": 1,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.22,
-      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 3.22%"
+      "change_pct": 4.52,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 4.52%"
     }
   ]
 }
