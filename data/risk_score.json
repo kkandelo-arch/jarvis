@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-15T01:29:07.041774+00:00",
-  "composite_score": 16,
+  "timestamp": "2026-08-15T04:36:09.139588+00:00",
+  "composite_score": 10,
   "level": "안정",
   "components": {
     "vix": {
@@ -16,8 +16,8 @@
       "score": 10
     },
     "kospi_drawdown_pct": {
-      "raw": -4.0,
-      "score": 40
+      "raw": -1.68,
+      "score": 10
     }
   }
 }
