@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-14T09:12:04.317957+00:00",
+  "timestamp": "2026-08-15T01:29:07.041774+00:00",
   "composite_score": 16,
   "level": "안정",
   "components": {
     "vix": {
-      "raw": 14.55,
+      "raw": 14.63,
       "score": 10
     },
     "high_yield_spread": {
@@ -12,12 +12,12 @@
       "score": 10
     },
     "yield_curve_10y2y": {
-      "raw": 0.48,
-      "score": 40
+      "raw": 0.51,
+      "score": 10
     },
     "kospi_drawdown_pct": {
-      "raw": -1.68,
-      "score": 10
+      "raw": -4.0,
+      "score": 40
     }
   }
 }
