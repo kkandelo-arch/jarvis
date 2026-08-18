@@ -1,43 +1,25 @@
 {
-  "timestamp": "2026-08-18T02:17:03.227168+00:00",
+  "timestamp": "2026-08-18T03:47:28.649115+00:00",
   "checked_count": 30,
-  "alert_count": 4,
+  "alert_count": 2,
   "alerts": [
     {
-      "ticker": "396500",
-      "name": "TIGER 반도체TOP10",
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.67,
-      "message": "TIGER 반도체TOP10 1일 급등 3.67%"
+      "change_pct": -3.37,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급락 3.37%"
     },
     {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
+      "ticker": "466920",
+      "name": "SOL 조선TOP3플러스",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.41,
-      "message": "KODEX 반도체 1일 급등 3.41%"
-    },
-    {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.62,
-      "message": "PLUS 글로벌HBM반도체 1일 급등 3.62%"
-    },
-    {
-      "ticker": "455850",
-      "name": "SOL AI반도체소부장",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.86,
-      "message": "SOL AI반도체소부장 1일 급등 3.86%"
+      "change_pct": -3.3,
+      "message": "SOL 조선TOP3플러스 1일 급락 3.3%"
     }
   ]
 }
