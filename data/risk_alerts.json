@@ -1,16 +1,25 @@
 {
-  "timestamp": "2026-08-18T04:39:19.689077+00:00",
+  "timestamp": "2026-08-18T05:33:05.116781+00:00",
   "checked_count": 30,
-  "alert_count": 1,
+  "alert_count": 2,
   "alerts": [
+    {
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.42,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급락 3.42%"
+    },
     {
       "ticker": "466920",
       "name": "SOL 조선TOP3플러스",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.12,
-      "message": "SOL 조선TOP3플러스 1일 급락 3.12%"
+      "change_pct": -3.57,
+      "message": "SOL 조선TOP3플러스 1일 급락 3.57%"
     }
   ]
 }
