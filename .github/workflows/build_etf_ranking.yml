@@ -28,5 +28,5 @@ jobs:
           git config user.email "actions@github.com"
           git add data/etf_ranking.json data/etf_top30.json
           git diff --cached --quiet || git commit -m "ETF 랭킹 자동 갱신"
-          git pull --rebase
+          git pull --no-rebase -X ours
           git push
