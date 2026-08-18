@@ -1,16 +1,25 @@
 {
-  "timestamp": "2026-08-18T05:33:05.116781+00:00",
+  "timestamp": "2026-08-18T06:48:55.143760+00:00",
   "checked_count": 30,
-  "alert_count": 2,
+  "alert_count": 4,
   "alerts": [
+    {
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -4.32,
+      "message": "KODEX 코스닥150 1일 급락 4.32%"
+    },
     {
       "ticker": "0148J0",
       "name": "TIGER 코리아휴머노이드로봇산업",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.42,
-      "message": "TIGER 코리아휴머노이드로봇산업 1일 급락 3.42%"
+      "level": "주의",
+      "change_pct": -5.34,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급락 5.34%"
     },
     {
       "ticker": "466920",
@@ -18,8 +27,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.57,
-      "message": "SOL 조선TOP3플러스 1일 급락 3.57%"
+      "change_pct": -3.68,
+      "message": "SOL 조선TOP3플러스 1일 급락 3.68%"
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -4.06,
+      "message": "TIGER 코스닥150 1일 급락 4.06%"
     }
   ]
 }
