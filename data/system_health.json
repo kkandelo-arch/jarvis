@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-20T05:18:04.643184+00:00",
+  "timestamp": "2026-08-20T05:38:47.867625+00:00",
   "expected_trading_day": "2026-08-20",
   "force_all": true,
   "any_stale": false,
@@ -15,8 +15,8 @@
     },
     {
       "file": "data/etf_top30.json",
-      "last_updated_utc": "2026-08-20T05:15:37.619670+00:00",
-      "last_updated_kst": "2026-08-20T14:15:37.619670+09:00",
+      "last_updated_utc": "2026-08-20T05:34:42.165790+00:00",
+      "last_updated_kst": "2026-08-20T14:34:42.165790+09:00",
       "expected_trading_day": "2026-08-20",
       "status": "정상",
       "retrigger_requested": true,
@@ -24,8 +24,8 @@
     },
     {
       "file": "data/etf_discovery.json",
-      "last_updated_utc": "2026-08-20T05:02:01.462906+00:00",
-      "last_updated_kst": "2026-08-20T14:02:01.462906+09:00",
+      "last_updated_utc": "2026-08-20T05:20:37.021682+00:00",
+      "last_updated_kst": "2026-08-20T14:20:37.021682+09:00",
       "expected_trading_day": "2026-08-20",
       "status": "정상",
       "retrigger_requested": true,
@@ -33,8 +33,8 @@
     },
     {
       "file": "data/risk_alerts.json",
-      "last_updated_utc": "2026-08-20T04:59:59.888932+00:00",
-      "last_updated_kst": "2026-08-20T13:59:59.888932+09:00",
+      "last_updated_utc": "2026-08-20T05:19:17.804486+00:00",
+      "last_updated_kst": "2026-08-20T14:19:17.804486+09:00",
       "expected_trading_day": "2026-08-20",
       "status": "정상",
       "retrigger_requested": true,
@@ -42,8 +42,8 @@
     },
     {
       "file": "data/portfolio_snapshot.json",
-      "last_updated_utc": "2026-08-20T04:59:32.117182+00:00",
-      "last_updated_kst": "2026-08-20T13:59:32.117182+09:00",
+      "last_updated_utc": "2026-08-20T05:22:39.902133+00:00",
+      "last_updated_kst": "2026-08-20T14:22:39.902133+09:00",
       "expected_trading_day": "2026-08-20",
       "status": "정상",
       "retrigger_requested": true,
