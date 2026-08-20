@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-20T03:49:42.649727+00:00",
+  "timestamp": "2026-08-20T04:40:34.577542+00:00",
   "checked_count": 30,
-  "alert_count": 19,
+  "alert_count": 20,
   "alerts": [
     {
       "ticker": "069500",
       "name": "KODEX 200",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.31,
-      "message": "KODEX 200 1일 급등 6.31%"
+      "level": "경고",
+      "change_pct": 7.31,
+      "message": "KODEX 200 1일 급등 7.31%"
     },
     {
       "ticker": "102110",
       "name": "TIGER 200",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.28,
-      "message": "TIGER 200 1일 급등 6.28%"
+      "level": "경고",
+      "change_pct": 7.29,
+      "message": "TIGER 200 1일 급등 7.29%"
     },
     {
       "ticker": "396500",
@@ -27,17 +27,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": 8.18,
-      "message": "TIGER 반도체TOP10 1일 급등 8.18%"
+      "change_pct": 9.97,
+      "message": "TIGER 반도체TOP10 1일 급등 9.97%"
     },
     {
       "ticker": "0167A0",
       "name": "SOL AI반도체TOP2플러스",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.06,
-      "message": "SOL AI반도체TOP2플러스 1일 급등 6.06%"
+      "level": "경고",
+      "change_pct": 7.45,
+      "message": "SOL AI반도체TOP2플러스 1일 급등 7.45%"
     },
     {
       "ticker": "091160",
@@ -45,8 +45,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": 7.12,
-      "message": "KODEX 반도체 1일 급등 7.12%"
+      "change_pct": 8.43,
+      "message": "KODEX 반도체 1일 급등 8.43%"
     },
     {
       "ticker": "395160",
@@ -54,35 +54,35 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": 7.57,
-      "message": "KODEX AI반도체TOP2플러스 1일 급등 7.57%"
+      "change_pct": 9.25,
+      "message": "KODEX AI반도체TOP2플러스 1일 급등 9.25%"
     },
     {
       "ticker": "498400",
       "name": "KODEX 200타겟위클리커버드콜",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.37,
-      "message": "KODEX 200타겟위클리커버드콜 1일 급등 6.37%"
+      "level": "경고",
+      "change_pct": 7.27,
+      "message": "KODEX 200타겟위클리커버드콜 1일 급등 7.27%"
     },
     {
       "ticker": "148020",
       "name": "RISE 200",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.12,
-      "message": "RISE 200 1일 급등 6.12%"
+      "level": "경고",
+      "change_pct": 7.11,
+      "message": "RISE 200 1일 급등 7.11%"
     },
     {
       "ticker": "139260",
       "name": "TIGER 200 IT",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.41,
-      "message": "TIGER 200 IT 1일 급등 6.41%"
+      "level": "경고",
+      "change_pct": 7.78,
+      "message": "TIGER 200 IT 1일 급등 7.78%"
     },
     {
       "ticker": "226490",
@@ -90,8 +90,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 6.03,
-      "message": "KODEX 코스피 1일 급등 6.03%"
+      "change_pct": 6.74,
+      "message": "KODEX 코스피 1일 급등 6.74%"
     },
     {
       "ticker": "395270",
@@ -99,17 +99,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": 7.37,
-      "message": "HANARO Fn K-반도체 1일 급등 7.37%"
+      "change_pct": 8.88,
+      "message": "HANARO Fn K-반도체 1일 급등 8.88%"
     },
     {
       "ticker": "472150",
       "name": "TIGER 배당커버드콜액티브",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.25,
-      "message": "TIGER 배당커버드콜액티브 1일 급등 6.25%"
+      "level": "경고",
+      "change_pct": 7.21,
+      "message": "TIGER 배당커버드콜액티브 1일 급등 7.21%"
     },
     {
       "ticker": "0162Z0",
@@ -117,26 +117,35 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.16,
-      "message": "RISE 삼성전자SK하이닉스채권혼합50 1일 급등 5.16%"
+      "change_pct": 5.95,
+      "message": "RISE 삼성전자SK하이닉스채권혼합50 1일 급등 5.95%"
     },
     {
       "ticker": "0219E0",
       "name": "KODEX 200커버드콜액티브",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.63,
-      "message": "KODEX 200커버드콜액티브 1일 급등 6.63%"
+      "level": "경고",
+      "change_pct": 7.69,
+      "message": "KODEX 200커버드콜액티브 1일 급등 7.69%"
     },
     {
       "ticker": "278530",
       "name": "KODEX 200TR",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.18,
-      "message": "KODEX 200TR 1일 급등 6.18%"
+      "level": "경고",
+      "change_pct": 7.09,
+      "message": "KODEX 200TR 1일 급등 7.09%"
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.03,
+      "message": "TIGER 코스닥150 1일 급등 3.03%"
     },
     {
       "ticker": "0177N0",
@@ -144,26 +153,26 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.15,
-      "message": "KODEX 삼성전자SK하이닉스채권혼합50 1일 급등 5.15%"
+      "change_pct": 6.04,
+      "message": "KODEX 삼성전자SK하이닉스채권혼합50 1일 급등 6.04%"
     },
     {
       "ticker": "105190",
       "name": "ACE 200",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.21,
-      "message": "ACE 200 1일 급등 6.21%"
+      "level": "경고",
+      "change_pct": 7.13,
+      "message": "ACE 200 1일 급등 7.13%"
     },
     {
       "ticker": "152100",
       "name": "PLUS 200",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.23,
-      "message": "PLUS 200 1일 급등 6.23%"
+      "level": "경고",
+      "change_pct": 7.13,
+      "message": "PLUS 200 1일 급등 7.13%"
     },
     {
       "ticker": "442580",
@@ -171,8 +180,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.26,
-      "message": "PLUS 글로벌HBM반도체 1일 급등 5.26%"
+      "change_pct": 6.11,
+      "message": "PLUS 글로벌HBM반도체 1일 급등 6.11%"
     }
   ]
 }
