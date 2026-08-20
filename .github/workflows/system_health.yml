@@ -1,0 +1,41 @@
+name: DC 자비스 시스템 자가검증
+
+on:
+  schedule:
+    - cron: "0 8 * * 1-5"   # 평일 한국시간 17:00 (하루 마무리 시점)
+  workflow_dispatch:
+    inputs:
+      force_all:
+        description: '체크박스 켜면 최신 여부 상관없이 전체 강제 갱신'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: 자가검증 실행
+        env:
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_ALL: ${{ inputs.force_all }}
+        run: python system_health.py
+      - name: 결과 커밋
+        run: |
+          git config user.name "dc-jarvis-bot"
+          git config user.email "actions@github.com"
+          git add data/system_health.json
+          git diff --cached --quiet || git commit -m "시스템 자가검증 결과 갱신"
+          git pull --no-rebase -X ours
+          git push
