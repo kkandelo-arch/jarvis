@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-21T02:24:22.884338+00:00",
+  "timestamp": "2026-08-21T03:53:21.977929+00:00",
   "checked_count": 30,
   "alert_count": 5,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 3.3,
-      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(3.3%) - 저가매수 후보 검토"
+      "band_position_pct": 3.7,
+      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(3.7%) - 저가매수 후보 검토"
     },
     {
       "ticker": "379800",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 3.3,
-      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(3.3%) - 저가매수 후보 검토"
+      "band_position_pct": 3.7,
+      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(3.7%) - 저가매수 후보 검토"
     },
     {
       "ticker": "229200",
@@ -27,8 +27,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -6.5,
-      "message": "KODEX 코스닥150 1일 급락 6.5%"
+      "change_pct": -5.78,
+      "message": "KODEX 코스닥150 1일 급락 5.78%"
     },
     {
       "ticker": "487240",
@@ -36,8 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -5.84,
-      "message": "KODEX AI전력핵심설비 1일 급락 5.84%"
+      "change_pct": -5.37,
+      "message": "KODEX AI전력핵심설비 1일 급락 5.37%"
     },
     {
       "ticker": "232080",
@@ -45,8 +45,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -6.48,
-      "message": "TIGER 코스닥150 1일 급락 6.48%"
+      "change_pct": -5.77,
+      "message": "TIGER 코스닥150 1일 급락 5.77%"
     }
   ]
 }
