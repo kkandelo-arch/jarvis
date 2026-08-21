@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-20T07:33:52.037506+00:00",
+  "timestamp": "2026-08-21T02:19:17.421112+00:00",
   "holdings_count": 1,
   "total_cost": 120280,
-  "total_eval_amount": 84350,
-  "total_pnl_amount": -35930,
-  "total_pnl_pct": -29.87,
+  "total_eval_amount": 80200,
+  "total_pnl_amount": -40080,
+  "total_pnl_pct": -33.32,
   "items": [
     {
       "ticker": "0183J0",
       "name": "TIGER 미국우주테크",
       "quantity": 10,
       "avg_price": 12028,
-      "current_price": 8435.0,
+      "current_price": 8020.0,
       "purchase_date": "2026-07-15",
-      "eval_amount": 84350,
-      "pnl_amount": -35930,
-      "pnl_pct": -29.87
+      "eval_amount": 80200,
+      "pnl_amount": -40080,
+      "pnl_pct": -33.32
     }
   ]
 }
