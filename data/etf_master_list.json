@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-08-16T21:09:31.458864+00:00",
-  "date_used": "20260816",
-  "count": 1163,
+  "timestamp": "2026-08-23T21:11:06.669317+00:00",
+  "date_used": "20260823",
+  "count": 1161,
   "etfs": [
     {
       "ticker": "0193M0",
@@ -250,10 +250,6 @@
     {
       "ticker": "432600",
       "name": "RISE 국채선물3년"
-    },
-    {
-      "ticker": "397420",
-      "name": "RISE 국채선물5년추종"
     },
     {
       "ticker": "0114X0",
@@ -885,19 +881,19 @@
     },
     {
       "ticker": "486240",
-      "name": "DAISHIN343 AI반도체&인프라액티브"
+      "name": "DAISHIN AI반도체&인프라액티브"
     },
     {
       "ticker": "434960",
-      "name": "DAISHIN343 K200"
+      "name": "DAISHIN K200"
     },
     {
       "ticker": "0189Z0",
-      "name": "DAISHIN343 금융&지주고배당"
+      "name": "DAISHIN 금융&지주고배당"
     },
     {
       "ticker": "0174J0",
-      "name": "DAISHIN343 오피스리츠플러스"
+      "name": "DAISHIN 오피스리츠플러스"
     },
     {
       "ticker": "0053M0",
@@ -3690,10 +3686,6 @@
     {
       "ticker": "0019K0",
       "name": "TIME 미국나스닥100채권혼합50액티브"
-    },
-    {
-      "ticker": "0036D0",
-      "name": "TIME 미국배당다우존스액티브"
     },
     {
       "ticker": "0043Y0",
