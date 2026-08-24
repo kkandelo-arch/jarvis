@@ -28,5 +28,5 @@ jobs:
           git config user.email "actions@github.com"
           git add data/etf_master_list.json
           git diff --cached --quiet || git commit -m "ETF 전체목록 자동 갱신"
-          git pull --rebase
+          git pull --no-rebase -X ours
           git push
