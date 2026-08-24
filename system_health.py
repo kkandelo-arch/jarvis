@@ -1,11 +1,9 @@
 """
-DC 자비스 - 시스템 자가검증 (v2.0 - KRX 거래일 캘린더 완전 연동 + 강제 전체갱신 옵션)
-pykrx로 실제 KRX 거래일을 조회해서, 각 데이터가 "마지막 거래일 기준으로" 최신인지 정확히 판단.
-FORCE_ALL 환경변수가 true면 최신 여부와 상관없이 전체 핵심 워크플로를 즉시 재실행(강제 갱신 버튼 역할).
-결과는 data/system_health.json 에 저장
+DC 자비스 - 시스템 자가검증 (v2.1 - 재실행 요청 사이 대기시간 추가로 KRX 동시로그인 충돌 방지)
 """
 import json
 import os
+import time
 from datetime import datetime, timezone, timedelta
 
 import requests
@@ -14,6 +12,8 @@ from pykrx import stock
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO = os.environ.get("GITHUB_REPOSITORY")
 FORCE_ALL = os.environ.get("FORCE_ALL", "false").lower() == "true"
+
+RETRIGGER_DELAY_SEC = 90
 
 CHECKS = [
     {"file": "data/risk_score.json", "workflow": "risk_score.yml"},
@@ -92,6 +92,7 @@ def main():
 
     results = []
     any_stale = False
+    pending_triggers = []
 
     for check in CHECKS:
         path = check["file"]
@@ -119,11 +120,17 @@ def main():
         if need_retrigger:
             if "정상" not in status:
                 any_stale = True
-            triggered = trigger_workflow(check["workflow"])
-            result["retrigger_requested"] = triggered
-            result["retrigger_reason"] = "강제 전체갱신" if FORCE_ALL else "데이터 오래됨"
+            pending_triggers.append((check["workflow"], result))
 
         results.append(result)
+
+    for i, (workflow_file, result) in enumerate(pending_triggers):
+        if i > 0:
+            print(f"[디버그] KRX 동시로그인 방지를 위해 {RETRIGGER_DELAY_SEC}초 대기...")
+            time.sleep(RETRIGGER_DELAY_SEC)
+        triggered = trigger_workflow(workflow_file)
+        result["retrigger_requested"] = triggered
+        result["retrigger_reason"] = "강제 전체갱신" if FORCE_ALL else "데이터 오래됨"
 
     output = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
