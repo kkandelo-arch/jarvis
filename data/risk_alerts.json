@@ -1,43 +1,16 @@
 {
-  "timestamp": "2026-08-25T02:19:25.900991+00:00",
+  "timestamp": "2026-08-25T03:51:37.431921+00:00",
   "checked_count": 30,
-  "alert_count": 5,
+  "alert_count": 2,
   "alerts": [
-    {
-      "ticker": "395160",
-      "name": "KODEX AI반도체TOP2플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.5,
-      "message": "KODEX AI반도체TOP2플러스 1일 급락 3.5%"
-    },
     {
       "ticker": "411060",
       "name": "ACE KRX금현물",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "ACE KRX금현물 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
-    },
-    {
-      "ticker": "139260",
-      "name": "TIGER 200 IT",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.55,
-      "message": "TIGER 200 IT 1일 급락 3.55%"
-    },
-    {
-      "ticker": "395270",
-      "name": "HANARO Fn K-반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.38,
-      "message": "HANARO Fn K-반도체 1일 급락 3.38%"
+      "band_position_pct": 99.3,
+      "message": "ACE KRX금현물 52주 밴드 상단 근접(99.3%) - 비중 축소 검토"
     },
     {
       "ticker": "228790",
