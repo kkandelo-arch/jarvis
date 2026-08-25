@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-25T05:34:56.757916+00:00",
+  "timestamp": "2026-08-25T06:53:27.573491+00:00",
   "checked_count": 30,
   "alert_count": 2,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 97.6,
-      "message": "ACE KRX금현물 52주 밴드 상단 근접(97.6%) - 비중 축소 검토"
+      "band_position_pct": 100.0,
+      "message": "ACE KRX금현물 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     },
     {
       "ticker": "228790",
