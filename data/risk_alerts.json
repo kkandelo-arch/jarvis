@@ -1,124 +1,16 @@
 {
-  "timestamp": "2026-08-24T07:04:01.592749+00:00",
+  "timestamp": "2026-08-25T02:19:25.900991+00:00",
   "checked_count": 30,
-  "alert_count": 23,
+  "alert_count": 5,
   "alerts": [
-    {
-      "ticker": "069500",
-      "name": "KODEX 200",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.62,
-      "message": "KODEX 200 1일 급락 3.62%"
-    },
-    {
-      "ticker": "102110",
-      "name": "TIGER 200",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.64,
-      "message": "TIGER 200 1일 급락 3.64%"
-    },
-    {
-      "ticker": "360750",
-      "name": "TIGER 미국S&P500",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 4.5,
-      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(4.5%) - 저가매수 후보 검토"
-    },
-    {
-      "ticker": "379800",
-      "name": "KODEX 미국S&P500",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 4.4,
-      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(4.4%) - 저가매수 후보 검토"
-    },
-    {
-      "ticker": "396500",
-      "name": "TIGER 반도체TOP10",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.85,
-      "message": "TIGER 반도체TOP10 1일 급락 4.85%"
-    },
-    {
-      "ticker": "0167A0",
-      "name": "SOL AI반도체TOP2플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.61,
-      "message": "SOL AI반도체TOP2플러스 1일 급락 3.61%"
-    },
-    {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.8,
-      "message": "KODEX 반도체 1일 급락 3.8%"
-    },
     {
       "ticker": "395160",
       "name": "KODEX AI반도체TOP2플러스",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.56,
-      "message": "KODEX AI반도체TOP2플러스 1일 급락 4.56%"
-    },
-    {
-      "ticker": "472150",
-      "name": "TIGER 배당커버드콜액티브",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.93,
-      "message": "TIGER 배당커버드콜액티브 1일 급락 3.93%"
-    },
-    {
-      "ticker": "498400",
-      "name": "KODEX 200타겟위클리커버드콜",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.27,
-      "message": "KODEX 200타겟위클리커버드콜 1일 급락 3.27%"
-    },
-    {
-      "ticker": "148020",
-      "name": "RISE 200",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.64,
-      "message": "RISE 200 1일 급락 3.64%"
-    },
-    {
-      "ticker": "381180",
-      "name": "TIGER 미국필라델피아반도체나스닥",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.81,
-      "message": "TIGER 미국필라델피아반도체나스닥 1일 급락 3.81%"
-    },
-    {
-      "ticker": "0177N0",
-      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.0,
-      "message": "KODEX 삼성전자SK하이닉스채권혼합50 1일 급락 3.0%"
+      "change_pct": -3.5,
+      "message": "KODEX AI반도체TOP2플러스 1일 급락 3.5%"
     },
     {
       "ticker": "411060",
@@ -130,22 +22,13 @@
       "message": "ACE KRX금현물 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     },
     {
-      "ticker": "0219E0",
-      "name": "KODEX 200커버드콜액티브",
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.67,
-      "message": "KODEX 200커버드콜액티브 1일 급락 3.67%"
-    },
-    {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.24,
-      "message": "KODEX 2차전지산업 1일 급등 6.24%"
+      "change_pct": -3.55,
+      "message": "TIGER 200 IT 1일 급락 3.55%"
     },
     {
       "ticker": "395270",
@@ -153,26 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.37,
-      "message": "HANARO Fn K-반도체 1일 급락 4.37%"
-    },
-    {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": -5.17,
-      "message": "PLUS 글로벌HBM반도체 1일 급락 5.17%"
-    },
-    {
-      "ticker": "228790",
-      "name": "TIGER 화장품",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.51,
-      "message": "TIGER 화장품 1일 급등 4.51%"
+      "change_pct": -3.38,
+      "message": "HANARO Fn K-반도체 1일 급락 3.38%"
     },
     {
       "ticker": "228790",
@@ -182,33 +47,6 @@
       "level": "주의",
       "band_position_pct": 100.0,
       "message": "TIGER 화장품 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
-    },
-    {
-      "ticker": "152100",
-      "name": "PLUS 200",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.61,
-      "message": "PLUS 200 1일 급락 3.61%"
-    },
-    {
-      "ticker": "0008T0",
-      "name": "SOL 화장품TOP3플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.56,
-      "message": "SOL 화장품TOP3플러스 1일 급등 4.56%"
-    },
-    {
-      "ticker": "0008T0",
-      "name": "SOL 화장품TOP3플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "SOL 화장품TOP3플러스 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     }
   ]
 }
