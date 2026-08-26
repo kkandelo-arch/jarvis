@@ -1,5 +1,5 @@
 """
-DC 자비스 - 시스템 자가검증 (v2.2 - "장마감 전 예외" 로직을 직전 거래일 정확 대조로 수정)
+DC 자비스 - 시스템 자가검증 (v2.3 - 거래일 판정을 30일 범위 조회로 교체, 연휴 길이 무관하게 안전)
 """
 import json
 import os
@@ -26,26 +26,47 @@ CHECKS = [
 KST = timezone(timedelta(hours=9))
 MARKET_CLOSE_HOUR_KST = 16
 
+# 거래일 조회 시 과거로 몇 일까지 넉넉하게 검색할지 (한국 최장 연휴도 10일을 넘긴 적 없음, 3배 여유)
+CALENDAR_LOOKBACK_DAYS = 30
+
+
+def _to_date(x):
+    """pandas Timestamp든 datetime.date든 date로 통일"""
+    return x.date() if hasattr(x, "date") else x
+
 
 def get_latest_trading_day():
+    """오늘(KST) 기준, 오늘을 포함해 가장 최근의 실제 거래일을 반환한다."""
+    today = datetime.now(KST).date()
     try:
-        result = stock.get_nearest_business_day_in_a_week()
-        print(f"[디버그] pykrx가 반환한 최근 거래일: {result}")
-        return datetime.strptime(result, "%Y%m%d").date()
+        fromdate = (today - timedelta(days=CALENDAR_LOOKBACK_DAYS)).strftime("%Y%m%d")
+        todate = today.strftime("%Y%m%d")
+        raw_days = stock.get_previous_business_days(fromdate=fromdate, todate=todate)
+        days = sorted(_to_date(d) for d in raw_days)
+        print(f"[디버그] 최근 {CALENDAR_LOOKBACK_DAYS}일 내 거래일 개수: {len(days)}, 마지막: {days[-1] if days else None}")
+        past_or_today = [d for d in days if d <= today]
+        if past_or_today:
+            return max(past_or_today)
+        print("[경고] 검색 범위 내 거래일을 찾지 못함, 오늘 날짜로 대체")
     except Exception as e:
         print(f"[경고] 거래일 조회 실패, 오늘 날짜로 대체: {e}")
-        return datetime.now(KST).date()
+    return today
 
 
 def get_previous_trading_day(from_date):
+    """from_date보다 이전의 가장 최근 거래일을 반환한다."""
     try:
-        candidate = from_date - timedelta(days=1)
-        result = stock.get_nearest_business_day_in_a_week(candidate.strftime("%Y%m%d"), prev=True)
-        print(f"[디버그] 직전 거래일: {result}")
-        return datetime.strptime(result, "%Y%m%d").date()
+        fromdate = (from_date - timedelta(days=CALENDAR_LOOKBACK_DAYS)).strftime("%Y%m%d")
+        todate = (from_date - timedelta(days=1)).strftime("%Y%m%d")
+        raw_days = stock.get_previous_business_days(fromdate=fromdate, todate=todate)
+        days = sorted(_to_date(d) for d in raw_days)
+        print(f"[디버그] {from_date} 이전 거래일 후보: {days[-3:] if days else '없음'}")
+        if days:
+            return max(days)
+        print("[경고] 검색 범위 내 직전 거래일을 찾지 못함, 하루 전 날짜로 대체")
     except Exception as e:
         print(f"[경고] 직전 거래일 조회 실패: {e}")
-        return from_date - timedelta(days=1)
+    return from_date - timedelta(days=1)
 
 
 def get_timestamp(data):
