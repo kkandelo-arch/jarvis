@@ -1,16 +1,34 @@
 {
-  "timestamp": "2026-08-25T06:53:27.573491+00:00",
+  "timestamp": "2026-08-26T01:33:08.328439+00:00",
   "checked_count": 30,
-  "alert_count": 2,
+  "alert_count": 5,
   "alerts": [
+    {
+      "ticker": "0091P0",
+      "name": "TIGER 코리아원자력",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": 6.64,
+      "message": "TIGER 코리아원자력 1일 급등 6.64%"
+    },
+    {
+      "ticker": "0091P0",
+      "name": "TIGER 코리아원자력",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+    },
     {
       "ticker": "411060",
       "name": "ACE KRX금현물",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "ACE KRX금현물 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+      "band_position_pct": 98.5,
+      "message": "ACE KRX금현물 52주 밴드 상단 근접(98.5%) - 비중 축소 검토"
     },
     {
       "ticker": "228790",
@@ -20,6 +38,15 @@
       "level": "주의",
       "band_position_pct": 100.0,
       "message": "TIGER 화장품 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "0008T0",
+      "name": "SOL 화장품TOP3플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "SOL 화장품TOP3플러스 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     }
   ]
 }
