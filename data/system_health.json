@@ -1,43 +1,59 @@
 {
-  "timestamp": "2026-08-25T08:32:14.652085+00:00",
-  "expected_trading_day": "2026-08-25",
-  "force_all": false,
+  "timestamp": "2026-08-26T01:33:41.585680+00:00",
+  "expected_trading_day": "2026-08-26",
+  "previous_trading_day": "2026-08-25",
+  "force_all": true,
   "any_stale": false,
   "checks": [
     {
       "file": "data/risk_score.json",
-      "last_updated_utc": "2026-08-25T04:43:23.901350+00:00",
-      "last_updated_kst": "2026-08-25T13:43:23.901350+09:00",
-      "expected_trading_day": "2026-08-25",
-      "status": "정상"
+      "last_updated_utc": "2026-08-25T08:49:24.978775+00:00",
+      "last_updated_kst": "2026-08-25T17:49:24.978775+09:00",
+      "expected_trading_day": "2026-08-26",
+      "previous_trading_day": "2026-08-25",
+      "status": "정상(직전 거래일 기준, 오늘 장마감 전)",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/etf_top30.json",
       "last_updated_utc": "2026-08-25T07:42:22.180344+00:00",
       "last_updated_kst": "2026-08-25T16:42:22.180344+09:00",
-      "expected_trading_day": "2026-08-25",
-      "status": "정상"
+      "expected_trading_day": "2026-08-26",
+      "previous_trading_day": "2026-08-25",
+      "status": "정상(직전 거래일 기준, 오늘 장마감 전)",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/etf_discovery.json",
       "last_updated_utc": "2026-08-25T07:49:25.074863+00:00",
       "last_updated_kst": "2026-08-25T16:49:25.074863+09:00",
-      "expected_trading_day": "2026-08-25",
-      "status": "정상"
+      "expected_trading_day": "2026-08-26",
+      "previous_trading_day": "2026-08-25",
+      "status": "정상(직전 거래일 기준, 오늘 장마감 전)",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/risk_alerts.json",
       "last_updated_utc": "2026-08-25T06:53:27.573491+00:00",
       "last_updated_kst": "2026-08-25T15:53:27.573491+09:00",
-      "expected_trading_day": "2026-08-25",
-      "status": "정상"
+      "expected_trading_day": "2026-08-26",
+      "previous_trading_day": "2026-08-25",
+      "status": "정상(직전 거래일 기준, 오늘 장마감 전)",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/portfolio_snapshot.json",
       "last_updated_utc": "2026-08-25T05:24:19.641277+00:00",
       "last_updated_kst": "2026-08-25T14:24:19.641277+09:00",
-      "expected_trading_day": "2026-08-25",
-      "status": "정상"
+      "expected_trading_day": "2026-08-26",
+      "previous_trading_day": "2026-08-25",
+      "status": "정상(직전 거래일 기준, 오늘 장마감 전)",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     }
   ]
 }
