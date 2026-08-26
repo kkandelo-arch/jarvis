@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-26T01:27:58.729600+00:00",
+  "timestamp": "2026-08-26T01:39:44.229243+00:00",
   "composite_score": 30,
   "level": "주의",
   "components": {
@@ -16,7 +16,7 @@
       "score": 40
     },
     "kospi_drawdown_pct": {
-      "raw": -3.3,
+      "raw": -2.98,
       "score": 40
     }
   }
