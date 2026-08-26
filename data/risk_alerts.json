@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-26T02:26:17.263552+00:00",
+  "timestamp": "2026-08-26T03:55:56.078995+00:00",
   "checked_count": 30,
   "alert_count": 9,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 6.88,
-      "message": "TIGER 코리아원자력 1일 급등 6.88%"
+      "change_pct": 6.43,
+      "message": "TIGER 코리아원자력 1일 급등 6.43%"
     },
     {
       "ticker": "0091P0",
@@ -36,8 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 6.93,
-      "message": "KODEX 원자력SMR 1일 급등 6.93%"
+      "change_pct": 6.58,
+      "message": "KODEX 원자력SMR 1일 급등 6.58%"
     },
     {
       "ticker": "0098F0",
@@ -63,8 +63,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.89,
-      "message": "KODEX 건설 1일 급등 5.89%"
+      "change_pct": 5.44,
+      "message": "KODEX 건설 1일 급등 5.44%"
     },
     {
       "ticker": "117700",
