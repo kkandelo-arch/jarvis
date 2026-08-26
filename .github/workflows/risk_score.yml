@@ -34,4 +34,5 @@ jobs:
           git config user.email "actions@github.com"
           git add data/risk_score.json
           git diff --cached --quiet || git commit -m "위험도 스코어 자동 갱신"
+          git pull --no-rebase -X ours
           git push
