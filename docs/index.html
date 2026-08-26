@@ -1,22 +1,80 @@
-self.addEventListener("push", function (event) {
-  let data = { title: "DC 자비스", body: "" };
-  try {
-    data = event.data.json();
-  } catch (e) {
-    data.body = event.data ? event.data.text() : "";
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DC 자비스 - 알림 구독</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 480px; margin: 60px auto; padding: 0 20px; text-align: center; color: #222; }
+  h1 { font-size: 20px; }
+  button { font-size: 16px; padding: 14px 28px; border-radius: 10px; border: none; background: #2563eb; color: white; cursor: pointer; margin-top: 20px; }
+  button:disabled { background: #9ca3af; }
+  #status { margin-top: 20px; font-size: 14px; color: #555; white-space: pre-wrap; word-break: break-all; }
+  textarea { width: 100%; height: 160px; margin-top: 16px; font-size: 11px; font-family: monospace; }
+  .hint { font-size: 13px; color: #888; margin-top: 30px; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <h1>📈 DC 자비스 알림 구독</h1>
+  <p>이 버튼을 눌러 위험경보 / 매수후보 알림을 받으세요.</p>
+  <button id="subscribeBtn">알림 구독하기</button>
+  <div id="status"></div>
+  <textarea id="subJson" style="display:none" readonly></textarea>
+  <div class="hint">
+    구독 후 나오는 텍스트 전체를 복사해서<br>
+    저장소의 <code>data/push_subscription.json</code> 파일에<br>
+    그대로 붙여넣으면 설정이 완료됩니다.
+  </div>
+
+<script>
+// 2-1 단계에서 생성한 VAPID_PUBLIC_KEY 값
+const VAPID_PUBLIC_KEY = "BG32wpG4vuVXwbPcCm9G9z23SdNYIQzJZMRxQWnpfDxYAZRTKb0-CNIJUxaRnMssn94aOO0nXG289OUcE2czKss";
+
+function urlBase64ToUint8Array(base64String) {
+  const padding = "=".repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
+  const rawData = atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
   }
+  return outputArray;
+}
 
-  const options = {
-    body: data.body || "",
-    icon: data.icon || "https://raw.githubusercontent.com/kkandelo-arch/jarvis/main/docs/icon.png",
-    data: { url: data.url || "https://github.com/kkandelo-arch/jarvis" }
-  };
+const btn = document.getElementById("subscribeBtn");
+const statusEl = document.getElementById("status");
+const jsonEl = document.getElementById("subJson");
 
-  event.waitUntil(self.registration.showNotification(data.title || "DC 자비스", options));
+btn.addEventListener("click", async () => {
+  statusEl.textContent = "구독 진행 중...";
+  try {
+    if (!("serviceWorker" in navigator) || !("PushManager" in window)) {
+      throw new Error("이 브라우저는 알림을 지원하지 않습니다. (아이폰은 홈화면에 추가한 뒤 그 앱에서 시도하세요)");
+    }
+
+    const permission = await Notification.requestPermission();
+    if (permission !== "granted") {
+      throw new Error("알림 권한이 거부되었습니다. 브라우저 설정에서 알림을 허용해주세요.");
+    }
+
+    const registration = await navigator.serviceWorker.register("sw.js");
+    await navigator.serviceWorker.ready;
+
+    const subscription = await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
+    });
+
+    const subJson = JSON.stringify(subscription.toJSON(), null, 2);
+    jsonEl.value = subJson;
+    jsonEl.style.display = "block";
+    statusEl.textContent = "✅ 구독 완료! 아래 내용 전체를 복사해서 data/push_subscription.json에 붙여넣으세요.";
+    btn.disabled = true;
+    btn.textContent = "구독됨";
+  } catch (err) {
+    statusEl.textContent = "❌ 오류: " + err.message;
+  }
 });
-
-self.addEventListener("notificationclick", function (event) {
-  event.notification.close();
-  const url = (event.notification.data && event.notification.data.url) || "https://github.com/kkandelo-arch/jarvis";
-  event.waitUntil(clients.openWindow(url));
-});
+</script>
+</body>
+</html>
