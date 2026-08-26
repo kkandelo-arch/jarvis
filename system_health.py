@@ -1,5 +1,5 @@
 """
-DC 자비스 - 시스템 자가검증 (v2.1 - 재실행 요청 사이 대기시간 추가로 KRX 동시로그인 충돌 방지)
+DC 자비스 - 시스템 자가검증 (v2.2 - "장마감 전 예외" 로직을 직전 거래일 정확 대조로 수정)
 """
 import json
 import os
@@ -37,6 +37,17 @@ def get_latest_trading_day():
         return datetime.now(KST).date()
 
 
+def get_previous_trading_day(from_date):
+    try:
+        candidate = from_date - timedelta(days=1)
+        result = stock.get_nearest_business_day_in_a_week(candidate.strftime("%Y%m%d"), prev=True)
+        print(f"[디버그] 직전 거래일: {result}")
+        return datetime.strptime(result, "%Y%m%d").date()
+    except Exception as e:
+        print(f"[경고] 직전 거래일 조회 실패: {e}")
+        return from_date - timedelta(days=1)
+
+
 def get_timestamp(data):
     ts = data.get("timestamp")
     if not ts:
@@ -68,18 +79,17 @@ def trigger_workflow(workflow_file):
         return False
 
 
-def evaluate_freshness(file_ts_utc, expected_trading_day, now_kst):
+def evaluate_freshness(file_ts_utc, expected_trading_day, previous_trading_day, now_kst):
     if file_ts_utc is None:
         return "확인불가(timestamp 없음)"
 
-    file_dt_kst = file_ts_utc.astimezone(KST)
-    file_date = file_dt_kst.date()
+    file_date = file_ts_utc.astimezone(KST).date()
 
     if file_date >= expected_trading_day:
         return "정상"
 
-    if expected_trading_day == now_kst.date() and now_kst.hour < MARKET_CLOSE_HOUR_KST:
-        return "정상(오늘 장마감 전, 어제자까지는 정상)"
+    if file_date == previous_trading_day and now_kst.hour < MARKET_CLOSE_HOUR_KST:
+        return "정상(직전 거래일 기준, 오늘 장마감 전)"
 
     return "오래됨"
 
@@ -87,7 +97,8 @@ def evaluate_freshness(file_ts_utc, expected_trading_day, now_kst):
 def main():
     now_kst = datetime.now(KST)
     expected_trading_day = get_latest_trading_day()
-    print(f"[디버그] 기대되는 최근 거래일: {expected_trading_day}, 현재시각(KST): {now_kst}")
+    previous_trading_day = get_previous_trading_day(expected_trading_day)
+    print(f"[디버그] 기대 거래일: {expected_trading_day}, 직전 거래일: {previous_trading_day}, 현재(KST): {now_kst}")
     print(f"[디버그] FORCE_ALL={FORCE_ALL}")
 
     results = []
@@ -102,7 +113,7 @@ def main():
             with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)
             ts = get_timestamp(data)
-            status = evaluate_freshness(ts, expected_trading_day, now_kst)
+            status = evaluate_freshness(ts, expected_trading_day, previous_trading_day, now_kst)
         except Exception as e:
             print(f"[경고] {path} 읽기 실패: {e}")
             status = "파일없음"
@@ -112,6 +123,7 @@ def main():
             "last_updated_utc": ts.isoformat() if ts else None,
             "last_updated_kst": ts.astimezone(KST).isoformat() if ts else None,
             "expected_trading_day": expected_trading_day.isoformat(),
+            "previous_trading_day": previous_trading_day.isoformat(),
             "status": status,
         }
         print(f"[디버그] {path}: {status}")
@@ -135,6 +147,7 @@ def main():
     output = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "expected_trading_day": expected_trading_day.isoformat(),
+        "previous_trading_day": previous_trading_day.isoformat(),
         "force_all": FORCE_ALL,
         "any_stale": any_stale,
         "checks": results,
