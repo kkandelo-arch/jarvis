@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-08-26T01:33:08.328439+00:00",
+  "timestamp": "2026-08-26T02:26:17.263552+00:00",
   "checked_count": 30,
-  "alert_count": 5,
+  "alert_count": 9,
   "alerts": [
     {
       "ticker": "0091P0",
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 6.64,
-      "message": "TIGER 코리아원자력 1일 급등 6.64%"
+      "change_pct": 6.88,
+      "message": "TIGER 코리아원자력 1일 급등 6.88%"
     },
     {
       "ticker": "0091P0",
@@ -22,15 +22,6 @@
       "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     },
     {
-      "ticker": "411060",
-      "name": "ACE KRX금현물",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 98.5,
-      "message": "ACE KRX금현물 52주 밴드 상단 근접(98.5%) - 비중 축소 검토"
-    },
-    {
       "ticker": "228790",
       "name": "TIGER 화장품",
       "origin": "기본(거래대금상위)",
@@ -40,6 +31,24 @@
       "message": "TIGER 화장품 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     },
     {
+      "ticker": "0098F0",
+      "name": "KODEX 원자력SMR",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": 6.93,
+      "message": "KODEX 원자력SMR 1일 급등 6.93%"
+    },
+    {
+      "ticker": "0098F0",
+      "name": "KODEX 원자력SMR",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "KODEX 원자력SMR 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+    },
+    {
       "ticker": "0008T0",
       "name": "SOL 화장품TOP3플러스",
       "origin": "기본(거래대금상위)",
@@ -47,6 +56,33 @@
       "level": "주의",
       "band_position_pct": 100.0,
       "message": "SOL 화장품TOP3플러스 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "117700",
+      "name": "KODEX 건설",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": 5.89,
+      "message": "KODEX 건설 1일 급등 5.89%"
+    },
+    {
+      "ticker": "117700",
+      "name": "KODEX 건설",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "KODEX 건설 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "411060",
+      "name": "ACE KRX금현물",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "ACE KRX금현물 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     }
   ]
 }
