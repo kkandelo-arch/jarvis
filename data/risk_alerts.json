@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-26T05:37:42.668070+00:00",
+  "timestamp": "2026-08-26T06:54:32.047442+00:00",
   "checked_count": 30,
   "alert_count": 9,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.83,
-      "message": "TIGER 코리아원자력 1일 급등 5.83%"
+      "change_pct": 6.73,
+      "message": "TIGER 코리아원자력 1일 급등 6.73%"
     },
     {
       "ticker": "0091P0",
@@ -27,8 +27,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 화장품 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+      "band_position_pct": 98.5,
+      "message": "TIGER 화장품 52주 밴드 상단 근접(98.5%) - 비중 축소 검토"
     },
     {
       "ticker": "0098F0",
@@ -36,8 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 6.07,
-      "message": "KODEX 원자력SMR 1일 급등 6.07%"
+      "change_pct": 6.52,
+      "message": "KODEX 원자력SMR 1일 급등 6.52%"
     },
     {
       "ticker": "0098F0",
@@ -54,8 +54,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 98.3,
-      "message": "SOL 화장품TOP3플러스 52주 밴드 상단 근접(98.3%) - 비중 축소 검토"
+      "band_position_pct": 98.6,
+      "message": "SOL 화장품TOP3플러스 52주 밴드 상단 근접(98.6%) - 비중 축소 검토"
     },
     {
       "ticker": "117700",
@@ -63,8 +63,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.15,
-      "message": "KODEX 건설 1일 급등 5.15%"
+      "change_pct": 6.34,
+      "message": "KODEX 건설 1일 급등 6.34%"
     },
     {
       "ticker": "117700",
@@ -81,8 +81,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 99.1,
-      "message": "ACE KRX금현물 52주 밴드 상단 근접(99.1%) - 비중 축소 검토"
+      "band_position_pct": 97.8,
+      "message": "ACE KRX금현물 52주 밴드 상단 근접(97.8%) - 비중 축소 검토"
     }
   ]
 }
