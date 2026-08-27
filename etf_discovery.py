@@ -11,6 +11,8 @@ from datetime import datetime, timedelta, timezone
 
 from pykrx import stock
 
+from send_push import send_notification
+
 EXCLUDE_KEYWORDS = [
     "레버리지", "인버스", "곱버스",
     "국고채", "회사채", "단기채", "머니마켓", "금리",
@@ -363,6 +365,16 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(json.dumps(top5, ensure_ascii=False, indent=2))
+
+    # 알림 발송: top5 중 "매수후보" 등급이 있을 때만 발송
+    buy_candidates = [r for r in top5 if r.get("decision") == "매수후보"]
+    if buy_candidates:
+        names = ", ".join(f"{r['name']}({r['stars']})" for r in buy_candidates)
+        send_notification(
+            title=f"🎯 DC 자비스 매수후보 발견 ({len(buy_candidates)}건)",
+            body=names,
+            url="https://github.com/kkandelo-arch/jarvis/blob/main/data/etf_discovery.json",
+        )
 
 
 if __name__ == "__main__":
