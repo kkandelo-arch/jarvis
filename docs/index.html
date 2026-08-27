@@ -2,77 +2,289 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DC 자비스 - 알림 구독</title>
-  <link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>DC 자비스</title>
+<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2563eb">
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 480px; margin: 60px auto; padding: 0 20px; text-align: center; color: #222; }
-  h1 { font-size: 20px; }
-  button { font-size: 16px; padding: 14px 28px; border-radius: 10px; border: none; background: #2563eb; color: white; cursor: pointer; margin-top: 20px; }
-  button:disabled { background: #9ca3af; }
-  #status { margin-top: 20px; font-size: 14px; color: #555; white-space: pre-wrap; word-break: break-all; }
-  textarea { width: 100%; height: 160px; margin-top: 16px; font-size: 11px; font-family: monospace; }
-  .hint { font-size: 13px; color: #888; margin-top: 30px; line-height: 1.6; }
+  :root {
+    --blue: #2563eb;
+    --red: #dc2626;
+    --green-bg: #ecfdf5;
+    --gray-bg: #f8fafc;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-sub: #64748b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", sans-serif;
+    margin: 0;
+    background: var(--gray-bg);
+    color: var(--text);
+    padding-bottom: 40px;
+  }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  header h1 { font-size: 17px; margin: 0; display: flex; align-items: center; gap: 6px; }
+  .icon-btn {
+    border: none; background: var(--gray-bg); border-radius: 10px;
+    width: 38px; height: 38px; font-size: 16px; cursor: pointer;
+  }
+  main { padding: 14px; max-width: 480px; margin: 0 auto; }
+  .card {
+    background: white; border-radius: 14px; padding: 16px;
+    margin-bottom: 12px; border: 1px solid var(--border);
+  }
+  .card-title {
+    font-size: 13px; color: var(--text-sub); margin: 0 0 10px 0;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .risk-score { display: flex; align-items: baseline; gap: 8px; }
+  .risk-score .num { font-size: 36px; font-weight: 700; }
+  .badge {
+    display: inline-block; padding: 3px 10px; border-radius: 999px;
+    font-size: 12px; font-weight: 600;
+  }
+  .badge.안정 { background: #dcfce7; color: #16a34a; }
+  .badge.주의 { background: #fef9c3; color: #ca8a04; }
+  .badge.경고 { background: #fee2e2; color: #dc2626; }
+  .badge.위험 { background: #fee2e2; color: #991b1b; }
+  .badge.매수후보 { background: #dbeafe; color: #1d4ed8; }
+  .badge.관심종목 { background: #e0e7ff; color: #4338ca; }
+  .badge.관망 { background: #f1f5f9; color: #64748b; }
+  .badge.제외권장 { background: #f1f5f9; color: #94a3b8; }
+  .badge.긴급 { background: #fee2e2; color: #991b1b; }
+  .badge.경고lv { background: #ffedd5; color: #c2410c; }
+  .badge.정보 { background: #f1f5f9; color: #64748b; }
+  .item-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-top: 1px solid var(--border);
+  }
+  .item-row:first-child { border-top: none; }
+  .item-name { font-size: 14px; font-weight: 600; }
+  .item-reason { font-size: 12px; color: var(--text-sub); margin-top: 2px; }
+  .pnl-pos { color: var(--red); font-weight: 700; }
+  .pnl-neg { color: var(--blue); font-weight: 700; }
+  .empty { color: var(--text-sub); font-size: 13px; text-align: center; padding: 20px 0; }
+  .freshness { font-size: 11px; color: var(--text-sub); text-align: center; margin-top: 4px; }
+  .freshness.stale { color: var(--red); }
+  #subscribeOverlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+    align-items: center; justify-content: center; z-index: 100; padding: 20px;
+  }
+  #subscribeOverlay .box {
+    background: white; border-radius: 16px; padding: 24px; max-width: 360px; width: 100%;
+    text-align: center;
+  }
+  #subscribeOverlay button {
+    font-size: 15px; padding: 12px 24px; border-radius: 10px; border: none;
+    background: var(--blue); color: white; margin-top: 14px; width: 100%;
+  }
+  #subscribeOverlay .close { background: none; color: var(--text-sub); margin-top: 8px; }
+  #subJson { width: 100%; height: 120px; margin-top: 10px; font-size: 10px; font-family: monospace; }
+  .loading { text-align: center; color: var(--text-sub); padding: 30px 0; font-size: 13px; }
 </style>
 </head>
 <body>
-  <h1>📈 DC 자비스 알림 구독</h1>
-  <p>이 버튼을 눌러 위험경보 / 매수후보 알림을 받으세요.</p>
-  <button id="subscribeBtn">알림 구독하기</button>
-  <div id="status"></div>
-  <textarea id="subJson" style="display:none" readonly></textarea>
-  <div class="hint">
-    구독 후 나오는 텍스트 전체를 복사해서<br>
-    저장소의 <code>data/push_subscription.json</code> 파일에<br>
-    그대로 붙여넣으면 설정이 완료됩니다.
+
+<header>
+  <h1>📈 DC 자비스</h1>
+  <button class="icon-btn" id="bellBtn" title="알림 설정">🔔</button>
+</header>
+
+<main id="main">
+  <div class="loading">데이터 불러오는 중...</div>
+</main>
+
+<div id="subscribeOverlay">
+  <div class="box">
+    <h3 style="margin-top:0">🔔 알림 구독</h3>
+    <p style="font-size:13px;color:var(--text-sub)">위험경보 / 매수후보 발견 시 이 기기로 알림을 받습니다.</p>
+    <button id="subscribeBtn">알림 구독하기</button>
+    <textarea id="subJson" style="display:none" readonly></textarea>
+    <div id="subStatus" style="font-size:12px;color:var(--text-sub);margin-top:8px;"></div>
+    <button class="close" id="closeOverlay">닫기</button>
   </div>
+</div>
 
 <script>
-// 2-1 단계에서 생성한 VAPID_PUBLIC_KEY 값
+const REPO_RAW = "https://raw.githubusercontent.com/kkandelo-arch/jarvis/main/data/";
 const VAPID_PUBLIC_KEY = "BG32wpG4vuVXwbPcCm9G9z23SdNYIQzJZMRxQWnpfDxYAZRTKb0-CNIJUxaRnMssn94aOO0nXG289OUcE2czKss";
 
+async function fetchJson(name) {
+  try {
+    const res = await fetch(REPO_RAW + name + "?t=" + Date.now());
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (e) {
+    return null;
+  }
+}
+
+function fmtNum(n) {
+  return n.toLocaleString("ko-KR");
+}
+
+function pnlClass(pct) {
+  return pct >= 0 ? "pnl-pos" : "pnl-neg";
+}
+
+function pnlSign(pct) {
+  return (pct >= 0 ? "+" : "") + pct + "%";
+}
+
+function timeAgo(iso) {
+  if (!iso) return "";
+  const diffMin = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+  if (diffMin < 60) return `${diffMin}분 전`;
+  const diffHr = Math.round(diffMin / 60);
+  if (diffHr < 24) return `${diffHr}시간 전`;
+  return `${Math.round(diffHr / 24)}일 전`;
+}
+
+async function loadDashboard() {
+  const [risk, discovery, portfolio, alerts, health] = await Promise.all([
+    fetchJson("risk_score.json"),
+    fetchJson("etf_discovery.json"),
+    fetchJson("portfolio_snapshot.json"),
+    fetchJson("risk_alerts.json"),
+    fetchJson("system_health.json"),
+  ]);
+
+  let html = "";
+
+  // 데이터 최신성
+  if (health) {
+    const stale = health.any_stale;
+    html += `<div class="freshness ${stale ? 'stale' : ''}">
+      ${stale ? '⚠️ 일부 데이터가 오래됨' : '✅ 데이터 최신 상태'} · 확인 ${timeAgo(health.timestamp)}
+    </div>`;
+  }
+
+  // 위험도 스코어
+  if (risk) {
+    html += `<div class="card">
+      <p class="card-title">시장 위험도 <span>${timeAgo(risk.timestamp)}</span></p>
+      <div class="risk-score">
+        <span class="num">${risk.composite_score}</span>
+        <span class="badge ${risk.level}">${risk.level}</span>
+      </div>
+    </div>`;
+  }
+
+  // 보유종목 손익
+  if (portfolio && portfolio.holdings_count > 0) {
+    let itemsHtml = portfolio.items.map(it => `
+      <div class="item-row">
+        <div>
+          <div class="item-name">${it.name}</div>
+          <div class="item-reason">${it.quantity}주 · 평단 ${fmtNum(it.avg_price)}원</div>
+        </div>
+        <div style="text-align:right">
+          <div class="${pnlClass(it.pnl_pct)}">${pnlSign(it.pnl_pct)}</div>
+          <div class="item-reason">${fmtNum(it.eval_amount)}원</div>
+        </div>
+      </div>
+    `).join("");
+
+    html += `<div class="card">
+      <p class="card-title">보유종목 손익 <span>${timeAgo(portfolio.timestamp)}</span></p>
+      <div class="risk-score">
+        <span class="num ${pnlClass(portfolio.total_pnl_pct)}">${pnlSign(portfolio.total_pnl_pct)}</span>
+        <span style="color:var(--text-sub);font-size:13px">${fmtNum(portfolio.total_pnl_amount)}원</span>
+      </div>
+      ${itemsHtml}
+    </div>`;
+  } else {
+    html += `<div class="card">
+      <p class="card-title">보유종목 손익</p>
+      <div class="empty">보유종목이 없습니다 (data/holdings.json에 입력)</div>
+    </div>`;
+  }
+
+  // 오늘의 발굴결과
+  if (discovery && discovery.top5) {
+    let topHtml = discovery.top5.map(r => `
+      <div class="item-row">
+        <div>
+          <div class="item-name">${r.name} ${"⭐".repeat(r.stars)}</div>
+          <div class="item-reason">${r.reason}</div>
+        </div>
+        <span class="badge ${r.decision}">${r.decision}</span>
+      </div>
+    `).join("");
+
+    html += `<div class="card">
+      <p class="card-title">오늘의 발굴결과 TOP5 <span>${timeAgo(discovery.timestamp)}</span></p>
+      ${topHtml}
+    </div>`;
+  }
+
+  // 최근 리스크 경보
+  if (alerts && alerts.alerts && alerts.alerts.length > 0) {
+    const sorted = [...alerts.alerts].sort((a, b) => {
+      const order = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3 };
+      return (order[a.level] ?? 9) - (order[b.level] ?? 9);
+    });
+    let alertHtml = sorted.slice(0, 6).map(a => `
+      <div class="item-row">
+        <div class="item-name" style="font-weight:400;font-size:13px">${a.message}</div>
+        <span class="badge ${a.level === '경고' ? '경고lv' : a.level}">${a.level}</span>
+      </div>
+    `).join("");
+
+    html += `<div class="card">
+      <p class="card-title">최근 리스크 경보 (${alerts.alert_count}건) <span>${timeAgo(alerts.timestamp)}</span></p>
+      ${alertHtml}
+    </div>`;
+  }
+
+  document.getElementById("main").innerHTML = html || `<div class="empty">데이터를 불러올 수 없습니다.</div>`;
+}
+
+loadDashboard();
+
+// ===== 알림 구독 로직 (기존 로직 그대로, 오버레이 안으로 이동) =====
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
   const rawData = atob(base64);
   const outputArray = new Uint8Array(rawData.length);
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i);
-  }
+  for (let i = 0; i < rawData.length; ++i) outputArray[i] = rawData.charCodeAt(i);
   return outputArray;
 }
 
-const btn = document.getElementById("subscribeBtn");
-const statusEl = document.getElementById("status");
-const jsonEl = document.getElementById("subJson");
+const overlay = document.getElementById("subscribeOverlay");
+document.getElementById("bellBtn").addEventListener("click", () => { overlay.style.display = "flex"; });
+document.getElementById("closeOverlay").addEventListener("click", () => { overlay.style.display = "none"; });
 
-btn.addEventListener("click", async () => {
+document.getElementById("subscribeBtn").addEventListener("click", async () => {
+  const statusEl = document.getElementById("subStatus");
+  const jsonEl = document.getElementById("subJson");
   statusEl.textContent = "구독 진행 중...";
   try {
     if (!("serviceWorker" in navigator) || !("PushManager" in window)) {
-      throw new Error("이 브라우저는 알림을 지원하지 않습니다. (아이폰은 홈화면에 추가한 뒤 그 앱에서 시도하세요)");
+      throw new Error("이 브라우저는 알림을 지원하지 않습니다.");
     }
-
     const permission = await Notification.requestPermission();
-    if (permission !== "granted") {
-      throw new Error("알림 권한이 거부되었습니다. 브라우저 설정에서 알림을 허용해주세요.");
-    }
+    if (permission !== "granted") throw new Error("알림 권한이 거부되었습니다.");
 
     const registration = await navigator.serviceWorker.register("sw.js");
     await navigator.serviceWorker.ready;
-
     const subscription = await registration.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
     });
 
-    const subJson = JSON.stringify(subscription.toJSON(), null, 2);
-    jsonEl.value = subJson;
+    jsonEl.value = JSON.stringify(subscription.toJSON(), null, 2);
     jsonEl.style.display = "block";
-    statusEl.textContent = "✅ 구독 완료! 아래 내용 전체를 복사해서 data/push_subscription.json에 붙여넣으세요.";
-    btn.disabled = true;
-    btn.textContent = "구독됨";
+    statusEl.textContent = "✅ 구독 완료! 아래 내용을 복사해서 data/push_subscription.json에 붙여넣으세요.";
   } catch (err) {
     statusEl.textContent = "❌ 오류: " + err.message;
   }
