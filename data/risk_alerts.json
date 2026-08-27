@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-08-26T06:54:32.047442+00:00",
+  "timestamp": "2026-08-27T00:43:31.355448+00:00",
   "checked_count": 30,
-  "alert_count": 9,
+  "alert_count": 8,
   "alerts": [
     {
-      "ticker": "0091P0",
-      "name": "TIGER 코리아원자력",
+      "ticker": "395160",
+      "name": "KODEX AI반도체TOP2플러스",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.73,
-      "message": "TIGER 코리아원자력 1일 급등 6.73%"
+      "level": "정보",
+      "change_pct": 3.39,
+      "message": "KODEX AI반도체TOP2플러스 1일 급등 3.39%"
     },
     {
       "ticker": "0091P0",
@@ -18,8 +18,26 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+      "band_position_pct": 98.1,
+      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(98.1%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": 5.68,
+      "message": "KODEX AI전력핵심설비 1일 급등 5.68%"
+    },
+    {
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.47,
+      "message": "PLUS 글로벌HBM반도체 1일 급등 3.47%"
     },
     {
       "ticker": "228790",
@@ -27,62 +45,35 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 98.5,
-      "message": "TIGER 화장품 52주 밴드 상단 근접(98.5%) - 비중 축소 검토"
+      "band_position_pct": 95.4,
+      "message": "TIGER 화장품 52주 밴드 상단 근접(95.4%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 4.37,
+      "message": "KODEX 2차전지산업 1일 급등 4.37%"
     },
     {
       "ticker": "0098F0",
       "name": "KODEX 원자력SMR",
       "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.52,
-      "message": "KODEX 원자력SMR 1일 급등 6.52%"
-    },
-    {
-      "ticker": "0098F0",
-      "name": "KODEX 원자력SMR",
-      "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "KODEX 원자력SMR 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+      "band_position_pct": 98.2,
+      "message": "KODEX 원자력SMR 52주 밴드 상단 근접(98.2%) - 비중 축소 검토"
     },
     {
-      "ticker": "0008T0",
-      "name": "SOL 화장품TOP3플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 98.6,
-      "message": "SOL 화장품TOP3플러스 52주 밴드 상단 근접(98.6%) - 비중 축소 검토"
-    },
-    {
-      "ticker": "117700",
-      "name": "KODEX 건설",
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.34,
-      "message": "KODEX 건설 1일 급등 6.34%"
-    },
-    {
-      "ticker": "117700",
-      "name": "KODEX 건설",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "KODEX 건설 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
-    },
-    {
-      "ticker": "411060",
-      "name": "ACE KRX금현물",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 97.8,
-      "message": "ACE KRX금현물 52주 밴드 상단 근접(97.8%) - 비중 축소 검토"
+      "level": "정보",
+      "change_pct": 3.15,
+      "message": "TIGER 200 IT 1일 급등 3.15%"
     }
   ]
 }
