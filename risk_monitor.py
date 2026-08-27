@@ -10,6 +10,8 @@ from datetime import datetime, timedelta, timezone
 
 from pykrx import stock
 
+from send_push import send_notification
+
 EXCLUDE_KEYWORDS = [
     "레버리지", "인버스", "곱버스",
     "국고채", "회사채", "단기채", "머니마켓", "금리",
@@ -148,6 +150,17 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(json.dumps(output, ensure_ascii=False, indent=2))
+
+    # 알림 발송: "긴급"/"경고" 등급만 발송 (주의/정보는 알림 피로 방지 위해 생략)
+    urgent = [a for a in alerts if a.get("level") in ("긴급", "경고")]
+    if urgent:
+        names = ", ".join(a["message"] for a in urgent[:3])
+        more = f" 외 {len(urgent) - 3}건" if len(urgent) > 3 else ""
+        send_notification(
+            title=f"⚠️ DC 자비스 리스크 알림 ({len(urgent)}건)",
+            body=f"{names}{more}",
+            url="https://github.com/kkandelo-arch/jarvis/blob/main/data/risk_alerts.json",
+        )
 
 
 if __name__ == "__main__":
