@@ -1,61 +1,34 @@
 {
-  "timestamp": "2026-08-27T00:43:31.355448+00:00",
+  "timestamp": "2026-08-27T11:00:39.959120+00:00",
   "checked_count": 30,
-  "alert_count": 8,
+  "alert_count": 4,
   "alerts": [
-    {
-      "ticker": "395160",
-      "name": "KODEX AI반도체TOP2플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.39,
-      "message": "KODEX AI반도체TOP2플러스 1일 급등 3.39%"
-    },
     {
       "ticker": "0091P0",
       "name": "TIGER 코리아원자력",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 98.1,
-      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(98.1%) - 비중 축소 검토"
+      "band_position_pct": 100.0,
+      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     },
     {
       "ticker": "487240",
       "name": "KODEX AI전력핵심설비",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 5.68,
-      "message": "KODEX AI전력핵심설비 1일 급등 5.68%"
-    },
-    {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.47,
-      "message": "PLUS 글로벌HBM반도체 1일 급등 3.47%"
-    },
-    {
-      "ticker": "228790",
-      "name": "TIGER 화장품",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 95.4,
-      "message": "TIGER 화장품 52주 밴드 상단 근접(95.4%) - 비중 축소 검토"
+      "level": "경고",
+      "change_pct": 9.34,
+      "message": "KODEX AI전력핵심설비 1일 급등 9.34%"
     },
     {
       "ticker": "305720",
       "name": "KODEX 2차전지산업",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.37,
-      "message": "KODEX 2차전지산업 1일 급등 4.37%"
+      "level": "주의",
+      "change_pct": 5.84,
+      "message": "KODEX 2차전지산업 1일 급등 5.84%"
     },
     {
       "ticker": "0098F0",
@@ -63,17 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 98.2,
-      "message": "KODEX 원자력SMR 52주 밴드 상단 근접(98.2%) - 비중 축소 검토"
-    },
-    {
-      "ticker": "139260",
-      "name": "TIGER 200 IT",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.15,
-      "message": "TIGER 200 IT 1일 급등 3.15%"
+      "band_position_pct": 100.0,
+      "message": "KODEX 원자력SMR 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     }
   ]
 }
