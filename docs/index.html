@@ -89,6 +89,52 @@
   #subscribeOverlay .close { background: none; color: var(--text-sub); margin-top: 8px; }
   #subJson { width: 100%; height: 120px; margin-top: 10px; font-size: 10px; font-family: monospace; }
   .loading { text-align: center; color: var(--text-sub); padding: 30px 0; font-size: 13px; }
+
+  #chatFab {
+    position: fixed; right: 18px; bottom: 18px; z-index: 50;
+    width: 54px; height: 54px; border-radius: 50%; border: none;
+    background: var(--blue); color: white; font-size: 22px;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.4); cursor: pointer;
+  }
+  #chatOverlay {
+    display: none; position: fixed; inset: 0; background: white; z-index: 200;
+    flex-direction: column;
+  }
+  #chatOverlay.open { display: flex; }
+  #chatHeader {
+    padding: 14px 16px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    background: white; position: sticky; top: 0;
+  }
+  #chatHeader h2 { font-size: 15px; margin: 0; }
+  #chatMessages { flex: 1; overflow-y: auto; padding: 14px; }
+  .msg-row { display: flex; margin-bottom: 10px; }
+  .msg-row.user { justify-content: flex-end; }
+  .msg-bubble {
+    max-width: 78%; padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5;
+    white-space: pre-wrap;
+  }
+  .msg-row.user .msg-bubble { background: var(--blue); color: white; border-bottom-right-radius: 4px; }
+  .msg-row.bot .msg-bubble { background: var(--gray-bg); color: var(--text); border-bottom-left-radius: 4px; }
+  .msg-row.bot .msg-bubble.error { background: #fee2e2; color: #991b1b; }
+  #chatInputBar {
+    display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--border);
+    background: white; position: sticky; bottom: 0;
+  }
+  #chatInput {
+    flex: 1; border: 1px solid var(--border); border-radius: 20px; padding: 10px 16px;
+    font-size: 14px; resize: none; font-family: inherit;
+  }
+  #chatSendBtn {
+    border: none; background: var(--blue); color: white; border-radius: 50%;
+    width: 42px; height: 42px; font-size: 16px; cursor: pointer; flex-shrink: 0;
+  }
+  #chatSendBtn:disabled { background: #93c5fd; }
+  .chat-suggestions { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 14px 10px; }
+  .chip {
+    border: 1px solid var(--border); background: white; border-radius: 999px;
+    padding: 6px 12px; font-size: 12px; color: var(--text-sub); cursor: pointer;
+  }
 </style>
 </head>
 <body>
@@ -110,6 +156,29 @@
     <textarea id="subJson" style="display:none" readonly></textarea>
     <div id="subStatus" style="font-size:12px;color:var(--text-sub);margin-top:8px;"></div>
     <button class="close" id="closeOverlay">닫기</button>
+  </div>
+</div>
+
+<button id="chatFab" title="DC 자비스에게 물어보기">💬</button>
+
+<div id="chatOverlay">
+  <div id="chatHeader">
+    <h2>💬 DC 자비스에게 물어보기</h2>
+    <button class="icon-btn" id="closeChatBtn">✕</button>
+  </div>
+  <div id="chatMessages">
+    <div class="msg-row bot">
+      <div class="msg-bubble">안녕하세요! 오늘 위험도, 매수후보, 보유종목 손익 등 저장된 데이터 기준으로 답변해드려요. 무엇이 궁금하신가요?</div>
+    </div>
+  </div>
+  <div class="chat-suggestions">
+    <button class="chip" data-q="오늘 매수후보 뭐야?">오늘 매수후보?</button>
+    <button class="chip" data-q="지금 시장 위험도 어때?">시장 위험도?</button>
+    <button class="chip" data-q="내 보유종목 손익 알려줘">보유종목 손익?</button>
+  </div>
+  <div id="chatInputBar">
+    <textarea id="chatInput" rows="1" placeholder="메시지를 입력하세요..."></textarea>
+    <button id="chatSendBtn">➤</button>
   </div>
 </div>
 
@@ -159,7 +228,6 @@ async function loadDashboard() {
 
   let html = "";
 
-  // 데이터 최신성
   if (health) {
     const stale = health.any_stale;
     html += `<div class="freshness ${stale ? 'stale' : ''}">
@@ -167,7 +235,6 @@ async function loadDashboard() {
     </div>`;
   }
 
-  // 위험도 스코어
   if (risk) {
     html += `<div class="card">
       <p class="card-title">시장 위험도 <span>${timeAgo(risk.timestamp)}</span></p>
@@ -178,7 +245,6 @@ async function loadDashboard() {
     </div>`;
   }
 
-  // 보유종목 손익
   if (portfolio && portfolio.holdings_count > 0) {
     let itemsHtml = portfolio.items.map(it => `
       <div class="item-row">
@@ -208,7 +274,6 @@ async function loadDashboard() {
     </div>`;
   }
 
-  // 오늘의 발굴결과
   if (discovery && discovery.top5) {
     let topHtml = discovery.top5.map(r => `
       <div class="item-row">
@@ -226,7 +291,6 @@ async function loadDashboard() {
     </div>`;
   }
 
-  // 최근 리스크 경보
   if (alerts && alerts.alerts && alerts.alerts.length > 0) {
     const sorted = [...alerts.alerts].sort((a, b) => {
       const order = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3 };
@@ -250,7 +314,6 @@ async function loadDashboard() {
 
 loadDashboard();
 
-// ===== 알림 구독 로직 (기존 로직 그대로, 오버레이 안으로 이동) =====
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
@@ -288,6 +351,85 @@ document.getElementById("subscribeBtn").addEventListener("click", async () => {
   } catch (err) {
     statusEl.textContent = "❌ 오류: " + err.message;
   }
+});
+
+// ===== 채팅 로직 =====
+const CHAT_WORKER_URL = "https://dc-jarvis-chat.kkandelo.workers.dev/";
+let chatHistory = [];
+
+const chatFab = document.getElementById("chatFab");
+const chatOverlay = document.getElementById("chatOverlay");
+const chatMessages = document.getElementById("chatMessages");
+const chatInput = document.getElementById("chatInput");
+const chatSendBtn = document.getElementById("chatSendBtn");
+
+chatFab.addEventListener("click", () => {
+  chatOverlay.classList.add("open");
+  chatInput.focus();
+});
+document.getElementById("closeChatBtn").addEventListener("click", () => {
+  chatOverlay.classList.remove("open");
+});
+
+function addBubble(text, role, isError) {
+  const row = document.createElement("div");
+  row.className = "msg-row " + (role === "user" ? "user" : "bot");
+  const bubble = document.createElement("div");
+  bubble.className = "msg-bubble" + (isError ? " error" : "");
+  bubble.textContent = text;
+  row.appendChild(bubble);
+  chatMessages.appendChild(row);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  return bubble;
+}
+
+async function sendChatMessage(text) {
+  if (!text.trim()) return;
+  chatInput.value = "";
+  chatInput.style.height = "auto";
+  chatSendBtn.disabled = true;
+
+  addBubble(text, "user");
+  chatHistory.push({ role: "user", content: text });
+
+  const loadingBubble = addBubble("생각 중...", "bot");
+
+  try {
+    const res = await fetch(CHAT_WORKER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages: chatHistory }),
+    });
+    const data = await res.json();
+
+    if (data.error) {
+      loadingBubble.textContent = "오류가 발생했어요: " + data.error;
+      loadingBubble.classList.add("error");
+    } else {
+      loadingBubble.textContent = data.reply;
+      chatHistory.push({ role: "assistant", content: data.reply });
+    }
+  } catch (err) {
+    loadingBubble.textContent = "연결에 실패했어요. 잠시 후 다시 시도해주세요.";
+    loadingBubble.classList.add("error");
+  } finally {
+    chatSendBtn.disabled = false;
+  }
+}
+
+chatSendBtn.addEventListener("click", () => sendChatMessage(chatInput.value));
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    sendChatMessage(chatInput.value);
+  }
+});
+chatInput.addEventListener("input", () => {
+  chatInput.style.height = "auto";
+  chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + "px";
+});
+document.querySelectorAll(".chip").forEach(chip => {
+  chip.addEventListener("click", () => sendChatMessage(chip.dataset.q));
 });
 </script>
 </body>
