@@ -1,62 +1,8 @@
 {
-  "timestamp": "2026-08-28T12:35:06.876930+00:00",
-  "checked_count": 30,
-  "alert_count": 8,
+  "timestamp": "2026-08-30T23:52:57.348564+00:00",
+  "checked_count": 31,
+  "alert_count": 9,
   "alerts": [
-    {
-      "ticker": "472150",
-      "name": "TIGER 배당커버드콜액티브",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.11,
-      "message": "TIGER 배당커버드콜액티브 1일 급락 4.11%"
-    },
-    {
-      "ticker": "0091P0",
-      "name": "TIGER 코리아원자력",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
-    },
-    {
-      "ticker": "0219E0",
-      "name": "KODEX 200커버드콜액티브",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.05,
-      "message": "KODEX 200커버드콜액티브 1일 급락 4.05%"
-    },
-    {
-      "ticker": "364980",
-      "name": "TIGER 2차전지TOP10",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 97.6,
-      "message": "TIGER 2차전지TOP10 52주 밴드 상단 근접(97.6%) - 비중 축소 검토"
-    },
-    {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.85,
-      "message": "PLUS 글로벌HBM반도체 1일 급락 3.85%"
-    },
-    {
-      "ticker": "117700",
-      "name": "KODEX 건설",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 96.9,
-      "message": "KODEX 건설 52주 밴드 상단 근접(96.9%) - 비중 축소 검토"
-    },
     {
       "ticker": "228790",
       "name": "TIGER 화장품",
@@ -74,6 +20,69 @@
       "level": "주의",
       "band_position_pct": 100.0,
       "message": "TIGER 화장품 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "472150",
+      "name": "TIGER 배당커버드콜액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -4.11,
+      "message": "TIGER 배당커버드콜액티브 1일 급락 4.11%"
+    },
+    {
+      "ticker": "0008T0",
+      "name": "SOL 화장품TOP3플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": 7.75,
+      "message": "SOL 화장품TOP3플러스 1일 급등 7.75%"
+    },
+    {
+      "ticker": "0008T0",
+      "name": "SOL 화장품TOP3플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "SOL 화장품TOP3플러스 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.85,
+      "message": "PLUS 글로벌HBM반도체 1일 급락 3.85%"
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 99.3,
+      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(99.3%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "0091P0",
+      "name": "TIGER 코리아원자력",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+    },
+    {
+      "ticker": "458730",
+      "name": "TIGER 미국배당다우존스",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "TIGER 미국배당다우존스 52주 밴드 하단 근접(0.0%) - 저가매수 후보 검토"
     }
   ]
 }
