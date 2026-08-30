@@ -1,7 +1,7 @@
 """
-DC 자비스 - 강화 모니터링 모듈 (v1.1 - etf_discovery 의존성 제거, 독립 실행)
-etf_top30.json(거래대금 상위) + custom_universe.json(임의추가)을 직접 로드해서
-1일 급등락 + 52주 밴드 과열/과매도 신호를 점검
+DC 자비스 - 강화 모니터링 모듈 (v1.2 - 보유종목 최우선 감시 편입)
+holdings.json(보유종목, 최우선) + etf_top30.json(거래대금 상위) + custom_universe.json(임의추가)을
+합쳐서 1일 급등락 + 52주 밴드 과열/과매도 신호를 점검
 결과는 data/risk_alerts.json 에 저장됨
 """
 import json
@@ -34,13 +34,31 @@ def load_universe():
     universe = []
     existing = set()
 
+    # 보유종목은 최우선으로 감시 대상에 편입 (top30/custom 여부와 무관하게 항상 감시)
+    try:
+        with open("data/holdings.json", "r", encoding="utf-8") as f:
+            holdings = json.load(f)
+        for item in holdings:
+            ticker = item.get("ticker")
+            name = item.get("name", ticker)
+            if ticker and ticker not in existing:
+                universe.append((ticker, name, "보유종목"))
+                existing.add(ticker)
+        print(f"[디버그] 보유종목 {len(existing)}개 감시목록에 최우선 편입")
+    except Exception as e:
+        print(f"[경고] holdings.json 로드 실패(없어도 정상 동작): {e}")
+
     try:
         with open("data/etf_top30.json", "r", encoding="utf-8") as f:
             ranking = json.load(f)
+        added = 0
         for item in ranking.get("top30", []):
-            universe.append((item["ticker"], item["name"], "기본(거래대금상위)"))
-            existing.add(item["ticker"])
-        print(f"[디버그] 랭킹 기반 기본목록 {len(universe)}개 로드")
+            ticker = item["ticker"]
+            if ticker not in existing:
+                universe.append((ticker, item["name"], "기본(거래대금상위)"))
+                existing.add(ticker)
+                added += 1
+        print(f"[디버그] 랭킹 기반 기본목록 {added}개 추가 (보유종목과 중복 제외)")
     except Exception as e:
         print(f"[경고] etf_top30.json 로드 실패: {e}")
 
@@ -56,6 +74,7 @@ def load_universe():
     except Exception as e:
         print(f"[경고] custom_universe.json 로드 실패(없어도 정상 동작): {e}")
 
+    print(f"[디버그] 최종 감시 대상 총 {len(universe)}개 (보유종목 포함)")
     return universe
 
 
