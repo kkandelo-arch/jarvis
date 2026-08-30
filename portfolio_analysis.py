@@ -97,18 +97,30 @@ def main():
     history_path = "data/portfolio_history.json"
     try:
         with open(history_path, "r", encoding="utf-8") as f:
-            history = json.load(f)
+            raw_history = json.load(f)
     except Exception:
-        history = []
+        raw_history = []
 
-    history.append(
-        {
-            "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "total_eval_amount": round(total_value),
-            "total_pnl_pct": total_pnl_pct,
-        }
-    )
-    history = history[-365:]
+    # 하루 3회 실행되면서 같은 날짜가 중복 기록되던 문제 정리:
+    # 날짜별로 마지막 값만 남기고, 오늘자는 이번 실행 값으로 덮어씀(upsert)
+    by_date = {}
+    for entry in raw_history:
+        if entry.get("date"):
+            by_date[entry["date"]] = entry
+
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    by_date[today_str] = {
+        "date": today_str,
+        "total_eval_amount": round(total_value),
+        "total_pnl_pct": total_pnl_pct,
+    }
+
+    history = [by_date[d] for d in sorted(by_date.keys())][-365:]
+
+    dedup_count = len(raw_history) - len({e.get("date") for e in raw_history})
+    if dedup_count > 0:
+        print(f"[디버그] 기존 중복 기록 {dedup_count}건 정리됨 (날짜별 1건으로 통합)")
+
     with open(history_path, "w", encoding="utf-8") as f:
         json.dump(history, f, ensure_ascii=False, indent=2)
 
