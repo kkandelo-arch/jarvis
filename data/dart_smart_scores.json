@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-31T01:59:47.247367+00:00",
-  "scored_count": 24,
+  "timestamp": "2026-08-31T16:12:51.093887+00:00",
+  "scored_count": 25,
   "results": [
     {
       "ticker": "069500",
@@ -179,131 +179,6 @@
       ]
     },
     {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "smart_score": 79,
-      "weighted_avg_growth_pct": 72.32,
-      "scored_holdings_count": 4,
-      "holdings": [
-        {
-          "stock_code": "000660",
-          "corp_name": "SK하이닉스",
-          "weight": 0.3695,
-          "net_income_growth_pct": 116.94,
-          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
-        },
-        {
-          "stock_code": "005930",
-          "corp_name": "삼성전자",
-          "weight": 0.2296,
-          "net_income_growth_pct": 31.22,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
-        },
-        {
-          "stock_code": "042700",
-          "corp_name": "한미반도체",
-          "weight": 0.0612,
-          "net_income_growth_pct": 40.23,
-          "source": "2025년 보고서11011 CFS (제 46 기 vs 제 45 기)"
-        },
-        {
-          "stock_code": "036930",
-          "corp_name": "주성엔지니어링",
-          "weight": 0.0366,
-          "net_income_growth_pct": -66.58,
-          "source": "2025년 보고서11011 CFS (제 31 기 vs 제 30 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "148020",
-      "name": "RISE 200",
-      "smart_score": 75,
-      "weighted_avg_growth_pct": 67.51,
-      "scored_holdings_count": 5,
-      "holdings": [
-        {
-          "stock_code": "005930",
-          "corp_name": "삼성전자",
-          "weight": 0.3325,
-          "net_income_growth_pct": 31.22,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
-        },
-        {
-          "stock_code": "000660",
-          "corp_name": "SK하이닉스",
-          "weight": 0.2604,
-          "net_income_growth_pct": 116.94,
-          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
-        },
-        {
-          "stock_code": "402340",
-          "corp_name": "SK스퀘어",
-          "weight": 0.0261,
-          "net_income_growth_pct": 141.57,
-          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
-        },
-        {
-          "stock_code": "009150",
-          "corp_name": "삼성전기",
-          "weight": 0.0219,
-          "net_income_growth_pct": 3.95,
-          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
-        },
-        {
-          "stock_code": "005380",
-          "corp_name": "현대자동차",
-          "weight": 0.0151,
-          "net_income_growth_pct": -21.66,
-          "source": "2025년 보고서11011 CFS (제 58 기 vs 제 57 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "487240",
-      "name": "KODEX AI전력핵심설비",
-      "smart_score": 65,
-      "weighted_avg_growth_pct": 54.06,
-      "scored_holdings_count": 5,
-      "holdings": [
-        {
-          "stock_code": "298040",
-          "corp_name": "효성중공업",
-          "weight": 0.2162,
-          "net_income_growth_pct": 125.56,
-          "source": "2025년 보고서11011 CFS (제 8 기 vs 제 7 기)"
-        },
-        {
-          "stock_code": "010120",
-          "corp_name": "엘에스일렉트릭",
-          "weight": 0.2081,
-          "net_income_growth_pct": 17.35,
-          "source": "2025년 보고서11011 CFS (제 52 기 vs 제 51 기)"
-        },
-        {
-          "stock_code": "267260",
-          "corp_name": "HD현대일렉트릭",
-          "weight": 0.1755,
-          "net_income_growth_pct": 46.83,
-          "source": "2025년 보고서11011 CFS (제 9 기 vs 제 8 기)"
-        },
-        {
-          "stock_code": "006260",
-          "corp_name": "LS",
-          "weight": 0.1279,
-          "net_income_growth_pct": 23.91,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
-        },
-        {
-          "stock_code": "001440",
-          "corp_name": "대한전선",
-          "weight": 0.0819,
-          "net_income_growth_pct": 21.14,
-          "source": "2025년 보고서11011 CFS (제 71 기 vs 제 70 기)"
-        }
-      ]
-    },
-    {
       "ticker": "0167A0",
       "name": "SOL AI반도체TOP2플러스",
       "smart_score": 80,
@@ -344,87 +219,6 @@
           "weight": 0.0755,
           "net_income_growth_pct": 116.77,
           "source": "2025년 보고서11011 CFS (제 54 기 vs 제 53 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "395160",
-      "name": "KODEX AI반도체TOP2플러스",
-      "smart_score": 80,
-      "weighted_avg_growth_pct": 74.17,
-      "scored_holdings_count": 5,
-      "holdings": [
-        {
-          "stock_code": "005930",
-          "corp_name": "삼성전자",
-          "weight": 0.2631,
-          "net_income_growth_pct": 31.22,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
-        },
-        {
-          "stock_code": "000660",
-          "corp_name": "SK하이닉스",
-          "weight": 0.2385,
-          "net_income_growth_pct": 116.94,
-          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
-        },
-        {
-          "stock_code": "402340",
-          "corp_name": "SK스퀘어",
-          "weight": 0.228,
-          "net_income_growth_pct": 141.57,
-          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
-        },
-        {
-          "stock_code": "009150",
-          "corp_name": "삼성전기",
-          "weight": 0.1921,
-          "net_income_growth_pct": 3.95,
-          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
-        },
-        {
-          "stock_code": "042700",
-          "corp_name": "한미반도체",
-          "weight": 0.0228,
-          "net_income_growth_pct": 40.23,
-          "source": "2025년 보고서11011 CFS (제 46 기 vs 제 45 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "498400",
-      "name": "KODEX 200타겟위클리커버드콜",
-      "smart_score": 77,
-      "weighted_avg_growth_pct": 69.61,
-      "scored_holdings_count": 4,
-      "holdings": [
-        {
-          "stock_code": "005930",
-          "corp_name": "삼성전자",
-          "weight": 0.2856,
-          "net_income_growth_pct": 31.22,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
-        },
-        {
-          "stock_code": "000660",
-          "corp_name": "SK하이닉스",
-          "weight": 0.224,
-          "net_income_growth_pct": 116.94,
-          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
-        },
-        {
-          "stock_code": "402340",
-          "corp_name": "SK스퀘어",
-          "weight": 0.0224,
-          "net_income_growth_pct": 141.57,
-          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
-        },
-        {
-          "stock_code": "009150",
-          "corp_name": "삼성전기",
-          "weight": 0.019,
-          "net_income_growth_pct": 3.95,
-          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
         }
       ]
     },
@@ -473,6 +267,295 @@
       ]
     },
     {
+      "ticker": "148020",
+      "name": "RISE 200",
+      "smart_score": 75,
+      "weighted_avg_growth_pct": 67.51,
+      "scored_holdings_count": 5,
+      "holdings": [
+        {
+          "stock_code": "005930",
+          "corp_name": "삼성전자",
+          "weight": 0.3325,
+          "net_income_growth_pct": 31.22,
+          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+        },
+        {
+          "stock_code": "000660",
+          "corp_name": "SK하이닉스",
+          "weight": 0.2604,
+          "net_income_growth_pct": 116.94,
+          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
+        },
+        {
+          "stock_code": "402340",
+          "corp_name": "SK스퀘어",
+          "weight": 0.0261,
+          "net_income_growth_pct": 141.57,
+          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
+        },
+        {
+          "stock_code": "009150",
+          "corp_name": "삼성전기",
+          "weight": 0.0219,
+          "net_income_growth_pct": 3.95,
+          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
+        },
+        {
+          "stock_code": "005380",
+          "corp_name": "현대자동차",
+          "weight": 0.0151,
+          "net_income_growth_pct": -21.66,
+          "source": "2025년 보고서11011 CFS (제 58 기 vs 제 57 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "smart_score": 79,
+      "weighted_avg_growth_pct": 72.32,
+      "scored_holdings_count": 4,
+      "holdings": [
+        {
+          "stock_code": "000660",
+          "corp_name": "SK하이닉스",
+          "weight": 0.3695,
+          "net_income_growth_pct": 116.94,
+          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
+        },
+        {
+          "stock_code": "005930",
+          "corp_name": "삼성전자",
+          "weight": 0.2296,
+          "net_income_growth_pct": 31.22,
+          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+        },
+        {
+          "stock_code": "042700",
+          "corp_name": "한미반도체",
+          "weight": 0.0612,
+          "net_income_growth_pct": 40.23,
+          "source": "2025년 보고서11011 CFS (제 46 기 vs 제 45 기)"
+        },
+        {
+          "stock_code": "036930",
+          "corp_name": "주성엔지니어링",
+          "weight": 0.0366,
+          "net_income_growth_pct": -66.58,
+          "source": "2025년 보고서11011 CFS (제 31 기 vs 제 30 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "395160",
+      "name": "KODEX AI반도체TOP2플러스",
+      "smart_score": 80,
+      "weighted_avg_growth_pct": 74.17,
+      "scored_holdings_count": 5,
+      "holdings": [
+        {
+          "stock_code": "005930",
+          "corp_name": "삼성전자",
+          "weight": 0.2631,
+          "net_income_growth_pct": 31.22,
+          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+        },
+        {
+          "stock_code": "000660",
+          "corp_name": "SK하이닉스",
+          "weight": 0.2385,
+          "net_income_growth_pct": 116.94,
+          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
+        },
+        {
+          "stock_code": "402340",
+          "corp_name": "SK스퀘어",
+          "weight": 0.228,
+          "net_income_growth_pct": 141.57,
+          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
+        },
+        {
+          "stock_code": "009150",
+          "corp_name": "삼성전기",
+          "weight": 0.1921,
+          "net_income_growth_pct": 3.95,
+          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
+        },
+        {
+          "stock_code": "042700",
+          "corp_name": "한미반도체",
+          "weight": 0.0228,
+          "net_income_growth_pct": 40.23,
+          "source": "2025년 보고서11011 CFS (제 46 기 vs 제 45 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "smart_score": 65,
+      "weighted_avg_growth_pct": 54.06,
+      "scored_holdings_count": 5,
+      "holdings": [
+        {
+          "stock_code": "298040",
+          "corp_name": "효성중공업",
+          "weight": 0.2162,
+          "net_income_growth_pct": 125.56,
+          "source": "2025년 보고서11011 CFS (제 8 기 vs 제 7 기)"
+        },
+        {
+          "stock_code": "010120",
+          "corp_name": "엘에스일렉트릭",
+          "weight": 0.2081,
+          "net_income_growth_pct": 17.35,
+          "source": "2025년 보고서11011 CFS (제 52 기 vs 제 51 기)"
+        },
+        {
+          "stock_code": "267260",
+          "corp_name": "HD현대일렉트릭",
+          "weight": 0.1755,
+          "net_income_growth_pct": 46.83,
+          "source": "2025년 보고서11011 CFS (제 9 기 vs 제 8 기)"
+        },
+        {
+          "stock_code": "006260",
+          "corp_name": "LS",
+          "weight": 0.1279,
+          "net_income_growth_pct": 23.91,
+          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+        },
+        {
+          "stock_code": "001440",
+          "corp_name": "대한전선",
+          "weight": 0.0819,
+          "net_income_growth_pct": 21.14,
+          "source": "2025년 보고서11011 CFS (제 71 기 vs 제 70 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "smart_score": 77,
+      "weighted_avg_growth_pct": 69.61,
+      "scored_holdings_count": 4,
+      "holdings": [
+        {
+          "stock_code": "005930",
+          "corp_name": "삼성전자",
+          "weight": 0.2856,
+          "net_income_growth_pct": 31.22,
+          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+        },
+        {
+          "stock_code": "000660",
+          "corp_name": "SK하이닉스",
+          "weight": 0.224,
+          "net_income_growth_pct": 116.94,
+          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
+        },
+        {
+          "stock_code": "402340",
+          "corp_name": "SK스퀘어",
+          "weight": 0.0224,
+          "net_income_growth_pct": 141.57,
+          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
+        },
+        {
+          "stock_code": "009150",
+          "corp_name": "삼성전기",
+          "weight": 0.019,
+          "net_income_growth_pct": 3.95,
+          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "smart_score": 2,
+      "weighted_avg_growth_pct": -26.85,
+      "scored_holdings_count": 4,
+      "holdings": [
+        {
+          "stock_code": "373220",
+          "corp_name": "LG에너지솔루션",
+          "weight": 0.2074,
+          "net_income_growth_pct": -76.14,
+          "source": "2025년 보고서11011 CFS (제 6 기 vs 제 5 기)"
+        },
+        {
+          "stock_code": "005490",
+          "corp_name": "POSCO홀딩스",
+          "weight": 0.1356,
+          "net_income_growth_pct": -46.77,
+          "source": "2025년 보고서11011 CFS (제 58 기 vs 제 57 기)"
+        },
+        {
+          "stock_code": "051910",
+          "corp_name": "LG화학",
+          "weight": 0.1011,
+          "net_income_growth_pct": -100,
+          "source": "2025년 보고서11011 CFS (제 25 기 vs 제 24 기)"
+        },
+        {
+          "stock_code": "247540",
+          "corp_name": "에코프로비엠",
+          "weight": 0.0717,
+          "net_income_growth_pct": 256.54,
+          "source": "2025년 보고서11011 CFS (제 10 기 vs 제 9 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
+      "smart_score": 80,
+      "weighted_avg_growth_pct": 73.82,
+      "scored_holdings_count": 2,
+      "holdings": [
+        {
+          "stock_code": "005930",
+          "corp_name": "삼성전자",
+          "weight": 0.2605,
+          "net_income_growth_pct": 31.22,
+          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+        },
+        {
+          "stock_code": "000660",
+          "corp_name": "SK하이닉스",
+          "weight": 0.2573,
+          "net_income_growth_pct": 116.94,
+          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "472150",
+      "name": "TIGER 배당커버드콜액티브",
+      "smart_score": 79,
+      "weighted_avg_growth_pct": 72.27,
+      "scored_holdings_count": 2,
+      "holdings": [
+        {
+          "stock_code": "005930",
+          "corp_name": "삼성전자",
+          "weight": 0.2643,
+          "net_income_growth_pct": 31.22,
+          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+        },
+        {
+          "stock_code": "000660",
+          "corp_name": "SK하이닉스",
+          "weight": 0.2429,
+          "net_income_growth_pct": 116.94,
+          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
+        }
+      ]
+    },
+    {
       "ticker": "228790",
       "name": "TIGER 화장품",
       "smart_score": 79,
@@ -517,112 +600,68 @@
       ]
     },
     {
-      "ticker": "152100",
-      "name": "PLUS 200",
-      "smart_score": 75,
-      "weighted_avg_growth_pct": 67.54,
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
+      "smart_score": 82,
+      "weighted_avg_growth_pct": 76.23,
       "scored_holdings_count": 5,
       "holdings": [
         {
           "stock_code": "005930",
           "corp_name": "삼성전자",
-          "weight": 0.3324,
+          "weight": 0.4938,
           "net_income_growth_pct": 31.22,
           "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
         },
         {
           "stock_code": "000660",
           "corp_name": "SK하이닉스",
-          "weight": 0.2605,
+          "weight": 0.4726,
           "net_income_growth_pct": 116.94,
           "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
         },
         {
-          "stock_code": "402340",
-          "corp_name": "SK스퀘어",
-          "weight": 0.0263,
-          "net_income_growth_pct": 141.57,
-          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
+          "stock_code": "003160",
+          "corp_name": "디아이",
+          "weight": 0.0117,
+          "net_income_growth_pct": 300,
+          "source": "2025년 보고서11011 CFS (제 65 기 vs 제 64 기)"
         },
         {
-          "stock_code": "009150",
-          "corp_name": "삼성전기",
-          "weight": 0.022,
-          "net_income_growth_pct": 3.95,
-          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
+          "stock_code": "089030",
+          "corp_name": "테크윙",
+          "weight": 0.0115,
+          "net_income_growth_pct": 140.95,
+          "source": "2025년 보고서11011 CFS (제 24 기 vs 제 23 기)"
         },
         {
-          "stock_code": "005380",
-          "corp_name": "현대자동차",
-          "weight": 0.0151,
-          "net_income_growth_pct": -21.66,
-          "source": "2025년 보고서11011 CFS (제 58 기 vs 제 57 기)"
+          "stock_code": "042700",
+          "corp_name": "한미반도체",
+          "weight": 0.0104,
+          "net_income_growth_pct": 40.23,
+          "source": "2025년 보고서11011 CFS (제 46 기 vs 제 45 기)"
         }
       ]
     },
     {
-      "ticker": "472150",
-      "name": "TIGER 배당커버드콜액티브",
-      "smart_score": 79,
-      "weighted_avg_growth_pct": 72.27,
+      "ticker": "0177N0",
+      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
+      "smart_score": 80,
+      "weighted_avg_growth_pct": 73.89,
       "scored_holdings_count": 2,
       "holdings": [
         {
           "stock_code": "005930",
           "corp_name": "삼성전자",
-          "weight": 0.2643,
+          "weight": 0.251,
           "net_income_growth_pct": 31.22,
           "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
         },
         {
           "stock_code": "000660",
           "corp_name": "SK하이닉스",
-          "weight": 0.2429,
+          "weight": 0.2488,
           "net_income_growth_pct": 116.94,
-          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "0117V0",
-      "name": "TIGER 코리아AI전력기기TOP3플러스",
-      "smart_score": 73,
-      "weighted_avg_growth_pct": 64.56,
-      "scored_holdings_count": 5,
-      "holdings": [
-        {
-          "stock_code": "298040",
-          "corp_name": "효성중공업",
-          "weight": 0.2704,
-          "net_income_growth_pct": 125.56,
-          "source": "2025년 보고서11011 CFS (제 8 기 vs 제 7 기)"
-        },
-        {
-          "stock_code": "010120",
-          "corp_name": "엘에스일렉트릭",
-          "weight": 0.259,
-          "net_income_growth_pct": 17.35,
-          "source": "2025년 보고서11011 CFS (제 52 기 vs 제 51 기)"
-        },
-        {
-          "stock_code": "267260",
-          "corp_name": "HD현대일렉트릭",
-          "weight": 0.2184,
-          "net_income_growth_pct": 46.83,
-          "source": "2025년 보고서11011 CFS (제 9 기 vs 제 8 기)"
-        },
-        {
-          "stock_code": "006260",
-          "corp_name": "LS",
-          "weight": 0.0493,
-          "net_income_growth_pct": 23.91,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
-        },
-        {
-          "stock_code": "000500",
-          "corp_name": "가온전선",
-          "weight": 0.0422,
-          "net_income_growth_pct": 102.71,
           "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
         }
       ]
@@ -672,69 +711,164 @@
       ]
     },
     {
-      "ticker": "0162Z0",
-      "name": "RISE 삼성전자SK하이닉스채권혼합50",
-      "smart_score": 80,
-      "weighted_avg_growth_pct": 73.82,
-      "scored_holdings_count": 2,
-      "holdings": [
-        {
-          "stock_code": "005930",
-          "corp_name": "삼성전자",
-          "weight": 0.2605,
-          "net_income_growth_pct": 31.22,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
-        },
-        {
-          "stock_code": "000660",
-          "corp_name": "SK하이닉스",
-          "weight": 0.2573,
-          "net_income_growth_pct": 116.94,
-          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "smart_score": 82,
-      "weighted_avg_growth_pct": 76.23,
+      "ticker": "395270",
+      "name": "HANARO Fn K-반도체",
+      "smart_score": 81,
+      "weighted_avg_growth_pct": 75.09,
       "scored_holdings_count": 5,
       "holdings": [
         {
           "stock_code": "005930",
           "corp_name": "삼성전자",
-          "weight": 0.4938,
+          "weight": 0.2597,
           "net_income_growth_pct": 31.22,
           "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
         },
         {
           "stock_code": "000660",
           "corp_name": "SK하이닉스",
-          "weight": 0.4726,
+          "weight": 0.2519,
           "net_income_growth_pct": 116.94,
           "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
         },
         {
-          "stock_code": "003160",
-          "corp_name": "디아이",
-          "weight": 0.0117,
-          "net_income_growth_pct": 300,
-          "source": "2025년 보고서11011 CFS (제 65 기 vs 제 64 기)"
+          "stock_code": "402340",
+          "corp_name": "SK스퀘어",
+          "weight": 0.2065,
+          "net_income_growth_pct": 141.57,
+          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
         },
         {
-          "stock_code": "089030",
-          "corp_name": "테크윙",
-          "weight": 0.0115,
-          "net_income_growth_pct": 140.95,
-          "source": "2025년 보고서11011 CFS (제 24 기 vs 제 23 기)"
+          "stock_code": "009150",
+          "corp_name": "삼성전기",
+          "weight": 0.1711,
+          "net_income_growth_pct": 3.95,
+          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
         },
         {
           "stock_code": "042700",
           "corp_name": "한미반도체",
-          "weight": 0.0104,
+          "weight": 0.0203,
           "net_income_growth_pct": 40.23,
           "source": "2025년 보고서11011 CFS (제 46 기 vs 제 45 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "364980",
+      "name": "TIGER 2차전지TOP10",
+      "smart_score": 0,
+      "weighted_avg_growth_pct": -57.37,
+      "scored_holdings_count": 4,
+      "holdings": [
+        {
+          "stock_code": "373220",
+          "corp_name": "LG에너지솔루션",
+          "weight": 0.2376,
+          "net_income_growth_pct": -76.14,
+          "source": "2025년 보고서11011 CFS (제 6 기 vs 제 5 기)"
+        },
+        {
+          "stock_code": "005490",
+          "corp_name": "POSCO홀딩스",
+          "weight": 0.2268,
+          "net_income_growth_pct": -46.77,
+          "source": "2025년 보고서11011 CFS (제 58 기 vs 제 57 기)"
+        },
+        {
+          "stock_code": "051910",
+          "corp_name": "LG화학",
+          "weight": 0.0519,
+          "net_income_growth_pct": -100,
+          "source": "2025년 보고서11011 CFS (제 25 기 vs 제 24 기)"
+        },
+        {
+          "stock_code": "086520",
+          "corp_name": "에코프로",
+          "weight": 0.0351,
+          "net_income_growth_pct": 64.27,
+          "source": "2025년 보고서11011 CFS (제 28 기 vs 제 27 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "455850",
+      "name": "SOL AI반도체소부장",
+      "smart_score": 56,
+      "weighted_avg_growth_pct": 42.64,
+      "scored_holdings_count": 4,
+      "holdings": [
+        {
+          "stock_code": "042700",
+          "corp_name": "한미반도체",
+          "weight": 0.162,
+          "net_income_growth_pct": 40.23,
+          "source": "2025년 보고서11011 CFS (제 46 기 vs 제 45 기)"
+        },
+        {
+          "stock_code": "007660",
+          "corp_name": "이수페타시스",
+          "weight": 0.1078,
+          "net_income_growth_pct": 116.77,
+          "source": "2025년 보고서11011 CFS (제 54 기 vs 제 53 기)"
+        },
+        {
+          "stock_code": "036930",
+          "corp_name": "주성엔지니어링",
+          "weight": 0.1027,
+          "net_income_growth_pct": -66.58,
+          "source": "2025년 보고서11011 CFS (제 31 기 vs 제 30 기)"
+        },
+        {
+          "stock_code": "353200",
+          "corp_name": "대덕전자",
+          "weight": 0.0627,
+          "net_income_growth_pct": 100.34,
+          "source": "2025년 보고서11011 CFS (제 6 기 vs 제 5 기)"
+        }
+      ]
+    },
+    {
+      "ticker": "152100",
+      "name": "PLUS 200",
+      "smart_score": 75,
+      "weighted_avg_growth_pct": 67.54,
+      "scored_holdings_count": 5,
+      "holdings": [
+        {
+          "stock_code": "005930",
+          "corp_name": "삼성전자",
+          "weight": 0.3324,
+          "net_income_growth_pct": 31.22,
+          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+        },
+        {
+          "stock_code": "000660",
+          "corp_name": "SK하이닉스",
+          "weight": 0.2605,
+          "net_income_growth_pct": 116.94,
+          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
+        },
+        {
+          "stock_code": "402340",
+          "corp_name": "SK스퀘어",
+          "weight": 0.0263,
+          "net_income_growth_pct": 141.57,
+          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
+        },
+        {
+          "stock_code": "009150",
+          "corp_name": "삼성전기",
+          "weight": 0.022,
+          "net_income_growth_pct": 3.95,
+          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
+        },
+        {
+          "stock_code": "005380",
+          "corp_name": "현대자동차",
+          "weight": 0.0151,
+          "net_income_growth_pct": -21.66,
+          "source": "2025년 보고서11011 CFS (제 58 기 vs 제 57 기)"
         }
       ]
     },
@@ -783,194 +917,90 @@
       ]
     },
     {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "smart_score": 2,
-      "weighted_avg_growth_pct": -26.85,
-      "scored_holdings_count": 4,
-      "holdings": [
-        {
-          "stock_code": "373220",
-          "corp_name": "LG에너지솔루션",
-          "weight": 0.2074,
-          "net_income_growth_pct": -76.14,
-          "source": "2025년 보고서11011 CFS (제 6 기 vs 제 5 기)"
-        },
-        {
-          "stock_code": "005490",
-          "corp_name": "POSCO홀딩스",
-          "weight": 0.1356,
-          "net_income_growth_pct": -46.77,
-          "source": "2025년 보고서11011 CFS (제 58 기 vs 제 57 기)"
-        },
-        {
-          "stock_code": "051910",
-          "corp_name": "LG화학",
-          "weight": 0.1011,
-          "net_income_growth_pct": -100,
-          "source": "2025년 보고서11011 CFS (제 25 기 vs 제 24 기)"
-        },
-        {
-          "stock_code": "247540",
-          "corp_name": "에코프로비엠",
-          "weight": 0.0717,
-          "net_income_growth_pct": 256.54,
-          "source": "2025년 보고서11011 CFS (제 10 기 vs 제 9 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "0177N0",
-      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
-      "smart_score": 80,
-      "weighted_avg_growth_pct": 73.89,
-      "scored_holdings_count": 2,
+      "ticker": "469150",
+      "name": "ACE AI반도체TOP3+",
+      "smart_score": 68,
+      "weighted_avg_growth_pct": 58.49,
+      "scored_holdings_count": 5,
       "holdings": [
         {
           "stock_code": "005930",
           "corp_name": "삼성전자",
-          "weight": 0.251,
+          "weight": 0.272,
           "net_income_growth_pct": 31.22,
           "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
         },
         {
           "stock_code": "000660",
           "corp_name": "SK하이닉스",
-          "weight": 0.2488,
+          "weight": 0.2489,
           "net_income_growth_pct": 116.94,
           "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "0091P0",
-      "name": "TIGER 코리아원자력",
-      "smart_score": 50,
-      "weighted_avg_growth_pct": 34.99,
-      "scored_holdings_count": 5,
-      "holdings": [
-        {
-          "stock_code": "000720",
-          "corp_name": "현대건설",
-          "weight": 0.2628,
-          "net_income_growth_pct": 172.96,
-          "source": "2025년 보고서11011 CFS (제 76 기 vs 제 75 기)"
-        },
-        {
-          "stock_code": "034020",
-          "corp_name": "두산에너빌리티",
-          "weight": 0.243,
-          "net_income_growth_pct": -48.02,
-          "source": "2025년 보고서11011 CFS (제 63 기 vs 제 62 기)"
-        },
-        {
-          "stock_code": "047040",
-          "corp_name": "대우건설",
-          "weight": 0.1403,
-          "net_income_growth_pct": -100,
-          "source": "2025년 보고서11011 CFS (제 26 기 vs 제 25 기)"
-        },
-        {
-          "stock_code": "052690",
-          "corp_name": "한전기술",
-          "weight": 0.0795,
-          "net_income_growth_pct": 45.9,
-          "source": "2025년 보고서11011 CFS (제 51 기 vs 제 50 기)"
-        },
-        {
-          "stock_code": "375500",
-          "corp_name": "DL이앤씨",
-          "weight": 0.0748,
-          "net_income_growth_pct": 61.5,
-          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
-        }
-      ]
-    },
-    {
-      "ticker": "395270",
-      "name": "HANARO Fn K-반도체",
-      "smart_score": 81,
-      "weighted_avg_growth_pct": 75.09,
-      "scored_holdings_count": 5,
-      "holdings": [
-        {
-          "stock_code": "005930",
-          "corp_name": "삼성전자",
-          "weight": 0.2597,
-          "net_income_growth_pct": 31.22,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
-        },
-        {
-          "stock_code": "000660",
-          "corp_name": "SK하이닉스",
-          "weight": 0.2519,
-          "net_income_growth_pct": 116.94,
-          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
-        },
-        {
-          "stock_code": "402340",
-          "corp_name": "SK스퀘어",
-          "weight": 0.2065,
-          "net_income_growth_pct": 141.57,
-          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
-        },
-        {
-          "stock_code": "009150",
-          "corp_name": "삼성전기",
-          "weight": 0.1711,
-          "net_income_growth_pct": 3.95,
-          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
         },
         {
           "stock_code": "042700",
           "corp_name": "한미반도체",
-          "weight": 0.0203,
+          "weight": 0.2388,
           "net_income_growth_pct": 40.23,
           "source": "2025년 보고서11011 CFS (제 46 기 vs 제 45 기)"
+        },
+        {
+          "stock_code": "140860",
+          "corp_name": "파크시스템스",
+          "weight": 0.0191,
+          "net_income_growth_pct": -19.46,
+          "source": "2025년 보고서11011 CFS (제 29 기 vs 제 28 기)"
+        },
+        {
+          "stock_code": "403870",
+          "corp_name": "HPSP",
+          "weight": 0.0173,
+          "net_income_growth_pct": -15.78,
+          "source": "2025년 보고서11011 OFS (제 9 기 vs 제 8 기)"
         }
       ]
     },
     {
-      "ticker": "294400",
-      "name": "KIWOOM 200TR",
-      "smart_score": 75,
-      "weighted_avg_growth_pct": 67.52,
+      "ticker": "0080G0",
+      "name": "KODEX 방산TOP10",
+      "smart_score": 30,
+      "weighted_avg_growth_pct": 9.2,
       "scored_holdings_count": 5,
       "holdings": [
         {
-          "stock_code": "005930",
-          "corp_name": "삼성전자",
-          "weight": 0.332,
-          "net_income_growth_pct": 31.22,
-          "source": "2025년 보고서11011 CFS (제 57 기 vs 제 56 기)"
+          "stock_code": "012450",
+          "corp_name": "한화에어로스페이스",
+          "weight": 0.2443,
+          "net_income_growth_pct": -13.3,
+          "source": "2025년 보고서11011 CFS (제 49 기 vs 제 48 기)"
         },
         {
-          "stock_code": "000660",
-          "corp_name": "SK하이닉스",
-          "weight": 0.26,
-          "net_income_growth_pct": 116.94,
-          "source": "2025년 보고서11011 CFS (제 78 기 vs 제 77 기)"
+          "stock_code": "047810",
+          "corp_name": "한국항공우주",
+          "weight": 0.2006,
+          "net_income_growth_pct": 9.61,
+          "source": "2025년 보고서11011 CFS (제 27 기 vs 제 26 기)"
         },
         {
-          "stock_code": "402340",
-          "corp_name": "SK스퀘어",
-          "weight": 0.0263,
-          "net_income_growth_pct": 141.57,
-          "source": "2025년 보고서11011 CFS (제 5 기 vs 제 4 기)"
+          "stock_code": "079550",
+          "corp_name": "LIG디펜스앤에어로스페이스",
+          "weight": 0.1931,
+          "net_income_growth_pct": 11.62,
+          "source": "2025년 보고서11011 CFS (제 24 기 vs 제 23 기)"
         },
         {
-          "stock_code": "009150",
-          "corp_name": "삼성전기",
-          "weight": 0.022,
-          "net_income_growth_pct": 3.95,
-          "source": "2025년 보고서11011 CFS (제 53 기 vs 제 52 기)"
+          "stock_code": "064350",
+          "corp_name": "현대로템",
+          "weight": 0.1578,
+          "net_income_growth_pct": 90.12,
+          "source": "2025년 보고서11011 CFS (제 27 기 vs 제 26 기)"
         },
         {
-          "stock_code": "005380",
-          "corp_name": "현대자동차",
-          "weight": 0.0151,
-          "net_income_growth_pct": -21.66,
-          "source": "2025년 보고서11011 CFS (제 58 기 vs 제 57 기)"
+          "stock_code": "272210",
+          "corp_name": "한화시스템",
+          "weight": 0.1257,
+          "net_income_growth_pct": -53.04,
+          "source": "2025년 보고서11011 CFS (제 26 기 vs 제 25 기)"
         }
       ]
     }
