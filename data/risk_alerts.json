@@ -1,16 +1,52 @@
 {
-  "timestamp": "2026-08-30T23:52:57.348564+00:00",
+  "timestamp": "2026-08-31T00:47:34.875321+00:00",
   "checked_count": 31,
-  "alert_count": 9,
+  "alert_count": 11,
   "alerts": [
     {
-      "ticker": "228790",
-      "name": "TIGER 화장품",
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "경고",
-      "change_pct": 7.17,
-      "message": "TIGER 화장품 1일 급등 7.17%"
+      "level": "정보",
+      "change_pct": -3.77,
+      "message": "KODEX 코스닥150 1일 급락 3.77%"
+    },
+    {
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.01,
+      "message": "TIGER 반도체TOP10 1일 급락 3.01%"
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.09,
+      "message": "KODEX 반도체 1일 급락 3.09%"
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.25,
+      "message": "KODEX AI전력핵심설비 1일 급락 3.25%"
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.49,
+      "message": "TIGER 코스닥150 1일 급락 3.49%"
     },
     {
       "ticker": "228790",
@@ -18,26 +54,17 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 화장품 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+      "band_position_pct": 98.4,
+      "message": "TIGER 화장품 52주 밴드 상단 근접(98.4%) - 비중 축소 검토"
     },
     {
-      "ticker": "472150",
-      "name": "TIGER 배당커버드콜액티브",
+      "ticker": "0117V0",
+      "name": "TIGER 코리아AI전력기기TOP3플러스",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.11,
-      "message": "TIGER 배당커버드콜액티브 1일 급락 4.11%"
-    },
-    {
-      "ticker": "0008T0",
-      "name": "SOL 화장품TOP3플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "경고",
-      "change_pct": 7.75,
-      "message": "SOL 화장품TOP3플러스 1일 급등 7.75%"
+      "change_pct": -3.84,
+      "message": "TIGER 코리아AI전력기기TOP3플러스 1일 급락 3.84%"
     },
     {
       "ticker": "0008T0",
@@ -49,40 +76,31 @@
       "message": "SOL 화장품TOP3플러스 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     },
     {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.85,
-      "message": "PLUS 글로벌HBM반도체 1일 급락 3.85%"
-    },
-    {
       "ticker": "305720",
       "name": "KODEX 2차전지산업",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 99.3,
-      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(99.3%) - 비중 축소 검토"
+      "band_position_pct": 100.0,
+      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
     },
     {
       "ticker": "0091P0",
       "name": "TIGER 코리아원자력",
       "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 비중 축소 검토"
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.96,
+      "message": "TIGER 코리아원자력 1일 급락 3.96%"
     },
     {
-      "ticker": "458730",
-      "name": "TIGER 미국배당다우존스",
+      "ticker": "395270",
+      "name": "HANARO Fn K-반도체",
       "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "TIGER 미국배당다우존스 52주 밴드 하단 근접(0.0%) - 저가매수 후보 검토"
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.02,
+      "message": "HANARO Fn K-반도체 1일 급락 3.02%"
     }
   ]
 }
