@@ -62,6 +62,41 @@
   .badge.긴급 { background: #fee2e2; color: #991b1b; }
   .badge.경고lv { background: #ffedd5; color: #c2410c; }
   .badge.정보 { background: #f1f5f9; color: #64748b; }
+  .badge.신뢰-높음 { background: #dcfce7; color: #16a34a; }
+  .badge.신뢰-보통 { background: #fef9c3; color: #ca8a04; }
+  .badge.신뢰-낮음 { background: #fee2e2; color: #dc2626; }
+  .badge.신뢰-표본부족, .badge.신뢰-검증전 { background: #f1f5f9; color: #94a3b8; }
+
+  .component-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0; border-top: 1px solid var(--border); font-size: 13px;
+  }
+  .component-row:first-child { border-top: none; }
+  .component-label { color: var(--text-sub); }
+  .component-value { font-weight: 600; display: flex; align-items: center; gap: 6px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .dot.ok { background: #16a34a; }
+  .dot.warn { background: #ca8a04; }
+  .dot.bad { background: #dc2626; }
+
+  .reliability-line {
+    font-size: 12px; color: var(--text-sub); margin-bottom: 10px;
+    background: var(--gray-bg); padding: 8px 10px; border-radius: 8px;
+  }
+  .tag-row { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+  .tag {
+    font-size: 10px; padding: 2px 7px; border-radius: 999px;
+    background: var(--gray-bg); color: var(--text-sub); border: 1px solid var(--border);
+  }
+  .expand-btn {
+    width: 100%; margin-top: 8px; padding: 10px; border: 1px dashed var(--border);
+    background: none; border-radius: 10px; color: var(--blue); font-size: 13px; cursor: pointer;
+  }
+  .compact-row {
+    display: flex; justify-content: space-between; padding: 7px 0;
+    border-top: 1px solid var(--border); font-size: 12px;
+  }
+  .compact-row:first-child { border-top: none; }
   .item-row {
     display: flex; justify-content: space-between; align-items: center;
     padding: 10px 0; border-top: 1px solid var(--border);
@@ -217,17 +252,50 @@ function timeAgo(iso) {
   return `${Math.round(diffHr / 24)}일 전`;
 }
 
-async function loadDashboard() {
-  const [risk, discovery, portfolio, alerts, health] = await Promise.all([
+function macroStatus(kind, v) {
+  if (v === undefined || v === null) return { cls: "warn", text: "-" };
+  if (kind === "vix") {
+    if (v < 20) return { cls: "ok", text: "안정" };
+    if (v < 28) return { cls: "warn", text: "주의" };
+    return { cls: "bad", text: "위험" };
+  }
+  if (kind === "spread") {
+    if (v < 3) return { cls: "ok", text: "안정" };
+    if (v < 4.5) return { cls: "warn", text: "주의" };
+    return { cls: "bad", text: "위험" };
+  }
+  if (kind === "curve") {
+    if (v >= 0) return { cls: "ok", text: "정상" };
+    if (v >= -0.3) return { cls: "warn", text: "평탄화" };
+    return { cls: "bad", text: "역전" };
+  }
+  if (kind === "kospi") {
+    if (v >= -5) return { cls: "ok", text: "안정" };
+    if (v >= -10) return { cls: "warn", text: "주의" };
+    return { cls: "bad", text: "위험" };
+  }
+  return { cls: "warn", text: "-" };
+}
+
+function originTag(origin) {
+  if (origin === "보유종목") {
+    return `<span class="tag" style="background:#dbeafe;color:#1d4ed8;border-color:#93c5fd">보유중</span>`;
+  }
+  return `<span class="tag">${origin}</span>`;
+}
+  async function loadDashboard() {
+  const [risk, discovery, portfolio, alerts, health, backtest] = await Promise.all([
     fetchJson("risk_score.json"),
     fetchJson("etf_discovery.json"),
     fetchJson("portfolio_snapshot.json"),
     fetchJson("risk_alerts.json"),
     fetchJson("system_health.json"),
+    fetchJson("backtest_result.json"),
   ]);
 
   let html = "";
 
+  // 데이터 최신성
   if (health) {
     const stale = health.any_stale;
     html += `<div class="freshness ${stale ? 'stale' : ''}">
@@ -235,16 +303,41 @@ async function loadDashboard() {
     </div>`;
   }
 
+  // 시장 위험도 (세부지표 브레이크다운 포함)
   if (risk) {
+    const c = risk.components || {};
+    const vix = macroStatus("vix", c.vix?.raw);
+    const spread = macroStatus("spread", c.high_yield_spread?.raw);
+    const curve = macroStatus("curve", c.yield_curve_10y2y?.raw);
+    const kospi = macroStatus("kospi", c.kospi_drawdown_pct?.raw);
+
     html += `<div class="card">
       <p class="card-title">시장 위험도 <span>${timeAgo(risk.timestamp)}</span></p>
       <div class="risk-score">
         <span class="num">${risk.composite_score}</span>
         <span class="badge ${risk.level}">${risk.level}</span>
       </div>
+      <div style="font-size:11px;color:var(--text-sub);margin-top:4px">4개 거시지표 종합 (0=안정 ~ 100=위험). 점수가 높을수록 발굴결과 계산에 불리하게 반영됩니다.</div>
+      <div class="component-row">
+        <span class="component-label">VIX 변동성지수</span>
+        <span class="component-value"><span class="dot ${vix.cls}"></span>${c.vix?.raw ?? "-"} · ${vix.text}</span>
+      </div>
+      <div class="component-row">
+        <span class="component-label">하이일드 스프레드</span>
+        <span class="component-value"><span class="dot ${spread.cls}"></span>${c.high_yield_spread?.raw ?? "-"}%p · ${spread.text}</span>
+      </div>
+      <div class="component-row">
+        <span class="component-label">10y-2y 금리차</span>
+        <span class="component-value"><span class="dot ${curve.cls}"></span>${c.yield_curve_10y2y?.raw ?? "-"}%p · ${curve.text}</span>
+      </div>
+      <div class="component-row">
+        <span class="component-label">코스피 낙폭</span>
+        <span class="component-value"><span class="dot ${kospi.cls}"></span>${c.kospi_drawdown_pct?.raw ?? "-"}% · ${kospi.text}</span>
+      </div>
     </div>`;
   }
 
+  // 보유종목 손익
   if (portfolio && portfolio.holdings_count > 0) {
     let itemsHtml = portfolio.items.map(it => `
       <div class="item-row">
@@ -274,46 +367,124 @@ async function loadDashboard() {
     </div>`;
   }
 
+  // 리밸런싱 검토 (보유종목 최우선 정렬)
+  if (alerts && alerts.alerts) {
+    const rebal = alerts.alerts.filter(a => a.type === "리밸런싱검토")
+      .sort((a, b) => (a.origin === "보유종목" ? -1 : 0) - (b.origin === "보유종목" ? -1 : 0));
+
+    if (rebal.length > 0) {
+      let rebalHtml = rebal.map(a => `
+        <div class="item-row">
+          <div>
+            <div class="item-name" style="font-size:13px">${a.name}</div>
+            <div class="item-reason">${a.message.replace(a.name, "").trim()}</div>
+            <div class="tag-row">${originTag(a.origin)}</div>
+          </div>
+        </div>
+      `).join("");
+      html += `<div class="card">
+        <p class="card-title">리밸런싱 검토 (${rebal.length}건) <span>${timeAgo(alerts.timestamp)}</span></p>
+        ${rebalHtml}
+      </div>`;
+    }
+  }
+
+  // 오늘의 발굴결과 (시스템 신뢰도 + 전체 30개 보기)
   if (discovery && discovery.top5) {
+    let reliabilityHtml = "";
+    if (backtest) {
+      reliabilityHtml = `<div class="reliability-line">
+        📊 이 시스템의 매수신호는 지난 1년간 <strong>${backtest.overall_buy_signal_count}건</strong> 검증되어
+        <strong>${backtest.overall_buy_signal_win_rate_pct}%</strong> 적중률을 기록했습니다.
+      </div>`;
+    }
+
+    const confBadge = (r) => {
+      const label = r.backtest_confidence?.label || "검증전";
+      const winRate = r.backtest_confidence?.backtest_win_rate_pct;
+      const sample = r.backtest_confidence?.backtest_sample_count;
+      const detail = winRate != null ? `승률${winRate}%·${sample}건` : label;
+      return `<span class="badge 신뢰-${label}">${detail}</span>`;
+    };
+
     let topHtml = discovery.top5.map(r => `
       <div class="item-row">
         <div>
           <div class="item-name">${r.name} ${"⭐".repeat(r.stars)}</div>
           <div class="item-reason">${r.reason}</div>
+          <div class="tag-row">
+            ${confBadge(r)}
+            ${r.leading_actor && r.leading_actor !== "정보없음" ? `<span class="tag">${r.leading_actor} 주도</span>` : ""}
+            ${r.volume_evaluation ? `<span class="tag">거래량 ${r.volume_evaluation}</span>` : ""}
+          </div>
         </div>
         <span class="badge ${r.decision}">${r.decision}</span>
       </div>
     `).join("");
 
+    let allHtml = "";
+    if (discovery.all_results && discovery.all_results.length > 0) {
+      allHtml = discovery.all_results.map(r => `
+        <div class="compact-row">
+          <span>${r.name}</span>
+          <span style="display:flex;gap:6px;align-items:center">
+            ${"⭐".repeat(r.stars)}
+            <span class="badge ${r.decision}" style="font-size:10px;padding:2px 8px">${r.decision}</span>
+          </span>
+        </div>
+      `).join("");
+    }
+
     html += `<div class="card">
       <p class="card-title">오늘의 발굴결과 TOP5 <span>${timeAgo(discovery.timestamp)}</span></p>
+      ${reliabilityHtml}
       ${topHtml}
+      <button class="expand-btn" id="toggleAllBtn">기본 30개 종목 전체보기 ▾</button>
+      <div id="allResultsBox" style="display:none;margin-top:6px">${allHtml}</div>
     </div>`;
   }
 
-  if (alerts && alerts.alerts && alerts.alerts.length > 0) {
-    const sorted = [...alerts.alerts].sort((a, b) => {
-      const order = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3 };
-      return (order[a.level] ?? 9) - (order[b.level] ?? 9);
-    });
-    let alertHtml = sorted.slice(0, 6).map(a => `
-      <div class="item-row">
-        <div class="item-name" style="font-weight:400;font-size:13px">${a.message}</div>
-        <span class="badge ${a.level === '경고' ? '경고lv' : a.level}">${a.level}</span>
-      </div>
-    `).join("");
+  // 최근 리스크 경보 (가격변동만, 리밸런싱은 위에서 별도 표시)
+  if (alerts && alerts.alerts) {
+    const priceAlerts = alerts.alerts.filter(a => a.type === "가격변동");
+    if (priceAlerts.length > 0) {
+      const sorted = [...priceAlerts].sort((a, b) => {
+        const order = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3 };
+        return (order[a.level] ?? 9) - (order[b.level] ?? 9);
+      });
+      let alertHtml = sorted.slice(0, 6).map(a => `
+        <div class="item-row">
+          <div>
+            <div class="item-name" style="font-weight:400;font-size:13px">${a.message}</div>
+            <div class="tag-row">${originTag(a.origin)}</div>
+          </div>
+          <span class="badge ${a.level === '경고' ? '경고lv' : a.level}">${a.level}</span>
+        </div>
+      `).join("");
 
-    html += `<div class="card">
-      <p class="card-title">최근 리스크 경보 (${alerts.alert_count}건) <span>${timeAgo(alerts.timestamp)}</span></p>
-      ${alertHtml}
-    </div>`;
+      html += `<div class="card">
+        <p class="card-title">최근 가격변동 경보 (${priceAlerts.length}건) <span>${timeAgo(alerts.timestamp)}</span></p>
+        ${alertHtml}
+      </div>`;
+    }
   }
 
   document.getElementById("main").innerHTML = html || `<div class="empty">데이터를 불러올 수 없습니다.</div>`;
+
+  const toggleBtn = document.getElementById("toggleAllBtn");
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      const box = document.getElementById("allResultsBox");
+      const open = box.style.display !== "none";
+      box.style.display = open ? "none" : "block";
+      toggleBtn.textContent = open ? "기본 30개 종목 전체보기 ▾" : "접기 ▴";
+    });
+  }
 }
 
 loadDashboard();
 
+// ===== 알림 구독 로직 (기존 로직 그대로, 오버레이 안으로 이동) =====
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
