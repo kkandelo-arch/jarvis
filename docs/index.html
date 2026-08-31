@@ -283,6 +283,16 @@ function originTag(origin) {
   }
   return `<span class="tag">${origin}</span>`;
 }
+
+function riskGuidance(level) {
+  const map = {
+    "안정": "평소 전략 유지 · 신규 매수 무리 없는 국면",
+    "주의": "변동성 확대 국면 · 신규 매수 시 분할매수 권장",
+    "경고": "리스크 관리 강화 구간 · 신규 매수 신중히 판단",
+    "위험": "방어적 포지션 검토 · 신규 매수는 보류 권장",
+  };
+  return map[level] || "";
+}
   async function loadDashboard() {
   const [risk, discovery, portfolio, alerts, health, backtest] = await Promise.all([
     fetchJson("risk_score.json"),
@@ -317,7 +327,8 @@ function originTag(origin) {
         <span class="num">${risk.composite_score}</span>
         <span class="badge ${risk.level}">${risk.level}</span>
       </div>
-      <div style="font-size:11px;color:var(--text-sub);margin-top:4px">4개 거시지표 종합 (0=안정 ~ 100=위험). 점수가 높을수록 발굴결과 계산에 불리하게 반영됩니다.</div>
+      <div style="font-size:13px;font-weight:600;margin-top:6px;color:var(--text)">${riskGuidance(risk.level)}</div>
+      <div style="font-size:11px;color:var(--text-sub);margin-top:2px">4개 거시지표 종합 (0=안정 ~ 100=위험). 점수가 높을수록 발굴결과 계산에 불리하게 반영됩니다.</div>
       <div class="component-row">
         <span class="component-label">VIX 변동성지수</span>
         <span class="component-value"><span class="dot ${vix.cls}"></span>${c.vix?.raw ?? "-"} · ${vix.text}</span>
@@ -399,6 +410,11 @@ function originTag(origin) {
       </div>`;
     }
 
+    const sortNote = `<div style="font-size:11px;color:var(--text-sub);margin-bottom:10px">
+      조정점수(5지표 가중합산×백테스트신뢰도) 높은 순 정렬 · <strong>매수후보</strong>(75점~) ·
+      <strong>관심종목</strong>(60~74점) · 관망(45~59점) · 제외권장(45점 미만)
+    </div>`;
+
     const confBadge = (r) => {
       const label = r.backtest_confidence?.label || "검증전";
       const winRate = r.backtest_confidence?.backtest_win_rate_pct;
@@ -410,7 +426,8 @@ function originTag(origin) {
     let topHtml = discovery.top5.map(r => `
       <div class="item-row">
         <div>
-          <div class="item-name">${r.name} ${"⭐".repeat(r.stars)}</div>
+          <div class="item-name">${r.name}</div>
+          <div class="item-reason" style="color:var(--text-sub);font-size:11px">조정점수 ${r.adjusted_score} · ${"⭐".repeat(r.stars)}</div>
           <div class="item-reason">${r.reason}</div>
           <div class="tag-row">
             ${confBadge(r)}
@@ -424,13 +441,23 @@ function originTag(origin) {
 
     let allHtml = "";
     if (discovery.all_results && discovery.all_results.length > 0) {
-      allHtml = discovery.all_results.map(r => `
-        <div class="compact-row">
-          <span>${r.name}</span>
-          <span style="display:flex;gap:6px;align-items:center">
-            ${"⭐".repeat(r.stars)}
-            <span class="badge ${r.decision}" style="font-size:10px;padding:2px 8px">${r.decision}</span>
-          </span>
+      allHtml = discovery.all_results.map((r, i) => `
+        <div class="all-item">
+          <div class="compact-row" data-idx="${i}" style="cursor:pointer">
+            <span>${r.name} <span style="color:var(--text-sub)">▾</span></span>
+            <span style="display:flex;gap:6px;align-items:center">
+              조정점수 ${r.adjusted_score}
+              <span class="badge ${r.decision}" style="font-size:10px;padding:2px 8px">${r.decision}</span>
+            </span>
+          </div>
+          <div class="all-detail" data-detail="${i}" style="display:none;padding:8px 4px 12px;font-size:12px;color:var(--text-sub)">
+            <div style="margin-bottom:6px">${r.reason}</div>
+            <div class="tag-row">
+              ${confBadge(r)}
+              ${r.leading_actor && r.leading_actor !== "정보없음" ? `<span class="tag">${r.leading_actor} 주도</span>` : ""}
+              ${r.volume_evaluation ? `<span class="tag">거래량 ${r.volume_evaluation}</span>` : ""}
+            </div>
+          </div>
         </div>
       `).join("");
     }
@@ -438,21 +465,28 @@ function originTag(origin) {
     html += `<div class="card">
       <p class="card-title">오늘의 발굴결과 TOP5 <span>${timeAgo(discovery.timestamp)}</span></p>
       ${reliabilityHtml}
+      ${sortNote}
       ${topHtml}
-      <button class="expand-btn" id="toggleAllBtn">기본 30개 종목 전체보기 ▾</button>
+      <button class="expand-btn" id="toggleAllBtn">기본 30개 종목 전체보기 (탭하면 근거 펼쳐짐) ▾</button>
       <div id="allResultsBox" style="display:none;margin-top:6px">${allHtml}</div>
     </div>`;
   }
 
   // 최근 리스크 경보 (가격변동만, 리밸런싱은 위에서 별도 표시)
-  if (alerts && alerts.alerts) {
-    const priceAlerts = alerts.alerts.filter(a => a.type === "가격변동");
+  if (alerts) {
+    const priceAlerts = (alerts.alerts || []).filter(a => a.type === "가격변동");
+    const holdingsCount = portfolio?.holdings_count ?? 0;
+    const monitorNote = `<div style="font-size:11px;color:var(--text-sub);margin-bottom:10px">
+      총 ${alerts.checked_count ?? "?"}개 종목 감시 중 (보유종목 ${holdingsCount}개 포함) · 하루 3%↑ 변동 시 표시
+    </div>`;
+
+    let bodyHtml;
     if (priceAlerts.length > 0) {
       const sorted = [...priceAlerts].sort((a, b) => {
         const order = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3 };
         return (order[a.level] ?? 9) - (order[b.level] ?? 9);
       });
-      let alertHtml = sorted.slice(0, 6).map(a => `
+      bodyHtml = sorted.slice(0, 6).map(a => `
         <div class="item-row">
           <div>
             <div class="item-name" style="font-weight:400;font-size:13px">${a.message}</div>
@@ -461,12 +495,15 @@ function originTag(origin) {
           <span class="badge ${a.level === '경고' ? '경고lv' : a.level}">${a.level}</span>
         </div>
       `).join("");
-
-      html += `<div class="card">
-        <p class="card-title">최근 가격변동 경보 (${priceAlerts.length}건) <span>${timeAgo(alerts.timestamp)}</span></p>
-        ${alertHtml}
-      </div>`;
+    } else {
+      bodyHtml = `<div class="empty">오늘은 조건에 해당하는 급등락 종목이 없습니다 (정상)</div>`;
     }
+
+    html += `<div class="card">
+      <p class="card-title">최근 가격변동 경보 (${priceAlerts.length}건) <span>${timeAgo(alerts.timestamp)}</span></p>
+      ${monitorNote}
+      ${bodyHtml}
+    </div>`;
   }
 
   document.getElementById("main").innerHTML = html || `<div class="empty">데이터를 불러올 수 없습니다.</div>`;
@@ -477,7 +514,22 @@ function originTag(origin) {
       const box = document.getElementById("allResultsBox");
       const open = box.style.display !== "none";
       box.style.display = open ? "none" : "block";
-      toggleBtn.textContent = open ? "기본 30개 종목 전체보기 ▾" : "접기 ▴";
+      toggleBtn.textContent = open ? "기본 30개 종목 전체보기 (탭하면 근거 펼쳐짐) ▾" : "접기 ▴";
+    });
+  }
+
+  const allResultsBox = document.getElementById("allResultsBox");
+  if (allResultsBox) {
+    allResultsBox.addEventListener("click", (e) => {
+      const row = e.target.closest(".compact-row");
+      if (!row) return;
+      const idx = row.dataset.idx;
+      const detail = allResultsBox.querySelector(`[data-detail="${idx}"]`);
+      if (!detail) return;
+      const open = detail.style.display !== "none";
+      detail.style.display = open ? "none" : "block";
+      const arrow = row.querySelector("span span");
+      if (arrow) arrow.textContent = open ? "▾" : "▴";
     });
   }
 }
