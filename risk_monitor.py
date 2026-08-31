@@ -128,7 +128,9 @@ def main():
             high52, low52 = window.max(), window.min()
             if high52 != low52:
                 position = (last - low52) / (high52 - low52) * 100
+                is_holding = origin == "보유종목"
                 if position >= 95:
+                    action = "비중 축소 검토" if is_holding else "신규매수 시 유의(과열구간)"
                     alerts.append(
                         {
                             "ticker": ticker,
@@ -137,10 +139,11 @@ def main():
                             "type": "리밸런싱검토",
                             "level": "주의",
                             "band_position_pct": round(position, 1),
-                            "message": f"{name} 52주 밴드 상단 근접({round(position,1)}%) - 비중 축소 검토",
+                            "message": f"{name} 52주 밴드 상단 근접({round(position,1)}%) - {action}",
                         }
                     )
                 elif position <= 5:
+                    action = "저가매수 검토" if is_holding else "관망 후보(저평가구간)"
                     alerts.append(
                         {
                             "ticker": ticker,
@@ -149,7 +152,7 @@ def main():
                             "type": "리밸런싱검토",
                             "level": "주의",
                             "band_position_pct": round(position, 1),
-                            "message": f"{name} 52주 밴드 하단 근접({round(position,1)}%) - 저가매수 후보 검토",
+                            "message": f"{name} 52주 밴드 하단 근접({round(position,1)}%) - {action}",
                         }
                     )
 
