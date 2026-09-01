@@ -176,7 +176,10 @@
 
 <header>
   <h1>📈 DC 자비스</h1>
-  <button class="icon-btn" id="bellBtn" title="알림 설정">🔔</button>
+  <div style="display:flex;gap:6px">
+    <button class="icon-btn" id="refreshBtn" title="새로고침">🔄</button>
+    <button class="icon-btn" id="bellBtn" title="알림 설정">🔔</button>
+  </div>
 </header>
 
 <main id="main">
@@ -220,6 +223,7 @@
 <script>
 const REPO_RAW = "https://raw.githubusercontent.com/kkandelo-arch/jarvis/main/data/";
 const VAPID_PUBLIC_KEY = "BG32wpG4vuVXwbPcCm9G9z23SdNYIQzJZMRxQWnpfDxYAZRTKb0-CNIJUxaRnMssn94aOO0nXG289OUcE2czKss";
+const WORKER_BASE = "https://dc-jarvis-chat.kkandelo.workers.dev";
 
 async function fetchJson(name) {
   try {
@@ -293,7 +297,34 @@ function riskGuidance(level) {
   };
   return map[level] || "";
 }
-  async function loadDashboard() {
+
+function liveBadge(fetchedAtIso) {
+  const t = new Date(fetchedAtIso);
+  const hh = String(t.getHours()).padStart(2, "0");
+  const mm = String(t.getMinutes()).padStart(2, "0");
+  return `<span style="color:#16a34a;font-weight:600">🔴 실시간 ${hh}:${mm} 기준</span>`;
+}
+
+function batchBadge(iso) {
+  return `<span>🕐 최종 장마감 기준 · ${timeAgo(iso)}</span>`;
+}
+
+async function fetchLiveQuotes(tickers) {
+  if (!tickers || tickers.length === 0) return null;
+  try {
+    const res = await fetch(WORKER_BASE + "/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ tickers }),
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (e) {
+    return null;
+  }
+}
+
+async function loadDashboard() {
   const [risk, discovery, portfolio, alerts, health, backtest] = await Promise.all([
     fetchJson("risk_score.json"),
     fetchJson("etf_discovery.json"),
@@ -303,72 +334,71 @@ function riskGuidance(level) {
     fetchJson("backtest_result.json"),
   ]);
 
+  const holdingsTickers = (portfolio?.items || []).map(it => it.ticker);
+  const liveData = await fetchLiveQuotes(holdingsTickers);
+
   let html = "";
 
-  // 데이터 최신성
+  // 상단 상태줄 + 전체갱신 트리거
   if (health) {
     const stale = health.any_stale;
     html += `<div class="freshness ${stale ? 'stale' : ''}">
-      ${stale ? '⚠️ 일부 데이터가 오래됨' : '✅ 데이터 최신 상태'} · 확인 ${timeAgo(health.timestamp)}
+      ${stale ? '⚠️ 배치 데이터 일부 오래됨' : '✅ 배치 데이터 최신'} (발굴·경보·리밸런싱) · 최종 ${timeAgo(health.timestamp)}
     </div>`;
   }
+  html += `<div style="text-align:center;margin-bottom:12px">
+    <button id="triggerBtn" style="font-size:11px;padding:6px 14px;border:1px solid var(--border);border-radius:999px;background:white;color:var(--blue);cursor:pointer">
+      🔄 배치 데이터 전체 갱신 요청 (1~2분 소요)
+    </button>
+    <div id="triggerStatus" style="font-size:11px;color:var(--text-sub);margin-top:4px"></div>
+  </div>`;
 
-  // 시장 위험도 (세부지표 브레이크다운 포함)
-  if (risk) {
-    const c = risk.components || {};
-    const vix = macroStatus("vix", c.vix?.raw);
-    const spread = macroStatus("spread", c.high_yield_spread?.raw);
-    const curve = macroStatus("curve", c.yield_curve_10y2y?.raw);
-    const kospi = macroStatus("kospi", c.kospi_drawdown_pct?.raw);
-
-    html += `<div class="card">
-      <p class="card-title">시장 위험도 <span>${timeAgo(risk.timestamp)}</span></p>
-      <div class="risk-score">
-        <span class="num">${risk.composite_score}</span>
-        <span class="badge ${risk.level}">${risk.level}</span>
-      </div>
-      <div style="font-size:13px;font-weight:600;margin-top:6px;color:var(--text)">${riskGuidance(risk.level)}</div>
-      <div style="font-size:11px;color:var(--text-sub);margin-top:2px">4개 거시지표 종합 (0=안정 ~ 100=위험). 점수가 높을수록 발굴결과 계산에 불리하게 반영됩니다.</div>
-      <div class="component-row">
-        <span class="component-label">VIX 변동성지수</span>
-        <span class="component-value"><span class="dot ${vix.cls}"></span>${c.vix?.raw ?? "-"} · ${vix.text}</span>
-      </div>
-      <div class="component-row">
-        <span class="component-label">하이일드 스프레드</span>
-        <span class="component-value"><span class="dot ${spread.cls}"></span>${c.high_yield_spread?.raw ?? "-"}%p · ${spread.text}</span>
-      </div>
-      <div class="component-row">
-        <span class="component-label">10y-2y 금리차</span>
-        <span class="component-value"><span class="dot ${curve.cls}"></span>${c.yield_curve_10y2y?.raw ?? "-"}%p · ${curve.text}</span>
-      </div>
-      <div class="component-row">
-        <span class="component-label">코스피 낙폭</span>
-        <span class="component-value"><span class="dot ${kospi.cls}"></span>${c.kospi_drawdown_pct?.raw ?? "-"}% · ${kospi.text}</span>
-      </div>
-    </div>`;
-  }
-
-  // 보유종목 손익
+  // ① 보유종목 손익 — 최우선, 실시간 현재가 반영
   if (portfolio && portfolio.holdings_count > 0) {
-    let itemsHtml = portfolio.items.map(it => `
+    let totalCost = 0;
+    let totalEval = 0;
+    let allLive = true;
+
+    const rows = portfolio.items.map(it => {
+      const lq = liveData?.quotes?.[it.ticker];
+      const hasLive = lq && lq.price !== undefined && lq.price !== null;
+      if (!hasLive) allLive = false;
+
+      const currentPrice = hasLive ? lq.price : it.current_price;
+      const cost = it.quantity * it.avg_price;
+      const evalAmount = Math.round(it.quantity * currentPrice);
+      const pnlAmount = evalAmount - cost;
+      const pnlPct = cost > 0 ? Math.round((pnlAmount / cost) * 10000) / 100 : 0;
+
+      totalCost += cost;
+      totalEval += evalAmount;
+
+      return { ...it, currentPrice, evalAmount, pnlAmount, pnlPct, hasLive };
+    });
+
+    const totalPnlAmount = totalEval - totalCost;
+    const totalPnlPct = totalCost > 0 ? Math.round((totalPnlAmount / totalCost) * 10000) / 100 : 0;
+
+    let itemsHtml = rows.map(it => `
       <div class="item-row">
         <div>
           <div class="item-name">${it.name}</div>
-          <div class="item-reason">${it.quantity}주 · 평단 ${fmtNum(it.avg_price)}원</div>
+          <div class="item-reason">${it.quantity}주 · 평단 ${fmtNum(it.avg_price)}원 → 현재 ${fmtNum(it.currentPrice)}원${it.hasLive ? "" : " (배치값)"}</div>
         </div>
         <div style="text-align:right">
-          <div class="${pnlClass(it.pnl_pct)}">${pnlSign(it.pnl_pct)}</div>
-          <div class="item-reason">${fmtNum(it.eval_amount)}원</div>
+          <div class="${pnlClass(it.pnlPct)}">${pnlSign(it.pnlPct)}</div>
+          <div class="item-reason">${it.pnlAmount >= 0 ? "+" : ""}${fmtNum(it.pnlAmount)}원 · 평가 ${fmtNum(it.evalAmount)}원</div>
         </div>
       </div>
     `).join("");
 
     html += `<div class="card">
-      <p class="card-title">보유종목 손익 <span>${timeAgo(portfolio.timestamp)}</span></p>
+      <p class="card-title">보유종목 손익 <span>${liveData ? liveBadge(liveData.fetched_at) : "🕐 실시간 조회 실패, 배치값 표시"}</span></p>
       <div class="risk-score">
-        <span class="num ${pnlClass(portfolio.total_pnl_pct)}">${pnlSign(portfolio.total_pnl_pct)}</span>
-        <span style="color:var(--text-sub);font-size:13px">${fmtNum(portfolio.total_pnl_amount)}원</span>
+        <span class="num ${pnlClass(totalPnlPct)}">${pnlSign(totalPnlPct)}</span>
+        <span style="color:var(--text-sub);font-size:13px">${totalPnlAmount >= 0 ? "+" : ""}${fmtNum(Math.round(totalPnlAmount))}원</span>
       </div>
+      <div style="font-size:12px;color:var(--text-sub);margin-top:2px">평가금액 ${fmtNum(totalEval)}원 · 매입금액 ${fmtNum(totalCost)}원</div>
       ${itemsHtml}
     </div>`;
   } else {
@@ -378,7 +408,7 @@ function riskGuidance(level) {
     </div>`;
   }
 
-  // 리밸런싱 검토 (보유종목 최우선 정렬)
+  // ② 리밸런싱 검토 (보유종목 최우선 정렬)
   if (alerts && alerts.alerts) {
     const rebal = alerts.alerts.filter(a => a.type === "리밸런싱검토")
       .sort((a, b) => (a.origin === "보유종목" ? -1 : 0) - (b.origin === "보유종목" ? -1 : 0));
@@ -394,13 +424,50 @@ function riskGuidance(level) {
         </div>
       `).join("");
       html += `<div class="card">
-        <p class="card-title">리밸런싱 검토 (${rebal.length}건) <span>${timeAgo(alerts.timestamp)}</span></p>
+        <p class="card-title">리밸런싱 검토 (${rebal.length}건) <span>${batchBadge(alerts.timestamp)}</span></p>
         ${rebalHtml}
       </div>`;
     }
   }
 
-  // 오늘의 발굴결과 (시스템 신뢰도 + 전체 30개 보기)
+  // ③ 최근 가격변동 경보 (보유종목 항상 최우선)
+  if (alerts) {
+    const priceAlerts = (alerts.alerts || []).filter(a => a.type === "가격변동");
+    const holdingsCount = portfolio?.holdings_count ?? 0;
+    const monitorNote = `<div style="font-size:11px;color:var(--text-sub);margin-bottom:10px">
+      총 ${alerts.checked_count ?? "?"}개 종목 감시 중 (보유종목 ${holdingsCount}개 포함) · 하루 3%↑ 변동 시 표시 · 보유종목 최우선 표시
+    </div>`;
+
+    let bodyHtml;
+    if (priceAlerts.length > 0) {
+      const sorted = [...priceAlerts].sort((a, b) => {
+        const holdA = a.origin === "보유종목" ? 0 : 1;
+        const holdB = b.origin === "보유종목" ? 0 : 1;
+        if (holdA !== holdB) return holdA - holdB;
+        const order = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3 };
+        return (order[a.level] ?? 9) - (order[b.level] ?? 9);
+      });
+      bodyHtml = sorted.slice(0, 8).map(a => `
+        <div class="item-row">
+          <div>
+            <div class="item-name" style="font-weight:400;font-size:13px">${a.message}</div>
+            <div class="tag-row">${originTag(a.origin)}</div>
+          </div>
+          <span class="badge ${a.level === '경고' ? '경고lv' : a.level}">${a.level}</span>
+        </div>
+      `).join("");
+    } else {
+      bodyHtml = `<div class="empty">오늘은 조건에 해당하는 급등락 종목이 없습니다 (정상)</div>`;
+    }
+
+    html += `<div class="card">
+      <p class="card-title">최근 가격변동 경보 (${priceAlerts.length}건) <span>${batchBadge(alerts.timestamp)}</span></p>
+      ${monitorNote}
+      ${bodyHtml}
+    </div>`;
+  }
+
+  // ④ 오늘의 발굴결과
   if (discovery && discovery.top5) {
     let reliabilityHtml = "";
     if (backtest) {
@@ -463,7 +530,7 @@ function riskGuidance(level) {
     }
 
     html += `<div class="card">
-      <p class="card-title">오늘의 발굴결과 TOP5 <span>${timeAgo(discovery.timestamp)}</span></p>
+      <p class="card-title">오늘의 발굴결과 TOP5 <span>${batchBadge(discovery.timestamp)}</span></p>
       ${reliabilityHtml}
       ${sortNote}
       ${topHtml}
@@ -472,37 +539,38 @@ function riskGuidance(level) {
     </div>`;
   }
 
-  // 최근 리스크 경보 (가격변동만, 리밸런싱은 위에서 별도 표시)
-  if (alerts) {
-    const priceAlerts = (alerts.alerts || []).filter(a => a.type === "가격변동");
-    const holdingsCount = portfolio?.holdings_count ?? 0;
-    const monitorNote = `<div style="font-size:11px;color:var(--text-sub);margin-bottom:10px">
-      총 ${alerts.checked_count ?? "?"}개 종목 감시 중 (보유종목 ${holdingsCount}개 포함) · 하루 3%↑ 변동 시 표시
-    </div>`;
-
-    let bodyHtml;
-    if (priceAlerts.length > 0) {
-      const sorted = [...priceAlerts].sort((a, b) => {
-        const order = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3 };
-        return (order[a.level] ?? 9) - (order[b.level] ?? 9);
-      });
-      bodyHtml = sorted.slice(0, 6).map(a => `
-        <div class="item-row">
-          <div>
-            <div class="item-name" style="font-weight:400;font-size:13px">${a.message}</div>
-            <div class="tag-row">${originTag(a.origin)}</div>
-          </div>
-          <span class="badge ${a.level === '경고' ? '경고lv' : a.level}">${a.level}</span>
-        </div>
-      `).join("");
-    } else {
-      bodyHtml = `<div class="empty">오늘은 조건에 해당하는 급등락 종목이 없습니다 (정상)</div>`;
-    }
+  // ⑤ 시장 위험도 — 참고 정보로 맨 아래 배치
+  if (risk) {
+    const c = risk.components || {};
+    const vix = macroStatus("vix", c.vix?.raw);
+    const spread = macroStatus("spread", c.high_yield_spread?.raw);
+    const curve = macroStatus("curve", c.yield_curve_10y2y?.raw);
+    const kospi = macroStatus("kospi", c.kospi_drawdown_pct?.raw);
 
     html += `<div class="card">
-      <p class="card-title">최근 가격변동 경보 (${priceAlerts.length}건) <span>${timeAgo(alerts.timestamp)}</span></p>
-      ${monitorNote}
-      ${bodyHtml}
+      <p class="card-title">시장 위험도 (참고) <span>${batchBadge(risk.timestamp)}</span></p>
+      <div class="risk-score">
+        <span class="num">${risk.composite_score}</span>
+        <span class="badge ${risk.level}">${risk.level}</span>
+      </div>
+      <div style="font-size:13px;font-weight:600;margin-top:6px;color:var(--text)">${riskGuidance(risk.level)}</div>
+      <div style="font-size:11px;color:var(--text-sub);margin-top:2px">4개 거시지표 종합 (0=안정 ~ 100=위험). 점수가 높을수록 발굴결과 계산에 불리하게 반영됩니다.</div>
+      <div class="component-row">
+        <span class="component-label">VIX 변동성지수</span>
+        <span class="component-value"><span class="dot ${vix.cls}"></span>${c.vix?.raw ?? "-"} · ${vix.text}</span>
+      </div>
+      <div class="component-row">
+        <span class="component-label">하이일드 스프레드</span>
+        <span class="component-value"><span class="dot ${spread.cls}"></span>${c.high_yield_spread?.raw ?? "-"}%p · ${spread.text}</span>
+      </div>
+      <div class="component-row">
+        <span class="component-label">10y-2y 금리차</span>
+        <span class="component-value"><span class="dot ${curve.cls}"></span>${c.yield_curve_10y2y?.raw ?? "-"}%p · ${curve.text}</span>
+      </div>
+      <div class="component-row">
+        <span class="component-label">코스피 낙폭</span>
+        <span class="component-value"><span class="dot ${kospi.cls}"></span>${c.kospi_drawdown_pct?.raw ?? "-"}% · ${kospi.text}</span>
+      </div>
     </div>`;
   }
 
@@ -532,7 +600,34 @@ function riskGuidance(level) {
       if (arrow) arrow.textContent = open ? "▾" : "▴";
     });
   }
+
+  const triggerBtn = document.getElementById("triggerBtn");
+  if (triggerBtn) {
+    triggerBtn.addEventListener("click", async () => {
+      const statusEl = document.getElementById("triggerStatus");
+      triggerBtn.disabled = true;
+      statusEl.textContent = "요청 중...";
+      try {
+        const res = await fetch(WORKER_BASE + "/trigger", { method: "POST" });
+        const data = await res.json();
+        statusEl.textContent = data.error ? "❌ " + data.error : "✅ " + data.message;
+      } catch (e) {
+        statusEl.textContent = "❌ 요청 실패: " + e.message;
+      } finally {
+        triggerBtn.disabled = false;
+      }
+    });
+  }
 }
+
+document.getElementById("refreshBtn").addEventListener("click", async () => {
+  const btn = document.getElementById("refreshBtn");
+  btn.textContent = "⏳";
+  btn.disabled = true;
+  await loadDashboard();
+  btn.textContent = "🔄";
+  btn.disabled = false;
+});
 
 loadDashboard();
 
