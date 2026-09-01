@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-31T16:01:26.860635+00:00",
+  "timestamp": "2026-09-01T01:10:52.187428+00:00",
   "composite_score": 22,
   "level": "안정",
   "components": {
@@ -12,11 +12,11 @@
       "score": 10
     },
     "yield_curve_10y2y": {
-      "raw": 0.39,
+      "raw": 0.41,
       "score": 40
     },
     "kospi_drawdown_pct": {
-      "raw": -2.71,
+      "raw": -2.48,
       "score": 40
     }
   }
