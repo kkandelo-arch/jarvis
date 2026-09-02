@@ -366,14 +366,13 @@ def main():
 
     print(json.dumps(top5, ensure_ascii=False, indent=2))
 
-    # 알림 발송: top5 중 "매수후보" 등급이 있을 때만 발송
+    # 알림 발송: top5 중 "매수후보" 등급이 있으면 종목별로 개별 발송
     buy_candidates = [r for r in top5 if r.get("decision") == "매수후보"]
-    if buy_candidates:
-        names = ", ".join(f"{r['name']}({r['stars']})" for r in buy_candidates)
+    for r in buy_candidates:
         send_notification(
-            title=f"🎯 DC 자비스 매수후보 발견 ({len(buy_candidates)}건)",
-            body=names,
-            url="https://github.com/kkandelo-arch/jarvis/blob/main/data/etf_discovery.json",
+            title=f"🎯 DC 자비스 매수후보 · {r['name']}",
+            body=f"{r['stars']}★ · 조정점수 {r['adjusted_score']}\n{r['reason']}",
+            url="https://kkandelo-arch.github.io/jarvis/",
         )
 
 
