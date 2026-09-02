@@ -2,7 +2,7 @@ name: DC 자비스 강화 모니터링
 
 on:
   schedule:
-    - cron: "0 1-6 * * 1-5"
+    - cron: "0,15,30,45 0-6 * * 1-5"   # 평일 KST 09:00~06:45(UTC), 15분 간격 (장중 전체 커버)
   workflow_dispatch: {}
 
 permissions:
@@ -28,7 +28,7 @@ jobs:
         run: |
           git config user.name "dc-jarvis-bot"
           git config user.email "actions@github.com"
-          git add data/risk_alerts.json
+          git add data/risk_alerts.json data/notification_state.json
           git diff --cached --quiet || git commit -m "리스크 알림 자동 갱신"
           git pull --no-rebase -X ours
           git push
