@@ -269,16 +269,11 @@ function timeAgo(iso) {
 }
 
 function macroStatus(kind, v) {
-  function macroStatus(kind, v) {
   if (v === undefined || v === null) return { cls: "warn", text: "-" };
   if (kind === "vix") {
     if (v < 20) return { cls: "ok", text: "안정" };
     if (v < 28) return { cls: "warn", text: "주의" };
-    return { cls: "bad", text: "위험" };
-  }
-  if (kind === "spread") {
-    if (v < 3) return { cls: "ok", text: "안정" };
-    if (v < 4.5) return { cls: "warn", text: "주의" };
+        if (v < 4.5) return { cls: "warn", text: "주의" };
     return { cls: "bad", text: "위험" };
   }
   if (kind === "curve") {
@@ -556,9 +551,10 @@ async function loadDashboard() {
           <div class="item-reason" style="color:var(--text-sub);font-size:11px">조정점수 ${r.adjusted_score} · ${"⭐".repeat(r.stars)}</div>
           <div class="item-reason">${r.reason}</div>
           <div class="tag-row">
-                      ${r.leading_actor && r.leading_actor !== "정보없음" ? `<span class="tag">${r.leading_actor} 주도</span>` : ""}
+            ${confBadge(r)}
+            ${r.leading_actor && r.leading_actor !== "정보없음" ? `<span class="tag">${r.leading_actor} 주도</span>` : ""}
             ${r.volume_evaluation ? `<span class="tag">거래량 ${r.volume_evaluation}</span>` : ""}
-          </div>
+                      </div>
         </div>
         <span class="badge ${r.decision}">${r.decision}</span>
       </div>
@@ -701,7 +697,8 @@ document.getElementById("refreshBtn").addEventListener("click", async () => {
 });
 
 loadDashboard();
-  // ===== 알림 구독 로직 (기존 로직 그대로, 오버레이 안으로 이동) =====
+
+// ===== 알림 구독 로직 (기존 로직 그대로, 오버레이 안으로 이동) =====
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
