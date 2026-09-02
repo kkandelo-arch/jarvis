@@ -62,6 +62,7 @@
   .badge.긴급 { background: #fee2e2; color: #991b1b; }
   .badge.경고lv { background: #ffedd5; color: #c2410c; }
   .badge.정보 { background: #f1f5f9; color: #64748b; }
+  .badge.정상 { background: #dcfce7; color: #16a34a; }
   .badge.신뢰-높음 { background: #dcfce7; color: #16a34a; }
   .badge.신뢰-보통 { background: #fef9c3; color: #ca8a04; }
   .badge.신뢰-낮음 { background: #fee2e2; color: #dc2626; }
@@ -257,6 +258,7 @@ function timeAgo(iso) {
 }
 
 function macroStatus(kind, v) {
+  function macroStatus(kind, v) {
   if (v === undefined || v === null) return { cls: "warn", text: "-" };
   if (kind === "vix") {
     if (v < 20) return { cls: "ok", text: "안정" };
@@ -322,6 +324,44 @@ async function fetchLiveQuotes(tickers) {
   } catch (e) {
     return null;
   }
+}
+
+function showToast(msg, isError) {
+  const toast = document.createElement("div");
+  toast.textContent = msg;
+  toast.style.cssText = `
+    position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%);
+    background: ${isError ? "#dc2626" : "#16a34a"}; color: white;
+    padding: 10px 18px; border-radius: 999px; font-size: 13px; z-index: 300;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); max-width: 90%; text-align: center;
+  `;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 4500);
+}
+
+async function pollUntilFresh(requestedAt) {
+  const maxWaitMs = 9 * 60 * 1000;
+  const intervalMs = 20000;
+  const start = Date.now();
+
+  while (Date.now() - start < maxWaitMs) {
+    await new Promise((r) => setTimeout(r, intervalMs));
+    const health = await fetchJson("system_health.json");
+    if (health && new Date(health.timestamp) > requestedAt) {
+      await loadDashboard();
+      showToast("✅ 데이터 갱신 완료! 화면이 자동으로 새로고침됐습니다.");
+      return;
+    }
+    const statusEl = document.getElementById("triggerStatus");
+    if (statusEl) {
+      const elapsedSec = Math.round((Date.now() - start) / 1000);
+      statusEl.textContent = `⏳ 갱신 진행 중... (${elapsedSec}초 경과, 최대 8~9분 소요될 수 있어요)`;
+    }
+  }
+
+  const btn = document.getElementById("triggerBtn");
+  if (btn) btn.disabled = false;
+  showToast("⏱️ 시간이 오래 걸리고 있어요. 잠시 후 수동으로 새로고침 해주세요.", true);
 }
 
 async function loadDashboard() {
@@ -430,40 +470,47 @@ async function loadDashboard() {
     }
   }
 
-  // ③ 최근 가격변동 경보 (보유종목 항상 최우선)
+  // ③ 최근 가격변동 경보 — 보유종목(전량) / 감시종목(임계값 기반) 구획 분리
   if (alerts) {
     const priceAlerts = (alerts.alerts || []).filter(a => a.type === "가격변동");
     const holdingsCount = portfolio?.holdings_count ?? 0;
-    const monitorNote = `<div style="font-size:11px;color:var(--text-sub);margin-bottom:10px">
-      총 ${alerts.checked_count ?? "?"}개 종목 감시 중 (보유종목 ${holdingsCount}개 포함) · 하루 3%↑ 변동 시 표시 · 보유종목 최우선 표시
+    const levelOrder = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3, "정상": 4 };
+
+    const holdingAlerts = priceAlerts
+      .filter(a => a.origin === "보유종목")
+      .sort((a, b) => (levelOrder[a.level] ?? 9) - (levelOrder[b.level] ?? 9));
+    const watchAlerts = priceAlerts
+      .filter(a => a.origin !== "보유종목")
+      .sort((a, b) => (levelOrder[a.level] ?? 9) - (levelOrder[b.level] ?? 9));
+
+    const rowHtml = (a) => `
+      <div class="item-row">
+        <div>
+          <div class="item-name" style="font-weight:400;font-size:13px">${a.message}</div>
+        </div>
+        <span class="badge ${a.level === '경고' ? '경고lv' : a.level}">${a.level}</span>
+      </div>
+    `;
+
+    let holdingBlock = `<div style="font-size:12px;font-weight:700;margin:10px 0 4px;color:var(--text)">📌 보유종목 전체 (변동폭 무관, ${holdingAlerts.length}건)</div>`;
+    holdingBlock += holdingAlerts.length > 0
+      ? holdingAlerts.map(rowHtml).join("")
+      : `<div class="empty">보유종목이 없습니다</div>`;
+
+    let watchBlock = `<div style="font-size:12px;font-weight:700;margin:14px 0 4px;color:var(--text)">감시종목 (기본30+관심종목, 3%↑ 변동만, ${watchAlerts.length}건)</div>`;
+    watchBlock += watchAlerts.length > 0
+      ? watchAlerts.slice(0, 8).map(rowHtml).join("")
+      : `<div class="empty">오늘은 조건에 해당하는 급등락 종목이 없습니다 (정상)</div>`;
+
+    const monitorNote = `<div style="font-size:11px;color:var(--text-sub);margin-bottom:2px">
+      총 ${alerts.checked_count ?? "?"}개 종목 감시 중 (보유종목 ${holdingsCount}개는 변동폭 무관 항상 표시)
     </div>`;
 
-    let bodyHtml;
-    if (priceAlerts.length > 0) {
-      const sorted = [...priceAlerts].sort((a, b) => {
-        const holdA = a.origin === "보유종목" ? 0 : 1;
-        const holdB = b.origin === "보유종목" ? 0 : 1;
-        if (holdA !== holdB) return holdA - holdB;
-        const order = { "긴급": 0, "경고": 1, "주의": 2, "정보": 3 };
-        return (order[a.level] ?? 9) - (order[b.level] ?? 9);
-      });
-      bodyHtml = sorted.slice(0, 8).map(a => `
-        <div class="item-row">
-          <div>
-            <div class="item-name" style="font-weight:400;font-size:13px">${a.message}</div>
-            <div class="tag-row">${originTag(a.origin)}</div>
-          </div>
-          <span class="badge ${a.level === '경고' ? '경고lv' : a.level}">${a.level}</span>
-        </div>
-      `).join("");
-    } else {
-      bodyHtml = `<div class="empty">오늘은 조건에 해당하는 급등락 종목이 없습니다 (정상)</div>`;
-    }
-
     html += `<div class="card">
-      <p class="card-title">최근 가격변동 경보 (${priceAlerts.length}건) <span>${batchBadge(alerts.timestamp)}</span></p>
+      <p class="card-title">최근 가격변동 경보 <span>${batchBadge(alerts.timestamp)}</span></p>
       ${monitorNote}
-      ${bodyHtml}
+      ${holdingBlock}
+      ${watchBlock}
     </div>`;
   }
 
@@ -497,8 +544,7 @@ async function loadDashboard() {
           <div class="item-reason" style="color:var(--text-sub);font-size:11px">조정점수 ${r.adjusted_score} · ${"⭐".repeat(r.stars)}</div>
           <div class="item-reason">${r.reason}</div>
           <div class="tag-row">
-            ${confBadge(r)}
-            ${r.leading_actor && r.leading_actor !== "정보없음" ? `<span class="tag">${r.leading_actor} 주도</span>` : ""}
+                      ${r.leading_actor && r.leading_actor !== "정보없음" ? `<span class="tag">${r.leading_actor} 주도</span>` : ""}
             ${r.volume_evaluation ? `<span class="tag">거래량 ${r.volume_evaluation}</span>` : ""}
           </div>
         </div>
@@ -607,13 +653,19 @@ async function loadDashboard() {
       const statusEl = document.getElementById("triggerStatus");
       triggerBtn.disabled = true;
       statusEl.textContent = "요청 중...";
+      const requestedAt = new Date();
       try {
         const res = await fetch(WORKER_BASE + "/trigger", { method: "POST" });
         const data = await res.json();
-        statusEl.textContent = data.error ? "❌ " + data.error : "✅ " + data.message;
+        if (data.error) {
+          statusEl.textContent = "❌ " + data.error;
+          triggerBtn.disabled = false;
+        } else {
+          statusEl.textContent = "✅ 요청 완료. 완료되면 자동으로 새로고침됩니다...";
+          pollUntilFresh(requestedAt);
+        }
       } catch (e) {
         statusEl.textContent = "❌ 요청 실패: " + e.message;
-      } finally {
         triggerBtn.disabled = false;
       }
     });
@@ -630,8 +682,7 @@ document.getElementById("refreshBtn").addEventListener("click", async () => {
 });
 
 loadDashboard();
-
-// ===== 알림 구독 로직 (기존 로직 그대로, 오버레이 안으로 이동) =====
+  // ===== 알림 구독 로직 (기존 로직 그대로, 오버레이 안으로 이동) =====
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
