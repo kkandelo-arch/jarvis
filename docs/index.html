@@ -227,9 +227,19 @@ const REPO_RAW = "https://raw.githubusercontent.com/kkandelo-arch/jarvis/main/da
 const VAPID_PUBLIC_KEY = "BG32wpG4vuVXwbPcCm9G9z23SdNYIQzJZMRxQWnpfDxYAZRTKb0-CNIJUxaRnMssn94aOO0nXG289OUcE2czKss";
 const WORKER_BASE = "https://dc-jarvis-chat.kkandelo.workers.dev";
 
+async function fetchWithTimeout(url, options = {}, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function fetchJson(name) {
   try {
-    const res = await fetch(REPO_RAW + name + "?t=" + Date.now());
+    const res = await fetchWithTimeout(REPO_RAW + name + "?t=" + Date.now());
     if (!res.ok) return null;
     return await res.json();
   } catch (e) {
@@ -315,11 +325,11 @@ function batchBadge(iso) {
 async function fetchLiveQuotes(tickers) {
   if (!tickers || tickers.length === 0) return null;
   try {
-    const res = await fetch(WORKER_BASE + "/quote", {
+    const res = await fetchWithTimeout(WORKER_BASE + "/quote", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ tickers }),
-    });
+    }, 8000);
     if (!res.ok) return null;
     return await res.json();
   } catch (e) {
@@ -366,6 +376,7 @@ async function pollUntilFresh(requestedAt) {
 }
 
 async function loadDashboard() {
+ try {
   const [risk, discovery, portfolio, alerts, health, backtest] = await Promise.all([
     fetchJson("risk_score.json"),
     fetchJson("etf_discovery.json"),
@@ -671,6 +682,13 @@ async function loadDashboard() {
       }
     });
   }
+ } catch (err) {
+   document.getElementById("main").innerHTML = `
+     <div class="empty">
+       ⚠️ 데이터를 불러오지 못했습니다.<br>${err.message}<br><br>
+       <button class="expand-btn" onclick="loadDashboard()">다시 시도</button>
+     </div>`;
+ }
 }
 
 document.getElementById("refreshBtn").addEventListener("click", async () => {
