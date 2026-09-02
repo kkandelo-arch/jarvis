@@ -1,16 +1,25 @@
 {
-  "timestamp": "2026-09-01T06:07:29.995402+00:00",
+  "timestamp": "2026-09-02T00:47:29.082488+00:00",
   "checked_count": 31,
-  "alert_count": 8,
+  "alert_count": 4,
   "alerts": [
+    {
+      "ticker": "0183J0",
+      "name": "TIGER 미국우주테크",
+      "origin": "보유종목",
+      "type": "가격변동",
+      "level": "정상",
+      "change_pct": -2.88,
+      "message": "TIGER 미국우주테크 1일 급락 2.88%"
+    },
     {
       "ticker": "360750",
       "name": "TIGER 미국S&P500",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.2,
-      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(0.2%) - 관망 후보(저평가구간)"
+      "band_position_pct": 0.0,
+      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
       "ticker": "379800",
@@ -18,44 +27,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.2,
-      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.2%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 98.1,
-      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(98.1%) - 신규매수 시 유의(과열구간)"
-    },
-    {
-      "ticker": "228790",
-      "name": "TIGER 화장품",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.08,
-      "message": "TIGER 화장품 1일 급락 4.08%"
-    },
-    {
-      "ticker": "0008T0",
-      "name": "SOL 화장품TOP3플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.81,
-      "message": "SOL 화장품TOP3플러스 1일 급락 4.81%"
-    },
-    {
-      "ticker": "364980",
-      "name": "TIGER 2차전지TOP10",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 98.1,
-      "message": "TIGER 2차전지TOP10 52주 밴드 상단 근접(98.1%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 0.0,
+      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
       "ticker": "360200",
@@ -63,17 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.2,
-      "message": "ACE 미국S&P500 52주 밴드 하단 근접(0.2%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "0005D0",
-      "name": "SOL 전고체배터리&실리콘음극재",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 99.3,
-      "message": "SOL 전고체배터리&실리콘음극재 52주 밴드 상단 근접(99.3%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 0.0,
+      "message": "ACE 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     }
   ]
 }
