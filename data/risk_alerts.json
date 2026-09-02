@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-02T00:47:29.082488+00:00",
+  "timestamp": "2026-09-02T01:06:27.949489+00:00",
   "checked_count": 31,
-  "alert_count": 4,
+  "alert_count": 5,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -9,17 +9,8 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정상",
-      "change_pct": -2.88,
-      "message": "TIGER 미국우주테크 1일 급락 2.88%"
-    },
-    {
-      "ticker": "360750",
-      "name": "TIGER 미국S&P500",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+      "change_pct": -2.94,
+      "message": "TIGER 미국우주테크 1일 급락 2.94%"
     },
     {
       "ticker": "379800",
@@ -31,13 +22,31 @@
       "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "360200",
-      "name": "ACE 미국S&P500",
+      "ticker": "360750",
+      "name": "TIGER 미국S&P500",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
       "band_position_pct": 0.0,
-      "message": "ACE 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "466920",
+      "name": "SOL 조선TOP3플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -4.1,
+      "message": "SOL 조선TOP3플러스 1일 급락 4.1%"
+    },
+    {
+      "ticker": "091170",
+      "name": "KODEX 은행",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "KODEX 은행 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     }
   ]
 }
