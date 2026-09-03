@@ -593,38 +593,29 @@ async function loadDashboard() {
     </div>`;
   }
 
-  // ⑤ 시장 위험도 — 참고 정보로 맨 아래 배치
-if (risk) {
-    const c = risk.components || {};
-    const vix = macroStatus("vix", c.vix?.raw);
-    const spread = macroStatus("spread", c.high_yield_spread?.raw);
-    const curve = macroStatus("curve", c.yield_curve_10y2y?.raw);
-    const kospi = macroStatus("kospi", c.kospi_drawdown_pct?.raw);
+  // ⑤ 시장 지수 & 환율 — 참고 정보
+  if (risk && risk.market_indices) {
+    const idx = risk.market_indices;
+    const order = ["kospi", "kosdaq", "sp500", "nasdaq", "dow", "usdkrw"];
+    let idxHtml = order.map((key) => {
+      const item = idx[key];
+      if (!item || item.value === null || item.value === undefined) {
+        return `<div class="component-row"><span class="component-label">${item?.label || key}</span><span class="component-value">-</span></div>`;
+      }
+      const pct = item.change_pct;
+      const cls = pct >= 0 ? "pnl-pos" : "pnl-neg";
+      const sign = pct >= 0 ? "+" : "";
+      const displayVal = key === "usdkrw" ? `${fmtNum(item.value)}원` : fmtNum(item.value);
+      return `<div class="component-row">
+        <span class="component-label">${item.label}</span>
+        <span class="component-value">${displayVal} <span class="${cls}">${sign}${pct}%</span></span>
+      </div>`;
+    }).join("");
 
     html += `<div class="card">
-      <p class="card-title">시장 위험도 (참고) <span>${batchBadge(risk.timestamp)}</span></p>
-      <div class="risk-score">
-        <span class="num">${risk.composite_score}</span>
-        <span class="badge ${risk.level}">${risk.level}</span>
-      </div>
-      <div style="font-size:13px;font-weight:600;margin-top:6px;color:var(--text)">${riskGuidance(risk.level)}</div>
-      <div style="font-size:11px;color:var(--text-sub);margin-top:2px">4개 거시지표 종합 (0=안정 ~ 100=위험). 점수가 높을수록 발굴결과 계산에 불리하게 반영됩니다.</div>
-      <div class="component-row">
-        <span class="component-label">VIX 변동성지수</span>
-        <span class="component-value"><span class="dot ${vix.cls}"></span>${c.vix?.raw ?? "-"} · ${vix.text}</span>
-      </div>
-      <div class="component-row">
-        <span class="component-label">하이일드 스프레드</span>
-        <span class="component-value"><span class="dot ${spread.cls}"></span>${c.high_yield_spread?.raw ?? "-"}%p · ${spread.text}</span>
-      </div>
-      <div class="component-row">
-        <span class="component-label">10y-2y 금리차</span>
-        <span class="component-value"><span class="dot ${curve.cls}"></span>${c.yield_curve_10y2y?.raw ?? "-"}%p · ${curve.text}</span>
-      </div>
-      <div class="component-row">
-        <span class="component-label">코스피 낙폭</span>
-        <span class="component-value"><span class="dot ${kospi.cls}"></span>${c.kospi_drawdown_pct?.raw ?? "-"}% · ${kospi.text}</span>
-      </div>
+      <p class="card-title">시장 지수 &amp; 환율 (참고) <span>${batchBadge(risk.timestamp)}</span></p>
+      <div style="font-size:11px;color:var(--text-sub);margin-bottom:4px">전일 종가 대비 등락률 (원달러환율은 상승=원화약세)</div>
+      ${idxHtml}
     </div>`;
   }
 
