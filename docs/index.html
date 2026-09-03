@@ -593,7 +593,7 @@ async function loadDashboard() {
     </div>`;
   }
 
-  // ⑤ 시장 지수 & 환율 — 참고 정보
+    // ⑤ 시장 지수 & 환율 — 참고 정보
   if (risk && risk.market_indices) {
     const idx = risk.market_indices;
     const order = ["kospi", "kosdaq", "sp500", "nasdaq", "dow", "usdkrw"];
@@ -616,6 +616,44 @@ async function loadDashboard() {
       <p class="card-title">시장 지수 &amp; 환율 (참고) <span>${batchBadge(risk.timestamp)}</span></p>
       <div style="font-size:11px;color:var(--text-sub);margin-bottom:4px">전일 종가 대비 등락률 (원달러환율은 상승=원화약세)</div>
       ${idxHtml}
+    </div>`;
+  }
+
+  // ⑥ 시장 위험도 — 참고 정보로 맨 아래 배치
+  if (risk) {
+    const c = risk.components || {};
+    const vix = macroStatus("vix", c.vix?.raw);
+    const spread = macroStatus("spread", c.high_yield_spread?.raw);
+    const curve = macroStatus("curve", c.yield_curve_10y2y?.raw);
+    const kospi = macroStatus("kospi", c.kospi_drawdown_pct?.raw);
+    const asOf = (comp, fallback) => `<span style="font-size:10px;color:var(--text-sub);font-weight:400">(${comp?.as_of || fallback})</span>`;
+
+    html += `<div class="card">
+      <p class="card-title">시장 위험도 (참고) <span>${batchBadge(risk.timestamp)}</span></p>
+      <div class="risk-score">
+        <span class="num">${risk.composite_score}</span>
+        <span class="badge ${risk.level}">${risk.level}</span>
+      </div>
+      <div style="font-size:13px;font-weight:600;margin-top:6px;color:var(--text)">${riskGuidance(risk.level)}</div>
+      <div style="font-size:11px;color:var(--text-sub);margin-top:2px">4개 거시지표 종합 (0=안정 ~ 100=위험). 미국 지표 3종은 전일 기준, 코스피는 당일 기준으로 시차가 있습니다.</div>
+      <div class="component-row">
+        <span class="component-label">VIX 변동성지수 ${asOf(c.vix, "미국 전일 기준")}</span>
+        <span class="component-value"><span class="dot ${vix.cls}"></span>${c.vix?.raw ?? "-"} · ${vix.text}</span>
+      </div>
+      <div class="component-row">
+        <span class="component-label">하이일드 스프레드 ${asOf(c.high_yield_spread, "미국 전일 기준")}</span>
+        <span class="component-value"><span class="dot ${spread.cls}"></span>${c.high_yield_spread?.raw ?? "-"}%p · ${spread.text}</span>
+      </div>
+      <div style="font-size:10px;color:var(--text-sub);margin:-2px 0 4px">정크본드-국채 금리차. 클수록 신용경색 우려↑ (3%대=평상시, 5%대=경계, 7%대~=위기급)</div>
+      <div class="component-row">
+        <span class="component-label">10y-2y 금리차 ${asOf(c.yield_curve_10y2y, "미국 전일 기준")}</span>
+        <span class="component-value"><span class="dot ${curve.cls}"></span>${c.yield_curve_10y2y?.raw ?? "-"}%p · ${curve.text}</span>
+      </div>
+      <div style="font-size:10px;color:var(--text-sub);margin:-2px 0 4px">장기-단기 국채 금리차. 마이너스(역전)면 전통적으로 경기침체 선행신호</div>
+      <div class="component-row">
+        <span class="component-label">코스피 20일 고점대비 ${asOf(c.kospi_drawdown_pct, "한국 당일 기준")}</span>
+        <span class="component-value"><span class="dot ${kospi.cls}"></span>${c.kospi_drawdown_pct?.raw ?? "-"}% · ${kospi.text}</span>
+      </div>
     </div>`;
   }
 
