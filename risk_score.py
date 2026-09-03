@@ -1,6 +1,6 @@
 """
-DC 자비스 - 위험도 스코어링 스크립트 (1단계 MVP, v1.2 - 코스피 이상치 필터링)
-FRED(거시지표) + yfinance(VIX/환율/코스피)를 조합해 0~100점 위험도 산출
+DC 자비스 - 위험도 스코어링 스크립트 (v1.3 - 주요 지수/환율 조회 + 지표별 기준시점 명시 추가)
+FRED(거시지표) + yfinance(VIX/환율/코스피/코스닥/S&P500/나스닥/다우)를 조합해 0~100점 위험도 산출
 결과는 data/risk_score.json 에 저장됨
 """
 import json
@@ -97,6 +97,40 @@ def score_kospi_drawdown():
     return drawdown, 100
 
 
+MARKET_INDEX_TICKERS = {
+    "kospi": ("^KS11", "코스피"),
+    "kosdaq": ("^KQ11", "코스닥"),
+    "sp500": ("^GSPC", "S&P500"),
+    "nasdaq": ("^IXIC", "나스닥"),
+    "dow": ("^DJI", "다우"),
+    "usdkrw": ("KRW=X", "원달러환율"),
+}
+
+
+def get_daily_change(ticker_symbol):
+    try:
+        hist = yf.Ticker(ticker_symbol).history(period="5d")
+        closes = hist["Close"].dropna()
+        if len(closes) < 2:
+            return None
+        last = float(closes.iloc[-1])
+        prev = float(closes.iloc[-2])
+        change_pct = round((last / prev - 1) * 100, 2)
+        return {"value": round(last, 2), "change_pct": change_pct}
+    except Exception as e:
+        print(f"[경고] {ticker_symbol} 조회 실패: {e}")
+        return None
+
+
+def get_market_indices():
+    indices = {}
+    for key, (symbol, label) in MARKET_INDEX_TICKERS.items():
+        result = get_daily_change(symbol)
+        indices[key] = {"label": label, **result} if result else {"label": label, "value": None, "change_pct": None}
+        print(f"[디버그] {label}: {indices[key]}")
+    return indices
+
+
 def main():
     vix_val = get_fred_latest("VIXCLS")
     hy_val = get_fred_latest("BAMLH0A0HYM2")
@@ -106,6 +140,7 @@ def main():
     hy_raw, hy_score = score_hy_spread(hy_val)
     curve_raw, curve_score = score_yield_curve(curve_val)
     dd_raw, dd_score = score_kospi_drawdown()
+    market_indices = get_market_indices()
 
     composite = round(
         vix_score * 0.30 + hy_score * 0.30 + curve_score * 0.20 + dd_score * 0.20
@@ -125,11 +160,12 @@ def main():
         "composite_score": composite,
         "level": level,
         "components": {
-            "vix": {"raw": round(vix_raw, 2), "score": vix_score},
-            "high_yield_spread": {"raw": round(hy_raw, 2), "score": hy_score},
-            "yield_curve_10y2y": {"raw": round(curve_raw, 2), "score": curve_score},
-            "kospi_drawdown_pct": {"raw": round(dd_raw, 2), "score": dd_score},
+            "vix": {"raw": round(vix_raw, 2), "score": vix_score, "as_of": "미국 전일 기준(FRED)"},
+            "high_yield_spread": {"raw": round(hy_raw, 2), "score": hy_score, "as_of": "미국 전일 기준(FRED)"},
+            "yield_curve_10y2y": {"raw": round(curve_raw, 2), "score": curve_score, "as_of": "미국 전일 기준(FRED)"},
+            "kospi_drawdown_pct": {"raw": round(dd_raw, 2), "score": dd_score, "as_of": "한국 당일 기준"},
         },
+        "market_indices": market_indices,
     }
 
     os.makedirs("data", exist_ok=True)
