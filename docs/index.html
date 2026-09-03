@@ -594,7 +594,7 @@ async function loadDashboard() {
   }
 
   // ⑤ 시장 위험도 — 참고 정보로 맨 아래 배치
-  if (risk) {
+if (risk) {
     const c = risk.components || {};
     const vix = macroStatus("vix", c.vix?.raw);
     const spread = macroStatus("spread", c.high_yield_spread?.raw);
