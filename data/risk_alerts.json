@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-03T07:45:00.157842+00:00",
+  "timestamp": "2026-09-03T19:44:16.960617+00:00",
   "checked_count": 31,
-  "alert_count": 4,
+  "alert_count": 7,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -38,6 +38,33 @@
       "level": "정보",
       "change_pct": 4.88,
       "message": "SOL 조선TOP3플러스 1일 급등 4.88%"
+    },
+    {
+      "ticker": "0091P0",
+      "name": "TIGER 코리아원자력",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.09,
+      "message": "TIGER 코리아원자력 1일 급등 3.09%"
+    },
+    {
+      "ticker": "498410",
+      "name": "KODEX 금융고배당TOP10타겟위클리커버드콜",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.38,
+      "message": "KODEX 금융고배당TOP10타겟위클리커버드콜 1일 급등 3.38%"
+    },
+    {
+      "ticker": "091170",
+      "name": "KODEX 은행",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "KODEX 은행 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     }
   ]
 }
