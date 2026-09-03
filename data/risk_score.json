@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-09-03T08:47:11.508669+00:00",
+  "timestamp": "2026-09-03T19:39:13.453302+00:00",
   "composite_score": 36,
   "level": "주의",
   "components": {
     "vix": {
-      "raw": 16.34,
+      "raw": 15.2,
       "score": 35,
       "as_of": "미국 전일 기준(FRED)"
     },
     "high_yield_spread": {
-      "raw": 2.65,
+      "raw": 2.66,
       "score": 10,
       "as_of": "미국 전일 기준(FRED)"
     },
@@ -19,7 +19,7 @@
       "as_of": "미국 전일 기준(FRED)"
     },
     "kospi_drawdown_pct": {
-      "raw": -5.71,
+      "raw": -5.95,
       "score": 70,
       "as_of": "한국 당일 기준"
     }
@@ -27,33 +27,33 @@
   "market_indices": {
     "kospi": {
       "label": "코스피",
-      "value": 6579.48,
-      "change_pct": 0.26
+      "value": 6562.72,
+      "change_pct": -3.99
     },
     "kosdaq": {
       "label": "코스닥",
-      "value": 790.21,
-      "change_pct": -1.71
+      "value": 803.98,
+      "change_pct": -2.1
     },
     "sp500": {
       "label": "S&P500",
-      "value": 7666.6,
-      "change_pct": 0.46
+      "value": 7751.1,
+      "change_pct": 1.1
     },
     "nasdaq": {
       "label": "나스닥",
-      "value": 26217.83,
-      "change_pct": 0.45
+      "value": 26602.22,
+      "change_pct": 1.47
     },
     "dow": {
       "label": "다우",
-      "value": 53061.95,
-      "change_pct": 0.56
+      "value": 53695.51,
+      "change_pct": 1.19
     },
     "usdkrw": {
       "label": "원달러환율",
-      "value": 1356.89,
-      "change_pct": -1.16
+      "value": 1355.89,
+      "change_pct": -1.24
     }
   }
 }
