@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-03T02:47:49.090744+00:00",
+  "timestamp": "2026-09-03T07:45:00.157842+00:00",
   "checked_count": 31,
-  "alert_count": 6,
+  "alert_count": 4,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -9,8 +9,8 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정상",
-      "change_pct": 1.46,
-      "message": "TIGER 미국우주테크 1일 급등 1.46%"
+      "change_pct": 1.66,
+      "message": "TIGER 미국우주테크 1일 급등 1.66%"
     },
     {
       "ticker": "360750",
@@ -31,31 +31,13 @@
       "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.11,
-      "message": "KODEX 2차전지산업 1일 급등 3.11%"
-    },
-    {
-      "ticker": "364980",
-      "name": "TIGER 2차전지TOP10",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.65,
-      "message": "TIGER 2차전지TOP10 1일 급등 3.65%"
-    },
-    {
       "ticker": "466920",
       "name": "SOL 조선TOP3플러스",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 4.56,
-      "message": "SOL 조선TOP3플러스 1일 급등 4.56%"
+      "change_pct": 4.88,
+      "message": "SOL 조선TOP3플러스 1일 급등 4.88%"
     }
   ]
 }
