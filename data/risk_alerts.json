@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-03T19:44:16.960617+00:00",
+  "timestamp": "2026-09-04T02:45:29.487720+00:00",
   "checked_count": 31,
-  "alert_count": 7,
+  "alert_count": 4,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -9,62 +9,35 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정상",
-      "change_pct": 1.66,
-      "message": "TIGER 미국우주테크 1일 급등 1.66%"
+      "change_pct": 1.91,
+      "message": "TIGER 미국우주테크 1일 급등 1.91%"
     },
     {
-      "ticker": "360750",
-      "name": "TIGER 미국S&P500",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "379800",
-      "name": "KODEX 미국S&P500",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "466920",
-      "name": "SOL 조선TOP3플러스",
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 4.88,
-      "message": "SOL 조선TOP3플러스 1일 급등 4.88%"
+      "change_pct": 3.05,
+      "message": "KODEX 코스닥150 1일 급등 3.05%"
     },
     {
-      "ticker": "0091P0",
-      "name": "TIGER 코리아원자력",
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.09,
-      "message": "TIGER 코리아원자력 1일 급등 3.09%"
+      "change_pct": 3.37,
+      "message": "TIGER 반도체TOP10 1일 급등 3.37%"
     },
     {
-      "ticker": "498410",
-      "name": "KODEX 금융고배당TOP10타겟위클리커버드콜",
+      "ticker": "091160",
+      "name": "KODEX 반도체",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.38,
-      "message": "KODEX 금융고배당TOP10타겟위클리커버드콜 1일 급등 3.38%"
-    },
-    {
-      "ticker": "091170",
-      "name": "KODEX 은행",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "KODEX 은행 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
+      "change_pct": 3.02,
+      "message": "KODEX 반도체 1일 급등 3.02%"
     }
   ]
 }
