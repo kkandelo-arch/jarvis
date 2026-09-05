@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-04T10:16:22.663555+00:00",
+  "timestamp": "2026-09-05T22:41:55.746184+00:00",
   "checked_count": 31,
-  "alert_count": 12,
+  "alert_count": 11,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -40,15 +40,6 @@
       "message": "SOL AI반도체TOP2플러스 1일 급등 3.67%"
     },
     {
-      "ticker": "232080",
-      "name": "TIGER 코스닥150",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.9,
-      "message": "TIGER 코스닥150 1일 급등 3.9%"
-    },
-    {
       "ticker": "091160",
       "name": "KODEX 반도체",
       "origin": "기본(거래대금상위)",
@@ -56,6 +47,15 @@
       "level": "정보",
       "change_pct": 3.7,
       "message": "KODEX 반도체 1일 급등 3.7%"
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.9,
+      "message": "TIGER 코스닥150 1일 급등 3.9%"
     },
     {
       "ticker": "395160",
@@ -85,15 +85,6 @@
       "message": "HANARO Fn K-반도체 1일 급등 4.06%"
     },
     {
-      "ticker": "487230",
-      "name": "KODEX 미국AI전력핵심인프라",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.33,
-      "message": "KODEX 미국AI전력핵심인프라 1일 급등 3.33%"
-    },
-    {
       "ticker": "139260",
       "name": "TIGER 200 IT",
       "origin": "기본(거래대금상위)",
@@ -103,13 +94,13 @@
       "message": "TIGER 200 IT 1일 급등 3.37%"
     },
     {
-      "ticker": "455850",
-      "name": "SOL AI반도체소부장",
+      "ticker": "487230",
+      "name": "KODEX 미국AI전력핵심인프라",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 4.01,
-      "message": "SOL AI반도체소부장 1일 급등 4.01%"
+      "change_pct": 3.33,
+      "message": "KODEX 미국AI전력핵심인프라 1일 급등 3.33%"
     }
   ]
 }
