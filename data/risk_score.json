@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-09-04T10:11:24.170797+00:00",
-  "composite_score": 30,
-  "level": "주의",
+  "timestamp": "2026-09-05T03:49:56.823904+00:00",
+  "composite_score": 22,
+  "level": "안정",
   "components": {
     "vix": {
-      "raw": 15.2,
-      "score": 35,
+      "raw": 14.32,
+      "score": 10,
       "as_of": "미국 전일 기준(FRED)"
     },
     "high_yield_spread": {
-      "raw": 2.66,
+      "raw": 2.65,
       "score": 10,
       "as_of": "미국 전일 기준(FRED)"
     },
     "yield_curve_10y2y": {
-      "raw": 0.43,
+      "raw": 0.41,
       "score": 40,
       "as_of": "미국 전일 기준(FRED)"
     },
@@ -37,23 +37,23 @@
     },
     "sp500": {
       "label": "S&P500",
-      "value": 7747.71,
-      "change_pct": 1.06
+      "value": 7718.6,
+      "change_pct": -0.38
     },
     "nasdaq": {
       "label": "나스닥",
-      "value": 26584.06,
-      "change_pct": 1.4
+      "value": 26506.99,
+      "change_pct": -0.29
     },
     "dow": {
       "label": "다우",
-      "value": 53686.11,
-      "change_pct": 1.18
+      "value": 53414.2,
+      "change_pct": -0.51
     },
     "usdkrw": {
       "label": "원달러환율",
-      "value": 1351.37,
-      "change_pct": -0.52
+      "value": 1351.1,
+      "change_pct": -0.32
     }
   }
 }
