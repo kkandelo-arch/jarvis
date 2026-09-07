@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-06T08:33:03.461061+00:00",
-  "composite_score": 22,
+  "timestamp": "2026-09-07T03:53:42.528804+00:00",
+  "composite_score": 16,
   "level": "안정",
   "components": {
     "vix": {
@@ -19,21 +19,21 @@
       "as_of": "미국 전일 기준(FRED)"
     },
     "kospi_drawdown_pct": {
-      "raw": -4.17,
-      "score": 40,
+      "raw": -0.89,
+      "score": 10,
       "as_of": "한국 당일 기준"
     }
   },
   "market_indices": {
     "kospi": {
       "label": "코스피",
-      "value": 6687.21,
-      "change_pct": 1.64
+      "value": 6915.82,
+      "change_pct": 3.42
     },
     "kosdaq": {
       "label": "코스닥",
-      "value": 813.5,
-      "change_pct": 2.95
+      "value": 824.18,
+      "change_pct": 1.31
     },
     "sp500": {
       "label": "S&P500",
@@ -52,8 +52,8 @@
     },
     "usdkrw": {
       "label": "원달러환율",
-      "value": 1351.1,
-      "change_pct": -0.32
+      "value": 1346.09,
+      "change_pct": -0.69
     }
   }
 }
