@@ -326,7 +326,11 @@ function macroStatus(kind, v) {
   if (kind === "vix") {
     if (v < 20) return { cls: "ok", text: "안정" };
     if (v < 28) return { cls: "warn", text: "주의" };
-        if (v < 4.5) return { cls: "warn", text: "주의" };
+    return { cls: "bad", text: "위험" };
+  }
+  if (kind === "spread") {
+    if (v < 3) return { cls: "ok", text: "안정" };
+    if (v < 4.5) return { cls: "warn", text: "주의" };
     return { cls: "bad", text: "위험" };
   }
   if (kind === "curve") {
