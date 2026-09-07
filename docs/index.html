@@ -172,6 +172,50 @@
     border: 1px solid var(--border); background: white; border-radius: 999px;
     padding: 6px 12px; font-size: 12px; color: var(--text-sub); cursor: pointer;
   }
+    #manageOverlay {
+    display: none; position: fixed; inset: 0; background: white; z-index: 200;
+    flex-direction: column;
+  }
+  #manageOverlay.open { display: flex; }
+  #manageHeader {
+    padding: 14px 16px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    background: white; position: sticky; top: 0;
+  }
+  #manageHeader h2 { font-size: 15px; margin: 0; }
+  #manageBody { flex: 1; overflow-y: auto; padding: 14px; }
+  .manage-section-title {
+    font-size: 13px; font-weight: 700; margin: 18px 0 8px; color: var(--text);
+  }
+  .manage-section-title:first-child { margin-top: 0; }
+  .manage-row {
+    padding: 10px 0; border-top: 1px solid var(--border);
+  }
+  .manage-row:first-child { border-top: none; }
+  .manage-row-main {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  }
+  .manage-btn {
+    font-size: 11px; padding: 5px 10px; border-radius: 8px; border: 1px solid var(--border);
+    background: white; color: var(--text); cursor: pointer; white-space: nowrap;
+  }
+  .manage-btn.primary { background: var(--blue); color: white; border-color: var(--blue); }
+  .manage-btn.danger { color: var(--red); border-color: #fecaca; }
+  .manage-form {
+    margin-top: 8px; padding: 10px; background: var(--gray-bg); border-radius: 10px;
+    display: none;
+  }
+  .manage-form.open { display: block; }
+  .manage-form input {
+    width: 100%; box-sizing: border-box; padding: 8px 10px; margin-bottom: 6px;
+    border: 1px solid var(--border); border-radius: 8px; font-size: 13px;
+  }
+  .manage-form-actions { display: flex; gap: 6px; margin-top: 4px; }
+  .manage-add-btn {
+    width: 100%; margin-top: 10px; padding: 10px; border: 1px dashed var(--border);
+    background: none; border-radius: 10px; color: var(--blue); font-size: 13px; cursor: pointer;
+  }
+  .manage-status { font-size: 12px; margin-top: 6px; min-height: 16px; }
 </style>
 </head>
 <body>
@@ -180,6 +224,7 @@
   <h1>📈 DC 자비스</h1>
   <div style="display:flex;gap:6px">
     <button class="icon-btn" id="refreshBtn" title="새로고침">🔄</button>
+    <button class="icon-btn" id="manageBtn" title="종목 관리">📋</button>
     <button class="icon-btn" id="bellBtn" title="알림 설정">🔔</button>
   </div>
 </header>
@@ -221,7 +266,15 @@
     <button id="chatSendBtn">➤</button>
   </div>
 </div>
-
+<div id="manageOverlay">
+  <div id="manageHeader">
+    <h2>📋 종목 관리</h2>
+    <button class="icon-btn" id="closeManageBtn">✕</button>
+  </div>
+  <div id="manageBody">
+    <div class="loading">불러오는 중...</div>
+  </div>
+</div>
 <script>
 const REPO_RAW = "https://raw.githubusercontent.com/kkandelo-arch/jarvis/main/data/";
 const VAPID_PUBLIC_KEY = "BG32wpG4vuVXwbPcCm9G9z23SdNYIQzJZMRxQWnpfDxYAZRTKb0-CNIJUxaRnMssn94aOO0nXG289OUcE2czKss";
@@ -861,6 +914,214 @@ chatInput.addEventListener("input", () => {
 });
 document.querySelectorAll(".chip").forEach(chip => {
   chip.addEventListener("click", () => sendChatMessage(chip.dataset.q));
+});
+  // ===== 종목 관리 (보유종목/관심종목) =====
+const manageOverlay = document.getElementById("manageOverlay");
+const manageBody = document.getElementById("manageBody");
+
+document.getElementById("manageBtn").addEventListener("click", () => {
+  manageOverlay.classList.add("open");
+  renderManagePanel();
+});
+document.getElementById("closeManageBtn").addEventListener("click", () => {
+  manageOverlay.classList.remove("open");
+});
+
+async function postAction(path, body) {
+  const res = await fetchWithTimeout(WORKER_BASE + path, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  }, 15000);
+  return await res.json();
+}
+
+async function afterSaveSuccess(statusEl, prefix) {
+  statusEl.textContent = prefix + " 저장 완료! 전체 데이터 갱신 중...";
+  await renderManagePanel();
+  try {
+    await fetch(WORKER_BASE + "/trigger", { method: "POST" });
+    pollUntilFresh(new Date());
+  } catch (e) {}
+}
+
+async function renderManagePanel() {
+  manageBody.innerHTML = `<div class="loading">불러오는 중...</div>`;
+  const [holdings, watchlist] = await Promise.all([
+    fetchJson("holdings.json"),
+    fetchJson("custom_universe.json"),
+  ]);
+
+  let html = `<div class="manage-section-title">💼 보유종목</div>`;
+
+  if (holdings && holdings.length > 0) {
+    html += holdings.map((h) => `
+      <div class="manage-row">
+        <div class="manage-row-main">
+          <div>
+            <div class="item-name">${h.name}</div>
+            <div class="item-reason">${h.ticker} · ${h.quantity}주 · 평단 ${fmtNum(h.avg_price)}원</div>
+          </div>
+          <div style="display:flex;gap:4px">
+            <button class="manage-btn primary" data-action="buy-toggle" data-ticker="${h.ticker}">추가매수</button>
+            <button class="manage-btn" data-action="sell-toggle" data-ticker="${h.ticker}">매도</button>
+          </div>
+        </div>
+        <div class="manage-form" id="buy-form-${h.ticker}">
+          <input type="number" placeholder="추가매수 수량(주)" id="buy-qty-${h.ticker}">
+          <input type="number" placeholder="매수 단가(원)" id="buy-price-${h.ticker}">
+          <div class="manage-form-actions">
+            <button class="manage-btn primary" data-action="buy-submit" data-ticker="${h.ticker}">확인</button>
+            <button class="manage-btn" data-action="buy-toggle" data-ticker="${h.ticker}">취소</button>
+          </div>
+          <div class="manage-status" id="buy-status-${h.ticker}"></div>
+        </div>
+        <div class="manage-form" id="sell-form-${h.ticker}">
+          <input type="number" placeholder="매도 수량(주, 전량이면 ${h.quantity} 입력)" id="sell-qty-${h.ticker}">
+          <div class="manage-form-actions">
+            <button class="manage-btn danger" data-action="sell-submit" data-ticker="${h.ticker}">매도 확인</button>
+            <button class="manage-btn" data-action="sell-toggle" data-ticker="${h.ticker}">취소</button>
+          </div>
+          <div class="manage-status" id="sell-status-${h.ticker}"></div>
+        </div>
+      </div>
+    `).join("");
+  } else {
+    html += `<div class="empty">보유종목이 없습니다</div>`;
+  }
+
+  html += `
+    <button class="manage-add-btn" data-action="add-toggle">+ 신규 종목 등록</button>
+    <div class="manage-form" id="add-form">
+      <input type="text" placeholder="종목코드(티커, 예: 069500)" id="add-ticker">
+      <input type="text" placeholder="종목명(예: KODEX 200)" id="add-name">
+      <input type="number" placeholder="수량(주)" id="add-qty">
+      <input type="number" placeholder="매수 단가(원)" id="add-price">
+      <div class="manage-form-actions">
+        <button class="manage-btn primary" data-action="add-submit">등록</button>
+        <button class="manage-btn" data-action="add-toggle">취소</button>
+      </div>
+      <div class="manage-status" id="add-status"></div>
+    </div>
+  `;
+
+  html += `<div class="manage-section-title">⭐ 관심종목</div>`;
+  if (watchlist && watchlist.length > 0) {
+    html += watchlist.map((w) => `
+      <div class="manage-row">
+        <div class="manage-row-main">
+          <div>
+            <div class="item-name">${w.name}</div>
+            <div class="item-reason">${w.ticker}</div>
+          </div>
+          <button class="manage-btn danger" data-action="watch-remove" data-ticker="${w.ticker}">삭제</button>
+        </div>
+      </div>
+    `).join("");
+  } else {
+    html += `<div class="empty">관심종목이 없습니다</div>`;
+  }
+
+  html += `
+    <button class="manage-add-btn" data-action="watch-add-toggle">+ 관심종목 추가</button>
+    <div class="manage-form" id="watch-add-form">
+      <input type="text" placeholder="종목코드(티커)" id="watch-add-ticker">
+      <input type="text" placeholder="종목명" id="watch-add-name">
+      <div class="manage-form-actions">
+        <button class="manage-btn primary" data-action="watch-add-submit">추가</button>
+        <button class="manage-btn" data-action="watch-add-toggle">취소</button>
+      </div>
+      <div class="manage-status" id="watch-add-status"></div>
+    </div>
+  `;
+
+  manageBody.innerHTML = html;
+}
+
+manageBody.addEventListener("click", async (e) => {
+  const btn = e.target.closest("[data-action]");
+  if (!btn) return;
+  const action = btn.dataset.action;
+  const ticker = btn.dataset.ticker;
+
+  if (action === "buy-toggle") {
+    document.getElementById(`buy-form-${ticker}`).classList.toggle("open");
+    return;
+  }
+  if (action === "sell-toggle") {
+    document.getElementById(`sell-form-${ticker}`).classList.toggle("open");
+    return;
+  }
+  if (action === "add-toggle") {
+    document.getElementById("add-form").classList.toggle("open");
+    return;
+  }
+  if (action === "watch-add-toggle") {
+    document.getElementById("watch-add-form").classList.toggle("open");
+    return;
+  }
+
+  if (action === "buy-submit") {
+    const statusEl = document.getElementById(`buy-status-${ticker}`);
+    const qty = Number(document.getElementById(`buy-qty-${ticker}`).value);
+    const price = Number(document.getElementById(`buy-price-${ticker}`).value);
+    if (!qty || !price) { statusEl.textContent = "수량과 단가를 입력해주세요."; return; }
+    statusEl.textContent = "처리 중...";
+    const res = await postAction("/holdings", { type: "buy", ticker, quantity: qty, price });
+    if (res.error) { statusEl.textContent = "❌ " + res.error; return; }
+    await afterSaveSuccess(statusEl, "✅ 추가매수");
+    return;
+  }
+
+  if (action === "sell-submit") {
+    const statusEl = document.getElementById(`sell-status-${ticker}`);
+    const qty = Number(document.getElementById(`sell-qty-${ticker}`).value);
+    if (!qty) { statusEl.textContent = "매도 수량을 입력해주세요."; return; }
+    statusEl.textContent = "처리 중...";
+    const holdings = await fetchJson("holdings.json");
+    const h = holdings?.find((x) => x.ticker === ticker);
+    const type = h && qty >= h.quantity ? "sell_all" : "sell_partial";
+    const res = await postAction("/holdings", { type, ticker, quantity: qty });
+    if (res.error) { statusEl.textContent = "❌ " + res.error; return; }
+    await afterSaveSuccess(statusEl, "✅ 매도");
+    return;
+  }
+
+  if (action === "add-submit") {
+    const statusEl = document.getElementById("add-status");
+    const t = document.getElementById("add-ticker").value.trim();
+    const name = document.getElementById("add-name").value.trim();
+    const qty = Number(document.getElementById("add-qty").value);
+    const price = Number(document.getElementById("add-price").value);
+    if (!t || !name || !qty || !price) { statusEl.textContent = "모든 항목을 입력해주세요."; return; }
+    statusEl.textContent = "처리 중...";
+    const res = await postAction("/holdings", { type: "add", ticker: t, name, quantity: qty, price });
+    if (res.error) { statusEl.textContent = "❌ " + res.error; return; }
+    await afterSaveSuccess(statusEl, "✅ 신규등록");
+    return;
+  }
+
+  if (action === "watch-remove") {
+    if (!confirm("관심종목에서 삭제하시겠습니까?")) return;
+    const res = await postAction("/watchlist", { type: "remove", ticker });
+    if (res.error) { alert("❌ " + res.error); return; }
+    await renderManagePanel();
+    showToast("✅ 관심종목에서 삭제됐습니다.");
+    return;
+  }
+
+  if (action === "watch-add-submit") {
+    const statusEl = document.getElementById("watch-add-status");
+    const t = document.getElementById("watch-add-ticker").value.trim();
+    const name = document.getElementById("watch-add-name").value.trim();
+    if (!t || !name) { statusEl.textContent = "종목코드와 이름을 입력해주세요."; return; }
+    statusEl.textContent = "처리 중...";
+    const res = await postAction("/watchlist", { type: "add", ticker: t, name });
+    if (res.error) { statusEl.textContent = "❌ " + res.error; return; }
+    statusEl.textContent = "✅ 추가 완료!";
+    await renderManagePanel();
+    return;
+  }
 });
 </script>
 </body>
