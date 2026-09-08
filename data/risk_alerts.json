@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-08T02:54:51.196358+00:00",
+  "timestamp": "2026-09-08T07:48:36.823827+00:00",
   "checked_count": 31,
-  "alert_count": 11,
+  "alert_count": 7,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -9,8 +9,8 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정상",
-      "change_pct": 0.61,
-      "message": "TIGER 미국우주테크 1일 급등 0.61%"
+      "change_pct": 0.2,
+      "message": "TIGER 미국우주테크 1일 급등 0.2%"
     },
     {
       "ticker": "360750",
@@ -27,44 +27,26 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+      "band_position_pct": 0.4,
+      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.4%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "396500",
-      "name": "TIGER 반도체TOP10",
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 4.14,
-      "message": "TIGER 반도체TOP10 1일 급등 4.14%"
-    },
-    {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.7,
-      "message": "KODEX 반도체 1일 급등 3.7%"
-    },
-    {
-      "ticker": "395160",
-      "name": "KODEX AI반도체TOP2플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.07,
-      "message": "KODEX AI반도체TOP2플러스 1일 급등 3.07%"
+      "change_pct": -3.37,
+      "message": "KODEX AI전력핵심설비 1일 급락 3.37%"
     },
     {
       "ticker": "0091P0",
       "name": "TIGER 코리아원자력",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.81,
-      "message": "TIGER 코리아원자력 1일 급등 6.81%"
+      "level": "정보",
+      "change_pct": 4.32,
+      "message": "TIGER 코리아원자력 1일 급등 4.32%"
     },
     {
       "ticker": "0091P0",
@@ -83,24 +65,6 @@
       "level": "주의",
       "band_position_pct": 0.0,
       "message": "TIGER 미국배당다우존스 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "091230",
-      "name": "TIGER 반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.77,
-      "message": "TIGER 반도체 1일 급등 3.77%"
-    },
-    {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.02,
-      "message": "PLUS 글로벌HBM반도체 1일 급등 3.02%"
     }
   ]
 }
