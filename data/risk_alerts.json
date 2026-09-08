@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-08T07:48:36.823827+00:00",
+  "timestamp": "2026-09-08T23:04:07.441749+00:00",
   "checked_count": 31,
-  "alert_count": 7,
+  "alert_count": 6,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -31,15 +31,6 @@
       "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.4%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "487240",
-      "name": "KODEX AI전력핵심설비",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.37,
-      "message": "KODEX AI전력핵심설비 1일 급락 3.37%"
-    },
-    {
       "ticker": "0091P0",
       "name": "TIGER 코리아원자력",
       "origin": "기본(거래대금상위)",
@@ -58,13 +49,13 @@
       "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
-      "ticker": "458730",
-      "name": "TIGER 미국배당다우존스",
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
       "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "TIGER 미국배당다우존스 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.37,
+      "message": "KODEX AI전력핵심설비 1일 급락 3.37%"
     }
   ]
 }
