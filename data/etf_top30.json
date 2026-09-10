@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-10T12:01:12.278276+00:00",
+  "timestamp": "2026-09-10T12:41:50.299587+00:00",
   "data_as_of": "20260910",
   "ranking_basis": "최근 거래대금 상위 30개 (레버리지/인버스/순수채권형/금리연동/환헤지(H) 제외, 주식+채권 혼합형과 커버드콜은 포함)",
   "top30": [
@@ -16,16 +16,16 @@
       "market_cap": 112085.73
     },
     {
-      "ticker": "360750",
-      "name": "TIGER 미국S&P500",
-      "trading_value": 1165177840352.0,
-      "market_cap": 25383.96
-    },
-    {
       "ticker": "133690",
       "name": "TIGER 미국나스닥100",
-      "trading_value": 1063589377168.0,
-      "market_cap": 174597.64
+      "trading_value": 1022132707461.0,
+      "market_cap": 174560.16
+    },
+    {
+      "ticker": "360750",
+      "name": "TIGER 미국S&P500",
+      "trading_value": 876156657562.0,
+      "market_cap": 25427.55
     },
     {
       "ticker": "379810",
@@ -40,16 +40,16 @@
       "market_cap": 23073.5
     },
     {
-      "ticker": "396500",
-      "name": "TIGER 반도체TOP10",
-      "trading_value": 502264568974.0,
-      "market_cap": 38183.14
-    },
-    {
       "ticker": "229200",
       "name": "KODEX 코스닥150",
       "trading_value": 493231262040.0,
       "market_cap": 14320.06
+    },
+    {
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10",
+      "trading_value": 371551634341.0,
+      "market_cap": 38089.63
     },
     {
       "ticker": "232080",
@@ -136,6 +136,12 @@
       "market_cap": 58875.98
     },
     {
+      "ticker": "381180",
+      "name": "TIGER 미국필라델피아반도체나스닥",
+      "trading_value": 54982390900.0,
+      "market_cap": 41329.58
+    },
+    {
       "ticker": "472150",
       "name": "TIGER 배당커버드콜액티브",
       "trading_value": 53677901011.0,
@@ -164,12 +170,6 @@
       "name": "TIGER 200 IT",
       "trading_value": 46806688973.0,
       "market_cap": 141870.67
-    },
-    {
-      "ticker": "381170",
-      "name": "TIGER 미국테크TOP10 INDXX",
-      "trading_value": 46041223487.0,
-      "market_cap": 29988.12
     },
     {
       "ticker": "390390",
