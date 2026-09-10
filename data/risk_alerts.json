@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-09-09T07:51:20.455430+00:00",
+  "timestamp": "2026-09-10T02:56:44.218597+00:00",
   "checked_count": 31,
-  "alert_count": 12,
+  "alert_count": 8,
   "alerts": [
     {
       "ticker": "0183J0",
       "name": "TIGER 미국우주테크",
       "origin": "보유종목",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.48,
-      "message": "TIGER 미국우주테크 1일 급등 4.48%"
+      "level": "주의",
+      "change_pct": -5.33,
+      "message": "TIGER 미국우주테크 1일 급락 5.33%"
     },
     {
       "ticker": "133690",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 4.9,
-      "message": "TIGER 미국나스닥100 52주 밴드 하단 근접(4.9%) - 관망 후보(저평가구간)"
+      "band_position_pct": 0.9,
+      "message": "TIGER 미국나스닥100 52주 밴드 하단 근접(0.9%) - 관망 후보(저평가구간)"
     },
     {
       "ticker": "360750",
@@ -40,76 +40,40 @@
       "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "229200",
-      "name": "KODEX 코스닥150",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.14,
-      "message": "KODEX 코스닥150 1일 급등 3.14%"
-    },
-    {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.09,
-      "message": "KODEX 반도체 1일 급등 3.09%"
-    },
-    {
-      "ticker": "0091P0",
-      "name": "TIGER 코리아원자력",
+      "ticker": "379810",
+      "name": "KODEX 미국나스닥100",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 1.2,
+      "message": "KODEX 미국나스닥100 52주 밴드 하단 근접(1.2%) - 관망 후보(저평가구간)"
     },
     {
       "ticker": "487240",
       "name": "KODEX AI전력핵심설비",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.28,
-      "message": "KODEX AI전력핵심설비 1일 급등 6.28%"
+      "level": "정보",
+      "change_pct": -3.65,
+      "message": "KODEX AI전력핵심설비 1일 급락 3.65%"
     },
     {
-      "ticker": "487240",
-      "name": "KODEX AI전력핵심설비",
+      "ticker": "367380",
+      "name": "ACE 미국나스닥100",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 95.8,
-      "message": "KODEX AI전력핵심설비 52주 밴드 상단 근접(95.8%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 0.8,
+      "message": "ACE 미국나스닥100 52주 밴드 하단 근접(0.8%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": 6.91,
-      "message": "KODEX 2차전지산업 1일 급등 6.91%"
-    },
-    {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 99.2,
-      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(99.2%) - 신규매수 시 유의(과열구간)"
-    },
-    {
-      "ticker": "455850",
-      "name": "SOL AI반도체소부장",
+      "ticker": "228790",
+      "name": "TIGER 화장품",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.91,
-      "message": "SOL AI반도체소부장 1일 급등 3.91%"
+      "change_pct": -3.02,
+      "message": "TIGER 화장품 1일 급락 3.02%"
     }
   ]
 }
