@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-10T02:56:44.218597+00:00",
+  "timestamp": "2026-09-10T07:52:17.370492+00:00",
   "checked_count": 31,
   "alert_count": 8,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": -5.33,
-      "message": "TIGER 미국우주테크 1일 급락 5.33%"
+      "change_pct": -5.0,
+      "message": "TIGER 미국우주테크 1일 급락 5.0%"
     },
     {
       "ticker": "133690",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.9,
-      "message": "TIGER 미국나스닥100 52주 밴드 하단 근접(0.9%) - 관망 후보(저평가구간)"
+      "band_position_pct": 3.0,
+      "message": "TIGER 미국나스닥100 52주 밴드 하단 근접(3.0%) - 관망 후보(저평가구간)"
     },
     {
       "ticker": "360750",
@@ -45,17 +45,26 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 1.2,
-      "message": "KODEX 미국나스닥100 52주 밴드 하단 근접(1.2%) - 관망 후보(저평가구간)"
+      "band_position_pct": 3.1,
+      "message": "KODEX 미국나스닥100 52주 밴드 하단 근접(3.1%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "487240",
-      "name": "KODEX AI전력핵심설비",
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
       "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.65,
-      "message": "KODEX AI전력핵심설비 1일 급락 3.65%"
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 96.4,
+      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(96.4%) - 신규매수 시 유의(과열구간)"
+    },
+    {
+      "ticker": "0091P0",
+      "name": "TIGER 코리아원자력",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "367380",
@@ -63,17 +72,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.8,
-      "message": "ACE 미국나스닥100 52주 밴드 하단 근접(0.8%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "228790",
-      "name": "TIGER 화장품",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.02,
-      "message": "TIGER 화장품 1일 급락 3.02%"
+      "band_position_pct": 2.8,
+      "message": "ACE 미국나스닥100 52주 밴드 하단 근접(2.8%) - 관망 후보(저평가구간)"
     }
   ]
 }
