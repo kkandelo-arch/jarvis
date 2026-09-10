@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-10T07:52:17.370492+00:00",
+  "timestamp": "2026-09-10T12:30:46.424361+00:00",
   "checked_count": 31,
   "alert_count": 8,
   "alerts": [
@@ -13,15 +13,6 @@
       "message": "TIGER 미국우주테크 1일 급락 5.0%"
     },
     {
-      "ticker": "133690",
-      "name": "TIGER 미국나스닥100",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 3.0,
-      "message": "TIGER 미국나스닥100 52주 밴드 하단 근접(3.0%) - 관망 후보(저평가구간)"
-    },
-    {
       "ticker": "360750",
       "name": "TIGER 미국S&P500",
       "origin": "기본(거래대금상위)",
@@ -31,13 +22,13 @@
       "message": "TIGER 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "379800",
-      "name": "KODEX 미국S&P500",
+      "ticker": "133690",
+      "name": "TIGER 미국나스닥100",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+      "band_position_pct": 3.0,
+      "message": "TIGER 미국나스닥100 52주 밴드 하단 근접(3.0%) - 관망 후보(저평가구간)"
     },
     {
       "ticker": "379810",
@@ -47,6 +38,15 @@
       "level": "주의",
       "band_position_pct": 3.1,
       "message": "KODEX 미국나스닥100 52주 밴드 하단 근접(3.1%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "379800",
+      "name": "KODEX 미국S&P500",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
       "ticker": "305720",
@@ -67,13 +67,13 @@
       "message": "TIGER 코리아원자력 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
-      "ticker": "367380",
-      "name": "ACE 미국나스닥100",
+      "ticker": "471990",
+      "name": "KODEX AI반도체핵심장비",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 2.8,
-      "message": "ACE 미국나스닥100 52주 밴드 하단 근접(2.8%) - 관망 후보(저평가구간)"
+      "band_position_pct": 97.9,
+      "message": "KODEX AI반도체핵심장비 52주 밴드 상단 근접(97.9%) - 신규매수 시 유의(과열구간)"
     }
   ]
 }
