@@ -216,7 +216,12 @@ def main():
     sent_count = 0
 
     # 1) 가격변동: "긴급"/"경고"만 발송 (주의/정보/정상은 앱에서 확인, 알림 피로 방지)
-    urgent_price = [a for a in alerts if a["type"] == "가격변동" and a["level"] in ("긴급", "경고")]
+        urgent_price = [
+        a for a in alerts if a["type"] == "가격변동" and (
+            (a["origin"] == "보유종목" and a["level"] in ("긴급", "경고", "주의"))
+            or (a["origin"] != "보유종목" and a["level"] in ("긴급", "경고"))
+        )
+    ]
     for a in urgent_price:
         key = f"{a['ticker']}_가격변동"
         if not should_notify(notify_state, key, a["level"]):
