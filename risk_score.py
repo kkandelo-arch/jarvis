@@ -109,13 +109,24 @@ MARKET_INDEX_TICKERS = {
 
 def get_daily_change(ticker_symbol):
     try:
-        hist = yf.Ticker(ticker_symbol).history(period="5d")
+        hist = yf.Ticker(ticker_symbol).history(period="1mo")
         closes = hist["Close"].dropna()
         if len(closes) < 2:
             return None
-        last = float(closes.iloc[-1])
-        prev = float(closes.iloc[-2])
+
+        # 이상치 방지: 최근 10거래일 중앙값 대비 ±25% 벗어나는 값은 데이터 오류로 간주해 제외
+        recent = closes.tail(10)
+        median = recent.median()
+        cleaned = recent[(recent >= median * 0.75) & (recent <= median * 1.25)]
+        if len(cleaned) < 2:
+            cleaned = recent
+
+        last = float(cleaned.iloc[-1])
+        prev = float(cleaned.iloc[-2])
+        last_date = str(cleaned.index[-1].date())
+        prev_date = str(cleaned.index[-2].date())
         change_pct = round((last / prev - 1) * 100, 2)
+        print(f"[디버그] {ticker_symbol}: {prev_date}({prev}) -> {last_date}({last}) = {change_pct}%")
         return {"value": round(last, 2), "change_pct": change_pct}
     except Exception as e:
         print(f"[경고] {ticker_symbol} 조회 실패: {e}")
