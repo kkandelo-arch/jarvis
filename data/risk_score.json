@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-13T13:13:12.568466+00:00",
+  "timestamp": "2026-09-14T00:19:18.357162+00:00",
   "composite_score": 30,
   "level": "주의",
   "components": {
@@ -52,8 +52,8 @@
     },
     "usdkrw": {
       "label": "원달러환율",
-      "value": 1342.4,
-      "change_pct": -0.43
+      "value": 1345.08,
+      "change_pct": -0.23
     }
   }
 }
