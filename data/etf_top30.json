@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-17T12:17:00.877799+00:00",
+  "timestamp": "2026-09-17T14:25:58.107137+00:00",
   "data_as_of": "20260917",
   "ranking_basis": "최근 거래대금 상위 30개 (레버리지/인버스/순수채권형/금리연동/환헤지(H) 제외, 주식+채권 혼합형과 커버드콜은 포함)",
   "top30": [
@@ -66,8 +66,8 @@
     {
       "ticker": "0167A0",
       "name": "SOL AI반도체TOP2플러스",
-      "trading_value": 141199529533.0,
-      "market_cap": 17260.27
+      "trading_value": 128545357007.0,
+      "market_cap": 17043.06
     },
     {
       "ticker": "498400",
@@ -136,6 +136,12 @@
       "market_cap": 14093.23
     },
     {
+      "ticker": "466920",
+      "name": "SOL 조선TOP3플러스",
+      "trading_value": 45109610938.0,
+      "market_cap": 28160.5
+    },
+    {
       "ticker": "0219E0",
       "name": "KODEX 200커버드콜액티브",
       "trading_value": 44057271430.0,
@@ -176,12 +182,6 @@
       "name": "PLUS K방산",
       "trading_value": 31066989738.0,
       "market_cap": 52493.77
-    },
-    {
-      "ticker": "455850",
-      "name": "SOL AI반도체소부장",
-      "trading_value": 30436453920.0,
-      "market_cap": 24879.3
     }
   ]
 }

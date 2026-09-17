@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-17T12:17:00.877763+00:00",
+  "timestamp": "2026-09-17T14:25:58.107104+00:00",
   "data_as_of": "20260917",
   "ranking_basis": "최근 거래대금 상위 (레버리지/인버스/순수채권형/금리연동/환헤지(H) 제외, 주식+채권 혼합형과 커버드콜은 포함)",
   "total_ranked": 920,
@@ -68,8 +68,8 @@
     {
       "ticker": "0167A0",
       "name": "SOL AI반도체TOP2플러스",
-      "trading_value": 141199529533.0,
-      "market_cap": 17260.27
+      "trading_value": 128545357007.0,
+      "market_cap": 17043.06
     },
     {
       "ticker": "498400",
@@ -136,6 +136,12 @@
       "name": "KODEX 삼성전자SK하이닉스채권혼합50",
       "trading_value": 51132067513.0,
       "market_cap": 14093.23
+    },
+    {
+      "ticker": "466920",
+      "name": "SOL 조선TOP3플러스",
+      "trading_value": 45109610938.0,
+      "market_cap": 28160.5
     },
     {
       "ticker": "0219E0",
@@ -228,28 +234,22 @@
       "market_cap": 45053.25
     },
     {
+      "ticker": "0008T0",
+      "name": "SOL 화장품TOP3플러스",
+      "trading_value": 26839923246.0,
+      "market_cap": 17615.3
+    },
+    {
       "ticker": "0222D0",
       "name": "KoAct 고배당액티브",
       "trading_value": 24674695665.0,
       "market_cap": 10424.24
     },
     {
-      "ticker": "466920",
-      "name": "SOL 조선TOP3플러스",
-      "trading_value": 24103847599.0,
-      "market_cap": 26793.56
-    },
-    {
       "ticker": "0148J0",
       "name": "TIGER 코리아휴머노이드로봇산업",
       "trading_value": 23838942492.0,
       "market_cap": 9454.38
-    },
-    {
-      "ticker": "0008T0",
-      "name": "SOL 화장품TOP3플러스",
-      "trading_value": 22673350108.0,
-      "market_cap": 17836.45
     },
     {
       "ticker": "471990",
@@ -534,6 +534,12 @@
       "market_cap": 9056.87
     },
     {
+      "ticker": "481190",
+      "name": "SOL 미국테크TOP10",
+      "trading_value": 7247520701.0,
+      "market_cap": 16709.12
+    },
+    {
       "ticker": "421320",
       "name": "PLUS 우주항공",
       "trading_value": 7097853595.0,
@@ -582,6 +588,12 @@
       "market_cap": 75271.38
     },
     {
+      "ticker": "0167B0",
+      "name": "SOL 200타겟위클리커버드콜",
+      "trading_value": 6286967099.0,
+      "market_cap": 11540.38
+    },
+    {
       "ticker": "475720",
       "name": "RISE 200위클리커버드콜",
       "trading_value": 6261215229.0,
@@ -624,12 +636,6 @@
       "market_cap": 17507.21
     },
     {
-      "ticker": "481190",
-      "name": "SOL 미국테크TOP10",
-      "trading_value": 5778349747.0,
-      "market_cap": 16564.9
-    },
-    {
       "ticker": "237350",
       "name": "KODEX 코스피100",
       "trading_value": 5730651504.0,
@@ -660,12 +666,6 @@
       "market_cap": 25882.19
     },
     {
-      "ticker": "0167B0",
-      "name": "SOL 200타겟위클리커버드콜",
-      "trading_value": 5393457740.0,
-      "market_cap": 11550.14
-    },
-    {
       "ticker": "456600",
       "name": "TIME 글로벌AI인공지능액티브",
       "trading_value": 5375450852.0,
@@ -682,12 +682,6 @@
       "name": "TIGER 기술이전바이오액티브",
       "trading_value": 5182312940.0,
       "market_cap": 5729.2
-    },
-    {
-      "ticker": "0005D0",
-      "name": "SOL 전고체배터리&실리콘음극재",
-      "trading_value": 5077744473.0,
-      "market_cap": 14651.32
     },
     {
       "ticker": "0199C0",
@@ -744,10 +738,22 @@
       "market_cap": 35716.91
     },
     {
+      "ticker": "0005D0",
+      "name": "SOL 전고체배터리&실리콘음극재",
+      "trading_value": 4163960797.0,
+      "market_cap": 14553.23
+    },
+    {
       "ticker": "0048K0",
       "name": "KODEX 차이나휴머노이드로봇",
       "trading_value": 4013073596.0,
       "market_cap": 7955.31
+    },
+    {
+      "ticker": "446720",
+      "name": "SOL 미국배당다우존스",
+      "trading_value": 3997193550.0,
+      "market_cap": 13529.88
     },
     {
       "ticker": "0233A0",
@@ -822,12 +828,6 @@
       "market_cap": 12950.93
     },
     {
-      "ticker": "455860",
-      "name": "SOL 2차전지소부장Fn",
-      "trading_value": 3570639150.0,
-      "market_cap": 4467.74
-    },
-    {
       "ticker": "251600",
       "name": "PLUS 고배당주채권혼합",
       "trading_value": 3536390246.0,
@@ -892,12 +892,6 @@
       "name": "KIWOOM 코스닥150",
       "trading_value": 3067702654.0,
       "market_cap": 6912.13
-    },
-    {
-      "ticker": "446720",
-      "name": "SOL 미국배당다우존스",
-      "trading_value": 3031035902.0,
-      "market_cap": 13604.98
     },
     {
       "ticker": "307520",
@@ -1026,6 +1020,12 @@
       "market_cap": 15092.74
     },
     {
+      "ticker": "455860",
+      "name": "SOL 2차전지소부장Fn",
+      "trading_value": 2464432744.0,
+      "market_cap": 4436.81
+    },
+    {
       "ticker": "0142D0",
       "name": "TIGER 미국AI데이터센터TOP4Plus",
       "trading_value": 2427078979.0,
@@ -1054,6 +1054,12 @@
       "name": "KODEX 금융고배당TOP10",
       "trading_value": 2309010682.0,
       "market_cap": 13658.41
+    },
+    {
+      "ticker": "0092B0",
+      "name": "SOL 한국원자력SMR",
+      "trading_value": 2274797161.0,
+      "market_cap": 16505.45
     },
     {
       "ticker": "0167Z0",
@@ -1210,12 +1216,6 @@
       "name": "DS 코스닥액티브",
       "trading_value": 1905208050.0,
       "market_cap": 10479.31
-    },
-    {
-      "ticker": "0092B0",
-      "name": "SOL 한국원자력SMR",
-      "trading_value": 1874788716.0,
-      "market_cap": 16343.1
     },
     {
       "ticker": "489030",
@@ -1884,6 +1884,12 @@
       "market_cap": 107383.47
     },
     {
+      "ticker": "486450",
+      "name": "SOL 미국AI전력인프라",
+      "trading_value": 674290023.0,
+      "market_cap": 18492.61
+    },
+    {
       "ticker": "447620",
       "name": "SOL 미국TOP5채권혼합50",
       "trading_value": 673382857.0,
@@ -1992,12 +1998,6 @@
       "market_cap": 12022.98
     },
     {
-      "ticker": "436140",
-      "name": "SOL 종합채권(AA-이상)액티브",
-      "trading_value": 585685765.0,
-      "market_cap": 105673.32
-    },
-    {
       "ticker": "0041D0",
       "name": "KODEX 미국AI소프트웨어TOP10",
       "trading_value": 585333654.0,
@@ -2032,6 +2032,12 @@
       "name": "TIGER Fn신재생에너지",
       "trading_value": 563497345.0,
       "market_cap": 23850.05
+    },
+    {
+      "ticker": "479620",
+      "name": "SOL 미국AI반도체칩메이커",
+      "trading_value": 558438387.0,
+      "market_cap": 24462.03
     },
     {
       "ticker": "117460",
@@ -2320,12 +2326,6 @@
       "name": "SOL 미국나스닥100",
       "trading_value": 356858525.0,
       "market_cap": 16779.5
-    },
-    {
-      "ticker": "486450",
-      "name": "SOL 미국AI전력인프라",
-      "trading_value": 353396459.0,
-      "market_cap": 18165.27
     },
     {
       "ticker": "475350",
@@ -2670,12 +2670,6 @@
       "market_cap": 10673.62
     },
     {
-      "ticker": "479620",
-      "name": "SOL 미국AI반도체칩메이커",
-      "trading_value": 211946137.0,
-      "market_cap": 23939.74
-    },
-    {
       "ticker": "0131W0",
       "name": "1Q 단기특수은행채액티브",
       "trading_value": 204490000.0,
@@ -2910,6 +2904,12 @@
       "market_cap": 28379.87
     },
     {
+      "ticker": "0118S0",
+      "name": "SOL 미국넥스트테크TOP10액티브",
+      "trading_value": 144499481.0,
+      "market_cap": 10494.44
+    },
+    {
       "ticker": "442560",
       "name": "RISE TDF2040액티브 적격",
       "trading_value": 144137014.0,
@@ -3118,12 +3118,6 @@
       "name": "PLUS 미국양자컴퓨팅TOP10",
       "trading_value": 117900858.0,
       "market_cap": 15531.29
-    },
-    {
-      "ticker": "0118S0",
-      "name": "SOL 미국넥스트테크TOP10액티브",
-      "trading_value": 116089743.0,
-      "market_cap": 10355.3
     },
     {
       "ticker": "491090",
@@ -4054,6 +4048,12 @@
       "name": "PLUS 미국나스닥테크",
       "trading_value": 28642062.0,
       "market_cap": 53109.76
+    },
+    {
+      "ticker": "436140",
+      "name": "SOL 종합채권(AA-이상)액티브",
+      "trading_value": 28555095.0,
+      "market_cap": 105945.59
     },
     {
       "ticker": "368190",
