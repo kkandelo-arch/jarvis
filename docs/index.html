@@ -217,7 +217,7 @@
   }
   .manage-status { font-size: 12px; margin-top: 6px; min-height: 16px; }
     .search-results {
-    max-height: 180px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px;
+    max-height: 240px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px;
     margin-bottom: 6px; display: none; background: white;
   }
   .search-results.open { display: block; }
@@ -959,7 +959,15 @@ function renderSearchResults(containerId, query, targetKey) {
   const q = query.trim().toLowerCase();
   const matches = (etfMasterList || [])
     .filter((e) => e.ticker.toLowerCase().includes(q) || e.name.toLowerCase().includes(q))
-    .slice(0, 8);
+    .sort((a, b) => {
+      const aPos = a.name.toLowerCase().indexOf(q);
+      const bPos = b.name.toLowerCase().indexOf(q);
+      const aRank = aPos === -1 ? 999 : aPos;
+      const bRank = bPos === -1 ? 999 : bPos;
+      if (aRank !== bRank) return aRank - bRank;
+      return a.name.length - b.name.length;
+    })
+    .slice(0, 30);
 
   if (matches.length === 0) {
     container.innerHTML = `<div class="search-result-item" style="color:var(--text-sub)">검색 결과 없음</div>`;
