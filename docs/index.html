@@ -216,6 +216,20 @@
     background: none; border-radius: 10px; color: var(--blue); font-size: 13px; cursor: pointer;
   }
   .manage-status { font-size: 12px; margin-top: 6px; min-height: 16px; }
+    .search-results {
+    max-height: 180px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px;
+    margin-bottom: 6px; display: none; background: white;
+  }
+  .search-results.open { display: block; }
+  .search-result-item {
+    padding: 9px 10px; font-size: 13px; cursor: pointer; border-top: 1px solid var(--border);
+  }
+  .search-result-item:first-child { border-top: none; }
+  .search-result-item:active { background: var(--gray-bg); }
+  .selected-stock {
+    padding: 8px 10px; background: #dbeafe; border-radius: 8px; font-size: 13px; margin-bottom: 6px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
 </style>
 </head>
 <body>
@@ -923,8 +937,65 @@ document.querySelectorAll(".chip").forEach(chip => {
 const manageOverlay = document.getElementById("manageOverlay");
 const manageBody = document.getElementById("manageBody");
 
+let etfMasterList = null;
+let selectedStock = { add: null, watchAdd: null };
+
+async function ensureMasterList() {
+  if (!etfMasterList) {
+    const data = await fetchJson("etf_master_list.json");
+    etfMasterList = data?.etfs || [];
+  }
+  return etfMasterList;
+}
+
+function renderSearchResults(containerId, query, targetKey) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  if (!query || query.trim().length < 1) {
+    container.classList.remove("open");
+    container.innerHTML = "";
+    return;
+  }
+  const q = query.trim().toLowerCase();
+  const matches = (etfMasterList || [])
+    .filter((e) => e.ticker.toLowerCase().includes(q) || e.name.toLowerCase().includes(q))
+    .slice(0, 8);
+
+  if (matches.length === 0) {
+    container.innerHTML = `<div class="search-result-item" style="color:var(--text-sub)">검색 결과 없음</div>`;
+    container.classList.add("open");
+    return;
+  }
+  container.innerHTML = matches
+    .map(
+      (e) =>
+        `<div class="search-result-item" data-ticker="${e.ticker}" data-name="${e.name}" data-target="${targetKey}">${e.name} (${e.ticker})</div>`
+    )
+    .join("");
+  container.classList.add("open");
+}
+
+function showSelectedStock(key, selectedElId, searchElId, resultsElId) {
+  const selectedEl = document.getElementById(selectedElId);
+  const searchEl = document.getElementById(searchElId);
+  const resultsEl = document.getElementById(resultsElId);
+  const stock = selectedStock[key];
+  if (stock) {
+    selectedEl.style.display = "flex";
+    selectedEl.innerHTML = `<span>✅ ${stock.name} (${stock.ticker})</span><button class="manage-btn" data-action="clear-selected" data-target="${key}">변경</button>`;
+    searchEl.style.display = "none";
+  } else {
+    selectedEl.style.display = "none";
+    searchEl.style.display = "block";
+    searchEl.value = "";
+  }
+  resultsEl.classList.remove("open");
+  resultsEl.innerHTML = "";
+}
+
 document.getElementById("manageBtn").addEventListener("click", () => {
   manageOverlay.classList.add("open");
+  ensureMasterList();
   renderManagePanel();
 });
 document.getElementById("closeManageBtn").addEventListener("click", () => {
@@ -951,6 +1022,7 @@ async function afterSaveSuccess(statusEl, prefix) {
 
 async function renderManagePanel() {
   manageBody.innerHTML = `<div class="loading">불러오는 중...</div>`;
+  selectedStock = { add: null, watchAdd: null };
   const [holdings, watchlist] = await Promise.all([
     fetchJson("holdings.json"),
     fetchJson("custom_universe.json"),
@@ -997,8 +1069,9 @@ async function renderManagePanel() {
   html += `
     <button class="manage-add-btn" data-action="add-toggle">+ 신규 종목 등록</button>
     <div class="manage-form" id="add-form">
-      <input type="text" placeholder="종목코드(티커, 예: 069500)" id="add-ticker">
-      <input type="text" placeholder="종목명(예: KODEX 200)" id="add-name">
+      <input type="text" placeholder="종목코드 또는 종목명 검색 (예: 069500 또는 KODEX 200)" id="add-search">
+      <div class="search-results" id="add-search-results"></div>
+      <div class="selected-stock" id="add-selected" style="display:none"></div>
       <input type="number" placeholder="수량(주)" id="add-qty">
       <input type="number" placeholder="매수 단가(원)" id="add-price">
       <div class="manage-form-actions">
@@ -1029,8 +1102,9 @@ async function renderManagePanel() {
   html += `
     <button class="manage-add-btn" data-action="watch-add-toggle">+ 관심종목 추가</button>
     <div class="manage-form" id="watch-add-form">
-      <input type="text" placeholder="종목코드(티커)" id="watch-add-ticker">
-      <input type="text" placeholder="종목명" id="watch-add-name">
+      <input type="text" placeholder="종목코드 또는 종목명 검색" id="watch-add-search">
+      <div class="search-results" id="watch-add-search-results"></div>
+      <div class="selected-stock" id="watch-add-selected" style="display:none"></div>
       <div class="manage-form-actions">
         <button class="manage-btn primary" data-action="watch-add-submit">추가</button>
         <button class="manage-btn" data-action="watch-add-toggle">취소</button>
@@ -1042,11 +1116,37 @@ async function renderManagePanel() {
   manageBody.innerHTML = html;
 }
 
+manageBody.addEventListener("input", (e) => {
+  if (e.target.id === "add-search") {
+    renderSearchResults("add-search-results", e.target.value, "add");
+  }
+  if (e.target.id === "watch-add-search") {
+    renderSearchResults("watch-add-search-results", e.target.value, "watchAdd");
+  }
+});
+
 manageBody.addEventListener("click", async (e) => {
+  const resultItem = e.target.closest(".search-result-item");
+  if (resultItem && resultItem.dataset.ticker) {
+    const target = resultItem.dataset.target;
+    selectedStock[target] = { ticker: resultItem.dataset.ticker, name: resultItem.dataset.name };
+    if (target === "add") showSelectedStock("add", "add-selected", "add-search", "add-search-results");
+    if (target === "watchAdd") showSelectedStock("watchAdd", "watch-add-selected", "watch-add-search", "watch-add-search-results");
+    return;
+  }
+
   const btn = e.target.closest("[data-action]");
   if (!btn) return;
   const action = btn.dataset.action;
   const ticker = btn.dataset.ticker;
+
+  if (action === "clear-selected") {
+    const target = btn.dataset.target;
+    selectedStock[target] = null;
+    if (target === "add") showSelectedStock("add", "add-selected", "add-search", "add-search-results");
+    if (target === "watchAdd") showSelectedStock("watchAdd", "watch-add-selected", "watch-add-search", "watch-add-search-results");
+    return;
+  }
 
   if (action === "buy-toggle") {
     document.getElementById(`buy-form-${ticker}`).classList.toggle("open");
@@ -1057,10 +1157,14 @@ manageBody.addEventListener("click", async (e) => {
     return;
   }
   if (action === "add-toggle") {
+    selectedStock.add = null;
+    showSelectedStock("add", "add-selected", "add-search", "add-search-results");
     document.getElementById("add-form").classList.toggle("open");
     return;
   }
   if (action === "watch-add-toggle") {
+    selectedStock.watchAdd = null;
+    showSelectedStock("watchAdd", "watch-add-selected", "watch-add-search", "watch-add-search-results");
     document.getElementById("watch-add-form").classList.toggle("open");
     return;
   }
@@ -1093,13 +1197,13 @@ manageBody.addEventListener("click", async (e) => {
 
   if (action === "add-submit") {
     const statusEl = document.getElementById("add-status");
-    const t = document.getElementById("add-ticker").value.trim();
-    const name = document.getElementById("add-name").value.trim();
+    const stock = selectedStock.add;
     const qty = Number(document.getElementById("add-qty").value);
     const price = Number(document.getElementById("add-price").value);
-    if (!t || !name || !qty || !price) { statusEl.textContent = "모든 항목을 입력해주세요."; return; }
+    if (!stock) { statusEl.textContent = "종목을 검색해서 선택해주세요."; return; }
+    if (!qty || !price) { statusEl.textContent = "수량과 단가를 입력해주세요."; return; }
     statusEl.textContent = "처리 중...";
-    const res = await postAction("/holdings", { type: "add", ticker: t, name, quantity: qty, price });
+    const res = await postAction("/holdings", { type: "add", ticker: stock.ticker, name: stock.name, quantity: qty, price });
     if (res.error) { statusEl.textContent = "❌ " + res.error; return; }
     await afterSaveSuccess(statusEl, "✅ 신규등록");
     return;
@@ -1116,11 +1220,10 @@ manageBody.addEventListener("click", async (e) => {
 
   if (action === "watch-add-submit") {
     const statusEl = document.getElementById("watch-add-status");
-    const t = document.getElementById("watch-add-ticker").value.trim();
-    const name = document.getElementById("watch-add-name").value.trim();
-    if (!t || !name) { statusEl.textContent = "종목코드와 이름을 입력해주세요."; return; }
+    const stock = selectedStock.watchAdd;
+    if (!stock) { statusEl.textContent = "종목을 검색해서 선택해주세요."; return; }
     statusEl.textContent = "처리 중...";
-    const res = await postAction("/watchlist", { type: "add", ticker: t, name });
+    const res = await postAction("/watchlist", { type: "add", ticker: stock.ticker, name: stock.name });
     if (res.error) { statusEl.textContent = "❌ " + res.error; return; }
     statusEl.textContent = "✅ 추가 완료!";
     await renderManagePanel();
