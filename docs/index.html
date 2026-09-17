@@ -967,7 +967,7 @@ function renderSearchResults(containerId, query, targetKey) {
       if (aRank !== bRank) return aRank - bRank;
       return a.name.length - b.name.length;
     })
-    .slice(0, 15);
+    .slice(0, 30);
 
   if (matches.length === 0) {
     container.innerHTML = `<div class="search-result-item" style="color:var(--text-sub)">검색 결과 없음</div>`;
