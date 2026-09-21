@@ -6,6 +6,9 @@
 <title>DC 자비스</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2563eb">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <style>
   :root {
     --blue: #2563eb;
@@ -290,6 +293,21 @@
   </div>
 </div>
 <script>
+  const APP_VERSION = "2026-09-15-01"; // 배포할 때마다 이 값만 바꾸면 모든 기기가 자동으로 새로고침됨
+(function checkVersionAndReload() {
+  try {
+    const stored = localStorage.getItem("dc_jarvis_version");
+    if (stored && stored !== APP_VERSION) {
+      localStorage.setItem("dc_jarvis_version", APP_VERSION);
+      if ("caches" in window) {
+        caches.keys().then((names) => names.forEach((n) => caches.delete(n)));
+      }
+      location.reload(true);
+      return;
+    }
+    localStorage.setItem("dc_jarvis_version", APP_VERSION);
+  } catch (e) {}
+})();
 const REPO_RAW = "https://raw.githubusercontent.com/kkandelo-arch/jarvis/main/data/";
 const VAPID_PUBLIC_KEY = "BG32wpG4vuVXwbPcCm9G9z23SdNYIQzJZMRxQWnpfDxYAZRTKb0-CNIJUxaRnMssn94aOO0nXG289OUcE2czKss";
 const WORKER_BASE = "https://dc-jarvis-chat.kkandelo.workers.dev";
