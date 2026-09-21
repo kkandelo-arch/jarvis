@@ -1,187 +1,187 @@
 {
-  "timestamp": "2026-09-20T04:15:52.156197+00:00",
-  "data_as_of": "20260920",
+  "timestamp": "2026-09-21T09:53:33.933378+00:00",
+  "data_as_of": "20260921",
   "ranking_basis": "최근 거래대금 상위 30개 (레버리지/인버스/순수채권형/금리연동/환헤지(H) 제외, 주식+채권 혼합형과 커버드콜은 포함)",
   "top30": [
     {
       "ticker": "069500",
       "name": "KODEX 200",
-      "trading_value": 2281109031636.0,
-      "market_cap": 109611.87
+      "trading_value": 2327082882055.0,
+      "market_cap": 111814.09
     },
     {
       "ticker": "102110",
       "name": "TIGER 200",
-      "trading_value": 1611662057387.0,
-      "market_cap": 109874.23
+      "trading_value": 1618094584736.0,
+      "market_cap": 112082.47
     },
     {
       "ticker": "360750",
       "name": "TIGER 미국S&P500",
-      "trading_value": 648336649543.0,
-      "market_cap": 26198.35
+      "trading_value": 680002411514.0,
+      "market_cap": 26160.6
     },
     {
       "ticker": "133690",
       "name": "TIGER 미국나스닥100",
-      "trading_value": 646653305856.0,
-      "market_cap": 180377.48
-    },
-    {
-      "ticker": "379800",
-      "name": "KODEX 미국S&P500",
-      "trading_value": 582778421689.0,
-      "market_cap": 23814.28
+      "trading_value": 597907800328.0,
+      "market_cap": 180924.33
     },
     {
       "ticker": "379810",
       "name": "KODEX 미국나스닥100",
-      "trading_value": 562485355027.0,
-      "market_cap": 26956.31
+      "trading_value": 535426328030.0,
+      "market_cap": 27051.91
     },
     {
-      "ticker": "229200",
-      "name": "KODEX 코스닥150",
-      "trading_value": 297276418968.0,
-      "market_cap": 13864.58
+      "ticker": "379800",
+      "name": "KODEX 미국S&P500",
+      "trading_value": 384312585888.0,
+      "market_cap": 23780.25
     },
     {
       "ticker": "396500",
       "name": "TIGER 반도체TOP10",
-      "trading_value": 262366205528.0,
-      "market_cap": 37151.67
+      "trading_value": 339963936625.0,
+      "market_cap": 38346.51
     },
     {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "trading_value": 158984571212.0,
-      "market_cap": 131142.05
-    },
-    {
-      "ticker": "232080",
-      "name": "TIGER 코스닥150",
-      "trading_value": 155426308119.0,
-      "market_cap": 14139.23
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "trading_value": 300017691434.0,
+      "market_cap": 14068.8
     },
     {
       "ticker": "0167A0",
       "name": "SOL AI반도체TOP2플러스",
-      "trading_value": 146884270037.0,
-      "market_cap": 17751.07
+      "trading_value": 200911646843.0,
+      "market_cap": 18370.22
     },
     {
-      "ticker": "487240",
-      "name": "KODEX AI전력핵심설비",
-      "trading_value": 140530747607.0,
-      "market_cap": 37798.21
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "trading_value": 200908253969.0,
+      "market_cap": 135645.05
     },
     {
       "ticker": "395160",
       "name": "KODEX AI반도체TOP2플러스",
-      "trading_value": 134709581434.0,
-      "market_cap": 40412.28
+      "trading_value": 151088528124.0,
+      "market_cap": 41718.53
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "trading_value": 138163014358.0,
+      "market_cap": 14345.72
     },
     {
       "ticker": "498400",
       "name": "KODEX 200타겟위클리커버드콜",
-      "trading_value": 107000774935.0,
-      "market_cap": 20398.95
-    },
-    {
-      "ticker": "442580",
-      "name": "PLUS 글로벌HBM반도체",
-      "trading_value": 88105545580.0,
-      "market_cap": 100520.86
+      "trading_value": 125148152370.0,
+      "market_cap": 20772.29
     },
     {
       "ticker": "148020",
       "name": "RISE 200",
-      "trading_value": 87834105245.0,
-      "market_cap": 110443.69
-    },
-    {
-      "ticker": "381180",
-      "name": "TIGER 미국필라델피아반도체나스닥",
-      "trading_value": 67129422079.0,
-      "market_cap": 41750.42
+      "trading_value": 112006547621.0,
+      "market_cap": 112658.79
     },
     {
       "ticker": "472150",
       "name": "TIGER 배당커버드콜액티브",
-      "trading_value": 63524549441.0,
-      "market_cap": 20573.3
-    },
-    {
-      "ticker": "390390",
-      "name": "KODEX 미국반도체",
-      "trading_value": 60732991377.0,
-      "market_cap": 52697.62
-    },
-    {
-      "ticker": "105190",
-      "name": "ACE 200",
-      "trading_value": 57009090835.0,
-      "market_cap": 109869.29
-    },
-    {
-      "ticker": "0162Z0",
-      "name": "RISE 삼성전자SK하이닉스채권혼합50",
-      "trading_value": 54625660421.0,
-      "market_cap": 13718.45
+      "trading_value": 85713018730.0,
+      "market_cap": 20990.72
     },
     {
       "ticker": "395270",
       "name": "HANARO Fn K-반도체",
-      "trading_value": 54322700679.0,
-      "market_cap": 57583.97
+      "trading_value": 83519281966.0,
+      "market_cap": 59417.13
     },
     {
-      "ticker": "117700",
-      "name": "KODEX 건설",
-      "trading_value": 44160419109.0,
-      "market_cap": 7271.26
-    },
-    {
-      "ticker": "0177N0",
-      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
-      "trading_value": 38879186475.0,
-      "market_cap": 14428.32
-    },
-    {
-      "ticker": "426030",
-      "name": "TIME 미국나스닥100액티브",
-      "trading_value": 37216421479.0,
-      "market_cap": 46498.54
-    },
-    {
-      "ticker": "0117V0",
-      "name": "TIGER 코리아AI전력기기TOP3플러스",
-      "trading_value": 35979798776.0,
-      "market_cap": 19724.12
-    },
-    {
-      "ticker": "0219E0",
-      "name": "KODEX 200커버드콜액티브",
-      "trading_value": 34148579563.0,
-      "market_cap": 8445.04
-    },
-    {
-      "ticker": "484880",
-      "name": "SOL 금융지주플러스고배당",
-      "trading_value": 33874657129.0,
-      "market_cap": 22983.16
-    },
-    {
-      "ticker": "381170",
-      "name": "TIGER 미국테크TOP10 INDXX",
-      "trading_value": 30042374323.0,
-      "market_cap": 31440.73
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "trading_value": 80972702851.0,
+      "market_cap": 37137.06
     },
     {
       "ticker": "305720",
       "name": "KODEX 2차전지산업",
-      "trading_value": 30007002615.0,
-      "market_cap": 14662.5
+      "trading_value": 67574564527.0,
+      "market_cap": 14375.74
+    },
+    {
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
+      "trading_value": 59861829639.0,
+      "market_cap": 13924.26
+    },
+    {
+      "ticker": "381180",
+      "name": "TIGER 미국필라델피아반도체나스닥",
+      "trading_value": 59522983344.0,
+      "market_cap": 42782.27
+    },
+    {
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
+      "trading_value": 50411707189.0,
+      "market_cap": 105364.86
+    },
+    {
+      "ticker": "455850",
+      "name": "SOL AI반도체소부장",
+      "trading_value": 47083325416.0,
+      "market_cap": 25933.21
+    },
+    {
+      "ticker": "0177N0",
+      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
+      "trading_value": 46833428546.0,
+      "market_cap": 14633.76
+    },
+    {
+      "ticker": "069660",
+      "name": "KIWOOM 200",
+      "trading_value": 46826446580.0,
+      "market_cap": 111762.94
+    },
+    {
+      "ticker": "0219E0",
+      "name": "KODEX 200커버드콜액티브",
+      "trading_value": 35889175874.0,
+      "market_cap": 8590.81
+    },
+    {
+      "ticker": "0148J0",
+      "name": "TIGER 코리아휴머노이드로봇산업",
+      "trading_value": 35298070985.0,
+      "market_cap": 9777.97
+    },
+    {
+      "ticker": "152100",
+      "name": "PLUS 200",
+      "trading_value": 34295334817.0,
+      "market_cap": 113510.77
+    },
+    {
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
+      "trading_value": 32714292994.0,
+      "market_cap": 141580.05
+    },
+    {
+      "ticker": "105190",
+      "name": "ACE 200",
+      "trading_value": 31888421442.0,
+      "market_cap": 112075.76
+    },
+    {
+      "ticker": "390390",
+      "name": "KODEX 미국반도체",
+      "trading_value": 29484501849.0,
+      "market_cap": 53679.29
     }
   ]
 }
