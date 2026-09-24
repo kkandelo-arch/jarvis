@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-09-23T12:21:44.876425+00:00",
-  "data_as_of": "20260923",
+  "timestamp": "2026-09-24T12:25:24.571982+00:00",
+  "data_as_of": "20260924",
   "ranking_basis": "최근 거래대금 상위 30개 (레버리지/인버스/순수채권형/금리연동/환헤지(H) 제외, 주식+채권 혼합형과 커버드콜은 포함)",
   "top30": [
     {
@@ -78,8 +78,8 @@
     {
       "ticker": "472150",
       "name": "TIGER 배당커버드콜액티브",
-      "trading_value": 113614178941.0,
-      "market_cap": 21001.33
+      "trading_value": 90035651547.0,
+      "market_cap": 21274.44
     },
     {
       "ticker": "498400",
@@ -148,6 +148,12 @@
       "market_cap": 14336.16
     },
     {
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
+      "trading_value": 37316395367.0,
+      "market_cap": 145745.59
+    },
+    {
       "ticker": "381170",
       "name": "TIGER 미국테크TOP10 INDXX",
       "trading_value": 35401456015.0,
@@ -176,12 +182,6 @@
       "name": "TIGER 코리아휴머노이드로봇산업",
       "trading_value": 32198690977.0,
       "market_cap": 9695.14
-    },
-    {
-      "ticker": "139260",
-      "name": "TIGER 200 IT",
-      "trading_value": 31417875389.0,
-      "market_cap": 143173.74
     }
   ]
 }
