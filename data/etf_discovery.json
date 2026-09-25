@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-24T12:40:10.944435+00:00",
+  "timestamp": "2026-09-25T12:41:25.450395+00:00",
   "macro_composite_score": 16,
   "scanned_count": 30,
   "ranking_basis": "adjusted_score (5지표 가중합산 x 백테스트 신뢰도), 기본목록은 거래대금 상위 자동선정",
@@ -32,8 +32,8 @@
       "components": {
         "momentum_20d_pct": 10.03,
         "momentum_score": 100,
-        "band_position_pct": 62.6,
-        "band_score": 96,
+        "band_position_pct": 62.3,
+        "band_score": 97,
         "macro_score": 100,
         "supply_net_eok": 1055.4,
         "supply_score": 100,
@@ -61,7 +61,7 @@
       "components": {
         "momentum_20d_pct": 9.1,
         "momentum_score": 96,
-        "band_position_pct": 61.5,
+        "band_position_pct": 61.2,
         "band_score": 98,
         "macro_score": 100,
         "supply_net_eok": 983.9,
@@ -90,7 +90,7 @@
       "components": {
         "momentum_20d_pct": 9.26,
         "momentum_score": 96,
-        "band_position_pct": 64.1,
+        "band_position_pct": 64.0,
         "band_score": 94,
         "macro_score": 100,
         "supply_net_eok": 343.6,
@@ -119,8 +119,8 @@
       "components": {
         "momentum_20d_pct": 10.38,
         "momentum_score": 100,
-        "band_position_pct": 67.8,
-        "band_score": 88,
+        "band_position_pct": 67.6,
+        "band_score": 89,
         "macro_score": 100,
         "supply_net_eok": 817.5,
         "supply_score": 100,
@@ -148,8 +148,8 @@
       "components": {
         "momentum_20d_pct": 7.46,
         "momentum_score": 87,
-        "band_position_pct": 67.0,
-        "band_score": 89,
+        "band_position_pct": 66.9,
+        "band_score": 90,
         "macro_score": 100,
         "supply_net_eok": 359.8,
         "supply_score": 100,
@@ -179,8 +179,8 @@
       "components": {
         "momentum_20d_pct": 10.03,
         "momentum_score": 100,
-        "band_position_pct": 62.6,
-        "band_score": 96,
+        "band_position_pct": 62.3,
+        "band_score": 97,
         "macro_score": 100,
         "supply_net_eok": 1055.4,
         "supply_score": 100,
@@ -208,7 +208,7 @@
       "components": {
         "momentum_20d_pct": 9.1,
         "momentum_score": 96,
-        "band_position_pct": 61.5,
+        "band_position_pct": 61.2,
         "band_score": 98,
         "macro_score": 100,
         "supply_net_eok": 983.9,
@@ -237,7 +237,7 @@
       "components": {
         "momentum_20d_pct": 9.26,
         "momentum_score": 96,
-        "band_position_pct": 64.1,
+        "band_position_pct": 64.0,
         "band_score": 94,
         "macro_score": 100,
         "supply_net_eok": 343.6,
@@ -266,8 +266,8 @@
       "components": {
         "momentum_20d_pct": 10.38,
         "momentum_score": 100,
-        "band_position_pct": 67.8,
-        "band_score": 88,
+        "band_position_pct": 67.6,
+        "band_score": 89,
         "macro_score": 100,
         "supply_net_eok": 817.5,
         "supply_score": 100,
@@ -295,8 +295,8 @@
       "components": {
         "momentum_20d_pct": 7.46,
         "momentum_score": 87,
-        "band_position_pct": 67.0,
-        "band_score": 89,
+        "band_position_pct": 66.9,
+        "band_score": 90,
         "macro_score": 100,
         "supply_net_eok": 359.8,
         "supply_score": 100,
@@ -324,7 +324,7 @@
       "components": {
         "momentum_20d_pct": 3.67,
         "momentum_score": 68,
-        "band_position_pct": 66.2,
+        "band_position_pct": 65.9,
         "band_score": 91,
         "macro_score": 100,
         "supply_net_eok": 6680.3,
@@ -353,8 +353,8 @@
       "components": {
         "momentum_20d_pct": 3.62,
         "momentum_score": 68,
-        "band_position_pct": 66.5,
-        "band_score": 90,
+        "band_position_pct": 66.2,
+        "band_score": 91,
         "macro_score": 100,
         "supply_net_eok": 1150.9,
         "supply_score": 100,
@@ -382,7 +382,7 @@
       "components": {
         "momentum_20d_pct": 3.61,
         "momentum_score": 68,
-        "band_position_pct": 66.2,
+        "band_position_pct": 65.9,
         "band_score": 91,
         "macro_score": 100,
         "supply_net_eok": 137.7,
@@ -469,7 +469,7 @@
       "components": {
         "momentum_20d_pct": 6.14,
         "momentum_score": 81,
-        "band_position_pct": 62.7,
+        "band_position_pct": 62.5,
         "band_score": 96,
         "macro_score": 100,
         "supply_net_eok": 188.0,
@@ -585,8 +585,8 @@
       "components": {
         "momentum_20d_pct": 2.57,
         "momentum_score": 63,
-        "band_position_pct": 65.1,
-        "band_score": 92,
+        "band_position_pct": 64.7,
+        "band_score": 93,
         "macro_score": 100,
         "supply_net_eok": 157.9,
         "supply_score": 100,
@@ -614,8 +614,8 @@
       "components": {
         "momentum_20d_pct": 11.88,
         "momentum_score": 100,
-        "band_position_pct": 68.5,
-        "band_score": 87,
+        "band_position_pct": 68.0,
+        "band_score": 88,
         "macro_score": 100,
         "supply_net_eok": 46.5,
         "supply_score": 73,
@@ -643,7 +643,7 @@
       "components": {
         "momentum_20d_pct": 13.83,
         "momentum_score": 100,
-        "band_position_pct": 73.4,
+        "band_position_pct": 73.1,
         "band_score": 80,
         "macro_score": 100,
         "supply_net_eok": 347.1,
@@ -672,8 +672,8 @@
       "components": {
         "momentum_20d_pct": 4.96,
         "momentum_score": 75,
-        "band_position_pct": 57.7,
-        "band_score": 97,
+        "band_position_pct": 57.5,
+        "band_score": 96,
         "macro_score": 100,
         "supply_net_eok": -85.5,
         "supply_score": 7,
@@ -701,8 +701,8 @@
       "components": {
         "momentum_20d_pct": 1.67,
         "momentum_score": 58,
-        "band_position_pct": 54.7,
-        "band_score": 92,
+        "band_position_pct": 54.3,
+        "band_score": 91,
         "macro_score": 100,
         "supply_net_eok": -2984.5,
         "supply_score": 0,
@@ -730,7 +730,7 @@
       "components": {
         "momentum_20d_pct": 1.6,
         "momentum_score": 58,
-        "band_position_pct": 56.2,
+        "band_position_pct": 55.8,
         "band_score": 94,
         "macro_score": 100,
         "supply_net_eok": -397.6,
@@ -759,7 +759,7 @@
       "components": {
         "momentum_20d_pct": -2.18,
         "momentum_score": 39,
-        "band_position_pct": 44.2,
+        "band_position_pct": 44.0,
         "band_score": 76,
         "macro_score": 100,
         "supply_net_eok": 40.1,
@@ -788,8 +788,8 @@
       "components": {
         "momentum_20d_pct": 5.25,
         "momentum_score": 76,
-        "band_position_pct": 64.4,
-        "band_score": 93,
+        "band_position_pct": 64.3,
+        "band_score": 94,
         "macro_score": 100,
         "supply_net_eok": -348.5,
         "supply_score": 0,
@@ -817,7 +817,7 @@
       "components": {
         "momentum_20d_pct": 3.0,
         "momentum_score": 65,
-        "band_position_pct": 62.7,
+        "band_position_pct": 62.4,
         "band_score": 96,
         "macro_score": 100,
         "supply_net_eok": -2673.8,
@@ -846,7 +846,7 @@
       "components": {
         "momentum_20d_pct": 3.02,
         "momentum_score": 65,
-        "band_position_pct": 62.1,
+        "band_position_pct": 61.9,
         "band_score": 97,
         "macro_score": 100,
         "supply_net_eok": -3874.9,
@@ -875,8 +875,8 @@
       "components": {
         "momentum_20d_pct": -0.63,
         "momentum_score": 47,
-        "band_position_pct": 58.5,
-        "band_score": 98,
+        "band_position_pct": 58.1,
+        "band_score": 97,
         "macro_score": 100,
         "supply_net_eok": -7134.7,
         "supply_score": 0,
@@ -904,7 +904,7 @@
       "components": {
         "momentum_20d_pct": -0.65,
         "momentum_score": 47,
-        "band_position_pct": 56.1,
+        "band_position_pct": 55.8,
         "band_score": 94,
         "macro_score": 100,
         "supply_net_eok": -3859.2,
