@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-25T12:41:25.450395+00:00",
+  "timestamp": "2026-09-26T00:00:55.126202+00:00",
   "macro_composite_score": 16,
   "scanned_count": 30,
   "ranking_basis": "adjusted_score (5지표 가중합산 x 백테스트 신뢰도), 기본목록은 거래대금 상위 자동선정",
