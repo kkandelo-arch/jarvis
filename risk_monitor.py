@@ -211,13 +211,14 @@ def main():
 
     print(json.dumps(output, ensure_ascii=False, indent=2))
 
-    # ===== 알림 발송 (건별 개별 발송 + 중복 발송 방지) =====
+        # ===== 알림 발송 (건별 개별 발송 + 중복 발송 방지) =====
     notify_state = load_notify_state()
     sent_count = 0
 
-    # 1) 가격변동: "긴급"/"경고"만 발송 (주의/정보/정상은 앱에서 확인, 알림 피로 방지)
-        urgent_price = [
-        a for a in alerts if a["type"] == "가격변동" and (
+    # 1) 가격변동: 보유종목은 "주의"부터, 그 외는 "경고"부터 발송 (알림 피로 방지)
+    urgent_price = [
+        a for a in alerts
+        if a["type"] == "가격변동" and (
             (a["origin"] == "보유종목" and a["level"] in ("긴급", "경고", "주의"))
             or (a["origin"] != "보유종목" and a["level"] in ("긴급", "경고"))
         )
