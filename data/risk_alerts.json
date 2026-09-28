@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-28T03:27:02.179937+00:00",
+  "timestamp": "2026-09-28T10:05:18.394939+00:00",
   "checked_count": 30,
-  "alert_count": 9,
+  "alert_count": 14,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -9,8 +9,17 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.58,
-      "message": "TIGER 미국우주테크 1일 급락 3.58%"
+      "change_pct": -3.89,
+      "message": "TIGER 미국우주테크 1일 급락 3.89%"
+    },
+    {
+      "ticker": "102110",
+      "name": "TIGER 200",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.14,
+      "message": "TIGER 200 1일 급락 3.14%"
     },
     {
       "ticker": "396500",
@@ -18,8 +27,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.21,
-      "message": "TIGER 반도체TOP10 1일 급락 4.21%"
+      "change_pct": -4.84,
+      "message": "TIGER 반도체TOP10 1일 급락 4.84%"
+    },
+    {
+      "ticker": "148020",
+      "name": "RISE 200",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.13,
+      "message": "RISE 200 1일 급락 3.13%"
     },
     {
       "ticker": "395270",
@@ -27,8 +45,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.01,
-      "message": "HANARO Fn K-반도체 1일 급락 4.01%"
+      "change_pct": -4.14,
+      "message": "HANARO Fn K-반도체 1일 급락 4.14%"
+    },
+    {
+      "ticker": "069500",
+      "name": "KODEX 200",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.22,
+      "message": "KODEX 200 1일 급락 3.22%"
     },
     {
       "ticker": "458730",
@@ -40,13 +67,22 @@
       "message": "TIGER 미국배당다우존스 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
+      "ticker": "091230",
+      "name": "TIGER 반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.21,
+      "message": "TIGER 반도체 1일 급락 3.21%"
+    },
+    {
       "ticker": "471760",
       "name": "TIGER AI반도체핵심공정",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER AI반도체핵심공정 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 99.5,
+      "message": "TIGER AI반도체핵심공정 52주 밴드 상단 근접(99.5%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "0177R0",
@@ -54,8 +90,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.74,
-      "message": "TIGER 반도체TOP10커버드콜액티브 1일 급락 3.74%"
+      "change_pct": -4.49,
+      "message": "TIGER 반도체TOP10커버드콜액티브 1일 급락 4.49%"
     },
     {
       "ticker": "0072R0",
@@ -67,13 +103,13 @@
       "message": "TIGER KRX금현물 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "367760",
-      "name": "RISE 네트워크인프라",
+      "ticker": "462010",
+      "name": "TIGER 2차전지소재Fn",
       "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 95.4,
-      "message": "RISE 네트워크인프라 52주 밴드 상단 근접(95.4%) - 신규매수 시 유의(과열구간)"
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": 3.09,
+      "message": "TIGER 2차전지소재Fn 1일 급등 3.09%"
     },
     {
       "ticker": "0167A0",
@@ -81,8 +117,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.55,
-      "message": "SOL AI반도체TOP2플러스 1일 급락 3.55%"
+      "change_pct": -4.15,
+      "message": "SOL AI반도체TOP2플러스 1일 급락 4.15%"
+    },
+    {
+      "ticker": "361580",
+      "name": "RISE 200TR",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.09,
+      "message": "RISE 200TR 1일 급락 3.09%"
     }
   ]
 }
