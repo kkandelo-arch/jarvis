@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-29T04:03:16.933123+00:00",
+  "timestamp": "2026-09-29T10:41:07.985603+00:00",
   "checked_count": 31,
   "alert_count": 7,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정상",
-      "change_pct": -1.24,
-      "message": "TIGER 미국우주테크 1일 급락 1.24%"
+      "change_pct": -1.05,
+      "message": "TIGER 미국우주테크 1일 급락 1.05%"
     },
     {
       "ticker": "091160",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.12,
-      "message": "KODEX 반도체 1일 급등 3.12%"
+      "change_pct": 3.58,
+      "message": "KODEX 반도체 1일 급등 3.58%"
     },
     {
       "ticker": "091160",
@@ -36,17 +36,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.61,
-      "message": "KODEX 2차전지산업 1일 급락 3.61%"
+      "change_pct": -3.55,
+      "message": "KODEX 2차전지산업 1일 급락 3.55%"
     },
     {
       "ticker": "455850",
       "name": "SOL AI반도체소부장",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.26,
-      "message": "SOL AI반도체소부장 1일 급등 4.26%"
+      "level": "주의",
+      "change_pct": 5.26,
+      "message": "SOL AI반도체소부장 1일 급등 5.26%"
     },
     {
       "ticker": "455850",
@@ -63,8 +63,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.56,
-      "message": "TIGER 2차전지TOP10 1일 급락 3.56%"
+      "change_pct": -3.66,
+      "message": "TIGER 2차전지TOP10 1일 급락 3.66%"
     }
   ]
 }
