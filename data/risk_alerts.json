@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-30T03:50:16.327393+00:00",
+  "timestamp": "2026-09-30T10:16:36.544140+00:00",
   "checked_count": 31,
   "alert_count": 5,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정상",
-      "change_pct": -1.56,
-      "message": "TIGER 미국우주테크 1일 급락 1.56%"
+      "change_pct": -1.58,
+      "message": "TIGER 미국우주테크 1일 급락 1.58%"
     },
     {
       "ticker": "091160",
