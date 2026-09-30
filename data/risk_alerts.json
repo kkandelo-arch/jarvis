@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-29T10:41:07.985603+00:00",
+  "timestamp": "2026-09-30T03:50:16.327393+00:00",
   "checked_count": 31,
-  "alert_count": 7,
+  "alert_count": 5,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -9,17 +9,8 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정상",
-      "change_pct": -1.05,
-      "message": "TIGER 미국우주테크 1일 급락 1.05%"
-    },
-    {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": 3.58,
-      "message": "KODEX 반도체 1일 급등 3.58%"
+      "change_pct": -1.56,
+      "message": "TIGER 미국우주테크 1일 급락 1.56%"
     },
     {
       "ticker": "091160",
@@ -31,24 +22,6 @@
       "message": "KODEX 반도체 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.55,
-      "message": "KODEX 2차전지산업 1일 급락 3.55%"
-    },
-    {
-      "ticker": "455850",
-      "name": "SOL AI반도체소부장",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": 5.26,
-      "message": "SOL AI반도체소부장 1일 급등 5.26%"
-    },
-    {
       "ticker": "455850",
       "name": "SOL AI반도체소부장",
       "origin": "기본(거래대금상위)",
@@ -58,13 +31,22 @@
       "message": "SOL AI반도체소부장 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
-      "ticker": "364980",
-      "name": "TIGER 2차전지TOP10",
+      "ticker": "471990",
+      "name": "KODEX AI반도체핵심장비",
       "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.66,
-      "message": "TIGER 2차전지TOP10 1일 급락 3.66%"
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "KODEX AI반도체핵심장비 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
+    },
+    {
+      "ticker": "475300",
+      "name": "SOL 반도체전공정",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 100.0,
+      "message": "SOL 반도체전공정 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     }
   ]
 }
