@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-10-02T03:54:41.516240+00:00",
+  "timestamp": "2026-10-02T10:18:19.464425+00:00",
   "checked_count": 31,
-  "alert_count": 16,
+  "alert_count": 13,
   "alerts": [
     {
       "ticker": "0183J0",
       "name": "TIGER 미국우주테크",
       "origin": "보유종목",
       "type": "가격변동",
-      "level": "정상",
-      "change_pct": -2.74,
-      "message": "TIGER 미국우주테크 1일 급락 2.74%"
+      "level": "정보",
+      "change_pct": -3.16,
+      "message": "TIGER 미국우주테크 1일 급락 3.16%"
     },
     {
       "ticker": "229200",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 97.0,
-      "message": "KODEX 코스닥150 52주 밴드 상단 근접(97.0%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 95.3,
+      "message": "KODEX 코스닥150 52주 밴드 상단 근접(95.3%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "396500",
@@ -27,8 +27,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 반도체TOP10 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 99.5,
+      "message": "TIGER 반도체TOP10 52주 밴드 상단 근접(99.5%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "091160",
@@ -36,8 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 99.4,
-      "message": "KODEX 반도체 52주 밴드 상단 근접(99.4%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 97.8,
+      "message": "KODEX 반도체 52주 밴드 상단 근접(97.8%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "0167A0",
@@ -45,8 +45,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 98.5,
-      "message": "SOL AI반도체TOP2플러스 52주 밴드 상단 근접(98.5%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 97.3,
+      "message": "SOL AI반도체TOP2플러스 52주 밴드 상단 근접(97.3%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "232080",
@@ -54,8 +54,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 96.7,
-      "message": "TIGER 코스닥150 52주 밴드 상단 근접(96.7%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 96.4,
+      "message": "TIGER 코스닥150 52주 밴드 상단 근접(96.4%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "395160",
@@ -72,8 +72,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 97.5,
-      "message": "SOL AI반도체소부장 52주 밴드 상단 근접(97.5%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 96.2,
+      "message": "SOL AI반도체소부장 52주 밴드 상단 근접(96.2%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "475300",
@@ -81,8 +81,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.23,
-      "message": "SOL 반도체전공정 1일 급락 3.23%"
+      "change_pct": -3.8,
+      "message": "SOL 반도체전공정 1일 급락 3.8%"
     },
     {
       "ticker": "395270",
@@ -94,31 +94,13 @@
       "message": "HANARO Fn K-반도체 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
-      "ticker": "0162Z0",
-      "name": "RISE 삼성전자SK하이닉스채권혼합50",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 95.8,
-      "message": "RISE 삼성전자SK하이닉스채권혼합50 52주 밴드 상단 근접(95.8%) - 신규매수 시 유의(과열구간)"
-    },
-    {
       "ticker": "471990",
       "name": "KODEX AI반도체핵심장비",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 99.2,
-      "message": "KODEX AI반도체핵심장비 52주 밴드 상단 근접(99.2%) - 신규매수 시 유의(과열구간)"
-    },
-    {
-      "ticker": "0177N0",
-      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 95.3,
-      "message": "KODEX 삼성전자SK하이닉스채권혼합50 52주 밴드 상단 근접(95.3%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 98.0,
+      "message": "KODEX AI반도체핵심장비 52주 밴드 상단 근접(98.0%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "139260",
@@ -130,22 +112,13 @@
       "message": "TIGER 200 IT 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
-      "ticker": "498410",
-      "name": "KODEX 금융고배당TOP10타겟위클리커버드콜",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 2.5,
-      "message": "KODEX 금융고배당TOP10타겟위클리커버드콜 52주 밴드 하단 근접(2.5%) - 관망 후보(저평가구간)"
-    },
-    {
       "ticker": "466920",
       "name": "SOL 조선TOP3플러스",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "SOL 조선TOP3플러스 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+      "band_position_pct": 2.6,
+      "message": "SOL 조선TOP3플러스 52주 밴드 하단 근접(2.6%) - 관망 후보(저평가구간)"
     }
   ]
 }
