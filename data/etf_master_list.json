@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-27T23:27:55.815539+00:00",
-  "date_used": "20260927",
-  "count": 1175,
+  "timestamp": "2026-10-04T23:41:25.660612+00:00",
+  "date_used": "20261004",
+  "count": 1171,
   "etfs": [
     {
       "ticker": "0193M0",
@@ -3428,20 +3428,8 @@
       "name": "KIWOOM 200선물인버스"
     },
     {
-      "ticker": "464240",
-      "name": "KIWOOM 26-09회사채(AA-이상)액티브"
-    },
-    {
       "ticker": "458210",
       "name": "KIWOOM CD금리액티브(합성)"
-    },
-    {
-      "ticker": "488200",
-      "name": "KIWOOM K-2차전지북미공급망"
-    },
-    {
-      "ticker": "488210",
-      "name": "KIWOOM K-반도체북미공급망"
     },
     {
       "ticker": "100910",
@@ -3630,10 +3618,6 @@
     {
       "ticker": "454780",
       "name": "KIWOOM 종합채권(AA-이상)액티브"
-    },
-    {
-      "ticker": "454180",
-      "name": "KIWOOM 차이나내수소비TOP CSI"
     },
     {
       "ticker": "104530",
