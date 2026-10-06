@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-06T04:42:33.988093+00:00",
+  "timestamp": "2026-10-06T11:32:23.098601+00:00",
   "checked_count": 31,
   "alert_count": 25,
   "alerts": [
@@ -9,8 +9,8 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.43,
-      "message": "TIGER 미국우주테크 1일 급등 5.43%"
+      "change_pct": 5.98,
+      "message": "TIGER 미국우주테크 1일 급등 5.98%"
     },
     {
       "ticker": "229200",
@@ -18,8 +18,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 4.02,
-      "message": "KODEX 코스닥150 1일 급등 4.02%"
+      "change_pct": 4.41,
+      "message": "KODEX 코스닥150 1일 급등 4.41%"
     },
     {
       "ticker": "229200",
@@ -53,9 +53,9 @@
       "name": "SOL AI반도체소부장",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.9,
-      "message": "SOL AI반도체소부장 1일 급등 4.9%"
+      "level": "주의",
+      "change_pct": 5.02,
+      "message": "SOL AI반도체소부장 1일 급등 5.02%"
     },
     {
       "ticker": "455850",
@@ -72,8 +72,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 3.78,
-      "message": "TIGER 코스닥150 1일 급등 3.78%"
+      "change_pct": 4.23,
+      "message": "TIGER 코스닥150 1일 급등 4.23%"
     },
     {
       "ticker": "232080",
@@ -99,8 +99,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 99.7,
-      "message": "KODEX AI반도체TOP2플러스 52주 밴드 상단 근접(99.7%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 100.0,
+      "message": "KODEX AI반도체TOP2플러스 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "475300",
@@ -108,8 +108,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.26,
-      "message": "SOL 반도체전공정 1일 급등 5.26%"
+      "change_pct": 5.43,
+      "message": "SOL 반도체전공정 1일 급등 5.43%"
     },
     {
       "ticker": "475300",
@@ -126,8 +126,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 6.11,
-      "message": "KODEX AI반도체핵심장비 1일 급등 6.11%"
+      "change_pct": 6.53,
+      "message": "KODEX AI반도체핵심장비 1일 급등 6.53%"
     },
     {
       "ticker": "471990",
@@ -144,8 +144,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "주의",
-      "change_pct": 5.4,
-      "message": "KODEX 2차전지산업 1일 급등 5.4%"
+      "change_pct": 6.0,
+      "message": "KODEX 2차전지산업 1일 급등 6.0%"
     },
     {
       "ticker": "305720",
@@ -179,9 +179,9 @@
       "name": "SOL 반도체후공정",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": 4.32,
-      "message": "SOL 반도체후공정 1일 급등 4.32%"
+      "level": "주의",
+      "change_pct": 5.1,
+      "message": "SOL 반도체후공정 1일 급등 5.1%"
     },
     {
       "ticker": "475310",
@@ -216,8 +216,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": 4.03,
-      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 4.03%"
+      "change_pct": 3.83,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급등 3.83%"
     },
     {
       "ticker": "0148J0",
@@ -225,8 +225,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 96.8,
-      "message": "TIGER 코리아휴머노이드로봇산업 52주 밴드 상단 근접(96.8%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 95.7,
+      "message": "TIGER 코리아휴머노이드로봇산업 52주 밴드 상단 근접(95.7%) - 신규매수 시 유의(과열구간)"
     }
   ]
 }
