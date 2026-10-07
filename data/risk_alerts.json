@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-10-07T04:08:07.680889+00:00",
+  "timestamp": "2026-10-07T11:04:51.219344+00:00",
   "checked_count": 31,
-  "alert_count": 8,
+  "alert_count": 15,
   "alerts": [
     {
       "ticker": "0183J0",
@@ -9,44 +9,89 @@
       "origin": "보유종목",
       "type": "가격변동",
       "level": "정상",
-      "change_pct": 0.38,
-      "message": "TIGER 미국우주테크 1일 급등 0.38%"
+      "change_pct": -0.19,
+      "message": "TIGER 미국우주테크 1일 급락 0.19%"
+    },
+    {
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.19,
+      "message": "KODEX 코스닥150 1일 급락 3.19%"
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -4.2,
+      "message": "KODEX 반도체 1일 급락 4.2%"
+    },
+    {
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.08,
+      "message": "TIGER 반도체TOP10 1일 급락 3.08%"
     },
     {
       "ticker": "455850",
       "name": "SOL AI반도체소부장",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
+      "level": "주의",
+      "change_pct": -5.37,
+      "message": "SOL AI반도체소부장 1일 급락 5.37%"
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.47,
-      "message": "SOL AI반도체소부장 1일 급락 3.47%"
+      "change_pct": -3.19,
+      "message": "TIGER 코스닥150 1일 급락 3.19%"
+    },
+    {
+      "ticker": "0167A0",
+      "name": "SOL AI반도체TOP2플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.49,
+      "message": "SOL AI반도체TOP2플러스 1일 급락 3.49%"
     },
     {
       "ticker": "475300",
       "name": "SOL 반도체전공정",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.96,
-      "message": "SOL 반도체전공정 1일 급락 4.96%"
+      "level": "경고",
+      "change_pct": -7.13,
+      "message": "SOL 반도체전공정 1일 급락 7.13%"
     },
     {
       "ticker": "471990",
       "name": "KODEX AI반도체핵심장비",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.41,
-      "message": "KODEX AI반도체핵심장비 1일 급락 3.41%"
+      "level": "주의",
+      "change_pct": -5.56,
+      "message": "KODEX AI반도체핵심장비 1일 급락 5.56%"
     },
     {
       "ticker": "487240",
       "name": "KODEX AI전력핵심설비",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.6,
-      "message": "KODEX AI전력핵심설비 1일 급락 3.6%"
+      "level": "주의",
+      "change_pct": -5.18,
+      "message": "KODEX AI전력핵심설비 1일 급락 5.18%"
     },
     {
       "ticker": "381180",
@@ -54,8 +99,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 95.4,
-      "message": "TIGER 미국필라델피아반도체나스닥 52주 밴드 상단 근접(95.4%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 96.6,
+      "message": "TIGER 미국필라델피아반도체나스닥 52주 밴드 상단 근접(96.6%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "475310",
@@ -63,8 +108,26 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.11,
-      "message": "SOL 반도체후공정 1일 급락 3.11%"
+      "change_pct": -4.5,
+      "message": "SOL 반도체후공정 1일 급락 4.5%"
+    },
+    {
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.42,
+      "message": "TIGER 200 IT 1일 급락 3.42%"
+    },
+    {
+      "ticker": "469150",
+      "name": "ACE AI반도체TOP3+",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.4,
+      "message": "ACE AI반도체TOP3+ 1일 급락 3.4%"
     },
     {
       "ticker": "0148J0",
@@ -72,8 +135,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.35,
-      "message": "TIGER 코리아휴머노이드로봇산업 1일 급락 3.35%"
+      "change_pct": -4.07,
+      "message": "TIGER 코리아휴머노이드로봇산업 1일 급락 4.07%"
     }
   ]
 }
