@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-08T04:20:32.664170+00:00",
+  "timestamp": "2026-10-08T11:32:19.259157+00:00",
   "checked_count": 31,
   "alert_count": 6,
   "alerts": [
@@ -8,9 +8,9 @@
       "name": "TIGER 미국우주테크",
       "origin": "보유종목",
       "type": "가격변동",
-      "level": "정상",
-      "change_pct": -2.89,
-      "message": "TIGER 미국우주테크 1일 급락 2.89%"
+      "level": "정보",
+      "change_pct": -3.28,
+      "message": "TIGER 미국우주테크 1일 급락 3.28%"
     },
     {
       "ticker": "487240",
@@ -18,17 +18,17 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.43,
-      "message": "KODEX AI전력핵심설비 1일 급락 4.43%"
+      "change_pct": -4.22,
+      "message": "KODEX AI전력핵심설비 1일 급락 4.22%"
     },
     {
-      "ticker": "395160",
-      "name": "KODEX AI반도체TOP2플러스",
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
       "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.05,
-      "message": "KODEX AI반도체TOP2플러스 1일 급락 3.05%"
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 96.5,
+      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(96.5%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "139260",
@@ -36,8 +36,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -3.26,
-      "message": "TIGER 200 IT 1일 급락 3.26%"
+      "change_pct": -3.19,
+      "message": "TIGER 200 IT 1일 급락 3.19%"
     },
     {
       "ticker": "0117V0",
@@ -45,8 +45,8 @@
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "정보",
-      "change_pct": -4.15,
-      "message": "TIGER 코리아AI전력기기TOP3플러스 1일 급락 4.15%"
+      "change_pct": -3.72,
+      "message": "TIGER 코리아AI전력기기TOP3플러스 1일 급락 3.72%"
     },
     {
       "ticker": "364980",
@@ -54,8 +54,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 95.4,
-      "message": "TIGER 2차전지TOP10 52주 밴드 상단 근접(95.4%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 100.0,
+      "message": "TIGER 2차전지TOP10 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     }
   ]
 }
