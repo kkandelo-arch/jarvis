@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-10-09T05:29:49.291622+00:00",
+  "timestamp": "2026-10-09T15:08:07.341717+00:00",
   "composite_score": 36,
   "level": "주의",
   "components": {
     "vix": {
-      "raw": 15.08,
+      "raw": 15.41,
       "score": 35,
       "as_of": "미국 전일 기준(FRED)"
     },
     "high_yield_spread": {
-      "raw": 3.09,
+      "raw": 3.15,
       "score": 10,
       "as_of": "미국 전일 기준(FRED)"
     },
@@ -37,23 +37,23 @@
     },
     "sp500": {
       "label": "S&P500",
-      "value": 7765.36,
-      "change_pct": -0.47
+      "value": 7794.71,
+      "change_pct": 0.38
     },
     "nasdaq": {
       "label": "나스닥",
-      "value": 27193.34,
-      "change_pct": -1.25
+      "value": 27307.49,
+      "change_pct": 0.42
     },
     "dow": {
       "label": "다우",
-      "value": 51231.64,
-      "change_pct": 0.1
+      "value": 51434.71,
+      "change_pct": 0.4
     },
     "usdkrw": {
       "label": "원달러환율",
-      "value": 1344.1,
-      "change_pct": 0.37
+      "value": 1341.52,
+      "change_pct": 0.18
     }
   }
 }
