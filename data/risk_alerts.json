@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-08T11:32:19.259157+00:00",
+  "timestamp": "2026-10-09T04:25:04.649572+00:00",
   "checked_count": 31,
   "alert_count": 6,
   "alerts": [
@@ -13,6 +13,15 @@
       "message": "TIGER 미국우주테크 1일 급락 3.28%"
     },
     {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 96.5,
+      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(96.5%) - 신규매수 시 유의(과열구간)"
+    },
+    {
       "ticker": "487240",
       "name": "KODEX AI전력핵심설비",
       "origin": "기본(거래대금상위)",
@@ -22,13 +31,13 @@
       "message": "KODEX AI전력핵심설비 1일 급락 4.22%"
     },
     {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
+      "ticker": "364980",
+      "name": "TIGER 2차전지TOP10",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 96.5,
-      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(96.5%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 100.0,
+      "message": "TIGER 2차전지TOP10 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
     },
     {
       "ticker": "139260",
@@ -40,22 +49,13 @@
       "message": "TIGER 200 IT 1일 급락 3.19%"
     },
     {
-      "ticker": "0117V0",
-      "name": "TIGER 코리아AI전력기기TOP3플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.72,
-      "message": "TIGER 코리아AI전력기기TOP3플러스 1일 급락 3.72%"
-    },
-    {
-      "ticker": "364980",
-      "name": "TIGER 2차전지TOP10",
+      "ticker": "0094M0",
+      "name": "RISE 코리아밸류업위클리고정커버드콜",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 2차전지TOP10 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 0.0,
+      "message": "RISE 코리아밸류업위클리고정커버드콜 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     }
   ]
 }
