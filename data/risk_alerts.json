@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-10-14T08:56:58.182109+00:00",
+  "timestamp": "2026-10-15T03:02:41.246502+00:00",
   "checked_count": 31,
-  "alert_count": 24,
+  "alert_count": 48,
   "alerts": [
     {
       "ticker": "0183J0",
       "name": "TIGER 미국우주테크",
       "origin": "보유종목",
       "type": "가격변동",
-      "level": "정상",
-      "change_pct": -2.87,
-      "message": "TIGER 미국우주테크 1일 급락 2.87%"
+      "level": "경고",
+      "change_pct": -7.6,
+      "message": "TIGER 미국우주테크 1일 급락 7.6%"
     },
     {
       "ticker": "0183J0",
@@ -25,6 +25,15 @@
       "ticker": "069500",
       "name": "KODEX 200",
       "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.47,
+      "message": "KODEX 200 1일 급락 8.47%"
+    },
+    {
+      "ticker": "069500",
+      "name": "KODEX 200",
+      "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
       "band_position_pct": 0.0,
@@ -34,10 +43,46 @@
       "ticker": "102110",
       "name": "TIGER 200",
       "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.33,
+      "message": "TIGER 200 1일 급락 8.33%"
+    },
+    {
+      "ticker": "102110",
+      "name": "TIGER 200",
+      "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
       "band_position_pct": 0.0,
       "message": "TIGER 200 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.48,
+      "message": "KODEX 코스닥150 1일 급락 8.48%"
+    },
+    {
+      "ticker": "229200",
+      "name": "KODEX 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "KODEX 코스닥150 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "긴급",
+      "change_pct": -10.68,
+      "message": "TIGER 반도체TOP10 1일 급락 10.68%"
     },
     {
       "ticker": "396500",
@@ -53,9 +98,27 @@
       "name": "KODEX 반도체",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.37,
-      "message": "KODEX 반도체 1일 급락 4.37%"
+      "level": "긴급",
+      "change_pct": -11.39,
+      "message": "KODEX 반도체 1일 급락 11.39%"
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "KODEX 반도체 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "0167A0",
+      "name": "SOL AI반도체TOP2플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "긴급",
+      "change_pct": -12.28,
+      "message": "SOL AI반도체TOP2플러스 1일 급락 12.28%"
     },
     {
       "ticker": "0167A0",
@@ -67,13 +130,13 @@
       "message": "SOL AI반도체TOP2플러스 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "498400",
-      "name": "KODEX 200타겟위클리커버드콜",
+      "ticker": "148020",
+      "name": "RISE 200",
       "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "KODEX 200타겟위클리커버드콜 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.46,
+      "message": "RISE 200 1일 급락 8.46%"
     },
     {
       "ticker": "148020",
@@ -85,13 +148,40 @@
       "message": "RISE 200 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.29,
+      "message": "TIGER 코스닥150 1일 급락 8.29%"
+    },
+    {
+      "ticker": "232080",
+      "name": "TIGER 코스닥150",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "TIGER 코스닥150 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
       "ticker": "455850",
       "name": "SOL AI반도체소부장",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "주의",
-      "change_pct": -6.26,
-      "message": "SOL AI반도체소부장 1일 급락 6.26%"
+      "level": "긴급",
+      "change_pct": -11.95,
+      "message": "SOL AI반도체소부장 1일 급락 11.95%"
+    },
+    {
+      "ticker": "395160",
+      "name": "KODEX AI반도체TOP2플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "긴급",
+      "change_pct": -12.05,
+      "message": "KODEX AI반도체TOP2플러스 1일 급락 12.05%"
     },
     {
       "ticker": "395160",
@@ -103,6 +193,51 @@
       "message": "KODEX AI반도체TOP2플러스 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
+      "ticker": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.48,
+      "message": "KODEX 200타겟위클리커버드콜 1일 급락 8.48%"
+    },
+    {
+      "ticker": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "KODEX 200타겟위클리커버드콜 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": -6.67,
+      "message": "KODEX 2차전지산업 1일 급락 6.67%"
+    },
+    {
+      "ticker": "364980",
+      "name": "TIGER 2차전지TOP10",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": -6.66,
+      "message": "TIGER 2차전지TOP10 1일 급락 6.66%"
+    },
+    {
+      "ticker": "472150",
+      "name": "TIGER 배당커버드콜액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.78,
+      "message": "TIGER 배당커버드콜액티브 1일 급락 8.78%"
+    },
+    {
       "ticker": "472150",
       "name": "TIGER 배당커버드콜액티브",
       "origin": "기본(거래대금상위)",
@@ -112,58 +247,22 @@
       "message": "TIGER 배당커버드콜액티브 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "471990",
-      "name": "KODEX AI반도체핵심장비",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "주의",
-      "change_pct": -5.93,
-      "message": "KODEX AI반도체핵심장비 1일 급락 5.93%"
-    },
-    {
-      "ticker": "475300",
-      "name": "SOL 반도체전공정",
+      "ticker": "0209D0",
+      "name": "KODEX 전고체배터리ESS TOP2플러스",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
       "level": "경고",
-      "change_pct": -7.94,
-      "message": "SOL 반도체전공정 1일 급락 7.94%"
+      "change_pct": -7.9,
+      "message": "KODEX 전고체배터리ESS TOP2플러스 1일 급락 7.9%"
     },
     {
-      "ticker": "395270",
-      "name": "HANARO Fn K-반도체",
+      "ticker": "105190",
+      "name": "ACE 200",
       "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "HANARO Fn K-반도체 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "487240",
-      "name": "KODEX AI전력핵심설비",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "KODEX AI전력핵심설비 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "0162Z0",
-      "name": "RISE 삼성전자SK하이닉스채권혼합50",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "RISE 삼성전자SK하이닉스채권혼합50 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "0219E0",
-      "name": "KODEX 200커버드콜액티브",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "KODEX 200커버드콜액티브 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.39,
+      "message": "ACE 200 1일 급락 8.39%"
     },
     {
       "ticker": "105190",
@@ -178,10 +277,154 @@
       "ticker": "152100",
       "name": "PLUS 200",
       "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.38,
+      "message": "PLUS 200 1일 급락 8.38%"
+    },
+    {
+      "ticker": "152100",
+      "name": "PLUS 200",
+      "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
       "band_position_pct": 0.0,
       "message": "PLUS 200 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "395270",
+      "name": "HANARO Fn K-반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "긴급",
+      "change_pct": -12.12,
+      "message": "HANARO Fn K-반도체 1일 급락 12.12%"
+    },
+    {
+      "ticker": "395270",
+      "name": "HANARO Fn K-반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "HANARO Fn K-반도체 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "0219E0",
+      "name": "KODEX 200커버드콜액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.9,
+      "message": "KODEX 200커버드콜액티브 1일 급락 8.9%"
+    },
+    {
+      "ticker": "0219E0",
+      "name": "KODEX 200커버드콜액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "KODEX 200커버드콜액티브 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "471990",
+      "name": "KODEX AI반도체핵심장비",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "긴급",
+      "change_pct": -12.11,
+      "message": "KODEX AI반도체핵심장비 1일 급락 12.11%"
+    },
+    {
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "경고",
+      "change_pct": -8.08,
+      "message": "PLUS 글로벌HBM반도체 1일 급락 8.08%"
+    },
+    {
+      "ticker": "442580",
+      "name": "PLUS 글로벌HBM반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "PLUS 글로벌HBM반도체 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": -5.37,
+      "message": "RISE 삼성전자SK하이닉스채권혼합50 1일 급락 5.37%"
+    },
+    {
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "RISE 삼성전자SK하이닉스채권혼합50 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "475300",
+      "name": "SOL 반도체전공정",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "긴급",
+      "change_pct": -11.87,
+      "message": "SOL 반도체전공정 1일 급락 11.87%"
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "긴급",
+      "change_pct": -11.06,
+      "message": "KODEX AI전력핵심설비 1일 급락 11.06%"
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "KODEX AI전력핵심설비 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "426030",
+      "name": "TIME 미국나스닥100액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "주의",
+      "change_pct": -5.68,
+      "message": "TIME 미국나스닥100액티브 1일 급락 5.68%"
+    },
+    {
+      "ticker": "426030",
+      "name": "TIME 미국나스닥100액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "TIME 미국나스닥100액티브 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "긴급",
+      "change_pct": -11.3,
+      "message": "TIGER 200 IT 1일 급락 11.3%"
     },
     {
       "ticker": "139260",
@@ -189,35 +432,8 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 1.1,
-      "message": "TIGER 200 IT 52주 밴드 하단 근접(1.1%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "069660",
-      "name": "KIWOOM 200",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
       "band_position_pct": 0.0,
-      "message": "KIWOOM 200 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "0177N0",
-      "name": "KODEX 삼성전자SK하이닉스채권혼합50",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 0.0,
-      "message": "KODEX 삼성전자SK하이닉스채권혼합50 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
-    },
-    {
-      "ticker": "091230",
-      "name": "TIGER 반도체",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "정보",
-      "change_pct": -4.27,
-      "message": "TIGER 반도체 1일 급락 4.27%"
+      "message": "TIGER 200 IT 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     }
   ]
 }
