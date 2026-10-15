@@ -1,49 +1,59 @@
 {
-  "timestamp": "2026-10-14T13:12:26.337772+00:00",
-  "expected_trading_day": "2026-10-14",
-  "previous_trading_day": "2026-10-13",
-  "force_all": false,
-  "any_stale": false,
+  "timestamp": "2026-10-15T08:26:35.891702+00:00",
+  "expected_trading_day": "2026-10-15",
+  "previous_trading_day": "2026-10-14",
+  "force_all": true,
+  "any_stale": true,
   "checks": [
     {
       "file": "data/risk_score.json",
-      "last_updated_utc": "2026-10-14T04:18:41.471958+00:00",
-      "last_updated_kst": "2026-10-14T13:18:41.471958+09:00",
-      "expected_trading_day": "2026-10-14",
-      "previous_trading_day": "2026-10-13",
-      "status": "정상"
+      "last_updated_utc": "2026-10-14T13:28:35.263887+00:00",
+      "last_updated_kst": "2026-10-14T22:28:35.263887+09:00",
+      "expected_trading_day": "2026-10-15",
+      "previous_trading_day": "2026-10-14",
+      "status": "오래됨",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/etf_top30.json",
       "last_updated_utc": "2026-10-14T12:35:47.076110+00:00",
       "last_updated_kst": "2026-10-14T21:35:47.076110+09:00",
-      "expected_trading_day": "2026-10-14",
-      "previous_trading_day": "2026-10-13",
-      "status": "정상"
+      "expected_trading_day": "2026-10-15",
+      "previous_trading_day": "2026-10-14",
+      "status": "오래됨",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/etf_discovery.json",
       "last_updated_utc": "2026-10-14T12:47:13.497018+00:00",
       "last_updated_kst": "2026-10-14T21:47:13.497018+09:00",
-      "expected_trading_day": "2026-10-14",
-      "previous_trading_day": "2026-10-13",
-      "status": "정상"
+      "expected_trading_day": "2026-10-15",
+      "previous_trading_day": "2026-10-14",
+      "status": "오래됨",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/risk_alerts.json",
-      "last_updated_utc": "2026-10-14T08:56:58.182109+00:00",
-      "last_updated_kst": "2026-10-14T17:56:58.182109+09:00",
-      "expected_trading_day": "2026-10-14",
-      "previous_trading_day": "2026-10-13",
-      "status": "정상"
+      "last_updated_utc": "2026-10-15T08:17:12.765457+00:00",
+      "last_updated_kst": "2026-10-15T17:17:12.765457+09:00",
+      "expected_trading_day": "2026-10-15",
+      "previous_trading_day": "2026-10-14",
+      "status": "정상",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/portfolio_snapshot.json",
-      "last_updated_utc": "2026-10-14T12:34:35.111122+00:00",
-      "last_updated_kst": "2026-10-14T21:34:35.111122+09:00",
-      "expected_trading_day": "2026-10-14",
-      "previous_trading_day": "2026-10-13",
-      "status": "정상"
+      "last_updated_utc": "2026-10-15T05:25:22.595284+00:00",
+      "last_updated_kst": "2026-10-15T14:25:22.595284+09:00",
+      "expected_trading_day": "2026-10-15",
+      "previous_trading_day": "2026-10-14",
+      "status": "정상",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     }
   ]
 }
