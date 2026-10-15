@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-15T08:38:43.305627+00:00",
+  "timestamp": "2026-10-15T12:21:06.236932+00:00",
   "data_as_of": "20261015",
   "ranking_basis": "최근 거래대금 상위 30개 (레버리지/인버스/순수채권형/금리연동/환헤지(H) 제외, 주식+채권 혼합형과 커버드콜은 포함)",
   "top30": [
@@ -22,12 +22,6 @@
       "market_cap": 178115.35
     },
     {
-      "ticker": "379810",
-      "name": "KODEX 미국나스닥100",
-      "trading_value": 971882165843.0,
-      "market_cap": 26643.53
-    },
-    {
       "ticker": "360750",
       "name": "TIGER 미국S&P500",
       "trading_value": 761852922509.0,
@@ -40,6 +34,12 @@
       "market_cap": 12745.89
     },
     {
+      "ticker": "379810",
+      "name": "KODEX 미국나스닥100",
+      "trading_value": 633663445662.0,
+      "market_cap": 27090.64
+    },
+    {
       "ticker": "396500",
       "name": "TIGER 반도체TOP10",
       "trading_value": 621164525239.0,
@@ -48,20 +48,20 @@
     {
       "ticker": "379800",
       "name": "KODEX 미국S&P500",
-      "trading_value": 576632854209.0,
-      "market_cap": 23395.99
-    },
-    {
-      "ticker": "091160",
-      "name": "KODEX 반도체",
-      "trading_value": 567983739046.0,
-      "market_cap": 111891.31
+      "trading_value": 586651866082.0,
+      "market_cap": 23568.39
     },
     {
       "ticker": "0167A0",
       "name": "SOL AI반도체TOP2플러스",
       "trading_value": 347481388136.0,
       "market_cap": 14279.28
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "trading_value": 335251807715.0,
+      "market_cap": 127215.62
     },
     {
       "ticker": "148020",
