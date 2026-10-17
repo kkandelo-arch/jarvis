@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-17T03:47:59.797322+00:00",
+  "timestamp": "2026-10-17T08:25:04.374974+00:00",
   "composite_score": 42,
   "level": "주의",
   "components": {
@@ -47,7 +47,7 @@
     },
     "dow": {
       "label": "다우",
-      "value": 52002.4,
+      "value": 52002.41,
       "change_pct": -0.34
     },
     "usdkrw": {
