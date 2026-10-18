@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-10-12T00:03:45.844387+00:00",
-  "date_used": "20261012",
-  "count": 1172,
+  "timestamp": "2026-10-18T22:39:51.356003+00:00",
+  "date_used": "20261018",
+  "count": 1176,
   "etfs": [
     {
       "ticker": "0193M0",
@@ -918,6 +918,10 @@
     {
       "ticker": "0053M0",
       "name": "더제이 중소형포커스액티브"
+    },
+    {
+      "ticker": "0243M0",
+      "name": "DS AI반도체액티브"
     },
     {
       "ticker": "0220B0",
@@ -2264,6 +2268,10 @@
       "name": "KODEX 미국AI소프트웨어TOP10"
     },
     {
+      "ticker": "0241D0",
+      "name": "KODEX 미국AI에이전트액티브"
+    },
+    {
       "ticker": "487230",
       "name": "KODEX 미국AI전력핵심인프라"
     },
@@ -3468,6 +3476,10 @@
       "name": "KIWOOM 글로벌AI반도체"
     },
     {
+      "ticker": "0247S0",
+      "name": "KIWOOM 글로벌MLCC&AI기판TOP4+"
+    },
+    {
       "ticker": "489860",
       "name": "KIWOOM 글로벌전력GRID인프라"
     },
@@ -3866,6 +3878,10 @@
     {
       "ticker": "105190",
       "name": "ACE 200"
+    },
+    {
+      "ticker": "0254W0",
+      "name": "ACE 29-11 회사채(AA-이상)액티브"
     },
     {
       "ticker": "475260",
