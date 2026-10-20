@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-20T08:47:20.890106+00:00",
+  "timestamp": "2026-10-20T12:39:28.692929+00:00",
   "macro_composite_score": 42,
   "scanned_count": 30,
   "ranking_basis": "adjusted_score (5지표 가중합산 x 백테스트 신뢰도), 기본목록은 거래대금 상위 자동선정",
@@ -305,35 +305,6 @@
       }
     },
     {
-      "ticker": "069660",
-      "name": "KIWOOM 200",
-      "origin": "기본(거래대금상위)",
-      "decision": "관망",
-      "reason": "재무건전성 양호(74점), 최근 20일 -18.27% 하락",
-      "adjusted_score": 52,
-      "stars": 3,
-      "total_score": 47,
-      "confidence_multiplier": 1.1,
-      "backtest_confidence": {
-        "label": "높음",
-        "backtest_win_rate_pct": 74.1,
-        "backtest_sample_count": 54
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "높음",
-      "components": {
-        "momentum_20d_pct": -18.27,
-        "momentum_score": 0,
-        "band_position_pct": 37.7,
-        "band_score": 67,
-        "macro_score": 100,
-        "supply_net_eok": -2.0,
-        "supply_score": 49,
-        "smart_score": 74,
-        "smart_score_available": true
-      }
-    },
-    {
       "ticker": "0167A0",
       "name": "SOL AI반도체TOP2플러스",
       "origin": "기본(거래대금상위)",
@@ -388,35 +359,6 @@
         "supply_net_eok": -16.1,
         "supply_score": 42,
         "smart_score": 74,
-        "smart_score_available": true
-      }
-    },
-    {
-      "ticker": "0005D0",
-      "name": "SOL 전고체배터리&실리콘음극재",
-      "origin": "기본(거래대금상위)",
-      "decision": "관망",
-      "reason": "재무 부진(29점), 수급 매도세(-130.8억), 최근 20일 +12.93% 상승",
-      "adjusted_score": 48,
-      "stars": 2,
-      "total_score": 56,
-      "confidence_multiplier": 0.85,
-      "backtest_confidence": {
-        "label": "검증전",
-        "backtest_win_rate_pct": null,
-        "backtest_sample_count": 0
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "높음",
-      "components": {
-        "momentum_20d_pct": 12.93,
-        "momentum_score": 100,
-        "band_position_pct": 37.8,
-        "band_score": 67,
-        "macro_score": 100,
-        "supply_net_eok": -130.8,
-        "supply_score": 0,
-        "smart_score": 29,
         "smart_score_available": true
       }
     },
@@ -650,6 +592,35 @@
         "supply_score": 0,
         "smart_score": 52,
         "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "381180",
+      "name": "TIGER 미국필라델피아반도체나스닥",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "수급 매도세(-129.7억), 최근 20일 -5.2% 하락",
+      "adjusted_score": 42,
+      "stars": 2,
+      "total_score": 38,
+      "confidence_multiplier": 1.1,
+      "backtest_confidence": {
+        "label": "높음",
+        "backtest_win_rate_pct": 72.5,
+        "backtest_sample_count": 40
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -5.2,
+        "momentum_score": 24,
+        "band_position_pct": 42.2,
+        "band_score": 73,
+        "macro_score": 100,
+        "supply_net_eok": -129.7,
+        "supply_score": 0,
+        "smart_score": 50,
+        "smart_score_available": false
       }
     },
     {
@@ -914,35 +885,6 @@
       }
     },
     {
-      "ticker": "475300",
-      "name": "SOL 반도체전공정",
-      "origin": "기본(거래대금상위)",
-      "decision": "제외권장",
-      "reason": "재무 부진(1점), 수급 매도세(-745.1억), 최근 20일 -7.4% 하락",
-      "adjusted_score": 30,
-      "stars": 1,
-      "total_score": 27,
-      "confidence_multiplier": 1.1,
-      "backtest_confidence": {
-        "label": "높음",
-        "backtest_win_rate_pct": 74.0,
-        "backtest_sample_count": 50
-      },
-      "leading_actor": "기관",
-      "volume_evaluation": "양호",
-      "components": {
-        "momentum_20d_pct": -7.4,
-        "momentum_score": 13,
-        "band_position_pct": 51.6,
-        "band_score": 87,
-        "macro_score": 100,
-        "supply_net_eok": -745.1,
-        "supply_score": 0,
-        "smart_score": 1,
-        "smart_score_available": true
-      }
-    },
-    {
       "ticker": "305720",
       "name": "KODEX 2차전지산업",
       "origin": "기본(거래대금상위)",
@@ -998,6 +940,64 @@
         "supply_score": 0,
         "smart_score": 0,
         "smart_score_available": true
+      }
+    },
+    {
+      "ticker": "105190",
+      "name": "ACE 200",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "수급 매도세(-271.8억), 최근 20일 -18.37% 하락, 백테스트 미검증",
+      "adjusted_score": 26,
+      "stars": 1,
+      "total_score": 30,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "높음",
+      "components": {
+        "momentum_20d_pct": -18.37,
+        "momentum_score": 0,
+        "band_position_pct": 37.4,
+        "band_score": 66,
+        "macro_score": 100,
+        "supply_net_eok": -271.8,
+        "supply_score": 0,
+        "smart_score": 50,
+        "smart_score_available": false
+      }
+    },
+    {
+      "ticker": "278530",
+      "name": "KODEX 200TR",
+      "origin": "기본(거래대금상위)",
+      "decision": "제외권장",
+      "reason": "수급 매도세(-425.4억), 최근 20일 -18.38% 하락, 백테스트 미검증",
+      "adjusted_score": 26,
+      "stars": 1,
+      "total_score": 30,
+      "confidence_multiplier": 0.85,
+      "backtest_confidence": {
+        "label": "검증전",
+        "backtest_win_rate_pct": null,
+        "backtest_sample_count": 0
+      },
+      "leading_actor": "기관",
+      "volume_evaluation": "양호",
+      "components": {
+        "momentum_20d_pct": -18.38,
+        "momentum_score": 0,
+        "band_position_pct": 38.1,
+        "band_score": 67,
+        "macro_score": 100,
+        "supply_net_eok": -425.4,
+        "supply_score": 0,
+        "smart_score": 50,
+        "smart_score_available": false
       }
     },
     {
