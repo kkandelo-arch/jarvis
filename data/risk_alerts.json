@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-10-19T08:50:48.038314+00:00",
+  "timestamp": "2026-10-20T03:15:37.371950+00:00",
   "checked_count": 31,
-  "alert_count": 11,
+  "alert_count": 26,
   "alerts": [
     {
       "ticker": "0183J0",
       "name": "TIGER 미국우주테크",
       "origin": "보유종목",
       "type": "가격변동",
-      "level": "정보",
-      "change_pct": -3.65,
-      "message": "TIGER 미국우주테크 1일 급락 3.65%"
+      "level": "정상",
+      "change_pct": -2.02,
+      "message": "TIGER 미국우주테크 1일 급락 2.02%"
     },
     {
       "ticker": "0183J0",
@@ -22,22 +22,139 @@
       "message": "TIGER 미국우주테크 52주 밴드 하단 근접(0.0%) - 저가매수 검토"
     },
     {
-      "ticker": "0209D0",
-      "name": "KODEX 전고체배터리ESS TOP2플러스",
-      "origin": "기본(거래대금상위)",
-      "type": "가격변동",
-      "level": "경고",
-      "change_pct": 9.37,
-      "message": "KODEX 전고체배터리ESS TOP2플러스 1일 급등 9.37%"
-    },
-    {
-      "ticker": "0209D0",
-      "name": "KODEX 전고체배터리ESS TOP2플러스",
+      "ticker": "069500",
+      "name": "KODEX 200",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "KODEX 전고체배터리ESS TOP2플러스 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
+      "band_position_pct": 2.8,
+      "message": "KODEX 200 52주 밴드 하단 근접(2.8%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "102110",
+      "name": "TIGER 200",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 3.2,
+      "message": "TIGER 200 52주 밴드 하단 근접(3.2%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "360750",
+      "name": "TIGER 미국S&P500",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.2,
+      "message": "TIGER 미국S&P500 52주 밴드 하단 근접(0.2%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "379800",
+      "name": "KODEX 미국S&P500",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.6,
+      "message": "KODEX 미국S&P500 52주 밴드 하단 근접(0.6%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "396500",
+      "name": "TIGER 반도체TOP10",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 2.1,
+      "message": "TIGER 반도체TOP10 52주 밴드 하단 근접(2.1%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "0167A0",
+      "name": "SOL AI반도체TOP2플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 3.3,
+      "message": "SOL AI반도체TOP2플러스 52주 밴드 하단 근접(3.3%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "091160",
+      "name": "KODEX 반도체",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 3.1,
+      "message": "KODEX 반도체 52주 밴드 하단 근접(3.1%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "148020",
+      "name": "RISE 200",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 3.6,
+      "message": "RISE 200 52주 밴드 하단 근접(3.6%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "395160",
+      "name": "KODEX AI반도체TOP2플러스",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 1.8,
+      "message": "KODEX AI반도체TOP2플러스 52주 밴드 하단 근접(1.8%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 2.5,
+      "message": "KODEX 200타겟위클리커버드콜 52주 밴드 하단 근접(2.5%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "305720",
+      "name": "KODEX 2차전지산업",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.35,
+      "message": "KODEX 2차전지산업 1일 급락 3.35%"
+    },
+    {
+      "ticker": "472150",
+      "name": "TIGER 배당커버드콜액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 3.2,
+      "message": "TIGER 배당커버드콜액티브 52주 밴드 하단 근접(3.2%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "364980",
+      "name": "TIGER 2차전지TOP10",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -3.14,
+      "message": "TIGER 2차전지TOP10 1일 급락 3.14%"
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "origin": "기본(거래대금상위)",
+      "type": "가격변동",
+      "level": "정보",
+      "change_pct": -4.75,
+      "message": "KODEX AI전력핵심설비 1일 급락 4.75%"
+    },
+    {
+      "ticker": "487240",
+      "name": "KODEX AI전력핵심설비",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.0,
+      "message": "KODEX AI전력핵심설비 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
     },
     {
       "ticker": "395270",
@@ -45,53 +162,62 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 5.0,
-      "message": "HANARO Fn K-반도체 52주 밴드 하단 근접(5.0%) - 관망 후보(저평가구간)"
+      "band_position_pct": 0.5,
+      "message": "HANARO Fn K-반도체 52주 밴드 하단 근접(0.5%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "381180",
-      "name": "TIGER 미국필라델피아반도체나스닥",
+      "ticker": "152100",
+      "name": "PLUS 200",
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 2.2,
-      "message": "TIGER 미국필라델피아반도체나스닥 52주 밴드 하단 근접(2.2%) - 관망 후보(저평가구간)"
+      "band_position_pct": 3.5,
+      "message": "PLUS 200 52주 밴드 하단 근접(3.5%) - 관망 후보(저평가구간)"
     },
     {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
+      "ticker": "0162Z0",
+      "name": "RISE 삼성전자SK하이닉스채권혼합50",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 0.9,
+      "message": "RISE 삼성전자SK하이닉스채권혼합50 52주 밴드 하단 근접(0.9%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "0219E0",
+      "name": "KODEX 200커버드콜액티브",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 1.4,
+      "message": "KODEX 200커버드콜액티브 52주 밴드 하단 근접(1.4%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "139260",
+      "name": "TIGER 200 IT",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 3.8,
+      "message": "TIGER 200 IT 52주 밴드 하단 근접(3.8%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "0005D0",
+      "name": "SOL 전고체배터리&실리콘음극재",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "경고",
-      "change_pct": 8.2,
-      "message": "KODEX 2차전지산업 1일 급등 8.2%"
+      "level": "정보",
+      "change_pct": -3.31,
+      "message": "SOL 전고체배터리&실리콘음극재 1일 급락 3.31%"
     },
     {
-      "ticker": "305720",
-      "name": "KODEX 2차전지산업",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 99.3,
-      "message": "KODEX 2차전지산업 52주 밴드 상단 근접(99.3%) - 신규매수 시 유의(과열구간)"
-    },
-    {
-      "ticker": "364980",
-      "name": "TIGER 2차전지TOP10",
+      "ticker": "475300",
+      "name": "SOL 반도체전공정",
       "origin": "기본(거래대금상위)",
       "type": "가격변동",
-      "level": "경고",
-      "change_pct": 8.53,
-      "message": "TIGER 2차전지TOP10 1일 급등 8.53%"
-    },
-    {
-      "ticker": "364980",
-      "name": "TIGER 2차전지TOP10",
-      "origin": "기본(거래대금상위)",
-      "type": "리밸런싱검토",
-      "level": "주의",
-      "band_position_pct": 100.0,
-      "message": "TIGER 2차전지TOP10 52주 밴드 상단 근접(100.0%) - 신규매수 시 유의(과열구간)"
+      "level": "정보",
+      "change_pct": -3.65,
+      "message": "SOL 반도체전공정 1일 급락 3.65%"
     },
     {
       "ticker": "442580",
@@ -99,8 +225,17 @@
       "origin": "기본(거래대금상위)",
       "type": "리밸런싱검토",
       "level": "주의",
-      "band_position_pct": 3.2,
-      "message": "PLUS 글로벌HBM반도체 52주 밴드 하단 근접(3.2%) - 관망 후보(저평가구간)"
+      "band_position_pct": 0.0,
+      "message": "PLUS 글로벌HBM반도체 52주 밴드 하단 근접(0.0%) - 관망 후보(저평가구간)"
+    },
+    {
+      "ticker": "069660",
+      "name": "KIWOOM 200",
+      "origin": "기본(거래대금상위)",
+      "type": "리밸런싱검토",
+      "level": "주의",
+      "band_position_pct": 3.1,
+      "message": "KIWOOM 200 52주 밴드 하단 근접(3.1%) - 관망 후보(저평가구간)"
     }
   ]
 }
