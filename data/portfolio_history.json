@@ -293,5 +293,10 @@
     "date": "2026-10-20",
     "total_eval_amount": 60300,
     "total_pnl_pct": -49.87
+  },
+  {
+    "date": "2026-10-21",
+    "total_eval_amount": 62900,
+    "total_pnl_pct": -47.71
   }
 ]
