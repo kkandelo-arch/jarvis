@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-10-22T13:20:48.627671+00:00",
+  "timestamp": "2026-10-22T13:38:29.891510+00:00",
   "composite_score": 42,
   "level": "주의",
   "components": {
     "vix": {
-      "raw": 17.31,
+      "raw": 16.68,
       "score": 35,
       "as_of": "미국 전일 기준(FRED)"
     },
@@ -37,23 +37,23 @@
     },
     "sp500": {
       "label": "S&P500",
-      "value": 7757.17,
-      "change_pct": 0.58
+      "value": 7696.64,
+      "change_pct": -0.78
     },
     "nasdaq": {
       "label": "나스닥",
-      "value": 26702.86,
-      "change_pct": 1.05
+      "value": 26317.16,
+      "change_pct": -1.44
     },
     "dow": {
       "label": "다우",
-      "value": 52856.09,
-      "change_pct": 0.69
+      "value": 52714.93,
+      "change_pct": -0.27
     },
     "usdkrw": {
       "label": "원달러환율",
-      "value": 1326.48,
-      "change_pct": 0.19
+      "value": 1326.86,
+      "change_pct": 0.22
     }
   }
 }
