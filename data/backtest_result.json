@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-01T23:21:30.471338+00:00",
+  "timestamp": "2026-11-08T23:24:55.460808+00:00",
   "method": "과거 시점별 모멘텀+52주밴드 점수(거시점수는 중립 50점 고정) vs 이후 20일 수익률 비교",
   "universe_source": "etf_top30.json(거래대금 상위, 매일 자동 갱신) + custom_universe.json",
   "buy_threshold": 60,
