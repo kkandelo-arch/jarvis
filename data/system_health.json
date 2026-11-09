@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T08:09:02.681935+00:00",
+  "timestamp": "2026-11-09T14:53:36.732867+00:00",
   "expected_trading_day": "2026-11-09",
   "previous_trading_day": "2026-11-08",
   "force_all": true,
@@ -7,8 +7,8 @@
   "checks": [
     {
       "file": "data/risk_score.json",
-      "last_updated_utc": "2026-11-09T08:01:52.609398+00:00",
-      "last_updated_kst": "2026-11-09T17:01:52.609398+09:00",
+      "last_updated_utc": "2026-11-09T08:03:21.816664+00:00",
+      "last_updated_kst": "2026-11-09T17:03:21.816664+09:00",
       "expected_trading_day": "2026-11-09",
       "previous_trading_day": "2026-11-08",
       "status": "정상",
@@ -17,8 +17,8 @@
     },
     {
       "file": "data/etf_top30.json",
-      "last_updated_utc": "2026-11-09T02:18:11.308239+00:00",
-      "last_updated_kst": "2026-11-09T11:18:11.308239+09:00",
+      "last_updated_utc": "2026-11-09T08:05:01.082917+00:00",
+      "last_updated_kst": "2026-11-09T17:05:01.082917+09:00",
       "expected_trading_day": "2026-11-09",
       "previous_trading_day": "2026-11-08",
       "status": "정상",
@@ -27,8 +27,8 @@
     },
     {
       "file": "data/etf_discovery.json",
-      "last_updated_utc": "2026-11-09T02:19:46.004497+00:00",
-      "last_updated_kst": "2026-11-09T11:19:46.004497+09:00",
+      "last_updated_utc": "2026-11-09T08:06:29.523685+00:00",
+      "last_updated_kst": "2026-11-09T17:06:29.523685+09:00",
       "expected_trading_day": "2026-11-09",
       "previous_trading_day": "2026-11-08",
       "status": "정상",
@@ -37,8 +37,8 @@
     },
     {
       "file": "data/risk_alerts.json",
-      "last_updated_utc": "2026-11-09T04:28:58.291126+00:00",
-      "last_updated_kst": "2026-11-09T13:28:58.291126+09:00",
+      "last_updated_utc": "2026-11-09T13:15:18.382016+00:00",
+      "last_updated_kst": "2026-11-09T22:15:18.382016+09:00",
       "expected_trading_day": "2026-11-09",
       "previous_trading_day": "2026-11-08",
       "status": "정상",
@@ -47,8 +47,8 @@
     },
     {
       "file": "data/portfolio_snapshot.json",
-      "last_updated_utc": "2026-11-09T07:29:16.131961+00:00",
-      "last_updated_kst": "2026-11-09T16:29:16.131961+09:00",
+      "last_updated_utc": "2026-11-09T08:09:31.323587+00:00",
+      "last_updated_kst": "2026-11-09T17:09:31.323587+09:00",
       "expected_trading_day": "2026-11-09",
       "previous_trading_day": "2026-11-08",
       "status": "정상",
