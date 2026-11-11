@@ -373,5 +373,10 @@
     "date": "2026-11-10",
     "total_eval_amount": 0,
     "total_pnl_pct": 0
+  },
+  {
+    "date": "2026-11-11",
+    "total_eval_amount": 0,
+    "total_pnl_pct": 0
   }
 ]
