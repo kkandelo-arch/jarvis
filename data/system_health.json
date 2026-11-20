@@ -1,48 +1,48 @@
 {
-  "timestamp": "2026-11-19T16:57:47.743765+00:00",
-  "expected_trading_day": "2026-11-20",
-  "previous_trading_day": "2026-11-19",
+  "timestamp": "2026-11-20T16:31:14.878464+00:00",
+  "expected_trading_day": "2026-11-21",
+  "previous_trading_day": "2026-11-20",
   "force_all": false,
   "any_stale": false,
   "checks": [
     {
       "file": "data/risk_score.json",
-      "last_updated_utc": "2026-11-19T06:47:57.325142+00:00",
-      "last_updated_kst": "2026-11-19T15:47:57.325142+09:00",
-      "expected_trading_day": "2026-11-20",
-      "previous_trading_day": "2026-11-19",
+      "last_updated_utc": "2026-11-20T06:36:17.340512+00:00",
+      "last_updated_kst": "2026-11-20T15:36:17.340512+09:00",
+      "expected_trading_day": "2026-11-21",
+      "previous_trading_day": "2026-11-20",
       "status": "정상(직전 거래일 기준, 오늘 장마감 전)"
     },
     {
       "file": "data/etf_top30.json",
-      "last_updated_utc": "2026-11-19T16:03:07.287957+00:00",
-      "last_updated_kst": "2026-11-20T01:03:07.287957+09:00",
-      "expected_trading_day": "2026-11-20",
-      "previous_trading_day": "2026-11-19",
+      "last_updated_utc": "2026-11-20T15:44:59.959242+00:00",
+      "last_updated_kst": "2026-11-21T00:44:59.959242+09:00",
+      "expected_trading_day": "2026-11-21",
+      "previous_trading_day": "2026-11-20",
       "status": "정상"
     },
     {
       "file": "data/etf_discovery.json",
-      "last_updated_utc": "2026-11-19T16:26:18.465564+00:00",
-      "last_updated_kst": "2026-11-20T01:26:18.465564+09:00",
-      "expected_trading_day": "2026-11-20",
-      "previous_trading_day": "2026-11-19",
+      "last_updated_utc": "2026-11-20T15:58:18.772167+00:00",
+      "last_updated_kst": "2026-11-21T00:58:18.772167+09:00",
+      "expected_trading_day": "2026-11-21",
+      "previous_trading_day": "2026-11-20",
       "status": "정상"
     },
     {
       "file": "data/risk_alerts.json",
-      "last_updated_utc": "2026-11-19T15:11:16.164037+00:00",
-      "last_updated_kst": "2026-11-20T00:11:16.164037+09:00",
-      "expected_trading_day": "2026-11-20",
-      "previous_trading_day": "2026-11-19",
-      "status": "정상"
+      "last_updated_utc": "2026-11-20T14:22:41.813854+00:00",
+      "last_updated_kst": "2026-11-20T23:22:41.813854+09:00",
+      "expected_trading_day": "2026-11-21",
+      "previous_trading_day": "2026-11-20",
+      "status": "정상(직전 거래일 기준, 오늘 장마감 전)"
     },
     {
       "file": "data/portfolio_snapshot.json",
-      "last_updated_utc": "2026-11-19T08:12:17.611328+00:00",
-      "last_updated_kst": "2026-11-19T17:12:17.611328+09:00",
-      "expected_trading_day": "2026-11-20",
-      "previous_trading_day": "2026-11-19",
+      "last_updated_utc": "2026-11-20T07:54:46.573534+00:00",
+      "last_updated_kst": "2026-11-20T16:54:46.573534+09:00",
+      "expected_trading_day": "2026-11-21",
+      "previous_trading_day": "2026-11-20",
       "status": "정상(직전 거래일 기준, 오늘 장마감 전)"
     }
   ]
