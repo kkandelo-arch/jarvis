@@ -42,51 +42,71 @@ def main():
     items = []
     total_cost = 0
     total_value = 0
+    priced_cost = 0
+    priced_count = 0
 
     for h in holdings:
         ticker = h["ticker"]
         name = h.get("name", ticker)
         qty = h["quantity"]
         avg_price = h["avg_price"]
+        cost = qty * avg_price
 
         current_price = get_current_price(ticker)
         if current_price is None:
-            print(f"[경고] {name}({ticker}) 현재가 조회 실패, 평가 제외")
+            # 현재가 조회 실패를 보유종목 부재로 취급하지 않는다.
+            # 종목/수량/매입가는 유지하고 평가 관련 값만 미확정으로 둔다.
+            items.append({
+                "ticker": ticker,
+                "name": name,
+                "quantity": qty,
+                "avg_price": avg_price,
+                "current_price": None,
+                "purchase_date": h.get("purchase_date"),
+                "eval_amount": None,
+                "pnl_amount": None,
+                "pnl_pct": None,
+                "valuation_available": False,
+            })
+            print(f"[경고] {name}({ticker}) 현재가 조회 실패, 보유정보만 표시")
             continue
 
-        cost = qty * avg_price
         value = qty * current_price
         pnl = value - cost
         pnl_pct = round((pnl / cost) * 100, 2) if cost > 0 else 0
 
         total_cost += cost
         total_value += value
+        priced_cost += cost
+        priced_count += 1
 
-        items.append(
-            {
-                "ticker": ticker,
-                "name": name,
-                "quantity": qty,
-                "avg_price": avg_price,
-                "current_price": current_price,
-                "purchase_date": h.get("purchase_date"),
-                "eval_amount": round(value),
-                "pnl_amount": round(pnl),
-                "pnl_pct": pnl_pct,
-            }
-        )
+        items.append({
+            "ticker": ticker,
+            "name": name,
+            "quantity": qty,
+            "avg_price": avg_price,
+            "current_price": current_price,
+            "purchase_date": h.get("purchase_date"),
+            "eval_amount": round(value),
+            "pnl_amount": round(pnl),
+            "pnl_pct": pnl_pct,
+            "valuation_available": True,
+        })
         print(f"[디버그] {name}({ticker}) 평가손익 {pnl_pct}%")
 
     total_pnl = total_value - total_cost
     total_pnl_pct = round((total_pnl / total_cost) * 100, 2) if total_cost > 0 else 0
+    valuation_complete = priced_count == len(holdings)
 
     snapshot = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "holdings_count": len(items),
-        "total_cost": round(total_cost),
-        "total_eval_amount": round(total_value),
-        "total_pnl_amount": round(total_pnl),
-        "total_pnl_pct": total_pnl_pct,
+        "priced_holdings_count": priced_count,
+        "valuation_complete": valuation_complete,
+        "total_cost": round(total_cost) if valuation_complete else None,
+        "total_eval_amount": round(total_value) if valuation_complete else None,
+        "total_pnl_amount": round(total_pnl) if valuation_complete else None,
+        "total_pnl_pct": total_pnl_pct if valuation_complete else None,
         "items": items,
     }
 
@@ -109,11 +129,14 @@ def main():
             by_date[entry["date"]] = entry
 
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    by_date[today_str] = {
-        "date": today_str,
-        "total_eval_amount": round(total_value),
-        "total_pnl_pct": total_pnl_pct,
-    }
+    if valuation_complete:
+        by_date[today_str] = {
+            "date": today_str,
+            "total_eval_amount": round(total_value),
+            "total_pnl_pct": total_pnl_pct,
+        }
+    else:
+        print("[경고] 일부 종목의 현재가가 없어 포트폴리오 이력은 갱신하지 않음")
 
     history = [by_date[d] for d in sorted(by_date.keys())][-365:]
 
