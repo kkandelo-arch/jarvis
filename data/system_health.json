@@ -1,17 +1,19 @@
 {
-  "timestamp": "2026-11-27T17:45:07.528880+00:00",
+  "timestamp": "2026-11-28T05:30:31.522574+00:00",
   "expected_trading_day": "2026-11-28",
   "previous_trading_day": "2026-11-27",
-  "force_all": false,
+  "force_all": true,
   "any_stale": false,
   "checks": [
     {
       "file": "data/risk_score.json",
-      "last_updated_utc": "2026-11-27T07:40:34.223053+00:00",
-      "last_updated_kst": "2026-11-27T16:40:34.223053+09:00",
+      "last_updated_utc": "2026-11-28T05:20:46.914083+00:00",
+      "last_updated_kst": "2026-11-28T14:20:46.914083+09:00",
       "expected_trading_day": "2026-11-28",
       "previous_trading_day": "2026-11-27",
-      "status": "정상(직전 거래일 기준, 오늘 장마감 전)"
+      "status": "정상",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/etf_top30.json",
@@ -19,7 +21,9 @@
       "last_updated_kst": "2026-11-28T01:58:32.174863+09:00",
       "expected_trading_day": "2026-11-28",
       "previous_trading_day": "2026-11-27",
-      "status": "정상"
+      "status": "정상",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/etf_discovery.json",
@@ -27,7 +31,9 @@
       "last_updated_kst": "2026-11-28T02:19:34.181491+09:00",
       "expected_trading_day": "2026-11-28",
       "previous_trading_day": "2026-11-27",
-      "status": "정상"
+      "status": "정상",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/risk_alerts.json",
@@ -35,7 +41,9 @@
       "last_updated_kst": "2026-11-28T01:59:04.634486+09:00",
       "expected_trading_day": "2026-11-28",
       "previous_trading_day": "2026-11-27",
-      "status": "정상"
+      "status": "정상",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     },
     {
       "file": "data/portfolio_snapshot.json",
@@ -43,7 +51,9 @@
       "last_updated_kst": "2026-11-27T18:19:11.995430+09:00",
       "expected_trading_day": "2026-11-28",
       "previous_trading_day": "2026-11-27",
-      "status": "정상(직전 거래일 기준, 오늘 장마감 전)"
+      "status": "정상(직전 거래일 기준, 오늘 장마감 전)",
+      "retrigger_requested": true,
+      "retrigger_reason": "강제 전체갱신"
     }
   ]
 }
