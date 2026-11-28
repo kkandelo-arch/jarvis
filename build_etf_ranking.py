@@ -65,6 +65,8 @@ def get_latest_metrics(ticker, debug_columns_shown, retry=True):
 
 def main():
     etfs = load_master_list()
+    if not etfs:
+        raise SystemExit("[중단] ETF 마스터 목록이 비어 있습니다. 기존 랭킹 파일은 보존합니다.")
     print(f"[디버그] 전체목록 {len(etfs)}개 로드, 랭킹 수집 시작 (요청간격 {REQUEST_DELAY_SEC}초)")
 
     ranked = []
@@ -97,6 +99,8 @@ def main():
             print(f"[디버그] {i + 1}/{len(etfs)} 처리 완료, 현재 {len(ranked)}개 확보, 실패 {fail_count}건")
 
     print(f"[디버그] 전체 처리 완료. 성공 {len(ranked)}개, 최종 실패 {fail_count}개")
+    if not ranked:
+        raise SystemExit("[중단] ETF 시세 수집 결과가 0개입니다. 기존 랭킹 파일은 보존합니다.")
 
     ranked.sort(key=lambda x: x["trading_value"], reverse=True)
     top30 = ranked[:30]
