@@ -262,6 +262,8 @@ def main():
     confidence_map = load_backtest_confidence()
     smart_score_map = load_smart_scores()
     universe = load_universe()
+    if not universe:
+        raise SystemExit("[중단] ETF 발굴 대상이 없습니다. 기존 발굴 결과는 보존합니다.")
     print(f"[디버그] 총 스캔 대상 {len(universe)}개")
 
     results = []
@@ -339,6 +341,9 @@ def main():
         except Exception as e:
             print(f"[경고] {name}({ticker}) 처리 중 오류 발생, 스킵: {e}")
             continue
+
+    if not results:
+        raise SystemExit("[중단] ETF 발굴 결과가 0개입니다. 기존 발굴 파일은 보존합니다.")
 
     results.sort(key=lambda x: x["adjusted_score"], reverse=True)
     top5 = results[:5]
