@@ -34,7 +34,7 @@ def main():
     date_used, tickers = find_recent_trading_date()
 
     if not tickers:
-        print("[오류] 최근 7일 내 유효한 ETF 티커 목록을 찾지 못했습니다. 빈 파일로 저장합니다.")
+        raise SystemExit("[중단] 최근 7일 내 ETF 티커 목록 조회 실패. 기존 ETF 목록은 보존합니다.")
 
     print(f"[디버그] 사용 기준일: {date_used}, 전체 ETF 티커 {len(tickers)}개")
     print("[디버그] 이름 조회 시작 (다소 시간 걸릴 수 있음)")
